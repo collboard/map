@@ -1,5 +1,5 @@
 module.exports = {
-    entryPath: './src/moduleSampleBasic.tsx',
+    entryPath: './src/index.tsx',
 };
 
 // TODO: !!! Put module.exports to other sample repos
