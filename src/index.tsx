@@ -23,6 +23,8 @@ declareModule({
         const { virtualArtVersioningSystem } = await systems.request('virtualArtVersioningSystem');
 
         // TODO: If constants to UPPERCASE and config
+
+        const mapZoom = 8;
         const centerCoords = new Vector(133, 83 /* Reverse */);
         const tileSize = Vector.square(256);
         const tileCount = new Vector(12, 8);
@@ -31,7 +33,7 @@ declareModule({
             for (let x = 0; x < tileCount.x; x++) {
                 const tileCoords = new Vector(x, y);
                 const tileArt = new ImageArt(
-                    `https://tile-a.openstreetmap.fr/hot/8/${tileCoords
+                    `https://tile-a.openstreetmap.fr/hot/${mapZoom}/${tileCoords
                         .add(centerCoords)
                         .toArray2D()
 
