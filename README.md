@@ -8,3 +8,7 @@ Maps for the geography class for the [Collboard.com](https://collboard.com/) in 
 [![Lint](https://github.com/collboard/map/actions/workflows/lint.yml/badge.svg)](https://github.com/collboard/map/actions/workflows/lint.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/collboard/map/badge.svg)](https://snyk.io/test/github/collboard/map)
 [![Issues](https://img.shields.io/github/issues/collboard/map.svg?style=flat)](https://github.com/collboard/map/issues)
+
+
+<!-- TODO: Add screenshot-->
+<!-- TODO: Add Prague logo-->

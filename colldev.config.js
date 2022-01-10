@@ -1,6 +1,5 @@
-module.export = {
+module.exports = {
     entryPath: './src/moduleSampleBasic.tsx',
-    develop: {
-        open: 'multiple',
-    },
 };
+
+// TODO: !!! Put module.exports to other sample repos
