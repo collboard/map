@@ -8,7 +8,7 @@ import { contributors, description, license, repository, version } from '../pack
 declareModule(
     makeExtrajsxModule({
         manifest: {
-            name: '@collboard/module-sample-basic',
+            name: '@collboard/map',
             version,
             description,
             contributors,
