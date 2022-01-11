@@ -1,14 +1,14 @@
 import { declareModule, ExtraJsxPlace, makeExtrajsxModule, randomEmoji } from '@collboard/modules-sdk';
 import * as React from 'react';
 import styled from 'styled-components';
-import helloWorldButton from '../assets/hello-world-button.png';
-import helloWorldIcon from '../assets/hello-world-icon.png';
-import { contributors, description, license, repository, version } from '../package.json';
+import helloWorldButton from '../../assets/hello-world-button.png';
+import helloWorldIcon from '../../assets/hello-world-icon.png';
+import { contributors, description, license, repository, version } from '../../package.json';
 
 declareModule(
     makeExtrajsxModule({
         manifest: {
-            name: '@collboard/map',
+            name: '@collboard/map-controls',
             version,
             description,
             contributors,

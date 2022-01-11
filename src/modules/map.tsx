@@ -1,12 +1,11 @@
 import { declareModule, ImageArt } from '@collboard/modules-sdk';
 import { Registration } from 'destroyable';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { Promisable } from 'type-fest';
-import { forTime } from 'waitasecond';
 import { Vector } from 'xyzt';
-import helloWorldIcon from '../assets/hello-world-icon.png';
-import { contributors, description, license, repository, version } from '../package.json';
-import { MapPolygonArt } from './MapPolygonArt';
+import helloWorldIcon from '../../assets/hello-world-icon.png';
+import { contributors, description, license, repository, version } from '../../package.json';
+import { observeByHeartbeat } from '../utils/observeByHeartbeat';
+import { wgs84ToTileXy } from '../utils/wgs84ToTileXy';
+import { MapPolygonArt } from './map-polygon-art';
 
 declareModule({
     manifest: {
@@ -85,75 +84,3 @@ declareModule({
         return registration;
     },
 });
-
-// TODO: Move to separate utils folder / file
-// TODO: isEqual
-function observeByHeartbeat<T>({
-    getValue,
-    waiter,
-}: {
-    getValue: () => T;
-    waiter?: () => Promise<void>;
-}): BehaviorSubject<T>;
-
-function observeByHeartbeat<T>({
-    getValue,
-    waiter,
-}: {
-    getValue: () => Promise<T>;
-    waiter?: () => Promise<void>;
-}): Observable<T>;
-function observeByHeartbeat<T>({
-    getValue,
-    waiter,
-}: {
-    getValue: () => Promisable<T>;
-    waiter?: () => Promise<void>;
-}): Observable<T> {
-    waiter = waiter || forTime.bind(null, 100);
-
-    const initialValue = getValue();
-    let subject: Subject<T>;
-    if (initialValue instanceof Promise) {
-        subject = new Subject<T>();
-        initialValue.then((initialValueResolved) => subject.next(initialValueResolved));
-    } else {
-        subject = new BehaviorSubject<T>(initialValue as T);
-    }
-    (async () => {
-        while (true) {
-            await waiter();
-            subject.next(await getValue());
-        }
-    })();
-
-    return subject;
-}
-
-function wgs84ToTileXy({ coordinatesWgs84, zoom }: { coordinatesWgs84: Vector; zoom: number }): {
-    position: Vector;
-    remainder: Vector;
-} {
-    const tileXy = new Vector(
-        ((coordinatesWgs84.x + 180) / 360) * Math.pow(2, zoom),
-        ((1 -
-            Math.log(
-                Math.tan((coordinatesWgs84.y * Math.PI) / 180) + 1 / Math.cos((coordinatesWgs84.y * Math.PI) / 180),
-            ) /
-                Math.PI) /
-            2) *
-            Math.pow(2, zoom),
-    );
-
-    const position = tileXy.map(Math.floor);
-    return { position, remainder: position.subtract(tileXy) };
-}
-
-/**
- * TODO: Should be here explicitelly installed `destroyable`  library
- * TODO: XYZT 2D forEach
- * TODO: XYZT semantic coordinates (latitude, longitude) with conversion
- * TODO: Provide newer RxJS API from appState
- * TODO: Export basic arts to SDK - like FreehandArt, ImageArt, TextArt,...
- * TODO: All Subscriptions to destroyable
- */

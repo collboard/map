@@ -1,5 +1,3 @@
 module.exports = {
-    entryPath: './src/index.tsx',
+    entryPath: './src/index.ts',
 };
-
-// TODO: !!! Put module.exports to other sample repos

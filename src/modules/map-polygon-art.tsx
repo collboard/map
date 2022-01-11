@@ -1,7 +1,7 @@
 import { Abstract2dArt, classNames, declareModule, makeArtModule } from '@collboard/modules-sdk';
 import * as React from 'react';
 import { IVectorData, Vector } from 'xyzt';
-import { contributors, description, license, repository, version } from '../package.json';
+import { contributors, description, license, repository, version } from '../../package.json';
 
 export const SVG_PADDING = 10;
 export const IS_NEAR_DISTANCE = 20;
@@ -24,11 +24,7 @@ export class MapPolygonArt extends Abstract2dArt {
     private minY: number = 0;
     private maxY: number = 0;
 
-    public constructor(
-        public path: IVectorData[],
-        public color: string,
-        public weight: number,
-    ) {
+    public constructor(public path: IVectorData[], public color: string, public weight: number) {
         super();
     }
 
