@@ -105,7 +105,7 @@ export class MapPolygonArt extends Abstract2dArt {
                             stroke={this.color}
                             strokeWidth={this.weight}
                             fillOpacity="null"
-                            strokeOpacity="null"
+                            strokeOpacity="10%"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             fill="transparent"
