@@ -27,6 +27,8 @@ declareModule({
         const tilePixelSize = Vector.square(256);
         const tileCount = new Vector(6, 4 /* TODO: Count based on screen size (with some system) and tileSize */);
 
+        //const mapProvider = new URL('https://tile-a.openstreetmap.fr/hot');
+        const mapProvider = new URL('https://tile-c.openstreetmap.fr/cyclosm');
         const mapZoom = 8;
         const mapCenterWgs84 = new Vector(14.4378005 /* Longitude  */, 50.0755381 /* Latitude  */);
 
@@ -41,7 +43,8 @@ declareModule({
             for (let x = 0; x < tileCount.x; x++) {
                 const tileCoords = new Vector(x, y);
                 const tileArt = new ImageArt(
-                    `https://tile-a.openstreetmap.fr/hot/${mapZoom}/${tileCoords
+                    // TODO: Map server and type provider
+                    `${mapProvider.href}/${mapZoom}/${tileCoords
                         .add(mapCenterTileXy)
                         .subtract(tileCount.half())
                         .toArray2D()
