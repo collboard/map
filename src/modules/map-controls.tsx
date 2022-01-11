@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import helloWorldButton from '../../assets/hello-world-button.png';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
+import { getUserGeolocation } from '../utils/getUserGeolocation';
 
 declareModule(
     makeExtrajsxModule({
@@ -32,7 +33,7 @@ declareModule(
                             tag: `hello-world-${Date.now()}`,
                             title: 'Hello world!',
                             subtitle: `Hello from Collboard modules!`,
-                            body: `Sending the ${randomEmoji()} from a module!`,
+                            body: `Sending the ${randomEmoji()} from a module towards ${await getUserGeolocation()}!`,
                             canBeClosed: true,
                         });
                     }}
