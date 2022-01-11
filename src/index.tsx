@@ -25,12 +25,15 @@ declareModule({
         // TODO: If constants to UPPERCASE and config
 
         const tilePixelSize = Vector.square(256);
-        const tileCount = new Vector(2, 2 /* TODO: Count based on screen size (with some system) and tileSize */);
+        const tileCount = new Vector(6, 4 /* TODO: Count based on screen size (with some system) and tileSize */);
 
         const mapZoom = 8;
         const mapCenterWgs84 = new Vector(14.4378005 /* Longitude  */, 50.0755381 /* Latitude  */);
 
-        const mapCenterTileXy = wgs84ToTileXy(mapCenterWgs84, mapZoom); // new Vector(133, 83 /* Reverse */);
+        const { position: mapCenterTileXy, remainder: mapCenterTileXyRemainder } = wgs84ToTileXy({
+            coordinatesWgs84: mapCenterWgs84,
+            zoom: mapZoom,
+        }); // new Vector(133, 83 /* Reverse */);
 
         const registration = Registration.void();
 
@@ -40,6 +43,7 @@ declareModule({
                 const tileArt = new ImageArt(
                     `https://tile-a.openstreetmap.fr/hot/${mapZoom}/${tileCoords
                         .add(mapCenterTileXy)
+                        .subtract(tileCount.half())
                         .toArray2D()
 
                         .join('/')}.png`,
@@ -47,7 +51,9 @@ declareModule({
                 );
 
                 tileArt.defaultZIndex = -1;
-                tileArt.setShift(tileCoords.subtract(tileCount.half()).multiply(tilePixelSize));
+                tileArt.setShift(
+                    tileCoords.subtract(tileCount.half()).add(mapCenterTileXyRemainder).multiply(tilePixelSize),
+                );
 
                 registration.addSubdestroyable(
                     virtualArtVersioningSystem.createPrimaryOperation().newArts(tileArt).persist(),
@@ -59,19 +65,23 @@ declareModule({
     },
 });
 
-function wgs84ToTileXy(coordinatesWgs84: Vector, zoom: number) {
-    return new Vector(
-        Math.floor(((coordinatesWgs84.x + 180) / 360) * Math.pow(2, zoom)),
-        Math.floor(
-            ((1 -
-                Math.log(
-                    Math.tan((coordinatesWgs84.y * Math.PI) / 180) + 1 / Math.cos((coordinatesWgs84.y * Math.PI) / 180),
-                ) /
-                    Math.PI) /
-                2) *
-                Math.pow(2, zoom),
-        ),
+function wgs84ToTileXy({ coordinatesWgs84, zoom }: { coordinatesWgs84: Vector; zoom: number }): {
+    position: Vector;
+    remainder: Vector;
+} {
+    const tileXy = new Vector(
+        ((coordinatesWgs84.x + 180) / 360) * Math.pow(2, zoom),
+        ((1 -
+            Math.log(
+                Math.tan((coordinatesWgs84.y * Math.PI) / 180) + 1 / Math.cos((coordinatesWgs84.y * Math.PI) / 180),
+            ) /
+                Math.PI) /
+            2) *
+            Math.pow(2, zoom),
     );
+
+    const position = tileXy.map(Math.floor);
+    return { position, remainder: position.subtract(tileXy) };
 }
 
 /**
