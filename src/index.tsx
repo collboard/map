@@ -1,8 +1,12 @@
 import { declareModule, ImageArt } from '@collboard/modules-sdk';
 import { Registration } from 'destroyable';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { Promisable } from 'type-fest';
+import { forTime } from 'waitasecond';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../package.json';
+import { MapPolygonArt } from './MapPolygonArt';
 
 declareModule({
     manifest: {
@@ -20,16 +24,19 @@ declareModule({
         },
     },
     async setup(systems) {
-        const { virtualArtVersioningSystem } = await systems.request('virtualArtVersioningSystem');
+        const { virtualArtVersioningSystem, appState } = await systems.request(
+            'virtualArtVersioningSystem',
+            'appState',
+        );
 
         // TODO: If constants to UPPERCASE and config
 
-        const tilePixelSize = Vector.square(256);
-        const tileCount = new Vector(6, 4 /* TODO: Count based on screen size (with some system) and tileSize */);
+        const tilePixelSize = Vector.square(256 /* TODO: Make some seam-padding */);
+        const tileCount = new Vector(6, 4 /* TODO: Count based on screen size (appState.windowSize) and tileSize */);
 
         //const mapProvider = new URL('https://tile-a.openstreetmap.fr/hot');
         const mapProvider = new URL('https://tile-c.openstreetmap.fr/cyclosm');
-        const mapZoom = 8;
+        const mapZoom = 17;
         const mapCenterWgs84 = new Vector(14.4378005 /* Longitude  */, 50.0755381 /* Latitude  */);
 
         const { position: mapCenterTileXy, remainder: mapCenterTileXyRemainder } = wgs84ToTileXy({
@@ -64,9 +71,64 @@ declareModule({
             }
         }
 
+        observeByHeartbeat({ getValue: () => appState.transform }).subscribe(() => {
+            const polygonArt = new MapPolygonArt(
+                [appState.transform.translate.negate(), appState.transform.translate.negate().add({ x: 10 })],
+                'blue',
+                20,
+            );
+            registration.addSubdestroyable(
+                virtualArtVersioningSystem.createPrimaryOperation().newArts(polygonArt).persist(),
+            );
+        });
+
         return registration;
     },
 });
+
+// TODO: Move to separate utils folder / file
+// TODO: isEqual
+function observeByHeartbeat<T>({
+    getValue,
+    waiter,
+}: {
+    getValue: () => T;
+    waiter?: () => Promise<void>;
+}): BehaviorSubject<T>;
+
+function observeByHeartbeat<T>({
+    getValue,
+    waiter,
+}: {
+    getValue: () => Promise<T>;
+    waiter?: () => Promise<void>;
+}): Observable<T>;
+function observeByHeartbeat<T>({
+    getValue,
+    waiter,
+}: {
+    getValue: () => Promisable<T>;
+    waiter?: () => Promise<void>;
+}): Observable<T> {
+    waiter = waiter || forTime.bind(null, 100);
+
+    const initialValue = getValue();
+    let subject: Subject<T>;
+    if (initialValue instanceof Promise) {
+        subject = new Subject<T>();
+        initialValue.then((initialValueResolved) => subject.next(initialValueResolved));
+    } else {
+        subject = new BehaviorSubject<T>(initialValue as T);
+    }
+    (async () => {
+        while (true) {
+            await waiter();
+            subject.next(await getValue());
+        }
+    })();
+
+    return subject;
+}
 
 function wgs84ToTileXy({ coordinatesWgs84, zoom }: { coordinatesWgs84: Vector; zoom: number }): {
     position: Vector;
@@ -91,4 +153,7 @@ function wgs84ToTileXy({ coordinatesWgs84, zoom }: { coordinatesWgs84: Vector; z
  * TODO: Should be here explicitelly installed `destroyable`  library
  * TODO: XYZT 2D forEach
  * TODO: XYZT semantic coordinates (latitude, longitude) with conversion
+ * TODO: Provide newer RxJS API from appState
+ * TODO: Export basic arts to SDK - like FreehandArt, ImageArt, TextArt,...
+ * TODO: All Subscriptions to destroyable
  */
