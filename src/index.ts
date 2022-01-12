@@ -1,5 +1,6 @@
 import './modules/map';
 import './modules/map-controls';
+import './modules/map-picking-tool';
 import './modules/map-polygon-art';
 
 /**

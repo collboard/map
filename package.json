@@ -4,8 +4,7 @@
     "description": "Simple sample module for Collboard.com created via @collboard/modules-sdk",
     "license": "SEE LICENSE IN LICENSE",
     "contributors": [
-        "Pavol Hejný <pavol.hejny@collboard.com> (https://collboard.com/-/about/team)",
-        "Jonáš Rosecký <jonas.rosecky@collboard.com> (https://collboard.com/-/about/team)"
+        "Pavol Hejný <pavol.hejny@collboard.com> (https://collboard.com/-/about/team)"
     ],
     "repository": {
         "type": "git",
@@ -19,7 +18,9 @@
         "preversion": "npm run lint && npm test",
         "postversion": "git push && git push --tags"
     },
-    "dependencies": {},
+    "dependencies": {
+        "destroyable": "^0.9.0"
+    },
     "devDependencies": {
         "@collboard/modules-sdk": "18.5.101",
         "@types/styled-components": "^4.4.1",

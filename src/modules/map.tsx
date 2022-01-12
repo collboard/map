@@ -76,6 +76,7 @@ declareModule({
                 'blue',
                 20,
             );
+
             registration.addSubdestroyable(
                 virtualArtVersioningSystem.createPrimaryOperation().newArts(polygonArt).persist(),
             );
