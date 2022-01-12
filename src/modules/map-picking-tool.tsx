@@ -31,6 +31,7 @@ declareModule(() => {
         moduleActivatedByIcon: {
             async setup(systems) {
                 const {
+                    // TODO: Pick only the needed systems
                     touchController,
                     virtualArtVersioningSystem,
                     materialArtVersioningSystem,

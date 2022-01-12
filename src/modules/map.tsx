@@ -4,7 +4,7 @@ import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
-import { wgs84ToTileXy } from '../utils/wgs84ToTileXy';
+import { tileXyToWgs84, wgs84ToTileXy } from '../utils/wgs84ToTileXy';
 import { MapPolygonArt } from './map-polygon-art';
 
 declareModule({
@@ -23,9 +23,22 @@ declareModule({
         },
     },
     async setup(systems) {
-        const { virtualArtVersioningSystem, appState } = await systems.request(
+        const {
+            // TODO: Pick only the needed systems
+            virtualArtVersioningSystem,
+            appState,
+            touchController,
+            materialArtVersioningSystem,
+            collSpace,
+            notificationSystem,
+        } = await systems.request(
             'virtualArtVersioningSystem',
             'appState',
+            'touchController',
+            'virtualArtVersioningSystem',
+            'materialArtVersioningSystem',
+            'collSpace',
+            'notificationSystem',
         );
 
         // TODO: If constants to UPPERCASE and config
@@ -81,6 +94,35 @@ declareModule({
                 virtualArtVersioningSystem.createPrimaryOperation().newArts(polygonArt).persist(),
             );
         });
+
+        registration.addSubdestroyable(
+            Registration.fromSubscription((registerAdditionalSubscription) =>
+                touchController.touches.subscribe((touch) => {
+                    const pointOnScreen = touch.firstFrame.position;
+                    const pointOnBoard = collSpace.pickPoint(pointOnScreen).point;
+                    const pointAsTileXy = pointOnBoard.divide(tilePixelSize).add(mapCenterTileXy);
+                    const { coordinatesWgs84: pointAsWgs84 } = tileXyToWgs84({
+                        tilePosition: pointAsTileXy,
+                        zoom: mapZoom,
+                    });
+
+                    console.log({ pointOnScreen, pointOnBoard, pointAsTileXy, pointAsWgs84 });
+
+                    notificationSystem.publish({
+                        type: 'info',
+                        tag: `picked-point-${touch.firstFrame.position}`,
+                        title: 'Picked point on map!',
+                        body: `You have picked point ${pointAsWgs84.toString2D()} on the map.`,
+                        canBeClosed: true,
+                        href: `https://en.mapy.cz/zakladni?x=${pointAsWgs84.x}&y=${pointAsWgs84.y}&z=${mapZoom}&source=coor&id=${pointAsWgs84.x}%2C${pointAsWgs84.y}`,
+                    });
+
+                    const polygonArt = new MapPolygonArt([pointOnBoard, pointOnBoard.add({ x: 10 })], 'blue', 20);
+
+                    materialArtVersioningSystem.createPrimaryOperation().newArts(polygonArt).persist();
+                }),
+            ),
+        );
 
         return registration;
     },
