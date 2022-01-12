@@ -3,6 +3,8 @@ import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
+import { mapCenterWgs84, mapProvider, mapZoom, tilePixelSize } from '../config';
+import { austriaGeojsonArt } from '../geojsons/austria';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
 import { tileXyToWgs84, wgs84ToTileXy } from '../utils/wgs84ToTileXy';
 import { MapPolygonArt } from './map-polygon-art';
@@ -41,15 +43,9 @@ declareModule({
             'notificationSystem',
         );
 
-        // TODO: If constants to UPPERCASE and config
 
-        const tilePixelSize = Vector.square(256 /* TODO: Make some seam-padding */);
+
         const tileCount = new Vector(6, 4 /* TODO: Count based on screen size (appState.windowSize) and tileSize */);
-
-        //const mapProvider = new URL('https://tile-a.openstreetmap.fr/hot');
-        const mapProvider = new URL('https://tile-c.openstreetmap.fr/cyclosm');
-        const mapZoom = 17;
-        const mapCenterWgs84 = new Vector(14.4378005 /* Longitude  */, 50.0755381 /* Latitude  */);
 
         const { position: mapCenterTileXy, remainder: mapCenterTileXyRemainder } = wgs84ToTileXy({
             coordinatesWgs84: mapCenterWgs84,
@@ -94,6 +90,10 @@ declareModule({
                 virtualArtVersioningSystem.createPrimaryOperation().newArts(polygonArt).persist(),
             );
         });
+
+        registration.addSubdestroyable(
+            virtualArtVersioningSystem.createPrimaryOperation().newArts(austriaGeojsonArt).persist(),
+        );
 
         registration.addSubdestroyable(
             Registration.fromSubscription((registerAdditionalSubscription) =>
