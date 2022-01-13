@@ -55,3 +55,8 @@ export function observeByHeartbeat<T>(options: {
 
     return subject;
 }
+
+/**
+ * TODO: Move to main collboard 
+ * TODO: Observable fro mobx object
+ */
