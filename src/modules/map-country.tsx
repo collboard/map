@@ -1,5 +1,6 @@
 import { declareModule } from '@collboard/modules-sdk';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
+import czechiaGeojson from '../../assets/maps/czechia.min1.geojson.json';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { GeojsonArt } from './map-geojson-art';
 
@@ -20,15 +21,18 @@ declareModule({
     },
     async setup(systems) {
         const { virtualArtVersioningSystem } = await systems.request('virtualArtVersioningSystem');
-
-        // @see https://nominatim.org/release-docs/develop/api/Search/
-        // TODO: Put Geojsons into assets
-        // TODO: Degrade Geojsons
-        const response = await fetch(
-            `https://nominatim.openstreetmap.org/search?country=czechia&format=geojson&polygon_geojson=1`,
-        );
-        const geojson = await response.json();
-
-        return virtualArtVersioningSystem.createPrimaryOperation().newArts(new GeojsonArt(geojson)).persist();
+        return virtualArtVersioningSystem.createPrimaryOperation().newArts(new GeojsonArt(czechiaGeojson)).persist();
     },
 });
+
+/*
+// @see https://nominatim.org/release-docs/develop/api/Search/
+// TODO: Put Geojsons into assets
+// TODO: Degrade Geojsons @see https://www.npmjs.com/package/simplify-geojson @see https://mapshaper.org/
+const response = await fetch(
+    `https://nominatim.openstreetmap.org/search?country=czechia&format=geojson&polygon_geojson=1`,
+);
+const geojson = await response.json();
+
+// TODO: Geojson server + caching
+*/
