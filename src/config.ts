@@ -14,3 +14,7 @@ export const mapCenterWgs84 = new Vector(14.5 /* Longitude  */, 50 /* Latitude  
 export const mapCenterTileXy = wgs84ToTileXy(mapCenterWgs84);
 export const mapCenterTileXyRound = mapCenterTileXy.map(Math.floor /* TODO: Floor OR round? */);
 export const mapCenterTileXyRoundRemainder = mapCenterTileXy.subtract(mapCenterTileXyRound);
+
+/**
+ * TODO: !!! mapProvider cycle between tile-a tile-b tile-c
+ */
