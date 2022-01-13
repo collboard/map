@@ -4,7 +4,8 @@ import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { mapCenterTileXy, tilePixelSize } from '../config';
 import { IGeojson } from '../interfaces/IGeojson';
-import { getAllCoordinatesOf } from '../utils/getAllPointsOf';
+import { getAllPointsOf } from '../utils/getAllPointsOf';
+import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
 import { wgs84ToTileXy } from '../utils/wgs84ToTileXy';
 
 export const SVG_PADDING = 10;
@@ -74,7 +75,7 @@ export class GeojsonArt extends Abstract2dArt {
     }
 
     private calculateBoundingBox() {
-        this.pointsOnBoard = getAllCoordinatesOf(this.geojson).map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
+        this.pointsOnBoard = getAllPointsOf(this.geojson).map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
         const xVals = this.pointsOnBoard.map((point) => point.x || 0);
         const yVals = this.pointsOnBoard.map((point) => point.y || 0);
         this.minX = Math.min.apply(null, xVals);
@@ -110,10 +111,10 @@ export class GeojsonArt extends Abstract2dArt {
                     height={this.maxY - this.minY + 2 * SVG_PADDING}
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    {getAllPolygonsOf(this.geojson).map((feature, i) => (
+                    {getAllSimplePolygonsOf(this.geojson).map((feature, i) => (
                         <polygon
                             key={i}
-                            points={getAllCoordinatesOf(feature)
+                            points={getAllPointsOf(feature)
                                 .map((pointAsWgs84) => {
                                     return this.wgs84ToBoard(pointAsWgs84)
                                         .subtract(new Vector(this.minX - SVG_PADDING, this.minY - SVG_PADDING))
