@@ -73,9 +73,6 @@ declareModule({
 
                         renderedTiles[tileUri] = tileArt;
 
-                        // TODO: Free tiles from memory
-                        // TODO: Fillup the screen by tiles (translate+zoom)
-
                         tileArt.defaultZIndex = -1;
                         tileArt.setShift(
                             tileCoords
@@ -112,5 +109,7 @@ declareModule({
 });
 
 /**
- * TODO: TileXy -> Tile
+ * TODO: !!! TileXy -> Tile
+ * TODO: !!! Free tiles from memory
+ * TODO: !!! Fillup the screen by tiles (translate+zoom)
  */
