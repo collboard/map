@@ -1,21 +1,23 @@
-import { IDeepsingleArray } from '../utils/unwrapDeepsingleArray';
+import { IDeepmultiArray } from '../utils/unwrapDeepsingleArray';
 
-export type IGeojson = IGeojsonFeatureCollection | IGeojsonFeature | IGeojsonMultiPolygon | IGeojsonSimplePolygon;
+export type IGeojson = IGeojsonFeatureCollection | IGeojsonFeature | IGeojsonPolygon | IGeojsonSimplePolygon;
 
 export interface IGeojsonFeatureCollection extends IGeojsonEntity<'FeatureCollection'> {
     features: IGeojsonFeature[];
 }
 
 export interface IGeojsonFeature extends IGeojsonEntity<'Feature'> {
-    geometry: IGeojsonSimplePolygon | IGeojsonMultiPolygon;
+    geometry: IGeojsonSimplePolygon | IGeojsonPolygon;
 }
 
-export interface IGeojsonMultiPolygon extends IGeojsonEntity<'Polygon' | 'MultiPolygon'> {
-    coordinates: IDeepsingleArray<IGeojsonCoords[][]>;
+export interface IGeojsonPolygon extends IGeojsonEntity<'Polygon' | 'MultiPolygon'> {
+    coordinates: IDeepmultiArray<IGeojsonCoords>;
 }
 
 /**
  * Note: ...
+ *
+ * Every IGeojsonSimplePolygon is also IGeojsonPolygon.
  */
 export interface IGeojsonSimplePolygon extends IGeojsonEntity<'Polygon'> {
     coordinates: IGeojsonCoords[];

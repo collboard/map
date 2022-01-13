@@ -115,8 +115,11 @@ describe(`parsing of coordinates`, () => {
         ]);
     });
 
+    /*
+    Note: This is already tested by TypeScript
     it(`throws on wrong input`, () => {
         expect(() => parseCoordinates([[[[[1], [3]]]]])).toThrowError(`Can not parse coordinates`);
         expect(() => parseCoordinates([[[[[1, 2, [3, 4]]]]]])).toThrowError(`Can not parse coordinates`);
     });
+    */
 });
