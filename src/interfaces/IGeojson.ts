@@ -1,3 +1,4 @@
+import { string_url } from '@collboard/modules-sdk';
 import { IDeepmultiArray } from '../utils/unwrapDeepsingleArray';
 
 export type IGeojson = IGeojsonFeatureCollection | IGeojsonFeature | IGeojsonPolygon | IGeojsonSimplePolygon;
@@ -35,6 +36,20 @@ export interface IGeojsonProperties {
     type?: string;
     value?: number | null;
     name?: string;
+
+    // From OpenStreetMap
+    place_id?: number;
+    osm_type?: 'node' | 'way' | 'relation';
+    osm_id?: number;
+    display_name?: string;
+    place_rank?: number;
+    category?: string;
+
+    /**
+     * Range <0;1>
+     */
+    importance?: number;
+    icon?: string_url;
 }
 
 export type latitude = number;
