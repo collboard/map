@@ -122,7 +122,8 @@ export class GeojsonArt extends Abstract2dArt {
                                 })
                                 .join(' ')}
                             style={{
-                                fill: 'blue' /* TODO: As Geojson param /+ additional config */,
+                                fill: '#009edd22' /* TODO: As Geojson param /+ additional config */,
+
                                 stroke: 'black',
                                 strokeWidth: 1,
                             }}

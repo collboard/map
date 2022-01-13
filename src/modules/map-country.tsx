@@ -1,6 +1,7 @@
 import { declareModule } from '@collboard/modules-sdk';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import czechiaGeojson from '../../assets/maps/czechia.min1.geojson.json';
+import slovakiaGeojson from '../../assets/maps/slovakia.min1.geojson.json';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { GeojsonArt } from './map-geojson-art';
 
@@ -21,7 +22,10 @@ declareModule({
     },
     async setup(systems) {
         const { virtualArtVersioningSystem } = await systems.request('virtualArtVersioningSystem');
-        return virtualArtVersioningSystem.createPrimaryOperation().newArts(new GeojsonArt(czechiaGeojson)).persist();
+        return virtualArtVersioningSystem
+            .createPrimaryOperation()
+            .newArts(new GeojsonArt(czechiaGeojson), new GeojsonArt(slovakiaGeojson))
+            .persist();
     },
 });
 

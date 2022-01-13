@@ -8,5 +8,5 @@ https://nominatim.openstreetmap.org/search?country=czechia&format=geojson&polygo
 
 And here are some other usefull tools:
 
-- https://nominatim.org/release-docs/develop/api/Search/
-- https://www.npmjs.com/package/simplify-geojsohttps://mapshaper.org/
+-   https://nominatim.org/release-docs/develop/api/Search/
+-   https://www.npmjs.com/package/simplify-geojsohttps://mapshaper.org/
