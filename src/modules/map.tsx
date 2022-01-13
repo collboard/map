@@ -91,10 +91,6 @@ declareModule({
         });
 
         registration.addSubdestroyable(
-            virtualArtVersioningSystem.createPrimaryOperation().newArts(austriaGeojsonArt).persist(),
-        );
-
-        registration.addSubdestroyable(
             Registration.fromSubscription((registerAdditionalSubscription) =>
                 touchController.touches.subscribe((touch) => {
                     const pointOnScreen = touch.firstFrame.position;
