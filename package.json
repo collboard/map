@@ -22,7 +22,7 @@
         "destroyable": "^0.9.0"
     },
     "devDependencies": {
-        "@collboard/modules-sdk": "18.5.101",
+        "@collboard/modules-sdk": "18.5.102",
         "@types/styled-components": "^4.4.1",
         "rxjs": "^7.5.2",
         "styled-components": "^4.4.1",
