@@ -45,42 +45,50 @@ declareModule({
 
         const registration = Registration.void();
 
+        const renderedTiles: Record<string, ImageArt> = {};
+
         observeByHeartbeat({ getValue: () => appState.transform }).subscribe((transform) => {
+            const mapCenterTileOffset = transform.translate
+                .divide(tilePixelSize)
+                .map(Math.floor /* TODO: Floor OR round? */);
+
             for (let y = 0; y < tileCount.y; y++) {
                 for (let x = 0; x < tileCount.x; x++) {
-                    const mapCenterTileOffset = transform.translate
-                        .divide(tilePixelSize)
-                        .map(Math.floor /* TODO: Floor OR round? */);
-
                     const tileCoords = new Vector(x, y);
-                    const tileArt = new ImageArt(
+                    const tileUri =
                         // TODO: Map server and type provider
-                        `${mapProvider.href}/${mapZoom}/${tileCoords
+                        `${mapZoom}/${tileCoords
                             .add(mapCenterTileXyRound)
                             .subtract(mapCenterTileOffset)
                             .subtract(tileCount.half())
                             .toArray2D()
 
-                            .join('/')}.png`,
-                        'Map tile',
-                    );
+                            .join('/')}.png`;
+                    if (!renderedTiles[tileUri]) {
+                        const tileArt = new ImageArt(
+                            // TODO: Map server and type provider
+                            `${mapProvider.href}/${tileUri}`,
+                            'Map tile',
+                        );
 
-                    // TODO: Cache tiles and do not rerender them
-                    // TODO: Free tiles from memory
-                    // TODO: Fillup the screen by tiles (translate+zoom)
+                        renderedTiles[tileUri] = tileArt;
 
-                    tileArt.defaultZIndex = -1;
-                    tileArt.setShift(
-                        tileCoords
-                            .subtract(tileCount.half())
-                            .subtract(mapCenterTileXyRoundRemainder)
-                            .subtract(mapCenterTileOffset)
-                            .multiply(tilePixelSize),
-                    );
+                        // TODO: Free tiles from memory
+                        // TODO: Fillup the screen by tiles (translate+zoom)
 
-                    registration.addSubdestroyable(
-                        virtualArtVersioningSystem.createPrimaryOperation().newArts(tileArt).persist(),
-                    );
+                        tileArt.defaultZIndex = -1;
+                        tileArt.setShift(
+                            tileCoords
+                                .subtract(tileCount.half())
+                                .subtract(mapCenterTileXyRoundRemainder)
+                                .subtract(mapCenterTileOffset)
+                                .multiply(tilePixelSize),
+                        );
+
+                        registration.addSubdestroyable(
+                            virtualArtVersioningSystem.createPrimaryOperation().newArts(tileArt).persist(),
+                        );
+                    }
                 }
             }
         });
