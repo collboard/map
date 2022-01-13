@@ -69,7 +69,10 @@ declareModule({
 
                 tileArt.defaultZIndex = -1;
                 tileArt.setShift(
-                    tileCoords.subtract(tileCount.half()).add(mapCenterTileXyRoundRemainder).multiply(tilePixelSize),
+                    tileCoords
+                        .subtract(tileCount.half())
+                        .subtract(mapCenterTileXyRoundRemainder)
+                        .multiply(tilePixelSize),
                 );
 
                 registration.addSubdestroyable(
@@ -98,6 +101,7 @@ declareModule({
                     const pointAsTileXy = pointOnBoard.divide(tilePixelSize).add(mapCenterTileXy);
                     const pointAsWgs84 = tileXyToWgs84(pointAsTileXy);
 
+                    // TODO: !!! Remove all console.logs
                     console.log({ pointOnScreen, pointOnBoard, pointAsTileXy, pointAsWgs84 });
 
                     notificationSystem.publish({
@@ -119,3 +123,7 @@ declareModule({
         return registration;
     },
 });
+
+/**
+ *
+ */

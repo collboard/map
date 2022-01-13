@@ -8,7 +8,7 @@ export const tilePixelSize = Vector.square(256 /* TODO: Make some seam-padding *
 export const mapProvider = new URL('https://tile-c.openstreetmap.fr/cyclosm');
 // export const mapZoom = 17;
 export const mapZoom = 7;
-export const mapCenterWgs84 = new Vector(14.4378005 /* Longitude  */, 50.0755381 /* Latitude  */);
+export const mapCenterWgs84 = new Vector(14.5 /* Longitude  */, 50 /* Latitude  */);
 
 // TODO: How to mark counted confiuration
 export const mapCenterTileXy = wgs84ToTileXy(mapCenterWgs84);
