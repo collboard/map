@@ -3,10 +3,17 @@ import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { mapCenterWgs84, mapProvider, mapZoom, tilePixelSize } from '../config';
-import { austriaGeojsonArt } from '../geojsons/austria';
+import {
+    mapCenterTileXy,
+    mapCenterTileXyRound,
+    mapCenterTileXyRoundRemainder,
+    mapProvider,
+    mapZoom,
+    tilePixelSize,
+} from '../config';
+import { austriaGeojsonArt } from '../data/geojsons/austria';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
-import { tileXyToWgs84, wgs84ToTileXy } from '../utils/wgs84ToTileXy';
+import { tileXyToWgs84 } from '../utils/wgs84ToTileXy';
 import { MapPolygonArt } from './map-polygon-art';
 
 declareModule({
@@ -43,14 +50,7 @@ declareModule({
             'notificationSystem',
         );
 
-
-
         const tileCount = new Vector(6, 4 /* TODO: Count based on screen size (appState.windowSize) and tileSize */);
-
-        const { position: mapCenterTileXy, remainder: mapCenterTileXyRemainder } = wgs84ToTileXy({
-            coordinatesWgs84: mapCenterWgs84,
-            zoom: mapZoom,
-        }); // new Vector(133, 83 /* Reverse */);
 
         const registration = Registration.void();
 
@@ -60,7 +60,7 @@ declareModule({
                 const tileArt = new ImageArt(
                     // TODO: Map server and type provider
                     `${mapProvider.href}/${mapZoom}/${tileCoords
-                        .add(mapCenterTileXy)
+                        .add(mapCenterTileXyRound)
                         .subtract(tileCount.half())
                         .toArray2D()
 
@@ -70,7 +70,7 @@ declareModule({
 
                 tileArt.defaultZIndex = -1;
                 tileArt.setShift(
-                    tileCoords.subtract(tileCount.half()).add(mapCenterTileXyRemainder).multiply(tilePixelSize),
+                    tileCoords.subtract(tileCount.half()).add(mapCenterTileXyRoundRemainder).multiply(tilePixelSize),
                 );
 
                 registration.addSubdestroyable(
@@ -101,10 +101,7 @@ declareModule({
                     const pointOnScreen = touch.firstFrame.position;
                     const pointOnBoard = collSpace.pickPoint(pointOnScreen).point;
                     const pointAsTileXy = pointOnBoard.divide(tilePixelSize).add(mapCenterTileXy);
-                    const { coordinatesWgs84: pointAsWgs84 } = tileXyToWgs84({
-                        tilePosition: pointAsTileXy,
-                        zoom: mapZoom,
-                    });
+                    const pointAsWgs84 = tileXyToWgs84(pointAsTileXy);
 
                     console.log({ pointOnScreen, pointOnBoard, pointAsTileXy, pointAsWgs84 });
 
