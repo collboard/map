@@ -14,7 +14,7 @@ declareModule(() => {
             license,
             repository,
             title: { en: 'Sample button' },
-            categories: ['Productivity', 'Buttons', 'Template'],
+            categories: ['Geography','Productivity'],
             icon: helloWorldIcon,
             flags: {
                 isTemplate: true,

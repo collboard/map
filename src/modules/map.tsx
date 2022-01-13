@@ -11,7 +11,6 @@ import {
     mapZoom,
     tilePixelSize,
 } from '../config';
-import { austriaGeojsonArt } from '../data/geojsons/austria';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
 import { tileXyToWgs84 } from '../utils/wgs84ToTileXy';
 import { MapPolygonArt } from './map-polygon-art';
@@ -25,7 +24,7 @@ declareModule({
         license,
         repository,
         title: { en: 'Sample button' },
-        categories: ['Productivity', 'Buttons', 'Template'],
+        categories: ['Geography', 'Productivity', 'Template'],
         icon: helloWorldIcon,
         flags: {
             isTemplate: true,
