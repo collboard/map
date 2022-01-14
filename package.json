@@ -20,7 +20,7 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "@collboard/modules-sdk": "18.5.102",
+        "@collboard/modules-sdk": "18.5.103",
         "@types/jest": "^27.4.0",
         "@types/styled-components": "^4.4.1",
         "destroyable": "^0.9.0",
