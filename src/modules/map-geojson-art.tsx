@@ -44,7 +44,7 @@ export class GeojsonArt extends Abstract2dArt {
 
     public get acceptedAttributes() {
         return [];
-        //return ['color', 'weight', 'size'];
+        // return ['color', 'weight', 'size'];
     }
 
     /*

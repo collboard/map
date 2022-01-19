@@ -6,18 +6,18 @@ import { IDeepmultiArray } from './unwrapDeepsingleArray';
  */
 export function parseCoordinates(
     array: IDeepmultiArray<IGeojsonCoords>,
-    _coordinates: Array<Array<IGeojsonCoords>> = [],
-): Array<Array<IGeojsonCoords>> {
+    _coordinates: IGeojsonCoords[][] = [],
+): IGeojsonCoords[][] {
     // Note: testing o if it matches following patter [[1, 1], [2, 2], ...]
     if (
-        (array as Array<IGeojsonCoords>).every(
+        (array as IGeojsonCoords[]).every(
             (arrayItem) =>
                 Array.isArray(arrayItem) &&
                 arrayItem.length === 2 &&
                 arrayItem.every((arrayItemItem) => typeof arrayItemItem === 'number'),
         )
     ) {
-        _coordinates.push(array as Array<IGeojsonCoords>);
+        _coordinates.push(array as IGeojsonCoords[]);
         return _coordinates;
     }
 

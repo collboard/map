@@ -56,7 +56,7 @@ declareModule(() => {
                         const pointAsWgs84 = tileXyToWgs84(pointAsTileXy);
 
                         // TODO: !!! Remove all console.logs
-                        console.log({ pointOnScreen, pointOnBoard, pointAsTileXy, pointAsWgs84 });
+                        // console.log({ pointOnScreen, pointOnBoard, pointAsTileXy, pointAsWgs84 });
 
                         const notification = notificationSystem.publish({
                             type: 'info',

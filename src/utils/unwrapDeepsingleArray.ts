@@ -1,5 +1,5 @@
 export type IDeepsingleArray<T> = T | [IDeepsingleArray<T>];
-export type IDeepmultiArray<T> = T | Array<IDeepmultiArray<T>>;
+export type IDeepmultiArray<T> = T | IDeepmultiArray<T>[];
 
 export function unwrapDeepsingleArray<T>(deepsingleArray: IDeepsingleArray<T>): T {
     if (Array.isArray(deepsingleArray) && deepsingleArray.length === 1) {
