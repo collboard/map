@@ -3,6 +3,7 @@ import './modules/map-controls';
 import './modules/map-country';
 import './modules/map-picking-tool';
 import './modules/map-polygon-art';
+import './modules/map-shortcuts';
 
 /**
  * TODO: !!! Make multimodule packs
