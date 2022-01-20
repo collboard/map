@@ -16,7 +16,7 @@ declareModule(() => {
             contributors,
             license,
             repository,
-            title: { en: 'Sample button' },
+            title: { en: 'Map picking tool' },
             categories: ['Geography', 'Productivity'],
             icon: helloWorldIcon,
             flags: {

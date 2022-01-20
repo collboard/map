@@ -1,5 +1,4 @@
-import { declareModule, ExtraJsxPlace, makeExtrajsxModule, randomEmoji, styled } from '@collboard/modules-sdk';
-import * as React from 'react';
+import { declareModule, ExtraJsxPlace, makeExtrajsxModule, randomEmoji, React, styled } from '@collboard/modules-sdk';
 import helloWorldButton from '../../assets/hello-world-button.png';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
@@ -14,7 +13,7 @@ declareModule(
             contributors,
             license,
             repository,
-            title: { en: 'Sample button' },
+            title: { en: 'Map controls' },
             categories: ['Geography', 'Buttons'],
             icon: helloWorldIcon,
             flags: {
