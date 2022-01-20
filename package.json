@@ -22,7 +22,7 @@
         "xyzt": "^4.7.0"
     },
     "devDependencies": {
-        "@collboard/modules-sdk": "18.11.1",
+        "@collboard/modules-sdk": "18.12.0",
         "@types/jest": "^27.4.0",
         "jest": "^27.4.7",
         "ts-jest": "^27.1.2",
