@@ -18,14 +18,14 @@ declareModule({
         version,
     },
     async setup(systems) {
-        const { shortcutsSystem, appState } = await systems.request('shortcutsSystem', 'appState');
-        const shortcuts = new Map<IShortcut, ITransformData>();
+        const { controlSystem, appState } = await systems.request('controlSystem', 'appState');
+        const defaultShortcuts = new Map<IShortcut, ITransformData>();
 
-        shortcuts.set(['WheelUp'], Transform.scale(WHEEL_SCALE_FACTOR_STEP));
-        shortcuts.set(['WheelDown'], Transform.scale(WHEEL_SCALE_FACTOR_STEP).inverse());
+        defaultShortcuts.set(['WheelUp'], Transform.scale(WHEEL_SCALE_FACTOR_STEP));
+        defaultShortcuts.set(['WheelDown'], Transform.scale(WHEEL_SCALE_FACTOR_STEP).inverse());
 
-        return shortcutsSystem.registerShortcut({
-            shortcuts,
+        return controlSystem.registerControl({
+            defaultShortcuts,
             executor: ({ value }) => {
                 const transform = Transform.fromObject(value);
                 appState.transform = appState.transform.apply(transform);
