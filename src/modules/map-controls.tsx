@@ -45,6 +45,8 @@ declareModule(
 );
 
 const ButtonElement = styled.button`
+    display: none /* TODO: !!! Use or remove whole module */;
+
     background-color: #906090;
 
     img {

@@ -10,5 +10,9 @@ Maps for the geography class for the [Collboard.com](https://collboard.com/) in 
 [![Issues](https://img.shields.io/github/issues/collboard/map.svg?style=flat)](https://github.com/collboard/map/issues)
 <!--/Badges-->
 
-<!-- TODO: Add screenshot-->
+
+
+[![Module showcase](./assets/screenshots/map.png) Create your own map board](https://collboard.com/new?redirect=1&modulesOn=@collboard/map,@collboard/map-controls)
+
+
 <!-- TODO: Add Prague logo-->
