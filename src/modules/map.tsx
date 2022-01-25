@@ -1,4 +1,5 @@
 import { declareModule, ImageArt } from '@collboard/modules-sdk';
+import { Operation } from '@collboard/modules-sdk/types/50-systems/ArtVersionSystem/Operation';
 import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
@@ -41,13 +42,13 @@ declareModule({
         );
 
         // TODO: Count based on screen size (appState.windowSize) and tileSize + observe
-        const tileCount = new Vector(6, 4);
+        const tileCount = new Vector(2, 2);
 
-        const registration = Registration.void();
-
-        const renderedTiles: Record<string, ImageArt> = {};
+        let lastRenderedTiles: Record<string, Operation> = {};
 
         observeByHeartbeat({ getValue: () => appState.transform }).subscribe((transform) => {
+            const newRenderedTiles: Record<string, Operation> = {};
+
             const mapCenterTileOffset = transform.translate
                 .divide(tilePixelSize)
                 .map(Math.floor /* TODO: Floor OR round? */);
@@ -64,14 +65,15 @@ declareModule({
                             .toArray2D()
 
                             .join('/')}.png`;
-                    if (!renderedTiles[tileUri]) {
+
+                    if (lastRenderedTiles[tileUri]) {
+                        newRenderedTiles[tileUri] = lastRenderedTiles[tileUri];
+                    } else {
                         const tileArt = new ImageArt(
                             // TODO: Map server and type provider
                             `${mapProvider.href}/${tileUri}`,
                             'Map tile',
                         );
-
-                        renderedTiles[tileUri] = tileArt;
 
                         tileArt.defaultZIndex = -1;
                         tileArt.setShift(
@@ -82,12 +84,25 @@ declareModule({
                                 .multiply(tilePixelSize),
                         );
 
-                        registration.addSubdestroyable(
-                            virtualArtVersioningSystem.createPrimaryOperation().newArts(tileArt).persist(),
-                        );
+                        newRenderedTiles[tileUri] = virtualArtVersioningSystem
+                            .createPrimaryOperation()
+                            .newArts(tileArt)
+                            .persist();
                     }
                 }
             }
+
+            // console.log({ lastRenderedTiles, newRenderedTiles });
+
+            for (const [tileUri, mapTile] of Object.entries(lastRenderedTiles).filter(
+                ([tileUri]) => !newRenderedTiles[tileUri],
+            )) {
+                // console.log('removing', tileUri);
+                /* not await to keep consistency */ mapTile.destroy();
+                delete lastRenderedTiles[tileUri];
+            }
+
+            lastRenderedTiles = newRenderedTiles;
         });
 
         /*/
@@ -104,7 +119,11 @@ declareModule({
         });
         /**/
 
-        return registration;
+        return new Registration(async () => {
+            for (const mapTile of Object.values(lastRenderedTiles)) {
+                await mapTile.destroy();
+            }
+        });
     },
 });
 
