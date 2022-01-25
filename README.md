@@ -12,7 +12,7 @@ Maps for the geography class for the [Collboard.com](https://collboard.com/) in 
 
 
 
-[![Module showcase](./assets/screenshots/map.png) Create your own map board](https://collboard.com/new?redirect=1&modulesOn=@collboard/map,@collboard/map-controls)
+[![Module showcase](./assets/screenshots/map.png) Create your own map board](https://collboard.com/new?redirect=1&modulesOn=@collboard/map,@collboard/map-controls,@collboard/map-country)
 
 
 <!-- TODO: Add Prague logo-->
