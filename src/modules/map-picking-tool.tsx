@@ -1,10 +1,11 @@
 import { declareModule, makeIconModuleOnModule, ToolbarName } from '@collboard/modules-sdk';
 import { Registration } from 'destroyable';
+import { spaceTrim } from 'spacetrim';
 import { forTime } from 'waitasecond';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { mapCenterTileXy, tilePixelSize } from '../config';
-import { tileXyToWgs84 } from '../utils/wgs84ToTileXy';
+import { MAP_BASE_CENTER, TILE_SIZE } from '../config';
+import { Tile } from '../semantic/Tile';
 import { MapPolygonArt } from './map-polygon-art';
 
 declareModule(() => {
@@ -48,21 +49,28 @@ declareModule(() => {
                     'notificationSystem',
                 );
 
+                const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
+
                 return Registration.fromSubscription((registerAdditionalSubscription) =>
                     touchController.touches.subscribe(async (touch) => {
                         const pointOnScreen = touch.firstFrame.position;
                         const pointOnBoard = collSpace.pickPoint(pointOnScreen).point;
-                        const pointAsTileXy = pointOnBoard.divide(tilePixelSize).add(mapCenterTileXy);
-                        const pointAsWgs84 = tileXyToWgs84(pointAsTileXy);
+                        const pointAsTile = new Tile(pointOnBoard.divide(TILE_SIZE).add(mapCenterTile));
+                        const pointAsWgs84 = pointAsTile.toWgs84();
 
-                        // TODO: !!! Remove all console.logs
-                        // console.log({ pointOnScreen, pointOnBoard, pointAsTileXy, pointAsWgs84 });
+                        // console.log({ pointOnScreen, pointOnBoard, pointAsTile, pointAsWgs84 });
 
                         const notification = notificationSystem.publish({
                             type: 'info',
                             tag: `picked-point-${touch.firstFrame.position}`,
                             title: 'Picked point on map!',
-                            body: `You have picked point ${touch.firstFrame.position} on the map.`,
+                            body: spaceTrim(`
+                              You have picked:
+                                - point ${pointOnScreen} on the screen.
+                                - point ${pointOnBoard} on the board.
+                                - coordinate ${pointAsWgs84} on the map.
+
+                            `),
                             canBeClosed: true,
                         });
 
@@ -82,3 +90,7 @@ declareModule(() => {
         },
     });
 });
+
+/**
+ * TODO: !!! Remove all console.logs
+ */

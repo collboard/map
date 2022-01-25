@@ -1,11 +1,12 @@
-import { Abstract2dArt, classNames, declareModule, makeArtModule,React } from '@collboard/modules-sdk';
+import { Abstract2dArt, classNames, declareModule, makeArtModule, React } from '@collboard/modules-sdk';
 import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { mapCenterTileXy, tilePixelSize } from '../config';
+import { MAP_BASE_CENTER, TILE_SIZE } from '../config';
 import { IGeojson } from '../interfaces/IGeojson';
+import { Tile } from '../semantic/Tile';
+import { Wgs84 } from '../semantic/Wgs84';
 import { getAllPointsOf } from '../utils/getAllPointsOf';
 import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
-import { wgs84ToTileXy } from '../utils/wgs84ToTileXy';
 
 export const SVG_PADDING = 10;
 export const IS_NEAR_DISTANCE = 20;
@@ -83,11 +84,13 @@ export class GeojsonArt extends Abstract2dArt {
         this.maxY = Math.max.apply(null, yVals);
     }
 
-    private wgs84ToBoard(pointAsWgs84: Vector): Vector {
-        // TODO: More direct way how to convert pointAsWgs84 to pointOnBoard / pointOnScreen - probably use CoordinateSystems
+    private wgs84ToBoard(pointAsWgs84: Wgs84): Vector {
+
         // TODO: !!! To global utils
-        const pointAsTileXy = wgs84ToTileXy(pointAsWgs84);
-        const pointOnBoard = pointAsTileXy.subtract(mapCenterTileXy).multiply(tilePixelSize);
+
+        const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
+        const pointAsTile = Tile.fromWgs84(pointAsWgs84);
+        const pointOnBoard = pointAsTile.subtract(mapCenterTile).multiply(TILE_SIZE);
 
         return pointOnBoard;
     }

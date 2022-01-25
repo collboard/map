@@ -4,7 +4,9 @@ import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { mapCenterTileXyRound, mapCenterTileXyRoundRemainder, mapProvider, mapZoom, tilePixelSize } from '../config';
+import { MAP_BASE_CENTER, MAP_BASE_ZOOM, MAP_PROVIDER, TILE_SIZE } from '../config';
+import { Tile } from '../semantic/Tile';
+import { TileOnScreen } from '../semantic/TileOnScreen';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
 
 declareModule({
@@ -46,20 +48,24 @@ declareModule({
 
         let lastRenderedTiles: Record<string, Operation> = {};
 
+        const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
+        const mapCenterTileRound = mapCenterTile.map(Math.floor /* TODO: Floor OR round? */);
+        const mapCenterTileRoundRemainder = mapCenterTile.subtract(mapCenterTileRound);
+
         observeByHeartbeat({ getValue: () => appState.transform }).subscribe((transform) => {
             const newRenderedTiles: Record<string, Operation> = {};
 
             const mapCenterTileOffset = transform.translate
-                .divide(tilePixelSize)
+                .divide(TILE_SIZE)
                 .map(Math.floor /* TODO: Floor OR round? */);
 
             for (let y = 0; y < tileCount.y; y++) {
                 for (let x = 0; x < tileCount.x; x++) {
-                    const tileCoords = new Vector(x, y);
+                    const tileCoords = new TileOnScreen(x, y);
                     const tileUri =
                         // TODO: Map server and type provider
-                        `${mapZoom}/${tileCoords
-                            .add(mapCenterTileXyRound)
+                        `${MAP_BASE_ZOOM}/${tileCoords
+                            .add(mapCenterTileRound)
                             .subtract(mapCenterTileOffset)
                             .subtract(tileCount.half())
                             .toArray2D()
@@ -71,7 +77,7 @@ declareModule({
                     } else {
                         const tileArt = new ImageArt(
                             // TODO: Map server and type provider
-                            `${mapProvider.href}/${tileUri}`,
+                            `${MAP_PROVIDER.href}/${tileUri}`,
                             'Map tile',
                         );
 
@@ -79,9 +85,9 @@ declareModule({
                         tileArt.setShift(
                             tileCoords
                                 .subtract(tileCount.half())
-                                .subtract(mapCenterTileXyRoundRemainder)
+                                .subtract(mapCenterTileRoundRemainder)
                                 .subtract(mapCenterTileOffset)
-                                .multiply(tilePixelSize),
+                                .multiply(TILE_SIZE),
                         );
 
                         newRenderedTiles[tileUri] = virtualArtVersioningSystem
@@ -128,7 +134,7 @@ declareModule({
 });
 
 /**
- * TODO: !!! TileXy -> Tile
+ * TODO: !!! Tile -> Tile
  * TODO: !!! Free tiles from memory
  * TODO: !!! Fillup the screen by tiles (translate+zoom)
  */

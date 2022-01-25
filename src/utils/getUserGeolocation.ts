@@ -1,6 +1,7 @@
 import { Vector } from 'xyzt';
+import { Wgs84 } from '../semantic/Wgs84';
 
-export function getUserGeolocation(): Promise<Vector> {
+export function getUserGeolocation(): Promise<Wgs84> {
     return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
@@ -8,7 +9,7 @@ export function getUserGeolocation(): Promise<Vector> {
                     const latitude = position.coords.latitude;
                     const longitude = position.coords.longitude;
 
-                    resolve(new Vector(longitude, latitude));
+                    resolve(new Wgs84(longitude, latitude));
                 },
                 () => {
                     reject(new Error(`Unable to retrieve your location`));
