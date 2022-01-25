@@ -4,7 +4,7 @@ import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { MAP_BASE_ZOOM, MAP_PROVIDER, TILE_SIZE } from '../config';
+import { MAP_BASE_ZOOM, MAP_PROVIDER, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileOnScreen } from '../semantic/TileOnScreen';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
 
@@ -42,8 +42,10 @@ declareModule({
             'notificationSystem',
         );
 
-        // TODO: Count based on screen size (appState.windowSize) and tileSize + observe
-        const tileCount = new TileOnScreen(1, 1);
+        // TODO: Observe appState.windowSize
+        const sizeOfScreenInTiles = new TileOnScreen(
+            appState.windowSize.divide(TILE_SIZE).scale(TILE_COUNT_PADDING).map(Math.ceil),
+        );
 
         let lastRenderedTiles: Record<string, Operation> = {};
 
@@ -51,52 +53,55 @@ declareModule({
         //const mapCenterTileRound = mapCenterTile.map(Math.floor /* TODO: Floor OR round? */);
         //const mapCenterTileRoundRemainder = mapCenterTile.subtract(mapCenterTileRound);
 
-        observeByHeartbeat({ getValue: () => appState.transform }).subscribe((transform) => {
-            const newRenderedTiles: Record<string, Operation> = {};
+        observeByHeartbeat({ getValue: () => appState.transform })
+            // TODO: Debounce by some distance value
+            .subscribe((transform) => {
+                const newRenderedTiles: Record<string, Operation> = {};
 
-            for (let y = 0; y < tileCount.y; y++) {
-                for (let x = 0; x < tileCount.x; x++) {
-                    const tileOnScreen = new TileOnScreen(new Vector(x, y).subtract(tileCount.half()));
-                    const { tile, remainder: tileRemainder } = tileOnScreen.toTile(transform);
+                for (let y = 0; y < sizeOfScreenInTiles.y; y++) {
+                    for (let x = 0; x < sizeOfScreenInTiles.x; x++) {
+                        const tileOnScreen = new TileOnScreen(new Vector(x, y).subtract(sizeOfScreenInTiles.half()));
 
-                    const tileUri =
-                        // TODO: Map server and type provider
-                        `${MAP_BASE_ZOOM}/${tile.toArray2D().join('/')}.png`;
+                        const { tile, remainder: tileRemainder } = tileOnScreen.toTile(transform);
 
-                    if (lastRenderedTiles[tileUri]) {
-                        newRenderedTiles[tileUri] = lastRenderedTiles[tileUri];
-                    } else {
-                        const tileArt = new ImageArt(
+                        const tileUri =
                             // TODO: Map server and type provider
-                            `${MAP_PROVIDER.href}/${tileUri}`,
-                            'Map tile',
-                        );
+                            `${MAP_BASE_ZOOM}/${tile.toArray2D().join('/')}.png`;
 
-                        tileArt.defaultZIndex = -1;
-                        tileArt.setShift(
-                            tileOnScreen.subtract(tileRemainder).multiply(TILE_SIZE).subtract(transform.translate),
-                        );
+                        if (lastRenderedTiles[tileUri]) {
+                            newRenderedTiles[tileUri] = lastRenderedTiles[tileUri];
+                        } else {
+                            const tileArt = new ImageArt(
+                                // TODO: Map server and type provider
+                                `${MAP_PROVIDER.href}/${tileUri}`,
+                                'Map tile',
+                            );
 
-                        newRenderedTiles[tileUri] = virtualArtVersioningSystem
-                            .createPrimaryOperation()
-                            .newArts(tileArt)
-                            .persist();
+                            tileArt.defaultZIndex = -1;
+                            tileArt.setShift(
+                                tileOnScreen.subtract(tileRemainder).multiply(TILE_SIZE).subtract(transform.translate),
+                            );
+
+                            newRenderedTiles[tileUri] = virtualArtVersioningSystem
+                                .createPrimaryOperation()
+                                .newArts(tileArt)
+                                .persist();
+                        }
                     }
                 }
-            }
+                // console.log(Object.keys(lastRenderedTiles).length, Object.keys(newRenderedTiles).length);
+                // console.log({ lastRenderedTiles, newRenderedTiles });
 
-            // console.log({ lastRenderedTiles, newRenderedTiles });
+                for (const [tileUri, mapTile] of Object.entries(lastRenderedTiles).filter(
+                    ([tileUri]) => !newRenderedTiles[tileUri],
+                )) {
+                    // console.log('removing', tileUri);
+                    /* not await to keep consistency */ mapTile.destroy();
+                    delete lastRenderedTiles[tileUri];
+                }
 
-            for (const [tileUri, mapTile] of Object.entries(lastRenderedTiles).filter(
-                ([tileUri]) => !newRenderedTiles[tileUri],
-            )) {
-                // console.log('removing', tileUri);
-                /* not await to keep consistency */ mapTile.destroy();
-                delete lastRenderedTiles[tileUri];
-            }
-
-            lastRenderedTiles = newRenderedTiles;
-        });
+                lastRenderedTiles = newRenderedTiles;
+            });
 
         /*/
         observeByHeartbeat({ getValue: () => appState.transform }).subscribe(() => {
