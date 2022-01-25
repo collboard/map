@@ -85,7 +85,7 @@ export class GeojsonArt extends Abstract2dArt {
     }
 
     private wgs84ToBoard(pointAsWgs84: Wgs84): Vector {
-
+        return new Vector(/* !!! */);
         // TODO: !!! To global utils
 
         const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);

@@ -5,15 +5,19 @@ import { Tile } from './Tile';
 export class TileOnScreen extends Vector {
     public readonly type = 'TileOnScreen';
 
-    public toTile(transform: Transform): { tile: Tile; remainder: TileOnScreen } {
-        const mapCenterTileOffset = new TileOnScreen(transform.translate.divide(TILE_SIZE));
+    public constructor(tile: { x: number; y: number; z: number });
+    public constructor(tile: { x: number; y: number; zoom: number });
+    public constructor(x: number, y: number, zoom: number);
+    public constructor(...args: any[]) {
+        super(...(typeof args[0] === 'number' ? args : [args[0].x, args[0].y, args[0].zoom || args[0].z]));
+    }
 
-        const tileSmooth = this.add(Tile.fromWgs84(MAP_BASE_CENTER)).subtract(mapCenterTileOffset);
-
-        const tile = new Tile(tileSmooth.map(Math.round /* TODO: Floor OR round? */));
-        const remainder = new TileOnScreen(tileSmooth.subtract(tile));
-
-        return { tile, remainder };
+    public toTile(transform: Transform): Tile {
+        return new Tile(
+            this.add(Tile.fromWgs84(MAP_BASE_CENTER)).subtract(
+                transform.translate.divide(TILE_SIZE.rearrangeAxis(([x, y]) => [x, y, 1])),
+            ),
+        );
     }
 }
 
