@@ -4,8 +4,7 @@ import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { MAP_BASE_CENTER, MAP_BASE_ZOOM, MAP_PROVIDER, TILE_SIZE } from '../config';
-import { Tile } from '../semantic/Tile';
+import { MAP_BASE_ZOOM, MAP_PROVIDER, TILE_SIZE } from '../config';
 import { TileOnScreen } from '../semantic/TileOnScreen';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
 
@@ -44,33 +43,25 @@ declareModule({
         );
 
         // TODO: Count based on screen size (appState.windowSize) and tileSize + observe
-        const tileCount = new Vector(2, 2);
+        const tileCount = new TileOnScreen(1, 1);
 
         let lastRenderedTiles: Record<string, Operation> = {};
 
-        const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
-        const mapCenterTileRound = mapCenterTile.map(Math.floor /* TODO: Floor OR round? */);
-        const mapCenterTileRoundRemainder = mapCenterTile.subtract(mapCenterTileRound);
+        //const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
+        //const mapCenterTileRound = mapCenterTile.map(Math.floor /* TODO: Floor OR round? */);
+        //const mapCenterTileRoundRemainder = mapCenterTile.subtract(mapCenterTileRound);
 
         observeByHeartbeat({ getValue: () => appState.transform }).subscribe((transform) => {
             const newRenderedTiles: Record<string, Operation> = {};
 
-            const mapCenterTileOffset = transform.translate
-                .divide(TILE_SIZE)
-                .map(Math.floor /* TODO: Floor OR round? */);
-
             for (let y = 0; y < tileCount.y; y++) {
                 for (let x = 0; x < tileCount.x; x++) {
-                    const tileCoords = new TileOnScreen(x, y);
+                    const tileOnScreen = new TileOnScreen(new Vector(x, y).subtract(tileCount.half()));
+                    const { tile, remainder: tileRemainder } = tileOnScreen.toTile(transform);
+
                     const tileUri =
                         // TODO: Map server and type provider
-                        `${MAP_BASE_ZOOM}/${tileCoords
-                            .add(mapCenterTileRound)
-                            .subtract(mapCenterTileOffset)
-                            .subtract(tileCount.half())
-                            .toArray2D()
-
-                            .join('/')}.png`;
+                        `${MAP_BASE_ZOOM}/${tile.toArray2D().join('/')}.png`;
 
                     if (lastRenderedTiles[tileUri]) {
                         newRenderedTiles[tileUri] = lastRenderedTiles[tileUri];
@@ -83,11 +74,7 @@ declareModule({
 
                         tileArt.defaultZIndex = -1;
                         tileArt.setShift(
-                            tileCoords
-                                .subtract(tileCount.half())
-                                .subtract(mapCenterTileRoundRemainder)
-                                .subtract(mapCenterTileOffset)
-                                .multiply(TILE_SIZE),
+                            tileOnScreen.subtract(tileRemainder).multiply(TILE_SIZE).subtract(transform.translate),
                         );
 
                         newRenderedTiles[tileUri] = virtualArtVersioningSystem
@@ -134,7 +121,5 @@ declareModule({
 });
 
 /**
- * TODO: !!! Tile -> Tile
- * TODO: !!! Free tiles from memory
  * TODO: !!! Fillup the screen by tiles (translate+zoom)
  */
