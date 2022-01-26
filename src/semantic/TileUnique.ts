@@ -3,7 +3,6 @@ import { TileRelative } from './TileRelative';
 
 export class TileUnique extends TileAbsolute {
     public static fromAbsolute(tileAbsolute: TileAbsolute): { tile: TileUnique; remainder: TileRelative } {
-        console.log({ tileAbsolute });
         const tile = new TileUnique(tileAbsolute.map(Math.round));
         const remainder = new TileRelative(tileAbsolute.subtract(tile));
         return { tile, remainder };

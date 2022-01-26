@@ -15,6 +15,7 @@ export class TileAbsolute extends Vector {
     protected check(): void {}
 
     public static fromWgs84({ x, y, z }: Wgs84): InstanceType<typeof this> {
+        // TODO: Maybe just recieve zoom
         return new this(
             ((x + 180) / 360) * Math.pow(2, z),
             ((1 - Math.log(Math.tan((y * Math.PI) / 180) + 1 / Math.cos((y * Math.PI) / 180)) / Math.PI) / 2) *
@@ -24,6 +25,7 @@ export class TileAbsolute extends Vector {
     }
 
     public toWgs84(): Wgs84 {
+        // TODO: Maybe just recieve zoom
         const { x, y, z } = this;
         const n = Math.PI - (2 * Math.PI * y) / Math.pow(2, z);
 

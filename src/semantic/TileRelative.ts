@@ -1,6 +1,7 @@
 import { Transform, Vector } from 'xyzt';
 import { MAP_BASE, TILE_SIZE } from '../config';
 import { TileAbsolute } from './TileAbsolute';
+import { Wgs84 } from './Wgs84';
 
 export class TileRelative extends Vector {
     public readonly type = 'TileRelative';
@@ -13,10 +14,19 @@ export class TileRelative extends Vector {
     }
 
     public toTile(transform: Transform): TileAbsolute {
-        const { x, y } = this.add(TileAbsolute.fromWgs84(MAP_BASE)).subtract(transform.translate.divide(TILE_SIZE));
-        const z = Math.log2(transform.scale.x) + MAP_BASE.z;
+        const zoom = Math.floor(Math.log2(transform.scale.x) + MAP_BASE.z);
+        const { x, y } = this.add(
+            TileAbsolute.fromWgs84(
+                new Wgs84({
+                    /* TODO: Use compact form */ longitude: MAP_BASE.longitude,
+                    latitude: MAP_BASE.latitude,
+                    zoom,
+                }),
+            ),
+        ).subtract(transform.translate.divide(TILE_SIZE));
+
         //console.log(z);
-        return new TileAbsolute(x, y, z);
+        return new TileAbsolute(x, y, zoom);
     }
 }
 
