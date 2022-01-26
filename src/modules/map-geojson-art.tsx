@@ -85,13 +85,12 @@ export class GeojsonArt extends Abstract2dArt {
     }
 
     private wgs84ToBoard(pointAsWgs84: Wgs84): Vector {
-        return new Vector(/* !!! */);
         // TODO: !!! To global utils
-
         const mapCenterTile = TileAbsolute.fromWgs84(MAP_BASE);
-        const pointAsTile = TileAbsolute.fromWgs84(pointAsWgs84);
+        const pointAsTile = TileAbsolute.fromWgs84(
+            new Wgs84({ longitude: pointAsWgs84.longitude, latitude: pointAsWgs84.latitude, zoom: MAP_BASE.zoom }),
+        );
         const pointOnBoard = pointAsTile.subtract(mapCenterTile).multiply(TILE_SIZE);
-
         return pointOnBoard;
     }
 
