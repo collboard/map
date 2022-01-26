@@ -1,6 +1,6 @@
 import { Pixels } from './semantic/Pixels';
 import { Wgs84 } from './semantic/Wgs84';
-import { MapProvider } from './utils/MapProvider';
+import { MapProvider } from './classes/MapProvider';
 
 // TODO: !!! to UPPERCASE
 
