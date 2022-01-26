@@ -4,7 +4,7 @@ import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { MAP_PROVIDER } from '../config';
+import { MAP_PROVIDER, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileRelative } from '../semantic/TileRelative';
 import { TileUnique } from '../semantic/TileUnique';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
@@ -44,11 +44,9 @@ declareModule({
         );
 
         // TODO: Observe appState.windowSize
-        const sizeOfScreenInTiles = new Vector(1, 1);
-
-        /* !!! new TileRelative(
+        const sizeOfScreenInTiles = new TileRelative(
             appState.windowSize.divide(TILE_SIZE).scale(TILE_COUNT_PADDING).map(Math.ceil),
-        );*/
+        ); //new Vector(2, 2);
 
         let lastRenderedTiles: Record<symbol, Operation> = {};
 

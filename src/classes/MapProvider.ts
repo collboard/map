@@ -57,4 +57,5 @@ export class MapProvider {
  * TODO: Configurable map provider, extends OSM map provider
  * TODO: TileArt
  * TODO: Optimize tile creation
+ * TODO: TileManager with memory management
  */
