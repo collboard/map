@@ -13,11 +13,10 @@ export class TileOnScreen extends Vector {
     }
 
     public toTile(transform: Transform): Tile {
-        return new Tile(
-            this.add(Tile.fromWgs84(MAP_BASE_CENTER)).subtract(
-                transform.translate.divide(TILE_SIZE.rearrangeAxis(([x, y]) => [x, y, 1])),
-            ),
-        );
+        const { x, y } = this.add(Tile.fromWgs84(MAP_BASE_CENTER)).subtract(transform.translate.divide(TILE_SIZE));
+        const z = Math.log2(transform.scale.x) + MAP_BASE_CENTER.z;
+        //console.log(z);
+        return new Tile(x, y, z);
     }
 }
 

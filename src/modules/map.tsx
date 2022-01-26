@@ -4,7 +4,7 @@ import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { MAP_PROVIDER, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
+import { MAP_BASE_CENTER, MAP_PROVIDER, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileOnScreen } from '../semantic/TileOnScreen';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
 
@@ -58,11 +58,12 @@ declareModule({
             .subscribe((transform) => {
                 const newRenderedTiles: Record<string, Operation> = {};
 
+                console.log('______________________');
                 for (let y = 0; y < sizeOfScreenInTiles.y; y++) {
                     for (let x = 0; x < sizeOfScreenInTiles.x; x++) {
                         const tileOnScreen = new TileOnScreen(new Vector(x, y).subtract(sizeOfScreenInTiles.half()));
 
-                        console.log({ tileOnScreen });
+                        // console.log({ tileOnScreen });
 
                         const tile = tileOnScreen.toTile(transform);
                         const tileUrl = MAP_PROVIDER.getTileUrl(tile);
@@ -73,8 +74,16 @@ declareModule({
                             const tileArt = new ImageArt(tileUrl, 'Map tile');
 
                             tileArt.defaultZIndex = -1;
+                            tileArt.size = TILE_SIZE.scale(Math.pow(2, MAP_BASE_CENTER.z - tile.z));
+
+                            console.log('size', tileArt.size);
+                            console.log('remainder', tile.remainder);
+
                             tileArt.setShift(
-                                tileOnScreen.subtract(tile.remainder).multiply(TILE_SIZE).subtract(transform.translate),
+                                tileOnScreen
+                                    .subtract(tile.remainder)
+                                    .multiply(tileArt.size)
+                                    .subtract(transform.translate),
                             );
 
                             newRenderedTiles[tileUrl] = virtualArtVersioningSystem
@@ -84,6 +93,8 @@ declareModule({
                         }
                     }
                 }
+                console.log('______________________');
+
                 // console.log(Object.keys(lastRenderedTiles).length, Object.keys(newRenderedTiles).length);
                 // console.log({ lastRenderedTiles, newRenderedTiles });
 
@@ -122,4 +133,6 @@ declareModule({
 
 /**
  * TODO: !!! Fillup the screen by tiles (translate+zoom)
+ * TODO: !!! Import MAP_BASE_CENTER only from one place
+ * TODO: Some calculations are made inefficiently in a 2D loop instead of once before it
  */
