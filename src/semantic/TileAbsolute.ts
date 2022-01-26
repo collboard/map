@@ -1,24 +1,18 @@
 import { Vector } from 'xyzt';
-import { TileOnScreen } from './TileOnScreen';
 import { Wgs84 } from './Wgs84';
 
-export class Tile extends Vector {
-    public readonly type = 'Tile';
+export class TileAbsolute extends Vector {
+    public readonly type = 'TileAbsolute';
 
     public constructor(tile: { x: number; y: number; z: number });
     public constructor(tile: { x: number; y: number; zoom: number });
     public constructor(x: number, y: number, zoom: number);
     public constructor(...args: any[]) {
         super(...(typeof args[0] === 'number' ? args : [args[0].x, args[0].y, args[0].zoom || args[0].z]));
-
-        /*
-
-        !!! Remove
-        if (Math.floor(this.x) !== this.x || Math.floor(this.y) !== this.y || Math.floor(this.zoom) !== this.zoom) {
-            throw new Error('Tile coordinates must be integers');
-        }
-        */
+        this.check();
     }
+
+    protected check(): void {}
 
     public static fromWgs84({ x, y, z }: Wgs84): InstanceType<typeof this> {
         return new this(
@@ -38,14 +32,5 @@ export class Tile extends Vector {
             (180 / Math.PI) * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n))),
             z,
         );
-    }
-
-    public get round(): Tile {
-        return new Tile(this.map(Math.round));
-    }
-
-    public get remainder(): TileOnScreen {
-        // TODO: Bit ugly cyclomatic complexity TileOnScreen
-        return new TileOnScreen(this.subtract(this.round));
     }
 }

@@ -4,8 +4,8 @@ import { spaceTrim } from 'spacetrim';
 import { forTime } from 'waitasecond';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { MAP_BASE_CENTER, TILE_SIZE } from '../config';
-import { Tile } from '../semantic/Tile';
+import { MAP_BASE, TILE_SIZE } from '../config';
+import { TileAbsolute } from '../semantic/TileAbsolute';
 import { MapPolygonArt } from './map-polygon-art';
 
 declareModule(() => {
@@ -49,13 +49,13 @@ declareModule(() => {
                     'notificationSystem',
                 );
 
-                const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
+                const mapCenterTile = TileAbsolute.fromWgs84(MAP_BASE);
 
                 return Registration.fromSubscription((registerAdditionalSubscription) =>
                     touchController.touches.subscribe(async (touch) => {
                         const pointOnScreen = touch.firstFrame.position;
                         const pointOnBoard = collSpace.pickPoint(pointOnScreen).point;
-                        const pointAsTile = new Tile(pointOnBoard.divide(TILE_SIZE).add(mapCenterTile));
+                        const pointAsTile = new TileAbsolute(pointOnBoard.divide(TILE_SIZE).add(mapCenterTile));
                         const pointAsWgs84 = pointAsTile.toWgs84();
 
                         // console.log({ pointOnScreen, pointOnBoard, pointAsTile, pointAsWgs84 });

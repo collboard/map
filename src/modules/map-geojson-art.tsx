@@ -1,9 +1,9 @@
 import { Abstract2dArt, classNames, declareModule, makeArtModule, React } from '@collboard/modules-sdk';
 import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { MAP_BASE_CENTER, TILE_SIZE } from '../config';
+import { MAP_BASE, TILE_SIZE } from '../config';
 import { IGeojson } from '../interfaces/IGeojson';
-import { Tile } from '../semantic/Tile';
+import { TileAbsolute } from '../semantic/TileAbsolute';
 import { Wgs84 } from '../semantic/Wgs84';
 import { getAllPointsOf } from '../utils/getAllPointsOf';
 import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
@@ -88,8 +88,8 @@ export class GeojsonArt extends Abstract2dArt {
         return new Vector(/* !!! */);
         // TODO: !!! To global utils
 
-        const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
-        const pointAsTile = Tile.fromWgs84(pointAsWgs84);
+        const mapCenterTile = TileAbsolute.fromWgs84(MAP_BASE);
+        const pointAsTile = TileAbsolute.fromWgs84(pointAsWgs84);
         const pointOnBoard = pointAsTile.subtract(mapCenterTile).multiply(TILE_SIZE);
 
         return pointOnBoard;

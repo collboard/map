@@ -1,11 +1,12 @@
-import { declareModule, ImageArt } from '@collboard/modules-sdk';
+import { declareModule } from '@collboard/modules-sdk';
 import { Operation } from '@collboard/modules-sdk/types/50-systems/ArtVersionSystem/Operation';
 import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { MAP_BASE_CENTER, MAP_PROVIDER, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
-import { TileOnScreen } from '../semantic/TileOnScreen';
+import { MAP_PROVIDER, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
+import { TileRelative } from '../semantic/TileRelative';
+import { TileUnique } from '../semantic/TileUnique';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
 
 declareModule({
@@ -43,11 +44,11 @@ declareModule({
         );
 
         // TODO: Observe appState.windowSize
-        const sizeOfScreenInTiles = new TileOnScreen(
+        const sizeOfScreenInTiles = new TileRelative(
             appState.windowSize.divide(TILE_SIZE).scale(TILE_COUNT_PADDING).map(Math.ceil),
         );
 
-        let lastRenderedTiles: Record<string, Operation> = {};
+        let lastRenderedTiles: Record<symbol, Operation> = {};
 
         //const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
         //const mapCenterTileRound = mapCenterTile.map(Math.floor /* TODO: Floor OR round? */);
@@ -56,39 +57,25 @@ declareModule({
         observeByHeartbeat({ getValue: () => appState.transform })
             // TODO: Debounce by some distance value
             .subscribe((transform) => {
-                const newRenderedTiles: Record<string, Operation> = {};
+                const newRenderedTiles: Record<symbol, Operation> = {};
 
                 console.log('______________________');
                 for (let y = 0; y < sizeOfScreenInTiles.y; y++) {
                     for (let x = 0; x < sizeOfScreenInTiles.x; x++) {
-                        const tileOnScreen = new TileOnScreen(new Vector(x, y).subtract(sizeOfScreenInTiles.half()));
+                        const tileOnScreen = new TileRelative(new Vector(x, y).subtract(sizeOfScreenInTiles.half()));
 
                         // console.log({ tileOnScreen });
 
-                        const tile = tileOnScreen.toTile(transform);
-                        const tileUrl = MAP_PROVIDER.getTileUrl(tile);
+                        const { tile } = TileUnique.fromAbsolute(tileOnScreen.toTile(transform));
 
-                        if (lastRenderedTiles[tileUrl]) {
-                            newRenderedTiles[tileUrl] = lastRenderedTiles[tileUrl];
+                        console.log(tile.uniqueKey);
+
+                        if (lastRenderedTiles[tile.uniqueKey]) {
+                            newRenderedTiles[tile.uniqueKey] = lastRenderedTiles[tile.uniqueKey];
                         } else {
-                            const tileArt = new ImageArt(tileUrl, 'Map tile');
-
-                            tileArt.defaultZIndex = -1;
-                            tileArt.size = TILE_SIZE.scale(Math.pow(2, MAP_BASE_CENTER.z - tile.z));
-
-                            console.log('size', tileArt.size);
-                            console.log('remainder', tile.remainder);
-
-                            tileArt.setShift(
-                                tileOnScreen
-                                    .subtract(tile.remainder)
-                                    .multiply(tileArt.size)
-                                    .subtract(transform.translate),
-                            );
-
-                            newRenderedTiles[tileUrl] = virtualArtVersioningSystem
+                            newRenderedTiles[tile.uniqueKey] = virtualArtVersioningSystem
                                 .createPrimaryOperation()
-                                .newArts(tileArt)
+                                .newArts(MAP_PROVIDER.createTileArt(tile))
                                 .persist();
                         }
                     }
@@ -98,12 +85,14 @@ declareModule({
                 // console.log(Object.keys(lastRenderedTiles).length, Object.keys(newRenderedTiles).length);
                 // console.log({ lastRenderedTiles, newRenderedTiles });
 
-                for (const [tileUrl, mapTile] of Object.entries(lastRenderedTiles).filter(
-                    ([tileUrl]) => !newRenderedTiles[tileUrl],
-                )) {
+                for (const tileUniqueKey of Object.getOwnPropertySymbols(lastRenderedTiles)) {
+                    if (newRenderedTiles[tileUniqueKey]) {
+                        continue;
+                    }
+
                     // console.log('removing', tileUrl);
-                    /* not await to keep consistency */ mapTile.destroy();
-                    delete lastRenderedTiles[tileUrl];
+                    /* not await to keep consistency */ lastRenderedTiles[tileUniqueKey].destroy();
+                    delete lastRenderedTiles[tileUniqueKey];
                 }
 
                 lastRenderedTiles = newRenderedTiles;
@@ -124,8 +113,8 @@ declareModule({
         /**/
 
         return new Registration(async () => {
-            for (const mapTile of Object.values(lastRenderedTiles)) {
-                await mapTile.destroy();
+            for (const tileUniqueKey of Object.getOwnPropertySymbols(lastRenderedTiles)) {
+                await lastRenderedTiles[tileUniqueKey].destroy();
             }
         });
     },

@@ -1,3 +1,5 @@
+console.clear();
+
 import './modules/map';
 import './modules/map-controls';
 import './modules/map-country';
@@ -15,4 +17,5 @@ import './modules/map-toolbar-persisting';
  * TODO: Translations
  * TODO: Take language from translateSystem (or localizationSystem) and prefer the default map with country and city
  * TODO: Pick type of the map (MapProvider should provide map types)
+ * TODO: Console.clear() to Colldev
  */
