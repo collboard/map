@@ -37,20 +37,10 @@ export class MapProvider {
 
         tileArt.shift = tileAbsolute.multiply(tileArt.size);
 
-        console.log('a', tile.toString());
-        console.log(
-            'b',
-            TileAbsolute.fromWgs84(
-                new Wgs84({
-                    ...MAP_BASE,
-                    z: tile.z,
-                }),
-            ).toString(),
-        );
 
-        console.log('tileAbsolute', tileAbsolute);
-        console.log('shift', tileArt.shift);
-        console.log('size', tileArt.size);
+        // console.log('tileAbsolute', tileAbsolute);
+        // console.log('shift', tileArt.shift);
+        // console.log('size', tileArt.size);
         // console.log('remainder', tile.remainder);
 
         return tileArt;

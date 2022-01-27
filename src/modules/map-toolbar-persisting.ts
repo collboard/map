@@ -16,7 +16,7 @@ declareModule({
     async setup(systems) {
         const { toolbarSystem } = await systems.request('toolbarSystem');
 
-        //await forTime(850 + 600);
+        // await forTime(850 + 600);
         // alert(123);
 
         for (let i = 0; i < 20; i++) {

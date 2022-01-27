@@ -3,8 +3,9 @@ import { Vector } from 'xyzt';
 export class Wgs84 extends Vector {
     public readonly type = 'Wgs84';
 
-    public constructor(vector: { x: number; y: number; z?: number });
-    public constructor(coordinates: { longitude: number; latitude: number; zoom?: number });
+    public constructor(
+        vector: { x: number; y: number; z?: number } | { longitude: number; latitude: number; zoom?: number },
+    );
     public constructor(longitude: number, latitude: number, zoom?: number);
 
     public constructor(...args: any[]) {

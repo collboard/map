@@ -6,8 +6,7 @@ import { Wgs84 } from './Wgs84';
 export class TileRelative extends Vector {
     public readonly type = 'TileRelative';
 
-    public constructor(tile: { x: number; y: number; z: number });
-    public constructor(tile: { x: number; y: number; zoom: number });
+    public constructor(tile: { x: number; y: number; z: number } | { x: number; y: number; zoom: number });
     public constructor(x: number, y: number, zoom: number);
     public constructor(...args: any[]) {
         super(...(typeof args[0] === 'number' ? args : [args[0].x, args[0].y, args[0].zoom || args[0].z]));
@@ -25,7 +24,7 @@ export class TileRelative extends Vector {
             ),
         ).subtract(transform.translate.divide(TILE_SIZE));
 
-        //console.log(z);
+        // console.log(z);
         return new TileAbsolute(x, y, zoom);
     }
 }

@@ -4,14 +4,14 @@ import { Wgs84 } from './Wgs84';
 export class TileAbsolute extends Vector {
     public readonly type = 'TileAbsolute';
 
-    public constructor(tile: { x: number; y: number; z: number });
-    public constructor(tile: { x: number; y: number; zoom: number });
+    public constructor(tile: { x: number; y: number; z: number } | { x: number; y: number; zoom: number });
     public constructor(x: number, y: number, zoom: number);
     public constructor(...args: any[]) {
         super(...(typeof args[0] === 'number' ? args : [args[0].x, args[0].y, args[0].zoom || args[0].z]));
         this.check();
     }
 
+    // tslint:disable-next-line:  no-empty
     protected check(): void {}
 
     public static fromWgs84({ x, y, z }: Wgs84): InstanceType<typeof this> {

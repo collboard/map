@@ -46,20 +46,20 @@ declareModule({
         // TODO: Observe appState.windowSize
         const sizeOfScreenInTiles = new TileRelative(
             appState.windowSize.divide(TILE_SIZE).scale(TILE_COUNT_PADDING).map(Math.ceil),
-        ); //new Vector(2, 2);
+        ); // new Vector(2, 2);
 
         let lastRenderedTiles: Record<symbol, Operation> = {};
 
-        //const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
-        //const mapCenterTileRound = mapCenterTile.map(Math.floor /* TODO: Floor OR round? */);
-        //const mapCenterTileRoundRemainder = mapCenterTile.subtract(mapCenterTileRound);
+        // const mapCenterTile = Tile.fromWgs84(MAP_BASE_CENTER);
+        // const mapCenterTileRound = mapCenterTile.map(Math.floor /* TODO: Floor OR round? */);
+        // const mapCenterTileRoundRemainder = mapCenterTile.subtract(mapCenterTileRound);
 
         observeByHeartbeat({ getValue: () => appState.transform })
             // TODO: Debounce by some distance value
             .subscribe((transform) => {
                 const newRenderedTiles: Record<symbol, Operation> = {};
 
-                console.log('______________________');
+                // console.log('______________________');
                 for (let y = 0; y < sizeOfScreenInTiles.y; y++) {
                     for (let x = 0; x < sizeOfScreenInTiles.x; x++) {
                         const tileOnScreen = new TileRelative(new Vector(x, y).subtract(sizeOfScreenInTiles.half()));
@@ -68,7 +68,7 @@ declareModule({
 
                         const { tile } = TileUnique.fromAbsolute(tileOnScreen.toTile(transform));
 
-                        console.log(tile.uniqueKey);
+                        // console.log(tile.uniqueKey);
 
                         if (lastRenderedTiles[tile.uniqueKey]) {
                             newRenderedTiles[tile.uniqueKey] = lastRenderedTiles[tile.uniqueKey];
@@ -80,7 +80,7 @@ declareModule({
                         }
                     }
                 }
-                console.log('______________________');
+                // console.log('______________________');
 
                 // console.log(Object.keys(lastRenderedTiles).length, Object.keys(newRenderedTiles).length);
                 // console.log({ lastRenderedTiles, newRenderedTiles });

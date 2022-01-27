@@ -1,3 +1,4 @@
+// tslint:disable-next-line: no-console
 console.clear();
 
 import './modules/map';
