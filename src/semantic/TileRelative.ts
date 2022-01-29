@@ -13,7 +13,8 @@ export class TileRelative extends Vector {
     }
 
     public toTile(transform: Transform): TileAbsolute {
-        const zoom = Math.floor(Math.log2(transform.scale.x) + MAP_BASE.z);
+        // Note: Using Math.ceil to keep better quality
+        const zoom = Math.ceil(Math.log2(transform.scale.x) + MAP_BASE.z);
         const { x, y } = this.add(
             TileAbsolute.fromWgs84(
                 new Wgs84({
