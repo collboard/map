@@ -4,7 +4,9 @@ Maps for the geography class for the [Collboard.com](https://collboard.com/) in 
 
 <!--Badges-->
 
- [![License](https://img.shields.io/github/license/collboard/map.svg?style=flat)](https://raw.githubusercontent.com/collboard/map/master/LICENSE)
+ [![License of 🗺️ Map](https://img.shields.io/github/license/collboard/map.svg?style=flat)](https://github.com/collboard/map/blob/main/LICENSE)
+ [![NPM Version of 🗺️ Map](https://badge.fury.io/js/map.svg)](https://www.npmjs.com/package/map)
+ [![Quality of package 🗺️ Map](https://packagequality.com/shield/map.svg)](https://packagequality.com/#?package=map)
  [![lint](https://github.com/collboard/map/actions/workflows/lint.yml/badge.svg)](https://github.com/collboard/map/actions/workflows/lint.yml)
  [![test](https://github.com/collboard/map/actions/workflows/test.yml/badge.svg)](https://github.com/collboard/map/actions/workflows/test.yml)
  [![Known Vulnerabilities](https://snyk.io/test/github/collboard/map/badge.svg)](https://snyk.io/test/github/collboard/map)
