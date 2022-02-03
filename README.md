@@ -17,3 +17,13 @@ Maps for the geography class for the [Collboard.com](https://collboard.com/) in 
 [![Module showcase](./assets/screenshots/map.png) Create your own map board](https://collboard.com/new?redirect=1&modulesOn=@collboard/map,@collboard/map-controls,@collboard/map-country)
 
 <!-- TODO: Add Prague logo-->
+
+
+
+<!--Contributing-->
+
+## 🖋️ Contributing
+
+I am open to pull requests, feedback, and suggestions. Or if you like this utility, you can [☕ buy me a coffee](https://www.buymeacoffee.com/hejny) or [donate via cryptocurrencies](https://github.com/hejny/hejny/blob/main/documents/crypto.md).
+
+<!--/Contributing-->
