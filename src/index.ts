@@ -1,6 +1,3 @@
-// tslint:disable-next-line: no-console
-console.clear();
-
 import './modules/map';
 import './modules/map-controls';
 import './modules/map-country';

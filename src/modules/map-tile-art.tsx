@@ -1,19 +1,9 @@
-import {
-    Abstract2dArt,
-    classNames,
-    declareModule,
-    makeArtModule,
-    makeMultiModule,
-    React,
-    string_url,
-} from '@collboard/modules-sdk';
-import { Registration } from 'destroyable';
+import { Abstract2dArt, classNames, declareModule, React, string_url } from '@collboard/modules-sdk';
 import { Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { MAP_BASE, TILE_SIZE } from '../config';
 import { Pixels } from '../semantic/Pixels';
 import { TileAbsolute } from '../semantic/TileAbsolute';
-import { TileRelative } from '../semantic/TileRelative';
 import { TileUnique } from '../semantic/TileUnique';
 import { Wgs84 } from '../semantic/Wgs84';
 
@@ -131,7 +121,28 @@ export class MapTileArt extends Abstract2dArt {
         );
     }
 }
+declareModule({
+    manifest: {
+        ...MapTileArt.manifest,
+        supports: {
+            art: MapTileArt.serializeName,
+        },
+    },
+    async setup(systems) {
+        const { artSerializer } = await systems.request('artSerializer');
+        // @deprecated DO not need to pass artSerializeRule,
+        return artSerializer.registerRule({
+            name: MapTileArt.serializeName,
+            // class: MapTileArt,
+            serialize: () => {
+                throw new Error('MapTileArt can not be serialized');
+                // return new MapTileArt(tile)
+            },
+        });
+    },
+});
 
+/*
 declareModule(
     makeMultiModule({
         modules: [
@@ -176,3 +187,5 @@ declareModule(
         ],
     }),
 );
+
+*/
