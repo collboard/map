@@ -4,7 +4,7 @@ import { TileAbsolute } from '../semantic/TileAbsolute';
 import { TileUnique } from '../semantic/TileUnique';
 import { Wgs84 } from '../semantic/Wgs84';
 
-export class MapProvider {
+export class TileProvider {
     private getServiceUrl(): URL {
         return new URL(`https://tile-${randomItem('a', 'b', 'c')}.openstreetmap.fr/cyclosm`);
     }

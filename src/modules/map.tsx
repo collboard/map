@@ -4,7 +4,7 @@ import { Registration } from 'destroyable';
 import { Vector } from 'xyzt';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { MAP_PROVIDER, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
+import { TILE_PROVIDER, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileRelative } from '../semantic/TileRelative';
 import { TileUnique } from '../semantic/TileUnique';
 import { observeByHeartbeat } from '../utils/observeByHeartbeat';
@@ -75,7 +75,7 @@ declareModule({
                         } else {
                             newRenderedTiles[tile.uniqueKey] = virtualArtVersioningSystem
                                 .createPrimaryOperation()
-                                .newArts(MAP_PROVIDER.createTileArt(tile))
+                                .newArts(TILE_PROVIDER.createTileArt(tile))
                                 .persist();
                         }
                     }
