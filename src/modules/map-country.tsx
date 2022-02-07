@@ -1,7 +1,7 @@
 import { declareModule } from '@collboard/modules-sdk';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
-import czechiaGeojson from '../../maps/czechia.min1.geojson.json';
-import slovakiaGeojson from '../../maps/slovakia.min1.geojson.json';
+import czechiaGeojson from '../../maps/czechia/czechia.min1.geojson.json';
+import slovakiaGeojson from '../../maps/slovakia/slovakia.min1.geojson.json';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { IGeojson } from '../interfaces/IGeojson';
 import { GeojsonArt } from './map-geojson-art';
