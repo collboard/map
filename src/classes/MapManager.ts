@@ -1,4 +1,4 @@
-import { AppState, VirtualArtVersioningSystem } from '@collboard/modules-sdk';
+import { AppState, Queue, VirtualArtVersioningSystem } from '@collboard/modules-sdk';
 import { Operation } from '@collboard/modules-sdk/types/50-systems/ArtVersionSystem/Operation';
 import { Destroyable, IDestroyable } from 'destroyable';
 import { forAllImagesInElement, forEver, forTime } from 'waitasecond';
@@ -46,12 +46,16 @@ export class MapManager extends Destroyable implements IDestroyable {
     }
 
     private render(transform: Transform) {
+        // console.log('render');
+
+        let createdTiles = 0;
         this.primaryTiles = {};
         for (let y = 0; y < this.sizeOfScreenInTiles.y; y++) {
             for (let x = 0; x < this.sizeOfScreenInTiles.x; x++) {
                 const tileOnScreen = new TileRelative(new Vector(x, y).subtract(this.sizeOfScreenInTiles.half()));
                 const { tile } = TileUnique.fromAbsolute(tileOnScreen.toTile(transform));
                 if (!this.renderedTiles[tile.uniqueKey]) {
+                    createdTiles++;
                     this.renderedTiles[tile.uniqueKey] = this.virtualArtVersioningSystem
                         .createPrimaryOperation()
                         .newArts(this.tileProvider.createTileArt(tile))
@@ -62,31 +66,38 @@ export class MapManager extends Destroyable implements IDestroyable {
             }
         }
 
-        /* TODO: Not await */ this.cleanup();
+        //console.log('createdTiles', createdTiles);
+
+        if (createdTiles) {
+            this.cleanup();
+        }
     }
 
-    private async cleanup() {
-        // TODO: Run only one cleanup at once
-        await Promise.all(
-            // TODO: Filter here only primaryTiles
-            Array.from(document.querySelectorAll(`img[src^='https://tile-']`)).map(async (imageElement) => {
-                // TODO: Better loaded detection - seems forAllImagesInElement not working perfectly for one image element
-                await forAllImagesInElement(imageElement as HTMLImageElement);
-                await forTime(1000);
-            }),
-        );
+    private cleanupQueue = new Queue();
+    private cleanup() {
+        this.cleanupQueue.task(async () => {
+            // console.log('cleanup');
+            await Promise.all(
+                // TODO: Filter here only primaryTiles
+                Array.from(document.querySelectorAll(`img[src^='https://tile-']`)).map(async (imageElement) => {
+                    // TODO: Better loaded detection - seems forAllImagesInElement not working perfectly for one image element
+                    await forAllImagesInElement(imageElement as HTMLImageElement);
+                    await forTime(1000);
+                }),
+            );
 
-        console.log('Cleanup performing');
+            // console.log('cleanup performing');
 
-        for (const tileUniqueKey of Object.getOwnPropertySymbols(this.renderedTiles)) {
-            if (this.primaryTiles[tileUniqueKey]) {
-                continue;
+            for (const tileUniqueKey of Object.getOwnPropertySymbols(this.renderedTiles)) {
+                if (this.primaryTiles[tileUniqueKey]) {
+                    continue;
+                }
+
+                // console.log('removing', tileUrl);
+                await this.renderedTiles[tileUniqueKey].destroy();
+                delete this.renderedTiles[tileUniqueKey];
             }
-
-            // console.log('removing', tileUrl);
-            /* not await to keep consistency */ this.renderedTiles[tileUniqueKey].destroy();
-            delete this.renderedTiles[tileUniqueKey];
-        }
+        });
     }
 
     public async destroy() {
