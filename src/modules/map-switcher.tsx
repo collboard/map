@@ -7,13 +7,13 @@ import { getUserGeolocation } from '../utils/getUserGeolocation';
 declareModule(
     makeExtrajsxModule({
         manifest: {
-            name: '@collboard/map-controls',
+            name: '@collboard/map-switcher',
             version,
             description,
             contributors,
             license,
             repository,
-            title: { en: 'Map controls' },
+            title: { en: 'Map switcher' },
             categories: ['Geography', 'Buttons'],
             icon: helloWorldIcon,
             flags: {

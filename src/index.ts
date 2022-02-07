@@ -1,7 +1,7 @@
 import './modules/map';
-import './modules/map-controls';
-import './modules/map-country';
-import './modules/map-picking-tool';
+//import './modules/map-switcher';
+import './modules/map-features';
+//import './modules/map-picking-tool';
 import './modules/map-polygon-art';
 import './modules/map-shortcuts';
 import './modules/map-toolbar-persisting';

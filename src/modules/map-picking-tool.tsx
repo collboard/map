@@ -21,7 +21,7 @@ declareModule(() => {
             categories: ['Geography', 'Productivity'],
             icon: helloWorldIcon,
             flags: {
-                isTemplate: true,
+                isHidden: true,
             },
         },
         toolbar: ToolbarName.Tools,
