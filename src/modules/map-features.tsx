@@ -29,9 +29,9 @@ for (const city of ['Praha', 'Brno', 'Plzeň', 'Olomouc', 'Liberec']) {
                 .createPrimaryOperation()
                 .newArts(
                     new GeojsonArt(await downloadGeojson({ city })),
-                    //new GeojsonArt(pragueGeojson as any as IGeojson),
-                    //new GeojsonArt(czechiaGeojson as IGeojson),
-                    //new GeojsonArt(slovakiaGeojson as IGeojson),
+                    // new GeojsonArt(pragueGeojson as any as IGeojson),
+                    // new GeojsonArt(czechiaGeojson as IGeojson),
+                    // new GeojsonArt(slovakiaGeojson as IGeojson),
                 )
                 .persist();
         },

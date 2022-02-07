@@ -1,7 +1,7 @@
 import { AppState, Queue, VirtualArtVersioningSystem } from '@collboard/modules-sdk';
 import { Operation } from '@collboard/modules-sdk/types/50-systems/ArtVersionSystem/Operation';
 import { Destroyable, IDestroyable } from 'destroyable';
-import { forAllImagesInElement, forEver, forTime } from 'waitasecond';
+import { forAllImagesInElement, forTime } from 'waitasecond';
 import { Transform, Vector } from 'xyzt';
 import { TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileRelative } from '../semantic/TileRelative';
@@ -33,6 +33,7 @@ export class MapManager extends Destroyable implements IDestroyable {
                 this.render(transform);
             });
 
+        /*
         (async () => {
             await forEver();
             while (true) {
@@ -43,6 +44,7 @@ export class MapManager extends Destroyable implements IDestroyable {
                 );
             }
         })();
+        */
     }
 
     private render(transform: Transform) {
@@ -66,7 +68,7 @@ export class MapManager extends Destroyable implements IDestroyable {
             }
         }
 
-        //console.log('createdTiles', createdTiles);
+        // console.log('createdTiles', createdTiles);
 
         if (createdTiles) {
             this.cleanup();
