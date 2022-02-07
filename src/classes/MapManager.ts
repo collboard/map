@@ -1,6 +1,7 @@
 import { AppState, VirtualArtVersioningSystem } from '@collboard/modules-sdk';
 import { Operation } from '@collboard/modules-sdk/types/50-systems/ArtVersionSystem/Operation';
 import { Destroyable, IDestroyable } from 'destroyable';
+import { forAllImagesInElement, forEver, forTime } from 'waitasecond';
 import { Transform, Vector } from 'xyzt';
 import { TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileRelative } from '../semantic/TileRelative';
@@ -10,6 +11,7 @@ import { TileProvider } from './TileProvider';
 
 export class MapManager extends Destroyable implements IDestroyable {
     private readonly tileProvider = new TileProvider();
+    private primaryTiles: Record<symbol, Operation> = {};
     private renderedTiles: Record<symbol, Operation> = {};
     private sizeOfScreenInTiles: TileRelative;
 
@@ -30,53 +32,61 @@ export class MapManager extends Destroyable implements IDestroyable {
             .subscribe((transform) => {
                 this.render(transform);
             });
+
+        (async () => {
+            await forEver();
+            while (true) {
+                await forTime(1000);
+                console.log(
+                    'Currently rendered tiles',
+                    Array.from(document.querySelectorAll(`img[src^='https://tile-']`)).length,
+                );
+            }
+        })();
     }
 
     private render(transform: Transform) {
-        console.log('render');
-        const newRenderedTiles: Record<symbol, Operation> = {};
-
-        // console.log('______________________');
+        this.primaryTiles = {};
         for (let y = 0; y < this.sizeOfScreenInTiles.y; y++) {
             for (let x = 0; x < this.sizeOfScreenInTiles.x; x++) {
                 const tileOnScreen = new TileRelative(new Vector(x, y).subtract(this.sizeOfScreenInTiles.half()));
-
-                // console.log({ tileOnScreen });
-
                 const { tile } = TileUnique.fromAbsolute(tileOnScreen.toTile(transform));
-
-                // console.log(tile.uniqueKey);
-
-                if (this.renderedTiles[tile.uniqueKey]) {
-                    newRenderedTiles[tile.uniqueKey] = this.renderedTiles[tile.uniqueKey];
-                } else {
-                    newRenderedTiles[tile.uniqueKey] = this.virtualArtVersioningSystem
+                if (!this.renderedTiles[tile.uniqueKey]) {
+                    this.renderedTiles[tile.uniqueKey] = this.virtualArtVersioningSystem
                         .createPrimaryOperation()
                         .newArts(this.tileProvider.createTileArt(tile))
                         .persist();
                 }
+
+                this.primaryTiles[tile.uniqueKey] = this.renderedTiles[tile.uniqueKey];
             }
         }
-        // console.log('______________________');
 
-        // console.log(Object.keys(lastRenderedTiles).length, Object.keys(newRenderedTiles).length);
-        // console.log({ lastRenderedTiles, newRenderedTiles });
+        /* TODO: Not await */ this.cleanup();
+    }
+
+    private async cleanup() {
+        // TODO: Run only one cleanup at once
+        await Promise.all(
+            // TODO: Filter here only primaryTiles
+            Array.from(document.querySelectorAll(`img[src^='https://tile-']`)).map(async (imageElement) => {
+                // TODO: Better loaded detection - seems forAllImagesInElement not working perfectly for one image element
+                await forAllImagesInElement(imageElement as HTMLImageElement);
+                await forTime(1000);
+            }),
+        );
+
+        console.log('Cleanup performing');
 
         for (const tileUniqueKey of Object.getOwnPropertySymbols(this.renderedTiles)) {
-            if (newRenderedTiles[tileUniqueKey]) {
+            if (this.primaryTiles[tileUniqueKey]) {
                 continue;
             }
-
-
-            this.renderedTiles[tileUniqueKey].arts
-            const imageElement = document.querySelector(`img[src='${tileArt.src}']`);
 
             // console.log('removing', tileUrl);
             /* not await to keep consistency */ this.renderedTiles[tileUniqueKey].destroy();
             delete this.renderedTiles[tileUniqueKey];
         }
-
-        this.renderedTiles = newRenderedTiles;
     }
 
     public async destroy() {
