@@ -4,6 +4,7 @@ These files were exported from OpenStreetMap.
 
 ```
 https://nominatim.openstreetmap.org/search?country=czechia&format=geojson&polygon_geojson=1
+https://nominatim.openstreetmap.org/search?city=prague&format=geojson&polygon_geojson=1
 ```
 
 And here are some other useful tools:
