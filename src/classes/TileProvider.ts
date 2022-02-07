@@ -5,15 +5,13 @@ import { TileUnique } from '../semantic/TileUnique';
 import { Wgs84 } from '../semantic/Wgs84';
 
 export class TileProvider {
-    private getServiceUrl(): URL {
-        return new URL(`https://tile-${randomItem('a', 'b', 'c')}.openstreetmap.fr/cyclosm`);
-    }
+    constructor(public readonly serviceDomains: URL[]) {}
 
     private getTileUrl(tile: TileUnique): URL {
         const { x, y, z } = tile;
 
-        const url = this.getServiceUrl();
-        url.pathname = `cyclosm/${z}/${x}/${y}.png`;
+        const url = new URL(randomItem(...this.serviceDomains).href);
+        url.pathname += `/${z}/${x}/${y}.png`;
 
         return url;
     }

@@ -10,12 +10,15 @@ import { observeByHeartbeat } from '../utils/observeByHeartbeat';
 import { TileProvider } from './TileProvider';
 
 export class MapManager extends Destroyable implements IDestroyable {
-    private readonly tileProvider = new TileProvider();
     private primaryTiles: Record<symbol, Operation> = {};
     private renderedTiles: Record<symbol, Operation> = {};
     private sizeOfScreenInTiles: TileRelative;
 
-    constructor(appState: AppState, private readonly virtualArtVersioningSystem: VirtualArtVersioningSystem) {
+    constructor(
+        private readonly tileProvider: TileProvider,
+        appState: AppState,
+        private readonly virtualArtVersioningSystem: VirtualArtVersioningSystem,
+    ) {
         super();
 
         // TODO: Observe appState.windowSize
