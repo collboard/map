@@ -1,22 +1,30 @@
-import { declareModule, normalizeToKebabCase } from '@collboard/modules-sdk';
+import { declareModule } from '@collboard/modules-sdk';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { downloadGeojson } from '../utils/downloadGeojson';
 import { GeojsonArt } from './map-geojson-art';
 
+const FEATURES = [
+    { name: 'prague', city: 'Praha' },
+    { name: 'brno', city: 'Brno' },
+    { name: 'pilsen', city: 'Plzeň' },
+    { name: 'olomouc', city: 'Olomouc' },
+    { name: 'liberec', city: 'Liberec' },
+];
+
 // TODO: Countries, counties, districts
-for (const city of ['Praha', 'Brno', 'Plzeň', 'Olomouc', 'Liberec']) {
+for (const feature of FEATURES) {
     declareModule({
         manifest: {
-            name: `@collboard/map-feature-${normalizeToKebabCase(city)}`,
+            name: `@collboard/map-feature-${feature.name}`,
             version,
             description,
             contributors,
             license,
             repository,
-            title: { cs: `${city} na mapě`, en: `${city} on map` },
+            title: { cs: `${feature.city} na mapě`, en: `${feature.city} on map` },
             categories: ['Geography', 'Template'],
-            keywords: ['map', 'geojson', 'country', 'county', 'district', 'czechia', city],
+            keywords: ['map', 'geojson', 'country', 'county', 'district', 'czechia'],
             icon: helloWorldIcon,
             flags: {
                 isTemplate: true,
@@ -28,7 +36,7 @@ for (const city of ['Praha', 'Brno', 'Plzeň', 'Olomouc', 'Liberec']) {
             return virtualArtVersioningSystem
                 .createPrimaryOperation()
                 .newArts(
-                    new GeojsonArt(await downloadGeojson({ city })),
+                    new GeojsonArt(await downloadGeojson(feature)),
                     // new GeojsonArt(pragueGeojson as any as IGeojson),
                     // new GeojsonArt(czechiaGeojson as IGeojson),
                     // new GeojsonArt(slovakiaGeojson as IGeojson),
