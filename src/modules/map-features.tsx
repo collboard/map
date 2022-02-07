@@ -1,4 +1,4 @@
-import { declareModule } from '@collboard/modules-sdk';
+import { declareModule, normalizeToKebabCase } from '@collboard/modules-sdk';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { downloadGeojson } from '../utils/downloadGeojson';
@@ -8,7 +8,7 @@ import { GeojsonArt } from './map-geojson-art';
 for (const city of ['Praha', 'Brno', 'Plzeň', 'Olomouc', 'Liberec']) {
     declareModule({
         manifest: {
-            name: `@collboard/map-feature-${city}`,
+            name: `@collboard/map-feature-${normalizeToKebabCase(city)}`,
             version,
             description,
             contributors,
