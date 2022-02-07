@@ -123,10 +123,10 @@ export class GeojsonArt extends Abstract2dArt {
                                 })
                                 .join(' ')}
                             style={{
-                                fill: '#009edd22' /* TODO: As Geojson param /+ additional config */,
+                                fill: '#ffcc0022' /* TODO: As Geojson param /+ additional config */,
 
-                                stroke: 'black',
-                                strokeWidth: 1,
+                                stroke: '#ff4411',
+                                strokeWidth: 3,
                             }}
                             onClick={() => {
                                 // TODO: Tell the region that the user clicked on it

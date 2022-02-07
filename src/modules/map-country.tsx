@@ -1,9 +1,10 @@
 import { declareModule } from '@collboard/modules-sdk';
+import simplifyGeojson from 'simplify-geojson';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
-import czechiaGeojson from '../../maps/czechia/czechia.min1.geojson.json';
-import slovakiaGeojson from '../../maps/slovakia/slovakia.min1.geojson.json';
+//import czechiaGeojson from '../../maps/czechia/czechia.min1.geojson';
+//import pragueGeojson from '../../maps/prague/prague.json';
+//import slovakiaGeojson from '../../maps/slovakia/slovakia.min1.geojson';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { IGeojson } from '../interfaces/IGeojson';
 import { GeojsonArt } from './map-geojson-art';
 
 declareModule({
@@ -23,9 +24,23 @@ declareModule({
     },
     async setup(systems) {
         const { virtualArtVersioningSystem } = await systems.request('virtualArtVersioningSystem');
+
+        // TODO: Make some util function for loading geojsons
+        const response = await fetch(
+            `https://nominatim.openstreetmap.org/search?city=praha&country=czechia&format=geojson&polygon_geojson=1`,
+        );
+        const geojson = await response.json();
+        const geojsonSimplified = simplifyGeojson(geojson, 0.001 /* <- TODO: To some global config */);
+        const pragueGeojson = geojsonSimplified;
+
         return virtualArtVersioningSystem
             .createPrimaryOperation()
-            .newArts(new GeojsonArt(czechiaGeojson as IGeojson), new GeojsonArt(slovakiaGeojson as IGeojson))
+            .newArts(
+                new GeojsonArt(pragueGeojson),
+                //new GeojsonArt(pragueGeojson as any as IGeojson),
+                //new GeojsonArt(czechiaGeojson as IGeojson),
+                //new GeojsonArt(slovakiaGeojson as IGeojson),
+            )
             .persist();
     },
 });
