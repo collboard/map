@@ -1,4 +1,4 @@
-import { AbstractArt, ImageArt, randomItem } from '@collboard/modules-sdk';
+import { ImageArt, randomItem } from '@collboard/modules-sdk';
 import { MAP_BASE, TILE_SIZE } from '../config';
 import { TileAbsolute } from '../semantic/TileAbsolute';
 import { TileUnique } from '../semantic/TileUnique';
@@ -18,7 +18,7 @@ export class TileProvider {
         return url;
     }
 
-    public createTileArt(tile: TileUnique): AbstractArt /* TODO: Maybe return AbstractArt[] OR TileArt */ {
+    public createTileArt(tile: TileUnique): ImageArt /* TODO: Maybe return AbstractArt[] OR TileArt */ {
         const tileAbsolute = tile.subtract(
             TileAbsolute.fromWgs84(
                 new Wgs84({
@@ -36,7 +36,6 @@ export class TileProvider {
         tileArt.size = TILE_SIZE.scale(Math.pow(2, MAP_BASE.z - tile.z));
 
         tileArt.shift = tileAbsolute.multiply(tileArt.size);
-
 
         // console.log('tileAbsolute', tileAbsolute);
         // console.log('shift', tileArt.shift);

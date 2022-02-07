@@ -33,3 +33,10 @@ declareModule({
         });
     },
 });
+
+
+/**
+ * TODO: !!! Make it work
+ * TODO: Shortcuts debugger in the collboard
+ * TODO: Pitch to zoom
+ */
