@@ -4,24 +4,28 @@ import { contributors, description, license, repository, version } from '../../p
 import { MapManager } from '../classes/MapManager';
 import { TileProvider } from '../classes/TileProvider';
 
-for (const provider of [
+for (const [name, provider] of Object.entries({
+    // TODO: To some config file and value
+    // TODO: Better names
     // @see https://www.openstreetmap.fr/
 
-    new TileProvider(['a', 'b', 'c'].map((x) => new URL(`https://tile-${x}.openstreetmap.fr/osmfr`))),
-    new TileProvider(['a', 'b', 'c'].map((x) => new URL(`https://tile-${x}.openstreetmap.fr/hot`))),
-    new TileProvider(['a', 'b', 'c'].map((x) => new URL(`https://tile-${x}.openstreetmap.fr/cyclosm`))),
-    new TileProvider(['a', 'b', 'c', 'd'].map((x) => new URL(`https://stamen-tiles-${x}.a.ssl.fastly.net/watercolor`))),
-    new TileProvider([new URL(`https://tile.openstreetmap.bzh/br`)]),
-    new TileProvider(
+    osmfr: new TileProvider(['a', 'b', 'c'].map((x) => new URL(`https://tile-${x}.openstreetmap.fr/osmfr`))),
+    hot: new TileProvider(['a', 'b', 'c'].map((x) => new URL(`https://tile-${x}.openstreetmap.fr/hot`))),
+    cyclosm: new TileProvider(['a', 'b', 'c'].map((x) => new URL(`https://tile-${x}.openstreetmap.fr/cyclosm`))),
+    watercolor: new TileProvider(
+        ['a', 'b', 'c', 'd'].map((x) => new URL(`https://stamen-tiles-${x}.a.ssl.fastly.net/watercolor`)),
+    ),
+    br: new TileProvider([new URL(`https://tile.openstreetmap.bzh/br`)]),
+    light_all: new TileProvider(
         ['a', 'b', 'c', 'd'].map((x) => new URL(`https://cartodb-basemaps-${x}.global.ssl.fastly.net/light_all`)),
     ),
-    new TileProvider(
+    dark_all: new TileProvider(
         ['a', 'b', 'c', 'd'].map((x) => new URL(`https://cartodb-basemaps-${x}.global.ssl.fastly.net/dark_all`)),
     ),
-]) {
+})) {
     declareModule({
         manifest: {
-            name: `@collboard/map-layer-${provider.serviceDomains[0].pathname.replace(/^\//, '')}`,
+            name: `@collboard/map-layer-${name}`,
             version,
             description,
             contributors,
