@@ -4,8 +4,8 @@ import { contributors, description, license, repository, version } from '../../p
 import { MapManager } from '../classes/MapManager';
 import { TileProvider } from '../classes/TileProvider';
 
-for (const [name, provider] of Object.entries({
-    // TODO: To some config file and value
+const MAP_PROVIDERS = {
+    // TODO: To some config file
     // TODO: Better names
     // @see https://www.openstreetmap.fr/
 
@@ -22,7 +22,9 @@ for (const [name, provider] of Object.entries({
     dark_all: new TileProvider(
         ['a', 'b', 'c', 'd'].map((x) => new URL(`https://cartodb-basemaps-${x}.global.ssl.fastly.net/dark_all`)),
     ),
-})) {
+};
+
+for (const [name, provider] of Object.entries({ hot: MAP_PROVIDERS.hot })) {
     declareModule({
         manifest: {
             name: `@collboard/map-layer-${name}`,
