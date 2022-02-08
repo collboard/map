@@ -53,6 +53,9 @@ export class MapManager extends Destroyable implements IDestroyable {
     private render(transform: Transform) {
         // console.log('render');
 
+        // TODO: !!! Variabile sizeOfScreenInTiles
+        // TODO: !!! Where is the exact center of the screen in tiles?
+
         let createdTiles = 0;
         this.primaryTiles = {};
         for (let y = 0; y < this.sizeOfScreenInTiles.y; y++) {
