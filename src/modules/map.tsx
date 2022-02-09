@@ -41,12 +41,13 @@ for (const [name, provider] of Object.entries({ hot: MAP_PROVIDERS.hot /*  TODO:
             },
         },
         async setup(systems) {
-            const { virtualArtVersioningSystem, appState } = await systems.request(
+            const { virtualArtVersioningSystem, appState, collSpace } = await systems.request(
                 'virtualArtVersioningSystem',
                 'appState',
+                'collSpace',
             );
 
-            return new MapManager(provider, appState, virtualArtVersioningSystem);
+            return new MapManager(provider, appState, collSpace, virtualArtVersioningSystem);
         },
     });
 }

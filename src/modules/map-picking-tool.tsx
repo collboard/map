@@ -1,7 +1,6 @@
-import { declareModule, makeIconModuleOnModule, ToolbarName } from '@collboard/modules-sdk';
+import { declareModule, makeIconModuleOnModule, React, ToolbarName } from '@collboard/modules-sdk';
 import { Registration } from 'destroyable';
-import { spaceTrim } from 'spacetrim';
-import { forTime } from 'waitasecond';
+import { forEver, forTime } from 'waitasecond';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { MAP_BASE, TILE_SIZE } from '../config';
@@ -58,19 +57,26 @@ declareModule(() => {
                         const pointAsTile = new TileAbsolute(pointOnBoard.divide(TILE_SIZE).add(mapCenterTile));
                         const pointAsWgs84 = pointAsTile.toWgs84();
 
+                        // TODO: !!! pointAsTile is incorrect according to the zoom level
+
                         // console.log({ pointOnScreen, pointOnBoard, pointAsTile, pointAsWgs84 });
 
                         const notification = notificationSystem.publish({
                             type: 'info',
                             tag: `picked-point-${touch.firstFrame.position}`,
                             title: 'Picked point on map!',
-                            body: spaceTrim(`
-                              You have picked:
-                                - point ${pointOnScreen} on the screen.
-                                - point ${pointOnBoard} on the board.
-                                - coordinate ${pointAsWgs84} on the map.
+                            body: (
+                                <>
+                                    <b>You have picked:</b>
+                                    <ul>
+                                        <li>point {pointOnScreen.toString()} on the screen</li>
+                                        <li>point {pointOnBoard.toString()} on the board</li>
+                                        <li>tile {pointAsTile.toString()}</li>
+                                        <li>coordinate {pointAsWgs84.toString()} on the map</li>
+                                    </ul>
+                                </>
+                            ),
 
-                            `),
                             canBeClosed: true,
                         });
 
@@ -80,7 +86,8 @@ declareModule(() => {
                             .newArts(polygonArt)
                             .persist();
 
-                        await forTime(1000);
+                        await forEver();
+                        await forTime(10000);
 
                         notification.destroy();
                         operation.destroy();
