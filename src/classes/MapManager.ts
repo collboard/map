@@ -60,16 +60,16 @@ export class MapManager extends Destroyable implements IDestroyable {
                 .rearrangeAxis(([x, y, z]) => [x, y, zoom]),
         );
 
-        //console.log('pointOnScreen', pointOnScreen);
-        //console.log('pointOnBoard', pointOnBoard);
-        console.log('pointAsTile', pointAsTile);
-        //console.log({ pointOnScreen, zoom, mapCenterTile, pointOnBoard, pointAsTile });
+        // console.log('pointOnScreen', pointOnScreen);
+        // console.log('pointOnBoard', pointOnBoard);
+        // console.log('pointAsTile', pointAsTile);
+        // console.log({ pointOnScreen, zoom, mapCenterTile, pointOnBoard, pointAsTile });
 
         return pointAsTile;
     }
 
     private render(transform: Transform, windowSize: Vector) {
-        console.log(`________________________`);
+        // console.log(`________________________`);
         // console.log('render');
 
         // TODO: !!! Variabile sizeOfScreenInTiles
@@ -88,8 +88,8 @@ export class MapManager extends Destroyable implements IDestroyable {
 
         const corners = [Vector.zero(), windowSize].map((corner) => this.pickTile(corner));
         // TODO: !!! Use instead of TILE_COUNT_PADDING
-        //const p = 0.6;
-        //const corners = [windowSize.scale(1 - p), windowSize.scale(p)].map((corner) => this.pickTile(corner));
+        // const p = 0.6;
+        // const corners = [windowSize.scale(1 - p), windowSize.scale(p)].map((corner) => this.pickTile(corner));
 
         /*
         !!! Remove

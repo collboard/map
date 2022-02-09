@@ -19,7 +19,7 @@ export function* iterateTilesBorders(...corners: TileAbsolute[]): IterableIterat
     const toX = Math.ceil(Math.max(...xs));
     const toY = Math.ceil(Math.max(...ys));
 
-    //console.log({ fromX, fromY, toX, toY });
+    // console.log({ fromX, fromY, toX, toY });
 
     // TODO: !!! Implement
 }

@@ -20,7 +20,7 @@ export function* iterateTiles(...corners: TileAbsolute[]): IterableIterator<Tile
     const toX = Math.ceil(Math.max(...xs));
     const toY = Math.ceil(Math.max(...ys));
 
-    //console.log({ fromX, fromY, toX, toY });
+    // console.log({ fromX, fromY, toX, toY });
 
     for (let y = fromY; y <= toY; y++) {
         for (let x = fromX; x <= toX; x++) {
