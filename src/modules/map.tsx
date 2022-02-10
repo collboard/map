@@ -24,7 +24,10 @@ const MAP_PROVIDERS = {
     ),
 };
 
-for (const [name, provider] of Object.entries({ hot: MAP_PROVIDERS.dark_all /*  TODO: !!! Every provider */ })) {
+for (const [name, provider] of Object.entries({
+    //hot: MAP_PROVIDERS.dark_all,
+    ...MAP_PROVIDERS /*  TODO: !!! Every provider */,
+})) {
     declareModule({
         manifest: {
             name: `@collboard/map-layer-${name}`,
