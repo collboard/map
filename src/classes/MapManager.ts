@@ -3,7 +3,7 @@ import { Operation } from '@collboard/modules-sdk/types/50-systems/ArtVersionSys
 import { Destroyable, IDestroyable } from 'destroyable';
 import { forAllImagesInElement, forTime } from 'waitasecond';
 import { Transform, Vector } from 'xyzt';
-import { MAP_BASE, TILE_SIZE } from '../config';
+import { MAP_BASE, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileAbsolute } from '../semantic/TileAbsolute';
 import { Wgs84 } from '../semantic/Wgs84';
 import { iterateTiles } from '../utils/iterateTiles';
@@ -72,53 +72,9 @@ export class MapManager extends Destroyable implements IDestroyable {
         // console.log(`________________________`);
         // console.log('render');
 
-        // TODO: !!! Variabile sizeOfScreenInTiles
-        // TODO: !!! Where is the exact center of the screen in tiles?
-
-        /*
-        const { tile } = TileUnique.fromAbsolute(new TileRelative(0, 0, 0).toTile(transform));
-        const tileSize = TILE_SIZE.scale(Math.pow(2, MAP_BASE.z - tile.z));
-
-        console.log(tileSize, TILE_SIZE);
-
-        const sizeOfScreenInTiles = new TileRelative(
-            windowSize.divide(TILE_SIZE).scale(TILE_COUNT_PADDING).map(Math.ceil),
+        const corners = [windowSize.scale(1 - TILE_COUNT_PADDING), windowSize.scale(TILE_COUNT_PADDING)].map((corner) =>
+            this.pickTile(corner),
         );
-        */
-
-        const corners = [Vector.zero(), windowSize].map((corner) => this.pickTile(corner));
-        // TODO: !!! Use instead of TILE_COUNT_PADDING
-        // const p = 0.6;
-        // const corners = [windowSize.scale(1 - p), windowSize.scale(p)].map((corner) => this.pickTile(corner));
-
-        /*
-        !!! Remove
-        console.log(Array.from(iterateTiles(...corners)).length);
-        */
-
-        /*
-        !!! Remove
-        for (const tile of iterateTilesCorners(...corners)) {
-            console.log(tile);
-            this.virtualArtVersioningSystem
-                .createPrimaryOperation()
-                .newArts(this.tileProvider.createTileArt(tile))
-                .persist();
-        }
-        */
-
-        /*
-        !!! Remove
-        for (const tile of [
-            new TileUnique(this.pickTile(Vector.zero()).map(Math.round)),
-            new TileUnique(this.pickTile(windowSize.scale(0.6)).map(Math.round)),
-        ]) {
-            this.virtualArtVersioningSystem
-                .createPrimaryOperation()
-                .newArts(this.tileProvider.createTileArt(tile))
-                .persist();
-        }
-        */
 
         let createdTiles = 0;
         this.primaryTiles = {};
@@ -134,8 +90,6 @@ export class MapManager extends Destroyable implements IDestroyable {
             this.primaryTiles[tile.uniqueKey] = this.renderedTiles[tile.uniqueKey];
         }
 
-        // console.log('createdTiles', createdTiles);
-
         if (createdTiles) {
             this.cleanup();
         }
@@ -144,7 +98,6 @@ export class MapManager extends Destroyable implements IDestroyable {
     private cleanupQueue = new Queue();
     private cleanup() {
         this.cleanupQueue.task(async () => {
-            // console.log('cleanup');
             await Promise.all(
                 // TODO: Filter here only primaryTiles
                 Array.from(document.querySelectorAll(`img[src^='https://tile-']`)).map(async (imageElement) => {
