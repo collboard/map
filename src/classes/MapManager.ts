@@ -180,7 +180,6 @@ export class MapManager extends Destroyable implements IDestroyable {
 /**
  * TODO: !!! Some little shifting on changing tiles in deep zoom level
  * TODO: !!! UX and precision of drawing in all zoom levels
- * TODO: !!! Remove small stripes
- * TODO: !!! Import MAP_BASE_CENTER only from one place
+ * TODO: Import MAP_BASE_CENTER only from one place
  * TODO: Some calculations are made inefficiently in a 2D loop instead of once before it
  */

@@ -1,4 +1,5 @@
 import { ImageArt, randomItem } from '@collboard/modules-sdk';
+import { Vector } from 'xyzt';
 import { MAP_BASE, TILE_SIZE } from '../config';
 import { TileAbsolute } from '../semantic/TileAbsolute';
 import { TileUnique } from '../semantic/TileUnique';
@@ -34,6 +35,12 @@ export class TileProvider {
         tileArt.size = TILE_SIZE.scale(Math.pow(2, MAP_BASE.z - tile.z));
 
         tileArt.shift = tileAbsolute.multiply(tileArt.size);
+
+        // TODO: !!! To config
+        // TODO: !!! Change between map tipes
+        // TODO: !!! Change in deep zoom level
+        tileArt.size = (tileArt.size as Vector).scale(1.01);
+        // tileArt.size = (tileArt.size as Vector).add(Vector.square(2));
 
         // console.log('tileAbsolute', tileAbsolute);
         // console.log('shift', tileArt.shift);
