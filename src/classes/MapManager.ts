@@ -1,7 +1,7 @@
 import { AppState, CollSpace, Queue, VirtualArtVersioningSystem } from '@collboard/modules-sdk';
 import { Operation } from '@collboard/modules-sdk/types/50-systems/ArtVersionSystem/Operation';
 import { Destroyable, IDestroyable } from 'destroyable';
-import { forAllImagesInElement, forTime } from 'waitasecond';
+import { forAllImagesInElement } from 'waitasecond';
 import { Transform, Vector } from 'xyzt';
 import { MAP_BASE, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileAbsolute } from '../semantic/TileAbsolute';
@@ -98,14 +98,8 @@ export class MapManager extends Destroyable implements IDestroyable {
     private cleanupQueue = new Queue();
     private cleanup() {
         this.cleanupQueue.task(async () => {
-            await Promise.all(
-                // TODO: Filter here only primaryTiles
-                Array.from(document.querySelectorAll(`img[src^='https://tile-']`)).map(async (imageElement) => {
-                    // TODO: Better loaded detection - seems forAllImagesInElement not working perfectly for one image element
-                    await forAllImagesInElement(imageElement as HTMLImageElement);
-                    await forTime(1000);
-                }),
-            );
+            // TODO: Filter here only primaryTiles and wait for each of them
+            await forAllImagesInElement(document.querySelector('.board-container') as HTMLElement);
 
             // console.log('cleanup performing');
 
