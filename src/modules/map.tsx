@@ -25,8 +25,8 @@ const MAP_PROVIDERS = {
 };
 
 for (const [name, provider] of Object.entries({
-    // hot: MAP_PROVIDERS.dark_all,
-    ...MAP_PROVIDERS /*  TODO: !!! Every provider */,
+    hot: MAP_PROVIDERS.hot,
+    //...MAP_PROVIDERS /*  TODO: !!! Every provider */,
 })) {
     declareModule({
         manifest: {

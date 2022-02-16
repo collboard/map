@@ -1,4 +1,4 @@
-import { Abstract2dArt, classNames, declareModule, makeArtModule, React } from '@collboard/modules-sdk';
+import { Abstract2dArt, classNames, declareModule, ISystems, makeArtModule, React } from '@collboard/modules-sdk';
 import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { MAP_BASE, TILE_SIZE } from '../config';
@@ -94,8 +94,10 @@ export class GeojsonArt extends Abstract2dArt {
         return pointOnBoard;
     }
 
-    render(selected: boolean) {
+    async render(selected: boolean, systems: ISystems) {
         this.calculateBoundingBox();
+
+        const { appState } = await systems.request('appState');
 
         return (
             <div
@@ -126,7 +128,7 @@ export class GeojsonArt extends Abstract2dArt {
                                 fill: '#ffcc0022' /* TODO: As Geojson param /+ additional config */,
 
                                 stroke: '#ff4411',
-                                strokeWidth: 3,
+                                strokeWidth: 3 / appState.transform.scale.x /* !!! Make this work */,
                             }}
                             onClick={() => {
                                 // TODO: Tell the region that the user clicked on it
