@@ -8,6 +8,7 @@ const FEATURES = [
     { name: 'prague', city: 'Praha' },
     /*
     TODO: !!! Uncomment
+    { name: 'prague', city: 'Praha' },
     { name: 'brno', city: 'Brno' },
     { name: 'pilsen', city: 'Plzeň' },
     { name: 'olomouc', city: 'Olomouc' },

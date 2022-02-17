@@ -1,12 +1,12 @@
 import { Abstract2dArt, classNames, declareModule, ISystems, makeArtModule, React } from '@collboard/modules-sdk';
 import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
+import { SimplifiedGeojson } from '../classes/SimplifiedGeojson';
 import { MAP_BASE, TILE_SIZE } from '../config';
 import { IGeojson } from '../interfaces/IGeojson';
 import { TileAbsolute } from '../semantic/TileAbsolute';
 import { Wgs84 } from '../semantic/Wgs84';
 import { getAllPointsOf } from '../utils/getAllPointsOf';
-import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
 
 export const SVG_PADDING = 10;
 export const IS_NEAR_DISTANCE = 20;
@@ -28,8 +28,12 @@ export class GeojsonArt extends Abstract2dArt {
     private minY: number = 0;
     private maxY: number = 0;
 
+    private readonly __simplifiedGeojson: SimplifiedGeojson;
+
     public constructor(public readonly geojson: IGeojson /* TODO: TODO: Should it be readonly */) {
         super();
+        // TODO: !!! Predegrade to 0.001
+        this.__simplifiedGeojson = new SimplifiedGeojson(geojson);
     }
 
     public get topLeftCorner() {
@@ -75,7 +79,8 @@ export class GeojsonArt extends Abstract2dArt {
     }
 
     private calculateBoundingBox() {
-        this.pointsOnBoard = getAllPointsOf(this.geojson).map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
+        // TODO: Use here SimplifiedGeojson.boundingBox
+        this.pointsOnBoard = this.__simplifiedGeojson.points.map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
         const xVals = this.pointsOnBoard.map((point) => point.x || 0);
         const yVals = this.pointsOnBoard.map((point) => point.y || 0);
         this.minX = Math.min.apply(null, xVals);
@@ -98,6 +103,12 @@ export class GeojsonArt extends Abstract2dArt {
         this.calculateBoundingBox();
 
         const { appState } = await systems.request('appState');
+        const z = appState.transform.scale.x;
+
+        const degradation = 0.001 / z; //Math.pow(2, z * 5);
+
+        // TODO: !!! Use simplifyForTransform
+        const simplifiedGeojson = this.__simplifiedGeojson.simplify(degradation);
 
         return (
             <div
@@ -108,13 +119,15 @@ export class GeojsonArt extends Abstract2dArt {
                     top: this.minY - SVG_PADDING + (this.shift.y || 0),
                 }}
             >
+                {' '}
+                {Math.random()}
                 <svg
                     // TODO: Maybe use viewBox instead of width+height
                     width={this.maxX - this.minX + 2 * SVG_PADDING}
                     height={this.maxY - this.minY + 2 * SVG_PADDING}
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    {getAllSimplePolygonsOf(this.geojson).map((feature, i) => (
+                    {simplifiedGeojson.simplePolygons.map((feature, i) => (
                         <polygon
                             key={i}
                             points={getAllPointsOf(feature)
@@ -128,7 +141,7 @@ export class GeojsonArt extends Abstract2dArt {
                                 fill: '#ffcc0022' /* TODO: As Geojson param /+ additional config */,
 
                                 stroke: '#ff4411',
-                                strokeWidth: 3 / appState.transform.scale.x /* !!! Make this work */,
+                                strokeWidth: 3 / z /* !!! Make this work */,
                             }}
                             onClick={() => {
                                 // TODO: Tell the region that the user clicked on it

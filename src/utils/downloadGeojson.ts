@@ -1,5 +1,3 @@
-import simplifyGeojson from 'simplify-geojson';
-
 interface IDownloadGeojsonOptions {
     city: string;
 }
@@ -16,11 +14,14 @@ export async function downloadGeojson(options: IDownloadGeojsonOptions) {
 
     const response = await fetch(url.href);
     const geojson = await response.json();
-    const geojsonSimplified = simplifyGeojson(geojson, 0.001 /* <- TODO: To some global config */);
 
-    return geojsonSimplified;
+    // Note: Openstreetmap returns geojson with two features, but strangely theese two features are duplicated
+    geojson.features = [geojson.features[1]];
+
+    return geojson;
 }
 
 /**
- * TODO: Cache this simplified in localstorage
+ * TODO: Cache in localstorage
+ * TODO: GeojsonProvider
  */

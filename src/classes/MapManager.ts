@@ -1,7 +1,7 @@
 import { AppState, CollSpace, ImageArt, Queue, VirtualArtVersioningSystem } from '@collboard/modules-sdk';
 import { Operation } from '@collboard/modules-sdk/types/50-systems/ArtVersionSystem/Operation';
 import { Destroyable, IDestroyable } from 'destroyable';
-import { forImage } from 'waitasecond';
+import { forImage, forValueDefined } from 'waitasecond';
 import { Transform, Vector } from 'xyzt';
 import { MAP_BASE, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileAbsolute } from '../semantic/TileAbsolute';
@@ -102,11 +102,14 @@ export class MapManager extends Destroyable implements IDestroyable {
             await Promise.all(
                 Object.getOwnPropertySymbols(this.renderedTiles)
                     .map((s) => this.renderedTiles[s])
-                    .map((tileOperation) => (tileOperation.arts[0 /* TODO: For each */] as ImageArt).element)
-                    .map((imageElement) => forImage(imageElement)),
+                    .map((tileOperation) =>
+                        forValueDefined(() => (tileOperation.arts[0 /* TODO: For each */] as ImageArt).element).then(
+                            (imageElement) => forImage(imageElement),
+                        ),
+                    ),
             );
 
-            // console.log('cleanup performing');
+            console.log('cleanup performing');
 
             for (const tileUniqueKey of Object.getOwnPropertySymbols(this.renderedTiles)) {
                 if (this.primaryTiles[tileUniqueKey]) {
