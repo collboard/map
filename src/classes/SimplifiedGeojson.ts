@@ -8,10 +8,15 @@ import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
  * Note: This class is wrapper around @see https://www.npmjs.com/package/simplify-geojson
  */
 export class SimplifiedGeojson {
-    private cache: Record<number, SimplifiedGeojson> = {};
+    private cache: Record<number, SimplifiedGeojson>;
 
-    constructor(public readonly geoJson: IGeojson) {
-        console.log(`SimplifiedGeojson created`);
+    constructor(public readonly geoJson: IGeojson, cache?: Record<number, SimplifiedGeojson>) {
+        if (!cache) {
+            console.log(`SimplifiedGeojson created with fresh cache`);
+            this.cache = {};
+        } else {
+            this.cache = cache;
+        }
     }
 
     /**
@@ -26,6 +31,7 @@ export class SimplifiedGeojson {
             this.cache[tolerance] = new SimplifiedGeojson(
                 // TODO: !!! Share cache
                 simplifyGeojson(this.geoJson, tolerance),
+                this.cache,
             );
         }
 
@@ -65,3 +71,8 @@ export class SimplifiedGeojson {
     }
     */
 }
+
+/**
+ * TODO: Cache in localstorage
+ * TODO: Pre-cache zoom levels
+ */
