@@ -6,6 +6,10 @@ import { GeojsonArt } from './map-geojson-art';
 
 const FEATURES = [
     { name: 'prague', city: 'Praha' },
+    { name: 'brno', city: 'Brno' },
+    { name: 'pilsen', city: 'Plzeň' },
+    { name: 'olomouc', city: 'Olomouc' },
+    { name: 'liberec', city: 'Liberec' },
     /*
     TODO: !!! Uncomment
     { name: 'prague', city: 'Praha' },
