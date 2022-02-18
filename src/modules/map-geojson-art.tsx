@@ -8,9 +8,6 @@ import { TileAbsolute } from '../semantic/TileAbsolute';
 import { Wgs84 } from '../semantic/Wgs84';
 import { getAllPointsOf } from '../utils/getAllPointsOf';
 
-export const SVG_PADDING = 10;
-export const IS_NEAR_DISTANCE = 20;
-
 export class GeojsonArt extends Abstract2dArt {
     public static serializeName = 'GeojsonArt';
     public static manifest = {
@@ -71,11 +68,14 @@ export class GeojsonArt extends Abstract2dArt {
     */
 
     public isNear(point2: IVectorData) {
+        return false;
+        /* TODO:
         // TODO: Also check if point is inside the polygon
         return (
             this.pointsOnBoard.filter((point) => Vector.add(point, this.shift).distance(point2) <= IS_NEAR_DISTANCE)
                 .length > 0
         );
+        */
     }
 
     private calculateBoundingBox() {
@@ -104,6 +104,7 @@ export class GeojsonArt extends Abstract2dArt {
 
         const { appState } = await systems.request('appState');
         const z = appState.transform.scale.x;
+        const svgPadding = 5 / z;
 
         const degradation = 0.001 / z; //Math.pow(2, z * 5);
 
@@ -115,34 +116,33 @@ export class GeojsonArt extends Abstract2dArt {
                 className={classNames('art', selected && 'selected')}
                 style={{
                     position: 'absolute',
-                    left: this.minX - SVG_PADDING + (this.shift.x || 0),
-                    top: this.minY - SVG_PADDING + (this.shift.y || 0),
+                    left: this.minX - svgPadding + (this.shift.x || 0),
+                    top: this.minY - svgPadding + (this.shift.y || 0),
                 }}
             >
-                {' '}
-                {Math.random()}
                 <svg
                     // TODO: Maybe use viewBox instead of width+height
-                    width={this.maxX - this.minX + 2 * SVG_PADDING}
-                    height={this.maxY - this.minY + 2 * SVG_PADDING}
+                    width={this.maxX - this.minX + 2 * svgPadding}
+                    height={this.maxY - this.minY + 2 * svgPadding}
                     xmlns="http://www.w3.org/2000/svg"
                 >
+                    {/*
+                    <filter id="dilate-and-xor">
+                        {/* TODO: Filters can be used also for special effects/texturing for FreehandArt * /}
+                        <feMorphology in="SourceGraphic" result="dilate-result" operator="dilate" radius={2 / z} />
+                        <feComposite in="SourceGraphic" in2="dilate-result" result="xor-result" operator="xor" />
+                    </filter>
+                    */}
                     {simplifiedGeojson.simplePolygons.map((feature, i) => (
                         <polygon
                             key={i}
                             points={getAllPointsOf(feature)
                                 .map((pointAsWgs84) => {
                                     return this.wgs84ToBoard(pointAsWgs84)
-                                        .subtract(new Vector(this.minX - SVG_PADDING, this.minY - SVG_PADDING))
+                                        .subtract(new Vector(this.minX - svgPadding, this.minY - svgPadding))
                                         .toArray2D();
                                 })
                                 .join(' ')}
-                            style={{
-                                fill: '#ffcc0022' /* TODO: As Geojson param /+ additional config */,
-
-                                stroke: '#ff4411',
-                                strokeWidth: 3 / z /* !!! Make this work */,
-                            }}
                             onClick={() => {
                                 // TODO: Tell the region that the user clicked on it
                             }}
@@ -150,6 +150,11 @@ export class GeojsonArt extends Abstract2dArt {
                                 // TODO: Tell the region that the user hoovered on it
                                 // + add  onMouseLeave={(event) => {
                             }}
+                            stroke="red"
+                            strokeWidth={3 / z}
+                            fill="none"
+                            strokeLinejoin="round"
+                            // filter="url(#dilate-and-xor)"
                         />
                     ))}
                 </svg>
@@ -163,4 +168,5 @@ declareModule(makeArtModule(GeojsonArt));
 /**
  * TODO: !!! Copy XYZT here and back
  * TODO: !!! XYZT Transformation should allow recieve convert/revert pair
+ * TODO: On low-zoom level show as dot instead of polygon
  */
