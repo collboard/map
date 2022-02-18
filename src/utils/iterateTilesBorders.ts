@@ -2,6 +2,7 @@ import { TileAbsolute } from '../semantic/TileAbsolute';
 import { TileUnique } from '../semantic/TileUnique';
 
 /**
+ * NOT IMPLEMENTED
  * Debugging complement for iterateTiles
  *
  * iterateTilesCorners function has same interface but iterates only through borders
@@ -20,8 +21,6 @@ export function* iterateTilesBorders(...corners: TileAbsolute[]): IterableIterat
     const toY = Math.ceil(Math.max(...ys));
 
     // console.log({ fromX, fromY, toX, toY });
-
-    // TODO: !!! Implement
 }
 
 /**

@@ -2,7 +2,6 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Promisable } from 'type-fest';
 import { forTime } from 'waitasecond';
 
-// TODO: !!! isEqual
 export function observeByHeartbeat<T>(options: {
     getValue: () => T;
     waiter?: () => Promise<void>;

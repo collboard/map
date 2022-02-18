@@ -59,8 +59,6 @@ declareModule(() => {
 
                         // TODO: !!! pointAsTile is incorrect according to the zoom level
 
-                        // console.log({ pointOnScreen, pointOnBoard, pointAsTile, pointAsWgs84 });
-
                         const notification = notificationSystem.publish({
                             type: 'info',
                             tag: `picked-point-${touch.firstFrame.position}`,
