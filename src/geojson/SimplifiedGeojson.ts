@@ -10,7 +10,7 @@ import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
 export class SimplifiedGeojson {
     private cache: Record<number, SimplifiedGeojson>;
 
-    constructor(public readonly geoJson: IGeojson, cache?: Record<number, SimplifiedGeojson>) {
+    protected constructor(public readonly geojson: IGeojson, cache?: Record<number, SimplifiedGeojson>) {
         if (!cache) {
             console.log(`SimplifiedGeojson created with fresh cache`);
             this.cache = {};
@@ -26,11 +26,12 @@ export class SimplifiedGeojson {
      * @param tolerance is number in degrees (e.g. lat/lon distance). 1 degree is roughly equivalent to 69 miles. the default is 0.001, which is around a city block long.
      */
     public simplify(tolerance: number): SimplifiedGeojson {
+        // TODO: Minimal tolerance should be 0.001
         // TODO: Round tolerance to some level across deep zooms
         if (!this.cache[tolerance]) {
             this.cache[tolerance] = new SimplifiedGeojson(
                 // TODO: !!! Share cache
-                simplifyGeojson(this.geoJson, tolerance),
+                simplifyGeojson(this.geojson, tolerance),
                 this.cache,
             );
         }
@@ -40,19 +41,19 @@ export class SimplifiedGeojson {
 
     get simplePolygons(): IGeojsonSimplePolygon[] {
         // TODO: Cache
-        return getAllSimplePolygonsOf(this.geoJson);
+        return getAllSimplePolygonsOf(this.geojson);
     }
 
     get points(): Wgs84[] {
         // TODO: Cache
-        return getAllPointsOf(this.geoJson);
+        return getAllPointsOf(this.geojson);
     }
 
     /*
     TODO
     get boundingBox(): IBoundingBox {
         // TODO: Cache
-        // TODO: Use here internal materialized this.geoJson`s information about bounding box
+        // TODO: Use here internal materialized this.geojson`s information about bounding box
         // TODO: getBoundingBoxOf
         this.pointsOnBoard = getAllPointsOf(this.geojson).map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
         const xVals = this.pointsOnBoard.map((point) => point.x || 0);

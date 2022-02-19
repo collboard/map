@@ -1,5 +1,4 @@
 import { IGeojsonCoords } from '../interfaces/IGeojson';
-import { IDeepmultiArray } from './unwrapDeepsingleArray';
 
 /**
  * ...

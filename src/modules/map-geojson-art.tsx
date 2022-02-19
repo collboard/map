@@ -1,8 +1,8 @@
 import { Abstract2dArt, classNames, declareModule, ISystems, makeArtModule, React } from '@collboard/modules-sdk';
 import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { SimplifiedGeojson } from '../classes/SimplifiedGeojson';
 import { MAP_BASE, TILE_SIZE } from '../config';
+import { SimplifiedGeojson } from '../geojson/SimplifiedGeojson';
 import { IGeojson } from '../interfaces/IGeojson';
 import { TileAbsolute } from '../semantic/TileAbsolute';
 import { Wgs84 } from '../semantic/Wgs84';
@@ -25,12 +25,19 @@ export class GeojsonArt extends Abstract2dArt {
     private minY: number = 0;
     private maxY: number = 0;
 
+    private readonly geojson: IGeojson;
     private readonly __simplifiedGeojson: SimplifiedGeojson;
 
-    public constructor(public readonly geojson: IGeojson /* TODO: TODO: Should it be readonly */) {
+    public constructor(geojson: /*IGeojson |*/ SimplifiedGeojson) {
         super();
-        // TODO: !!! Predegrade to 0.001
-        this.__simplifiedGeojson = new SimplifiedGeojson(geojson);
+
+        //if (geojson instanceof SimplifiedGeojson) {
+        this.geojson = geojson.geojson;
+        this.__simplifiedGeojson = geojson;
+        /*} else {
+            this.geojson = geojson;
+            this.__simplifiedGeojson = new SimplifiedGeojson(geojson);
+        }*/
     }
 
     public get topLeftCorner() {
