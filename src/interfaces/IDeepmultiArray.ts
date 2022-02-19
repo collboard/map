@@ -1,0 +1,1 @@
+export type IDeepmultiArray<T> = T | IDeepmultiArray<T>[];

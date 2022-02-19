@@ -1,3 +1,4 @@
+import { IDeepmultiArray } from '../interfaces/IDeepmultiArray';
 import { IGeojsonCoords } from '../interfaces/IGeojson';
 
 /**

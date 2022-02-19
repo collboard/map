@@ -1,5 +1,5 @@
 import { string_url } from '@collboard/modules-sdk';
-import { IDeepmultiArray } from '../utils/unwrapDeepsingleArray';
+import { IDeepmultiArray } from './IDeepmultiArray';
 
 export type IGeojson = IGeojsonFeatureCollection | IGeojsonFeature | IGeojsonPolygon | IGeojsonSimplePolygon;
 
