@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import { IGeojson } from '../interfaces/IGeojson';
+import { IGeojson, IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 
 export class OsmGeojson {
     protected constructor(public readonly geojson: IGeojson) {}
@@ -16,10 +16,26 @@ export class OsmGeojson {
         }
 
         const response = await fetch(url.href);
-        const geojson = await response.json();
+        const geojson = (await response.json()) as IGeojsonFeatureCollection;
 
-        // Note: Openstreetmap returns geojson with two features, but strangely theese two features are duplicated
-        // !!!geojson.features = [geojson.features[1]];
+        //------
+        // Problem: Openstreetmap returns geojson with two features, but strangely theese two features are duplicated
+        // Solution: Remove duplicated features by comparing its bounding boxes and choose only first of each unique
+        // TODO: Maybe to separate util
+        geojson.features = geojson.features.reduce((uniqueFeatures, feature) => {
+            const uniqueFeature = uniqueFeatures.find(
+                (uniqueFeature) =>
+                    uniqueFeature.geometry.type === feature.geometry.type &&
+                    uniqueFeature.bbox?.join(',') === feature.bbox?.join(','),
+            );
+
+            if (!uniqueFeature) {
+                uniqueFeatures.push(feature);
+            }
+
+            return uniqueFeatures;
+        }, [] as IGeojsonFeatureCollection['features']);
+        //-------
 
         return geojson;
     }

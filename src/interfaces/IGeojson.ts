@@ -7,6 +7,7 @@ export interface IGeojsonFeatureCollection extends IGeojsonEntity<'FeatureCollec
 }
 
 export interface IGeojsonFeature extends IGeojsonEntity<'Feature'> {
+    bbox?: number[];
     geometry: IGeojsonSimplePolygon | IGeojsonPolygon;
 }
 
