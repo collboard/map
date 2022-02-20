@@ -5,6 +5,7 @@
 import { mkdir, writeFile } from 'fs/promises';
 import { dirname, join } from 'path';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
+import { geojsonStringify } from './utils/geojsonStringify';
 
 /**/
 download();
@@ -18,5 +19,5 @@ async function download() {
 
     const geojsonPath = join(__dirname, `../../maps/downloaded/cities/prague.geojson`);
     await mkdir(dirname(geojsonPath), { recursive: true });
-    await writeFile(geojsonPath, JSON.stringify(geojson, null, 4), 'utf8');
+    await writeFile(geojsonPath, geojsonStringify(geojson), 'utf8');
 }
