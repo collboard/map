@@ -1,8 +1,9 @@
 import simplifyGeojson from 'simplify-geojson';
-import { IGeojson, IGeojsonSimplePolygon } from '../interfaces/IGeojson';
+import { IGeojsonSimplePolygon } from '../interfaces/IGeojson';
 import { Wgs84 } from '../semantic/Wgs84';
 import { getAllPointsOf } from '../utils/getAllPointsOf';
 import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
+import { OsmGeojson } from './OsmGeojson';
 
 /**
  * Note: This class is wrapper around @see https://www.npmjs.com/package/simplify-geojson
@@ -10,7 +11,10 @@ import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
 export class SimplifiedGeojson {
     private cache: Record<number, SimplifiedGeojson>;
 
-    protected constructor(public readonly geojson: IGeojson, cache?: Record<number, SimplifiedGeojson>) {
+    public constructor(
+        private readonly originalGeojson: OsmGeojson /* TODO: | IGeojson */,
+        cache?: Record<number, SimplifiedGeojson>,
+    ) {
         if (!cache) {
             console.log(`SimplifiedGeojson created with fresh cache`);
             this.cache = {};
@@ -31,7 +35,7 @@ export class SimplifiedGeojson {
         if (!this.cache[tolerance]) {
             this.cache[tolerance] = new SimplifiedGeojson(
                 // TODO: !!! Share cache
-                simplifyGeojson(this.geojson, tolerance),
+                simplifyGeojson(this.originalGeojson, tolerance),
                 this.cache,
             );
         }
@@ -41,12 +45,12 @@ export class SimplifiedGeojson {
 
     get simplePolygons(): IGeojsonSimplePolygon[] {
         // TODO: Cache
-        return getAllSimplePolygonsOf(this.geojson);
+        return getAllSimplePolygonsOf(this.originalGeojson.geojson);
     }
 
     get points(): Wgs84[] {
         // TODO: Cache
-        return getAllPointsOf(this.geojson);
+        return getAllPointsOf(this.originalGeojson.geojson);
     }
 
     /*
@@ -74,6 +78,5 @@ export class SimplifiedGeojson {
 }
 
 /**
- * TODO: Cache in localstorage
  * TODO: Pre-cache zoom levels
  */

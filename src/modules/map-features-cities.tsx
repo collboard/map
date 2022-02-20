@@ -1,6 +1,6 @@
 import { declareModule } from '@collboard/modules-sdk';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { OpenstreetmapGeojson } from '../geojson/OpenstreetmapGeojson';
+import { OsmGeojsonCached } from '../geojson/OsmGeojsonCached';
 import { GeojsonArt } from './map-geojson-art';
 
 const FEATURES_CITIES = [{ en: 'Prague', cs: 'Praha', search: 'Prague' }];
@@ -35,7 +35,7 @@ for (const city of FEATURES_CITIES) {
 
             return virtualArtVersioningSystem
                 .createPrimaryOperation()
-                .newArts(new GeojsonArt(await OpenstreetmapGeojson.fromCity(city.search)))
+                .newArts(new GeojsonArt(await OsmGeojsonCached.fromCity(city.search)))
                 .persist();
         },
     });

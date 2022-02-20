@@ -1,4 +1,3 @@
-import { string_url } from '@collboard/modules-sdk';
 import { IDeepmultiArray } from './IDeepmultiArray';
 
 export type IGeojson = IGeojsonFeatureCollection | IGeojsonFeature | IGeojsonPolygon | IGeojsonSimplePolygon;
@@ -49,7 +48,7 @@ export interface IGeojsonProperties {
      * Range <0;1>
      */
     importance?: number;
-    icon?: string_url;
+    icon?: string /*_url*/;
 }
 
 export type latitude = number;

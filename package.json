@@ -21,6 +21,8 @@
     "dependencies": {},
     "devDependencies": {
         "@collboard/modules-sdk": "18.20.0",
+        "@types/isomorphic-fetch": "0.0.35",
+        "isomorphic-fetch": "^3.0.0",
         "@types/jest": "27.4.0",
         "everstorage": "^1.10.1",
         "jest": "27.4.7",

@@ -2,6 +2,7 @@ import { Abstract2dArt, classNames, declareModule, ISystems, makeArtModule, Reac
 import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { MAP_BASE, TILE_SIZE } from '../config';
+import { OsmGeojson } from '../geojson/OsmGeojson';
 import { SimplifiedGeojson } from '../geojson/SimplifiedGeojson';
 import { IGeojson } from '../interfaces/IGeojson';
 import { TileAbsolute } from '../semantic/TileAbsolute';
@@ -28,16 +29,16 @@ export class GeojsonArt extends Abstract2dArt {
     private readonly geojson: IGeojson;
     private readonly __simplifiedGeojson: SimplifiedGeojson;
 
-    public constructor(geojson: /*IGeojson |*/ SimplifiedGeojson) {
+    public constructor(geojson: OsmGeojson /* TODO: | IGeojson */) {
         super();
 
         //if (geojson instanceof SimplifiedGeojson) {
+        //  this.geojson = geojson.geojson;
+        //  this.__simplifiedGeojson = geojson;
+        //} else {
         this.geojson = geojson.geojson;
-        this.__simplifiedGeojson = geojson;
-        /*} else {
-            this.geojson = geojson;
-            this.__simplifiedGeojson = new SimplifiedGeojson(geojson);
-        }*/
+        this.__simplifiedGeojson = new SimplifiedGeojson(geojson);
+        //}
     }
 
     public get topLeftCorner() {
