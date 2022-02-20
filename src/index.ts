@@ -1,6 +1,6 @@
 import './modules/map';
 // import './modules/map-switcher';
-import './modules/map-features';
+import './modules/map-features-cities';
 import './modules/map-picking-tool';
 import './modules/map-polygon-art';
 import './modules/map-shortcuts';
