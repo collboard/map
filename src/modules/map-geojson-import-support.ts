@@ -31,7 +31,9 @@ declareModule({
                 // TODO: Import GeoJson and center the map
                 const geojson = JSON.parse(await file.text()) as IGeojson;
 
-                console.log({ geojson });
+                // TODO: !!! Upload to server as a file
+
+                // console.log({ geojson });
                 const geojsonArt = new GeojsonArt(geojson);
 
                 materialArtVersioningSystem.createPrimaryOperation().newArts(geojsonArt).persist();

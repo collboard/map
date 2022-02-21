@@ -6,13 +6,13 @@ export class OsmGeojsonCached extends OsmGeojson {
     private static storage = new ObjectStorage<any /*IGeojson*/>(new PrefixStorage(localStorage, 'Geojson'));
 
     protected static async downloadFromNominatim(params: Record<string, string>): Promise<IGeojson> {
-        console.log(
+        /*console.log(
             { params },
             Object.entries(params),
             `Geojson_${Object.entries(params)
                 .map(([key, value]) => `${key}-${value}`)
                 .join('_')}`,
-        );
+        );*/
 
         const cacheKey = `Geojson_${Object.entries(params)
             .map((key, value) => `${key}-${value}`)

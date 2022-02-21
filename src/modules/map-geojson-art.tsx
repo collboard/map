@@ -26,7 +26,9 @@ export class GeojsonArt extends Abstract2dArt {
     private minY: number = 0;
     private maxY: number = 0;
 
+    // TODO: !!! Probbably delete
     private readonly geojson: IGeojson;
+    // tslint:disable-next-line:variable-name
     private readonly __simplifiedGeojson: SimplifiedGeojson;
 
     public constructor(geojson: OsmGeojson | IGeojson) {
@@ -114,7 +116,7 @@ export class GeojsonArt extends Abstract2dArt {
         const z = appState.transform.scale.x;
         const svgPadding = 5 / z;
 
-        const degradation = 0.001 / z; //Math.pow(2, z * 5);
+        const degradation = 0.001 / z; // Math.pow(2, z * 5);
 
         // TODO: !!! Use simplifyForTransform
         const simplifiedGeojson = this.__simplifiedGeojson.simplify(degradation);

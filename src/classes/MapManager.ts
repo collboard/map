@@ -109,7 +109,7 @@ export class MapManager extends Destroyable implements IDestroyable {
                     ),
             );
 
-            console.log('cleanup performing');
+            // console.log('cleanup performing');
 
             for (const tileUniqueKey of Object.getOwnPropertySymbols(this.renderedTiles)) {
                 if (this.primaryTiles[tileUniqueKey]) {

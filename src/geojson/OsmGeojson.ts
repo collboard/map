@@ -18,15 +18,15 @@ export class OsmGeojson {
         const response = await fetch(url.href);
         const geojson = (await response.json()) as IGeojsonFeatureCollection;
 
-        //------
+        // ------
         // Problem: Openstreetmap returns geojson with two features, but strangely theese two features are duplicated
         // Solution: Remove duplicated features by comparing its bounding boxes and choose only first of each unique
         // TODO: Maybe to separate util
         geojson.features = geojson.features.reduce((uniqueFeatures, feature) => {
             const uniqueFeature = uniqueFeatures.find(
-                (uniqueFeature) =>
-                    uniqueFeature.geometry.type === feature.geometry.type &&
-                    uniqueFeature.bbox?.join(',') === feature.bbox?.join(','),
+                (uniqueFeature2) =>
+                    uniqueFeature2.geometry.type === feature.geometry.type &&
+                    uniqueFeature2.bbox?.join(',') === feature.bbox?.join(','),
             );
 
             if (!uniqueFeature) {
@@ -35,7 +35,7 @@ export class OsmGeojson {
 
             return uniqueFeatures;
         }, [] as IGeojsonFeatureCollection['features']);
-        //-------
+        // -------
 
         return geojson;
     }

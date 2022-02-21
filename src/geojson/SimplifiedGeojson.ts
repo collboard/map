@@ -21,7 +21,7 @@ export class SimplifiedGeojson {
         }
 
         if (!cache) {
-            console.log(`SimplifiedGeojson created with fresh cache`);
+            // console.log(`SimplifiedGeojson created with fresh cache`);
             this.cache = {};
         } else {
             this.cache = cache;
