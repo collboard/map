@@ -1,5 +1,5 @@
 import simplifyGeojson from 'simplify-geojson';
-import { IGeojsonSimplePolygon } from '../interfaces/IGeojson';
+import { IGeojson, IGeojsonSimplePolygon } from '../interfaces/IGeojson';
 import { Wgs84 } from '../semantic/Wgs84';
 import { getAllPointsOf } from '../utils/getAllPointsOf';
 import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
@@ -11,10 +11,15 @@ import { OsmGeojson } from './OsmGeojson';
 export class SimplifiedGeojson {
     private cache: Record<number, SimplifiedGeojson>;
 
-    public constructor(
-        private readonly originalGeojson: OsmGeojson /* TODO: | IGeojson */,
-        cache?: Record<number, SimplifiedGeojson>,
-    ) {
+    private readonly originalGeojson: IGeojson;
+
+    public constructor(geojson: OsmGeojson | IGeojson, cache?: Record<number, SimplifiedGeojson>) {
+        if (geojson instanceof OsmGeojson) {
+            this.originalGeojson = geojson.geojson;
+        } else {
+            this.originalGeojson = geojson;
+        }
+
         if (!cache) {
             console.log(`SimplifiedGeojson created with fresh cache`);
             this.cache = {};
@@ -45,12 +50,12 @@ export class SimplifiedGeojson {
 
     get simplePolygons(): IGeojsonSimplePolygon[] {
         // TODO: Cache
-        return getAllSimplePolygonsOf(this.originalGeojson.geojson);
+        return getAllSimplePolygonsOf(this.originalGeojson);
     }
 
     get points(): Wgs84[] {
         // TODO: Cache
-        return getAllPointsOf(this.originalGeojson.geojson);
+        return getAllPointsOf(this.originalGeojson);
     }
 
     /*

@@ -29,16 +29,16 @@ export class GeojsonArt extends Abstract2dArt {
     private readonly geojson: IGeojson;
     private readonly __simplifiedGeojson: SimplifiedGeojson;
 
-    public constructor(geojson: OsmGeojson /* TODO: | IGeojson */) {
+    public constructor(geojson: OsmGeojson | IGeojson) {
         super();
 
-        //if (geojson instanceof SimplifiedGeojson) {
-        //  this.geojson = geojson.geojson;
-        //  this.__simplifiedGeojson = geojson;
-        //} else {
-        this.geojson = geojson.geojson;
+        if (geojson instanceof OsmGeojson) {
+            this.geojson = geojson.geojson;
+        } else {
+            this.geojson = geojson;
+        }
+
         this.__simplifiedGeojson = new SimplifiedGeojson(geojson);
-        //}
     }
 
     public get topLeftCorner() {

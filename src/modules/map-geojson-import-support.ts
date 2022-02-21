@@ -1,6 +1,7 @@
 import { declareModule } from '@collboard/modules-sdk';
-import { forImmediate } from 'waitasecond';
 import { contributors, license, repository, version } from '../../package.json';
+import { IGeojson } from '../interfaces/IGeojson';
+import { GeojsonArt } from './map-geojson-art';
 
 declareModule({
     manifest: {
@@ -27,10 +28,16 @@ declareModule({
             priority: 0,
             mimeType: 'application/geo+json',
             async processFile({ file, boardPosition }) {
+                // TODO: Import GeoJson and center the map
+                const geojson = JSON.parse(await file.text()) as IGeojson;
 
+                console.log({ geojson });
+                const geojsonArt = new GeojsonArt(geojson);
+
+                materialArtVersioningSystem.createPrimaryOperation().newArts(geojsonArt).persist();
 
                 /*
-                TODO: Import GeoJson and center the map
+
 
                 let imageSrc = await blobToDataURI(file);
                 const imageScaledSize = fitInside({

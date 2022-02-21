@@ -44,12 +44,20 @@ export class OsmGeojson {
         return new OsmGeojson(await this.downloadFromNominatim({ city }));
     }
 
+    /*
+    TODO: !!! Remove
+    public static fromData(geojson: IGeojson): OsmGeojson {
+        return new OsmGeojson(geojson);
+    }
+    */
+
     public get title() {
         return '!!! TODO';
     }
 }
 
 /**
+ * TODO: Probbably better name than OsmGeojson because data can be also from other sources than OpenStreetMap
  * TODO: Everstorage should have some util for making cached functions
  * TODO: Liberec is smaller than in real life
  * TODO: Brno is not shown

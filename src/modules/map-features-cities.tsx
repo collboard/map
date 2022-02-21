@@ -3,16 +3,13 @@ import { contributors, description, license, repository, version } from '../../p
 import { OsmGeojsonCached } from '../geojson/OsmGeojsonCached';
 import { GeojsonArt } from './map-geojson-art';
 
-const FEATURES_CITIES = [{ en: 'Prague', cs: 'Praha', search: 'Prague' }];
-
-/*
-TODO: !!! Uncomment
-{ name: 'prague', city: 'Praha' },
-{ name: 'brno', city: 'Brno' },
-{ name: 'pilsen', city: 'Plzeň' },
-{ name: 'olomouc', city: 'Olomouc' },
-{ name: 'liberec', city: 'Liberec' },
-*/
+const FEATURES_CITIES: any = [
+    { en: 'Prague', cs: 'Praha', search: 'Prague' },
+    { en: 'Brno', cs: 'Brno', search: 'Brno' },
+    { en: 'Pilsen', cs: 'Plzeň', search: 'Plzeň' },
+    { en: 'Olomouc', cs: 'Olomouc', search: 'Olomouc' },
+    { en: 'Liberec', cs: 'Liberec', search: 'Liberec' },
+];
 
 // TODO: Countries, counties, districts
 
