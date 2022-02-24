@@ -4,9 +4,10 @@ import { IGeojson, IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 export class OsmGeojson {
     protected constructor(public readonly geojson: IGeojson) {}
 
-    protected static async downloadFromNominatim(params: Record<string, string>): Promise<IGeojson> {
+    public static async search(params: Record<string, string>): Promise<OsmGeojson> {
         const url = new URL(`https://nominatim.openstreetmap.org/search`);
 
+        // TODO: !!! Do not hardcode country
         url.searchParams.set('country', 'czechia');
         url.searchParams.set('format', 'geojson');
         url.searchParams.set('polygon_geojson', '1');
@@ -37,12 +38,15 @@ export class OsmGeojson {
         }, [] as IGeojsonFeatureCollection['features']);
         // -------
 
-        return geojson;
+        return new OsmGeojson(geojson);
     }
 
+    /*
+    Note: using more universal search
     public static async fromCity(city: string): Promise<OsmGeojson> {
-        return new OsmGeojson(await this.downloadFromNominatim({ city }));
+        return new OsmGeojson(await this.search({ city }));
     }
+    */
 
     /*
     TODO: !!! Remove

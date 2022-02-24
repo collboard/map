@@ -1,38 +1,32 @@
 import { declareModule } from '@collboard/modules-sdk';
 import { contributors, description, license, repository, version } from '../../package.json';
+import { FEATURES } from '../../maps/features';
 import { OsmGeojsonCached } from '../geojson/OsmGeojsonCached';
 import { GeojsonArt } from './map-geojson-art';
 
-const FEATURES_CITIES: any = [
-    { en: 'Prague', cs: 'Praha', search: 'Prague' },
-    { en: 'Brno', cs: 'Brno', search: 'Brno' },
-    { en: 'Pilsen', cs: 'Plzeň', search: 'Plzeň' },
-    { en: 'Olomouc', cs: 'Olomouc', search: 'Olomouc' },
-    { en: 'Liberec', cs: 'Liberec', search: 'Liberec' },
-];
 
 // TODO: Countries, counties, districts
 
-for (const city of FEATURES_CITIES) {
+for (const feature of FEATURES) {
     declareModule({
         manifest: {
-            name: `@collboard/map-feature-${city.en.toLowerCase()}`,
+            name: `@collboard/map-feature-${feature.en.toLowerCase()}`,
             version,
             description,
             contributors,
             license,
             repository,
-            title: { cs: `${city.cs} na mapě`, en: `${city.en} on map` },
+            title: { cs: `${feature.cs} na mapě`, en: `${feature.en} on map` },
             categories: ['Geography', 'Template'],
             keywords: ['map', 'geojson', 'country', 'county', 'district', 'czechia', 'city'],
-            icon: '🌆',
+            icon: '🌆' /* <- TODO: Determine icon + other stuff in manifest from search */,
         },
         async setup(systems) {
             const { virtualArtVersioningSystem } = await systems.request('virtualArtVersioningSystem');
 
             return virtualArtVersioningSystem
                 .createPrimaryOperation()
-                .newArts(new GeojsonArt(await OsmGeojsonCached.fromCity(city.search)))
+                .newArts(new GeojsonArt(await OsmGeojsonCached.search(feature.search)))
                 .persist();
         },
     });

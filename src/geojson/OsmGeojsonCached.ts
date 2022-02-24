@@ -23,7 +23,7 @@ export class OsmGeojsonCached extends OsmGeojson {
             return cacheValue;
         }
 
-        const geojson = await super.downloadFromNominatim(params);
+        const geojson = await super.search(params);
 
         await this.storage.setItem(cacheKey, geojson);
 

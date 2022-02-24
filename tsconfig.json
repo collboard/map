@@ -11,6 +11,6 @@
         "esModuleInterop": true,
         "strict": true
     },
-    "include": ["src", "assets"],
+    "include": ["src", "assets", "maps/features.ts"],
     "exclude": ["node_modules"]
 }

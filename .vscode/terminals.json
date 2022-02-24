@@ -20,8 +20,7 @@
         },
         {
             "name": "🏭🗺️ Run geojson downloader",
-            "cwd": "./scripts/geojson-downloader/",
-            "command": "ts-node ./geojson-downloader.ts",
+            "command": "ts-node ./scripts/geojson-downloader/geojson-downloader.ts",
             "onlySingle": true,
             "focus": true
         }
