@@ -40,7 +40,10 @@ async function download(override: boolean) {
             const geopath = geojson.features[0]
                 .properties!.display_name!.split(',')
                 .map((part) => part.trim())
-                .filter((part) => !isNumeric(part))
+                .filter(
+                    // Note: Filtering out postcodes
+                    (part) => !isNumeric(part.split(/\s+/).join('')),
+                )
                 .reverse();
 
             // TODO: !!! Translate all parts of path to lowercase, without diacritics English
