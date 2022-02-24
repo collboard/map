@@ -5,14 +5,13 @@
 import del from 'del';
 import { mkdir, writeFile } from 'fs/promises';
 import { dirname, join } from 'path';
-import { forEver } from 'waitasecond';
 import { FEATURES } from '../../maps/features/features';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { isNumeric } from '../../src/utils/isNumeric';
 import { geojsonStringify } from './utils/geojsonStringify';
 
 /**/
-download(false);
+download(true);
 /**/
 
 async function download(override: boolean) {
@@ -26,9 +25,6 @@ async function download(override: boolean) {
     }
 
     console.info(`🗺️ Downloading geojsons`);
-
-    console.log((await OsmGeojson.search({ q: `South Africa` })).geojson);
-    await forEver();
 
     for (const feature of FEATURES) {
         console.info(`⬇️ Downloading ${feature.search.q /* TODO: Better */}`);
