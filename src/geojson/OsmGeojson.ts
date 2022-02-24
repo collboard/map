@@ -7,8 +7,6 @@ export class OsmGeojson {
     public static async search(params: Record<string, string>): Promise<OsmGeojson> {
         const url = new URL(`https://nominatim.openstreetmap.org/search`);
 
-        // TODO: !!! Do not hardcode country
-        url.searchParams.set('country', 'czechia');
         url.searchParams.set('format', 'geojson');
         url.searchParams.set('polygon_geojson', '1');
 
@@ -18,6 +16,11 @@ export class OsmGeojson {
 
         const response = await fetch(url.href);
         const geojson = (await response.json()) as IGeojsonFeatureCollection;
+
+        // ------
+        // Note: Picking only features of geometry type Polygon
+        geojson.features = geojson.features.filter((feature) => feature.geometry.type === 'Polygon');
+        // ------
 
         // ------
         // Problem: Openstreetmap returns geojson with two features, but strangely theese two features are duplicated

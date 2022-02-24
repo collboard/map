@@ -5,30 +5,6 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "city",
-                "place_id": 15060224,
-                "osm_type": "node",
-                "osm_id": 1599305717,
-                "display_name": "Olomouc, okres Olomouc, Olomoucký kraj, Střední Morava, 771 00, Česko",
-                "place_rank": 16,
-                "category": "place",
-                "importance": 0.7085230938863903,
-                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//poi_place_city.p.20.png"
-            },
-            "bbox": [
-                17.091143,
-                49.4340567,
-                17.411143,
-                49.7540567
-            ],
-            "geometry": {
-                "type": "Point",
-                "coordinates": [17.251143,49.5940567]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "type": "administrative",
                 "place_id": 281991098,
                 "osm_type": "relation",
