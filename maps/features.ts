@@ -1,4 +1,3 @@
-
 export const FEATURES: any = [
     { en: 'Prague', cs: 'Praha', search: { city: 'Prague' } },
     { en: 'Brno', cs: 'Brno', search: { city: 'Brno' } },

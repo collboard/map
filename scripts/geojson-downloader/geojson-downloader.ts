@@ -15,6 +15,12 @@ download();
 
 async function download() {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
+
+    console.info(`🧹 Making cleenup`);
+    const geojsonsPath = join(__dirname, `../../maps/geojsons/`);
+    // TODO: !!! Probbably switch overriting
+    await del(geojsonsPath);
+
     console.info(`🗺️ Downloading geojsons`);
 
     for (const feature of FEATURES) {
@@ -24,10 +30,6 @@ async function download() {
 
         const [type, name] = Object.entries(feature.search)[0];
 
-        const geojsonsPath = join(__dirname, `../../maps/geojsons/`);
-
-        // TODO: !!! Probbably switch overriting
-        await del(geojsonsPath);
         const geojsonPath = join(
             geojsonsPath,
             `/czechia/${feature.en.toLowerCase()}/${feature.en.toLowerCase()}.${type}.geojson`,
