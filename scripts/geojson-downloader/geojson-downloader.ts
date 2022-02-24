@@ -7,6 +7,7 @@ import { mkdir, writeFile } from 'fs/promises';
 import { dirname, join } from 'path';
 import { FEATURES } from '../../maps/features/features';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
+import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
 import { isNumeric } from '../../src/utils/isNumeric';
 import { geojsonStringify } from './utils/geojsonStringify';
 
@@ -27,10 +28,12 @@ async function download(override: boolean) {
     console.info(`🗺️ Downloading geojsons`);
 
     for (const feature of FEATURES) {
-        console.info(`⬇️ Downloading ${feature.search.q /* TODO: Better */}`);
+        console.info(`⬇️ Downloading ${feature.en}`);
+
+        let geojson: IGeojsonFeatureCollection;
 
         try {
-            const geojson = (await OsmGeojson.search(feature.search)).geojson;
+            geojson = (await OsmGeojson.search(feature.search)).geojson;
 
             // TODO: Maybe use const [type, name] = Object.entries(feature.search)[0]; >.${type}.geojson
 
@@ -50,6 +53,8 @@ async function download(override: boolean) {
 
             await writeFile(geojsonPath, geojsonStringify(geojson), 'utf8');
         } catch (error) {
+            console.info(feature);
+            console.info(geojson!);
             console.error(error);
         }
     }

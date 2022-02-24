@@ -49,7 +49,8 @@ async function generateFeatures() {
                       q: featureName,
                   };
             const feature = {
-                // TODO: English + other languages name
+                // TODO: !!! Propper translate to other languages name
+                en: featureName,
                 cs: featureName,
                 search,
             };

@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import { IGeojson, IGeojsonFeatureCollection } from '../interfaces/IGeojson';
+import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 
 export class OsmGeojson {
     protected constructor(public readonly geojson: IGeojsonFeatureCollection) {}
@@ -19,7 +19,9 @@ export class OsmGeojson {
 
         // ------
         // Note: Picking only features of geometry type Polygon
-        geojson.features = geojson.features.filter((feature) => feature.geometry.type === 'Polygon');
+        geojson.features = geojson.features.filter(
+            (feature) => feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon',
+        );
         // ------
 
         // ------
