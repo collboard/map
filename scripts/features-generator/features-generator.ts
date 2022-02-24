@@ -24,6 +24,9 @@ async function generateFeatures() {
     const features: any[] = [];
 
     for (const csvPath of await glob(join(__dirname, '../../maps/features/countries/**/*.csv'))) {
+        const country = /countries\/(?<country>.*?)\//.exec(csvPath)?.groups?.country;
+        console.log({ country });
+
         const csvString = await readFile(csvPath, 'utf8');
 
         const { data } = papaparse.parse(csvString.trim(), {
@@ -32,15 +35,25 @@ async function generateFeatures() {
 
         // Note: Picking first non-numeric value as name
         const featureNameKey = Object.keys(data[0] as any)[isNumeric(Object.values(data[0] as any)[0] as any) ? 1 : 0];
-        const featureNames = data.map((row: any) => row[featureNameKey]);
+        const featureNames = data
+            .map((row: any) => row[featureNameKey])
+            .map((name) => name.split(/\[[a-zA-Z0-9]\]/g).join(''));
 
         for (const featureName of featureNames) {
-            features.push({
+            const feature = {
                 cs: featureName,
                 search: {
+                    // TODO: Maybe in future more semantic { country: 'czechia', city: cityName }
+                    country,
                     q: featureName,
-                } /* TODO: Maybe in future more semantic { country: 'czechia', city: cityName } */,
-            });
+                },
+            };
+
+            if (country === null) {
+                delete feature.search.country;
+            }
+            
+            features.push(feature);
         }
     }
 

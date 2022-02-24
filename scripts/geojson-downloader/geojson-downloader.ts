@@ -5,23 +5,30 @@
 import del from 'del';
 import { mkdir, writeFile } from 'fs/promises';
 import { dirname, join } from 'path';
+import { forEver } from 'waitasecond';
 import { FEATURES } from '../../maps/features/features';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
+import { isNumeric } from '../../src/utils/isNumeric';
 import { geojsonStringify } from './utils/geojsonStringify';
 
 /**/
-download();
+download(false);
 /**/
 
-async function download() {
+async function download(override: boolean) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
 
     console.info(`🧹 Making cleenup`);
     const geojsonsPath = join(__dirname, `../../maps/geojsons/`);
-    // TODO: !!! Probbably switch overriting
-    await del(geojsonsPath);
+
+    if (override) {
+        await del(geojsonsPath);
+    }
 
     console.info(`🗺️ Downloading geojsons`);
+
+    console.log((await OsmGeojson.search({ q: `South Africa` })).geojson);
+    await forEver();
 
     for (const feature of FEATURES) {
         console.info(`⬇️ Downloading ${feature.search.q /* TODO: Better */}`);
@@ -34,14 +41,25 @@ async function download() {
             const geopath = geojson.features[0]
                 .properties!.display_name!.split(',')
                 .map((part) => part.trim())
+                .filter((part) => !isNumeric(part))
                 .reverse();
 
             // TODO: !!! Translate all parts of path to lowercase, without diacritics English
             const geojsonPath = join(geojsonsPath, ...geopath, `${geopath[geopath.length - 1]}.geojson`);
             await mkdir(dirname(geojsonPath), { recursive: true });
+
+            (geojson as any).collboard = {
+                feature,
+            };
+
             await writeFile(geojsonPath, geojsonStringify(geojson), 'utf8');
         } catch (error) {
             console.error(error);
         }
     }
 }
+
+/**
+ * TODO: !!! Do not download bullshit like parks, points...
+ * TODO: !!! Create modules from geojson files
+ */
