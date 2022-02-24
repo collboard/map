@@ -19,6 +19,12 @@
             "focus": true
         },
         {
+            "name": "🏭🎹 Run generate of features",
+            "command": "ts-node ./scripts/features-generator/features-generator.ts",
+            "onlySingle": true,
+            "focus": true
+        },
+        {
             "name": "🏭🗺️ Run geojson downloader",
             "command": "ts-node ./scripts/geojson-downloader/geojson-downloader.ts",
             "onlySingle": true,

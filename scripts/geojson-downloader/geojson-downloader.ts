@@ -5,7 +5,7 @@
 import del from 'del';
 import { mkdir, writeFile } from 'fs/promises';
 import { dirname, join } from 'path';
-import { FEATURES } from '../../maps/features';
+import { FEATURES } from '../../maps/features/features';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { geojsonStringify } from './utils/geojsonStringify';
 
