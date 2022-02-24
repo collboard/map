@@ -5,6 +5,7 @@ import glob from 'glob-promise';
 import papaparse from 'papaparse';
 import { join } from 'path';
 import spaceTrim from 'spacetrim';
+import { isNumeric } from '../../src/utils/isNumeric';
 
 const GENERATOR_WARNING = spaceTrim(`
   /**
@@ -16,15 +17,6 @@ const GENERATOR_WARNING = spaceTrim(`
 /**/
 generateFeatures();
 /**/
-
-// TODO: !!! To utils
-function isNumeric(str: string): boolean {
-    if (typeof str != 'string') return false; // we only process strings!
-    return (
-        !isNaN(str as any) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
-        !isNaN(parseFloat(str))
-    ); // ...and ensure strings of whitespace fail
-}
 
 async function generateFeatures() {
     console.info(`🎹 Generating features from CSVs`);
