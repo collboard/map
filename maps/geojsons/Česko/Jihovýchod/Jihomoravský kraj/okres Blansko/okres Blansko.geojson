@@ -96,5 +96,15 @@
                 "coordinates": [[[16.6224834,49.4092909],[16.6226953,49.4088493],[16.6235188,49.4089637],[16.6230856,49.4093808],[16.6224834,49.4092909]]]
             }
         }
-    ]
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Okres Blansko",
+            "cs": "Okres Blansko",
+            "search": {
+                "country": "czechia",
+                "q": "Okres Blansko"
+            }
+        }
+    }
 }

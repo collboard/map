@@ -98,5 +98,15 @@
                 "coordinates": [[[14.4082737,50.2199141],[14.4086871,50.2196311],[14.4087311,50.2199143],[14.4083111,50.2201942],[14.4082737,50.2199141]]]
             }
         }
-    ]
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Odolena Voda",
+            "cs": "Odolena Voda",
+            "search": {
+                "country": "czechia",
+                "q": "Odolena Voda"
+            }
+        }
+    }
 }

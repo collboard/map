@@ -49,5 +49,15 @@
                 "coordinates": [[[15.4261806,50.7282169],[15.4266273,50.7275363],[15.4273111,50.7277056],[15.4269033,50.7283937],[15.4261806,50.7282169]]]
             }
         }
-    ]
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Rokytnice nad Jizerou",
+            "cs": "Rokytnice nad Jizerou",
+            "search": {
+                "country": "czechia",
+                "q": "Rokytnice nad Jizerou"
+            }
+        }
+    }
 }
