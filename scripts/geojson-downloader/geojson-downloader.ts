@@ -24,7 +24,7 @@ async function download() {
     console.info(`🗺️ Downloading geojsons`);
 
     for (const feature of FEATURES) {
-        console.info(`⬇️ Downloading ${feature.en}`);
+        console.info(`⬇️ Downloading ${feature.search.q /* TODO: Better */}`);
 
         const geojson = (await OsmGeojson.search(feature.search)).geojson;
 
