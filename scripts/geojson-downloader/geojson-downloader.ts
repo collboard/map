@@ -26,17 +26,22 @@ async function download() {
     for (const feature of FEATURES) {
         console.info(`⬇️ Downloading ${feature.search.q /* TODO: Better */}`);
 
-        const geojson = (await OsmGeojson.search(feature.search)).geojson;
+        try {
+            const geojson = (await OsmGeojson.search(feature.search)).geojson;
 
-        // TODO: Maybe use const [type, name] = Object.entries(feature.search)[0]; >.${type}.geojson
+            // TODO: Maybe use const [type, name] = Object.entries(feature.search)[0]; >.${type}.geojson
 
-        const geopath = geojson.features[0]
-            .properties!.display_name!.split(',')
-            .map((part) => part.trim())
-            .reverse();
+            const geopath = geojson.features[0]
+                .properties!.display_name!.split(',')
+                .map((part) => part.trim())
+                .reverse();
 
-        const geojsonPath = join(geojsonsPath, ...geopath, `${geopath[geopath.length - 1]}.geojson`);
-        await mkdir(dirname(geojsonPath), { recursive: true });
-        await writeFile(geojsonPath, geojsonStringify(geojson), 'utf8');
+            // TODO: !!! Translate all parts of path to lowercase, without diacritics English
+            const geojsonPath = join(geojsonsPath, ...geopath, `${geopath[geopath.length - 1]}.geojson`);
+            await mkdir(dirname(geojsonPath), { recursive: true });
+            await writeFile(geojsonPath, geojsonStringify(geojson), 'utf8');
+        } catch (error) {
+            console.error(error);
+        }
     }
 }
