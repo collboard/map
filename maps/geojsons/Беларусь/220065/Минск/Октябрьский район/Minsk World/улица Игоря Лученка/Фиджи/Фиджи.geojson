@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "construction",
+                "place_id": 279776103,
+                "osm_type": "way",
+                "osm_id": 975140628,
+                "display_name": "Фиджи, улица Игоря Лученка, Minsk World, Октябрьский район, Минск, 220065, Беларусь",
+                "place_rank": 30,
+                "category": "building",
+                "importance": 0.001
+            },
+            "bbox": [
+                27.5516496,
+                53.8624875,
+                27.5519491,
+                53.8628817
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[27.5516496,53.8627746],[27.551654,53.862598],[27.5517147,53.8624875],[27.551894,53.8624891],[27.5519491,53.8626058],[27.551945,53.8627692],[27.5518841,53.8628817],[27.5517049,53.8628802],[27.5516496,53.8627746]]]
+            }
+        }
+    ]
+}

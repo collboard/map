@@ -1,0 +1,54 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "station",
+                "place_id": 124852318,
+                "osm_type": "way",
+                "osm_id": 102598671,
+                "display_name": "Bruntal, 1095/43, Nádražní, Bruntál-město, Bruntál, okres Bruntál, Moravskoslezský kraj, Moravskoslezsko, 79201, Česko",
+                "place_rank": 30,
+                "category": "railway",
+                "importance": 0.11100000000000002,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//transport_train_station2.p.20.png"
+            },
+            "bbox": [
+                17.4740919,
+                49.9935844,
+                17.4743937,
+                49.9941213
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[17.4740919,49.9936136],[17.4741197,49.9936111],[17.4741164,49.9935969],[17.474138,49.9935943],[17.4742208,49.9935844],[17.4742261,49.9935978],[17.4742524,49.9935963],[17.4743245,49.993849],[17.4743937,49.9940915],[17.4743666,49.9940949],[17.4743708,49.9941088],[17.4742705,49.9941213],[17.4742662,49.9941073],[17.4742363,49.994111],[17.4741762,49.9939038],[17.4741722,49.9939043],[17.4741613,49.9938667],[17.474148,49.9938208],[17.474152,49.9938204],[17.4740919,49.9936136]]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "bus_station",
+                "place_id": 278916141,
+                "osm_type": "way",
+                "osm_id": 967529803,
+                "display_name": "Bruntál, autobusové stanoviště, Zeyerova, Bruntál-město, Bruntál, okres Bruntál, Moravskoslezský kraj, Moravskoslezsko, 79201, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.11100000000000002,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//transport_bus_station.p.20.png"
+            },
+            "bbox": [
+                17.4626941,
+                49.9849185,
+                17.4633043,
+                49.9856441
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[17.4626941,49.985363],[17.4628061,49.9853096],[17.4627102,49.9851716],[17.4627042,49.9851492],[17.4627156,49.9851306],[17.4627491,49.9851017],[17.4628229,49.9850513],[17.4628309,49.9850591],[17.4630401,49.9849185],[17.4633043,49.9855523],[17.4629335,49.9856441],[17.4628631,49.9856295],[17.4627458,49.9854605],[17.4627732,49.985451],[17.4626941,49.985363]]]
+            }
+        }
+    ]
+}

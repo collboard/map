@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "farmyard",
+                "place_id": 275995202,
+                "osm_type": "way",
+                "osm_id": 945956115,
+                "display_name": "Katar, Ноҳияи Панҷакент, Вилояти Суғд, Тоҷикистон",
+                "place_rank": 22,
+                "category": "landuse",
+                "importance": 0.30999999999999994
+            },
+            "bbox": [
+                67.7253208,
+                39.1701754,
+                67.7265288,
+                39.1709207
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[67.7253208,39.1706504],[67.7254382,39.170392],[67.7258794,39.1702459],[67.7263684,39.1701754],[67.7265288,39.1704649],[67.7263408,39.1707212],[67.7259548,39.1709207],[67.7256016,39.1709163],[67.7253208,39.1706504]]]
+            }
+        }
+    ]
+}

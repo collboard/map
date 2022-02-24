@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "garden",
+                "place_id": 329905130,
+                "osm_type": "way",
+                "osm_id": 1024342980,
+                "display_name": "Japonsko, 373, Křtiny, okres Blansko, Jihomoravský kraj, Jihovýchod, 679 06, Česko",
+                "place_rank": 30,
+                "category": "leisure",
+                "importance": 0.11100000000000002
+            },
+            "bbox": [
+                16.7401833,
+                49.3195701,
+                16.7407335,
+                49.3199654
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[16.7401833,49.319856],[16.7405678,49.3195701],[16.7407335,49.3196706],[16.7403814,49.3199654],[16.7401833,49.319856]]]
+            }
+        }
+    ]
+}

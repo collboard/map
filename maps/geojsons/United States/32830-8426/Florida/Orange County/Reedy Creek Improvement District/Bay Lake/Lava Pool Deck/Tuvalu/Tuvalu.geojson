@@ -1,0 +1,52 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "hotel",
+                "place_id": 112567652,
+                "osm_type": "way",
+                "osm_id": 43305554,
+                "display_name": "Tuvalu, Lava Pool Deck, Bay Lake, Reedy Creek Improvement District, Orange County, Florida, 32830-8426, United States",
+                "place_rank": 30,
+                "category": "building",
+                "importance": 0.11100000000000002
+            },
+            "bbox": [
+                -81.5861951,
+                28.4065245,
+                -81.585632,
+                28.4068591
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[-81.5861951,28.40664],[-81.5860119,28.4065973],[-81.5859958,28.4065936],[-81.5858751,28.4065655],[-81.5858641,28.406563],[-81.585699,28.4065245],[-81.5856685,28.4066255],[-81.5856607,28.4066515],[-81.585632,28.4067468],[-81.5861267,28.4068591],[-81.5861728,28.4067115],[-81.5861951,28.40664]]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "furniture",
+                "place_id": 237201423,
+                "osm_type": "way",
+                "osm_id": 681689367,
+                "display_name": "Tuvalu, 295, Forest Avenue, Laguna Beach, Orange County, California, 92651, United States",
+                "place_rank": 30,
+                "category": "shop",
+                "importance": 0.11100000000000002
+            },
+            "bbox": [
+                -117.7827875,
+                33.5425993,
+                -117.782538,
+                33.5428966
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[-117.7827875,33.5427245],[-117.782538,33.5425993],[-117.7826413,33.5428966],[-117.7826761,33.5428877],[-117.7827875,33.5427245]]]
+            }
+        }
+    ]
+}

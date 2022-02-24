@@ -1,0 +1,75 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "office",
+                "place_id": 186826281,
+                "osm_type": "way",
+                "osm_id": 364590666,
+                "display_name": "Australië, Hoogoorddreef, Bullewijk, Zuidoost, Amsterdam, Noord-Holland, Nederland, 1101, Nederland",
+                "place_rank": 30,
+                "category": "building",
+                "importance": 0.001
+            },
+            "bbox": [
+                4.945839,
+                52.3083505,
+                4.9468497,
+                52.309044
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[4.945839,52.3084722],[4.9458853,52.3084165],[4.9459314,52.3083536],[4.9459503,52.3083505],[4.9462917,52.308468],[4.9465392,52.3085531],[4.9465801,52.3086413],[4.9468445,52.308732],[4.9468497,52.3087436],[4.9468361,52.3088162],[4.9468276,52.3088177],[4.9467699,52.3087979],[4.946716,52.3088568],[4.9464526,52.3087637],[4.9463714,52.3088526],[4.9462893,52.3089423],[4.9462363,52.3090003],[4.946199,52.3090411],[4.9461817,52.309044],[4.9461183,52.3090229],[4.9461235,52.3090078],[4.9459927,52.3089676],[4.9460233,52.3089318],[4.9460783,52.3088718],[4.9461638,52.3087784],[4.9462413,52.3086937],[4.9462009,52.3086056],[4.9461731,52.3085961],[4.9458438,52.3084829],[4.945839,52.3084722]]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "industrial",
+                "place_id": 116469891,
+                "osm_type": "way",
+                "osm_id": 57867658,
+                "display_name": "Australië, Donauweg, Westhaven, Amsterdam, Noord-Holland, Nederland, 1043AJ, Nederland",
+                "place_rank": 30,
+                "category": "building",
+                "importance": 0.001
+            },
+            "bbox": [
+                4.8323146,
+                52.3938917,
+                4.8333175,
+                52.3941033
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[4.8323146,52.3941024],[4.8323157,52.3938917],[4.8333175,52.3938932],[4.8333167,52.3941033],[4.8323146,52.3941024]]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "service",
+                "place_id": 117022155,
+                "osm_type": "way",
+                "osm_id": 65567614,
+                "display_name": "Australie, Rue de l'Australie, Les Riffaudières, Le Mans, Sarthe, Pays de la Loire, France métropolitaine, 72100, France",
+                "place_rank": 30,
+                "category": "building",
+                "importance": 0.001
+            },
+            "bbox": [
+                0.1848964,
+                47.9946372,
+                0.1849293,
+                47.9946663
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[0.1848964,47.9946393],[0.1849254,47.9946372],[0.1849293,47.9946648],[0.1849179,47.9946654],[0.1849012,47.9946663],[0.1848964,47.9946393]]]
+            }
+        }
+    ]
+}
