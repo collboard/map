@@ -28,12 +28,14 @@ async function download() {
 
         const geojson = (await OsmGeojson.search(feature.search)).geojson;
 
-        const [type, name] = Object.entries(feature.search)[0];
+        // TODO: Maybe use const [type, name] = Object.entries(feature.search)[0]; >.${type}.geojson
 
-        const geojsonPath = join(
-            geojsonsPath,
-            `/czechia/${feature.en.toLowerCase()}/${feature.en.toLowerCase()}.${type}.geojson`,
-        );
+        const geopath = geojson.features[0]
+            .properties!.display_name!.split(',')
+            .map((part) => part.trim())
+            .reverse();
+
+        const geojsonPath = join(geojsonsPath, ...geopath, `${geopath[geopath.length - 1]}.geojson`);
         await mkdir(dirname(geojsonPath), { recursive: true });
         await writeFile(geojsonPath, geojsonStringify(geojson), 'utf8');
     }

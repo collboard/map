@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 import { IGeojson, IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 
 export class OsmGeojson {
-    protected constructor(public readonly geojson: IGeojson) {}
+    protected constructor(public readonly geojson: IGeojsonFeatureCollection) {}
 
     public static async search(params: Record<string, string>): Promise<OsmGeojson> {
         const url = new URL(`https://nominatim.openstreetmap.org/search`);
