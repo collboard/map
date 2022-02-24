@@ -25,7 +25,6 @@ async function generateFeatures() {
 
     for (const csvPath of await glob(join(__dirname, '../../maps/features/countries/**/*.csv'))) {
         const country = /countries\/(?<country>.*?)\//.exec(csvPath)?.groups?.country;
-        console.log({ country });
 
         const csvString = await readFile(csvPath, 'utf8');
 
@@ -40,19 +39,21 @@ async function generateFeatures() {
             .map((name) => name.split(/\[[a-zA-Z0-9]\]/g).join(''));
 
         for (const featureName of featureNames) {
+            const search = !country
+                ? {
+                      country: featureName,
+                  }
+                : {
+                      // TODO: Maybe in future more semantic { country: 'czechia', city: cityName }
+                      country,
+                      q: featureName,
+                  };
             const feature = {
+                // TODO: English + other languages name
                 cs: featureName,
-                search: {
-                    // TODO: Maybe in future more semantic { country: 'czechia', city: cityName }
-                    country,
-                    q: featureName,
-                },
+                search,
             };
 
-            if (country === null) {
-                delete feature.search.country;
-            }
-            
             features.push(feature);
         }
     }
