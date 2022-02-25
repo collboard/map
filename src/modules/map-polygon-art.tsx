@@ -117,3 +117,8 @@ export class MapPolygonArt extends Abstract2dArt {
 }
 
 declareModule(makeArtModule(MapPolygonArt));
+
+/**
+ * TODO: !!! Probably remove this module - using only map-geojson-art
+ * TODO: !!! Rendering of multiple polygons is strangely supported?!
+ */

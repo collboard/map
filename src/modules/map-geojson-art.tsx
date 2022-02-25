@@ -130,6 +130,7 @@ export class GeojsonArt extends Abstract2dArt {
                     top: this.minY - svgPadding + (this.shift.y || 0),
                 }}
             >
+                {/* !!! Optimize rendering Math.random()*/}
                 <svg
                     // TODO: Maybe use viewBox instead of width+height
                     width={this.maxX - this.minX + 2 * svgPadding}
@@ -161,7 +162,7 @@ export class GeojsonArt extends Abstract2dArt {
                                 // + add  onMouseLeave={(event) => {
                             }}
                             stroke="red"
-                            strokeWidth={3 / z}
+                            strokeWidth={(3 + Math.random()) / z}
                             fill="none"
                             strokeLinejoin="round"
                             // filter="url(#dilate-and-xor)"
@@ -176,6 +177,7 @@ export class GeojsonArt extends Abstract2dArt {
 declareModule(makeArtModule(GeojsonArt));
 
 /**
+ * TODO: !!! Optimize rendering probbably by rendering .svg from predetermined URL with pregenerated LODs
  * TODO: !!! Copy XYZT here and back
  * TODO: !!! XYZT Transformation should allow recieve convert/revert pair
  * TODO: On low-zoom level show as dot instead of polygon

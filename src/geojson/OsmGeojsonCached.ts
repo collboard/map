@@ -1,11 +1,13 @@
-import { ObjectStorage, PrefixStorage } from 'everstorage';
-import { IGeojson } from '../interfaces/IGeojson';
+import { IJson, ObjectStorage, PrefixStorage } from 'everstorage';
+import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 import { OsmGeojson } from './OsmGeojson';
 
 export class OsmGeojsonCached extends OsmGeojson {
-    private static storage = new ObjectStorage<any /*IGeojson*/>(new PrefixStorage(localStorage, 'Geojson'));
+    private static storage = new ObjectStorage<IGeojsonFeatureCollection & IJson>(
+        new PrefixStorage(localStorage, 'Geojson'),
+    );
 
-    protected static async downloadFromNominatim(params: Record<string, string>): Promise<IGeojson> {
+    public static async search(params: Record<string, string>): Promise<OsmGeojson> {
         /*console.log(
             { params },
             Object.entries(params),
@@ -20,12 +22,12 @@ export class OsmGeojsonCached extends OsmGeojson {
         const cacheValue = await this.storage.getItem(cacheKey);
 
         if (cacheValue) {
-            return cacheValue;
+            return new OsmGeojson(cacheValue);
         }
 
         const geojson = await super.search(params);
 
-        await this.storage.setItem(cacheKey, geojson);
+        await this.storage.setItem(cacheKey, geojson.geojson as IGeojsonFeatureCollection & IJson);
 
         return geojson;
     }
