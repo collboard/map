@@ -29,6 +29,12 @@
             "command": "ts-node ./scripts/geojson-downloader/geojson-downloader.ts",
             "onlySingle": true,
             "focus": true
+        },
+        {
+            "name": "🏭🖼️ Run svg-geojson-converter",
+            "command": "ts-node ./scripts/svg-geojson-converter/svg-geojson-converter.ts",
+            "onlySingle": true,
+            "focus": true
         }
     ]
 }

@@ -1,3 +1,5 @@
+/// <reference path="../../src/simplify-geojson.d.ts" />
+
 import simplifyGeojson from 'simplify-geojson';
 import { IGeojson, IGeojsonSimplePolygon } from '../interfaces/IGeojson';
 import { Wgs84 } from '../semantic/Wgs84';
