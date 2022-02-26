@@ -23,12 +23,13 @@ export class SvgGeojsonConverter {
     private calculateBoundingBox() {
         // TODO: Use here SimplifiedGeojson.boundingBox
         this.pointsOnBoard = this.simplifiedGeojson.points.map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
+
         const xVals = this.pointsOnBoard.map((point) => point.x || 0);
         const yVals = this.pointsOnBoard.map((point) => point.y || 0);
-        this.minX = Math.min.apply(null, xVals);
-        this.maxX = Math.max.apply(null, xVals);
-        this.minY = Math.min.apply(null, yVals);
-        this.maxY = Math.max.apply(null, yVals);
+        this.minX = Math.min(...xVals);
+        this.maxX = Math.max(...xVals);
+        this.minY = Math.min(...yVals);
+        this.maxY = Math.max(...yVals);
     }
 
     private wgs84ToBoard(pointAsWgs84: Wgs84): Vector {
@@ -41,7 +42,7 @@ export class SvgGeojsonConverter {
         return pointOnBoard;
     }
 
-    async makeSvg(z: number) {
+    public async makeSvg(z: number) {
         this.calculateBoundingBox();
 
         const svgPadding = 5 / z;
@@ -83,6 +84,7 @@ export class SvgGeojsonConverter {
                             // + add  onMouseLeave={(event) => {
                         }}
                         stroke="red"
+                        // !!! Dynamic size in SVG
                         strokeWidth={(3 + Math.random()) / z}
                         fill="none"
                         strokeLinejoin="round"

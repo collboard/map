@@ -93,10 +93,10 @@ export class GeojsonArt extends Abstract2dArt {
         this.pointsOnBoard = this.__simplifiedGeojson.points.map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
         const xVals = this.pointsOnBoard.map((point) => point.x || 0);
         const yVals = this.pointsOnBoard.map((point) => point.y || 0);
-        this.minX = Math.min.apply(null, xVals);
-        this.maxX = Math.max.apply(null, xVals);
-        this.minY = Math.min.apply(null, yVals);
-        this.maxY = Math.max.apply(null, yVals);
+        this.minX = Math.min(...xVals);
+        this.maxX = Math.max(...xVals);
+        this.minY = Math.min(...yVals);
+        this.maxY = Math.max(...yVals);
     }
 
     private wgs84ToBoard(pointAsWgs84: Wgs84): Vector {

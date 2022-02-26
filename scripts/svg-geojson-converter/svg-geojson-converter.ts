@@ -1,10 +1,14 @@
 #!/usr/bin/env ts-node
 
-import { readFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
-import { join } from 'path';
+import { basename, join } from 'path';
+import ReactDOMServer from 'react-dom/server';
 import { SvgGeojsonConverter } from '../../src/geojson/SvgGeojsonConverter';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
+
+// TODO: Logaritmic scale
+const LODS = [0.01, 0.1, 1, 10, 100];
 
 /**/
 download(true);
@@ -15,13 +19,23 @@ async function download(override: boolean) {
 
     console.info(`🖼️ Converting GeoJSONs to SVGs`);
 
-    for (const geojsonPath of await glob(join(__dirname, '../../maps/features/geojsons/**/*.geojson'))) {
-        const geojson = JSON.parse(await readFile(geojsonPath, 'utf8')) as IGeojsonFeatureCollection;
+    for (const geojsonPath of await glob(join(__dirname, '../../maps/geojsons/**/*.geojson'))) {
+        try {
+            console.info(`🗾 Converting ${basename(geojsonPath)}`);
 
-        const svgGeojsonConverter = new SvgGeojsonConverter(geojson);
+            const geojson = JSON.parse(await readFile(geojsonPath, 'utf8')) as IGeojsonFeatureCollection;
 
-        svgGeojsonConverter.makeSvg(1);
+            const svgGeojsonConverter = new SvgGeojsonConverter(geojson);
 
-        // !!! And save SVG to file
+            const svgJsx = await svgGeojsonConverter.makeSvg(1);
+            const svgString = ReactDOMServer.renderToStaticMarkup(svgJsx);
+            // TODO: !!! Prettify SVG
+            // TODO: !!! Add collboard branding
+            // TODO: !!! Add metadata of geo
+
+            await writeFile(geojsonPath.replace('/geojsons/', '/svgs/') + '.lod1.svg', svgString, 'utf8');
+        } catch (error) {
+            console.error(error);
+        }
     }
 }
