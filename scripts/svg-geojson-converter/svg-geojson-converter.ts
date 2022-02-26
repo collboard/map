@@ -1,8 +1,9 @@
 #!/usr/bin/env ts-node
 
-import { readFile, writeFile } from 'fs/promises';
+import del from 'del';
+import { mkdir, readFile, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
-import { basename, join } from 'path';
+import { basename, dirname, join } from 'path';
 import ReactDOMServer from 'react-dom/server';
 import { SvgGeojsonConverter } from '../../src/geojson/SvgGeojsonConverter';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
@@ -11,11 +12,18 @@ import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
 const LODS = [0.01, 0.1, 1, 10, 100];
 
 /**/
-download(true);
+convert(true);
 /**/
 
-async function download(override: boolean) {
+async function convert(override: boolean) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
+
+    console.info(`🧹 Making cleenup`);
+    const geojsonsPath = join(__dirname, `../../maps/svgs/`);
+
+    if (override) {
+        await del(geojsonsPath);
+    }
 
     console.info(`🖼️ Converting GeoJSONs to SVGs`);
 
@@ -33,7 +41,10 @@ async function download(override: boolean) {
             // TODO: !!! Add collboard branding
             // TODO: !!! Add metadata of geo
 
-            await writeFile(geojsonPath.replace('/geojsons/', '/svgs/') + '.lod1.svg', svgString, 'utf8');
+            const svgPath = geojsonPath.replace('/geojsons/', '/svgs/') + '.lod1.svg';
+
+            await mkdir(dirname(svgPath), { recursive: true });
+            await writeFile(svgPath, svgString, 'utf8');
         } catch (error) {
             console.error(error);
         }
