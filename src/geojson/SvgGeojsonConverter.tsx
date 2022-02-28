@@ -21,7 +21,7 @@ export class SvgGeojsonConverter {
     }
 
     private calculateBoundingBox() {
-        // TODO: Use here SimplifiedGeojson.boundingBox
+        // TODO: Use here BoundingBox.fromPoints
         this.pointsOnBoard = this.simplifiedGeojson.points.map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
 
         const xVals = this.pointsOnBoard.map((point) => point.x || 0);
@@ -88,6 +88,7 @@ export class SvgGeojsonConverter {
                         strokeWidth={(3 + Math.random()) / z}
                         fill="none"
                         strokeLinejoin="round"
+                        vectorEffect="non-scaling-stroke"
                         // filter="url(#dilate-and-xor)"
                     />
                 ))}

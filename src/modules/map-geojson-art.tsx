@@ -1,13 +1,9 @@
 import { Abstract2dArt, classNames, declareModule, ISystems, makeArtModule, React } from '@collboard/modules-sdk';
-import { IVectorData, Vector } from 'xyzt';
+import { Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
-import { MAP_BASE, TILE_SIZE } from '../config';
 import { OsmGeojson } from '../geojson/OsmGeojson';
-import { SimplifiedGeojson } from '../geojson/SimplifiedGeojson';
+import { SvgGeojsonConverter } from '../geojson/SvgGeojsonConverter';
 import { IGeojson } from '../interfaces/IGeojson';
-import { TileAbsolute } from '../semantic/TileAbsolute';
-import { Wgs84 } from '../semantic/Wgs84';
-import { getAllPointsOf } from '../utils/getAllPointsOf';
 
 export class GeojsonArt extends Abstract2dArt {
     public static serializeName = 'GeojsonArt';
@@ -28,8 +24,7 @@ export class GeojsonArt extends Abstract2dArt {
 
     // TODO: !!! Probbably delete
     private readonly geojson: IGeojson;
-    // tslint:disable-next-line:variable-name
-    private readonly __simplifiedGeojson: SimplifiedGeojson;
+    private __svg: JSX.Element;
 
     public constructor(geojson: OsmGeojson | IGeojson) {
         super();
@@ -40,7 +35,7 @@ export class GeojsonArt extends Abstract2dArt {
             this.geojson = geojson;
         }
 
-        this.__simplifiedGeojson = new SimplifiedGeojson(geojson);
+        new SvgGeojsonConverter(this.geojson).makeSvg(1).then((svg) => (this.__svg = svg));
     }
 
     public get topLeftCorner() {
@@ -88,87 +83,17 @@ export class GeojsonArt extends Abstract2dArt {
         */
     }
 
-    private calculateBoundingBox() {
-        // TODO: Use here SimplifiedGeojson.boundingBox
-        this.pointsOnBoard = this.__simplifiedGeojson.points.map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
-        const xVals = this.pointsOnBoard.map((point) => point.x || 0);
-        const yVals = this.pointsOnBoard.map((point) => point.y || 0);
-        this.minX = Math.min(...xVals);
-        this.maxX = Math.max(...xVals);
-        this.minY = Math.min(...yVals);
-        this.maxY = Math.max(...yVals);
-    }
-
-    private wgs84ToBoard(pointAsWgs84: Wgs84): Vector {
-        // TODO: !!! To global utils
-        const mapCenterTile = TileAbsolute.fromWgs84(MAP_BASE);
-        const pointAsTile = TileAbsolute.fromWgs84(
-            new Wgs84({ longitude: pointAsWgs84.longitude, latitude: pointAsWgs84.latitude, zoom: MAP_BASE.zoom }),
-        );
-        const pointOnBoard = pointAsTile.subtract(mapCenterTile).multiply(TILE_SIZE);
-        return pointOnBoard;
-    }
-
     async render(selected: boolean, systems: ISystems) {
-        this.calculateBoundingBox();
-
-        const { appState } = await systems.request('appState');
-        const z = appState.transform.scale.x;
-        const svgPadding = 5 / z;
-
-        const degradation = 0.001 / z; // Math.pow(2, z * 5);
-
-        // TODO: !!! Use simplifyForTransform
-        const simplifiedGeojson = this.__simplifiedGeojson.simplify(degradation);
-
         return (
             <div
                 className={classNames('art', selected && 'selected')}
                 style={{
                     position: 'absolute',
-                    left: this.minX - svgPadding + (this.shift.x || 0),
-                    top: this.minY - svgPadding + (this.shift.y || 0),
+                    left: this.minX - /* !!! svgPadding + */ (this.shift.x || 0),
+                    top: this.minY - /* !!! svgPadding + */ (this.shift.y || 0),
                 }}
             >
-                {/* !!! Optimize rendering Math.random()*/}
-                <svg
-                    // TODO: Maybe use viewBox instead of width+height
-                    width={this.maxX - this.minX + 2 * svgPadding}
-                    height={this.maxY - this.minY + 2 * svgPadding}
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    {/*
-                    <filter id="dilate-and-xor">
-                        {/* TODO: Filters can be used also for special effects/texturing for FreehandArt * /}
-                        <feMorphology in="SourceGraphic" result="dilate-result" operator="dilate" radius={2 / z} />
-                        <feComposite in="SourceGraphic" in2="dilate-result" result="xor-result" operator="xor" />
-                    </filter>
-                    */}
-                    {simplifiedGeojson.simplePolygons.map((feature, i) => (
-                        <polygon
-                            key={i}
-                            points={getAllPointsOf(feature)
-                                .map((pointAsWgs84) => {
-                                    return this.wgs84ToBoard(pointAsWgs84)
-                                        .subtract(new Vector(this.minX - svgPadding, this.minY - svgPadding))
-                                        .toArray2D();
-                                })
-                                .join(' ')}
-                            onClick={() => {
-                                // TODO: Tell the region that the user clicked on it
-                            }}
-                            onMouseEnter={(event) => {
-                                // TODO: Tell the region that the user hoovered on it
-                                // + add  onMouseLeave={(event) => {
-                            }}
-                            stroke="red"
-                            strokeWidth={(3 + Math.random()) / z}
-                            fill="none"
-                            strokeLinejoin="round"
-                            // filter="url(#dilate-and-xor)"
-                        />
-                    ))}
-                </svg>
+                {this.__svg}
             </div>
         );
     }

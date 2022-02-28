@@ -8,8 +8,7 @@ import ReactDOMServer from 'react-dom/server';
 import { SvgGeojsonConverter } from '../../src/geojson/SvgGeojsonConverter';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
 
-// TODO: Logaritmic scale
-const LODS = [0.01, 0.1, 1, 10, 100];
+const LODS_EXPONENTS = [/*-1, 0, 1, 2, 3, 4, 5*/ 0];
 
 /**/
 convert(true);
@@ -35,16 +34,18 @@ async function convert(override: boolean) {
 
             const svgGeojsonConverter = new SvgGeojsonConverter(geojson);
 
-            const svgJsx = await svgGeojsonConverter.makeSvg(1);
-            const svgString = ReactDOMServer.renderToStaticMarkup(svgJsx);
-            // TODO: !!! Prettify SVG
-            // TODO: !!! Add collboard branding
-            // TODO: !!! Add metadata of geo
+            for (const exponent of LODS_EXPONENTS) {
+                const svgJsx = await svgGeojsonConverter.makeSvg(Math.pow(1.1, exponent));
+                const svgString = ReactDOMServer.renderToStaticMarkup(svgJsx);
+                // TODO: !!! Prettify SVG
+                // TODO: !!! Add collboard branding
+                // TODO: !!! Add metadata of geo
 
-            const svgPath = geojsonPath.replace('/geojsons/', '/svgs/') + '.lod1.svg';
+                const svgPath = geojsonPath.replace('/geojsons/', '/svgs/') + `.lod${exponent}.svg`;
 
-            await mkdir(dirname(svgPath), { recursive: true });
-            await writeFile(svgPath, svgString, 'utf8');
+                await mkdir(dirname(svgPath), { recursive: true });
+                await writeFile(svgPath, svgString, 'utf8');
+            }
         } catch (error) {
             console.error(error);
         }
