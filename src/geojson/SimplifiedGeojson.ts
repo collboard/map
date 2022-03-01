@@ -1,10 +1,10 @@
-/// <reference path="../../src/simplify-geojson.d.ts" />
+/// <reference path="./simplify-geojson.d.ts" />
 
 import simplifyGeojson from 'simplify-geojson';
-import { IGeojson, IGeojsonSimplePolygon } from '../interfaces/IGeojson';
+import { IGeojson, IGeojsonFeatureCollection, IGeojsonSimplePolygon } from '../interfaces/IGeojson';
 import { Wgs84 } from '../semantic/Wgs84';
-import { getAllPointsOf } from '../utils/getAllPointsOf';
-import { getAllSimplePolygonsOf } from '../utils/getAllSimplePolygonsOf';
+import { getAllPointsOf } from './getAllPointsOf';
+import { getAllSimplePolygonsOf } from './getAllSimplePolygonsOf';
 import { OsmGeojson } from './OsmGeojson';
 
 /**
@@ -15,7 +15,7 @@ export class SimplifiedGeojson {
 
     private readonly originalGeojson: IGeojson;
 
-    public constructor(geojson: OsmGeojson | IGeojson, cache?: Record<number, SimplifiedGeojson>) {
+    public constructor(geojson: OsmGeojson | IGeojsonFeatureCollection, cache?: Record<number, SimplifiedGeojson>) {
         if (geojson instanceof OsmGeojson) {
             this.originalGeojson = geojson.geojson;
         } else {

@@ -3,7 +3,7 @@
  * ⚠️ Warning: Do not edit by hand, all changes will be lost on next execution
  */
 
-export const FEATURES: any = [
+export const FEATURES: Array<{ en: string; cs: string; search: any }> = [
     { en: 'China', cs: 'China', search: { country: 'China' } },
     { en: 'India', cs: 'India', search: { country: 'India' } },
     { en: 'United States', cs: 'United States', search: { country: 'United States' } },

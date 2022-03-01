@@ -6,7 +6,11 @@ import { GeojsonArt } from './map-geojson-art';
 
 // TODO: Countries, counties, districts
 
-for (const feature of FEATURES) {
+const pickedFeatures = FEATURES.filter((feature) => feature.cs === 'Praha');
+
+// TODO: !!! When developing pick here one, when releasing pick all
+
+for (const feature of pickedFeatures) {
     declareModule({
         manifest: {
             name: `@collboard/map-feature-${feature.en.toLowerCase()}`,

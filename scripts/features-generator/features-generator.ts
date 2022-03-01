@@ -65,7 +65,7 @@ async function generateFeatures() {
             (block) => `
               ${block(GENERATOR_WARNING)}
 
-              export const FEATURES: any = [
+              export const FEATURES: Array<{ en: string; cs: string; search: any }> = [
                 ${block(features.map((feature) => JSON.stringify(feature)).join(',\n'))}
               ];
 

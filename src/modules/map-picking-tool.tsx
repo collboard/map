@@ -1,11 +1,9 @@
 import { declareModule, makeIconModuleOnModule, React, ToolbarName } from '@collboard/modules-sdk';
 import { Registration } from 'destroyable';
-import { forEver, forTime } from 'waitasecond';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { MAP_BASE, TILE_SIZE } from '../config';
 import { TileAbsolute } from '../semantic/TileAbsolute';
-import { MapPolygonArt } from './map-polygon-art';
 
 declareModule(() => {
     return makeIconModuleOnModule({
@@ -78,6 +76,7 @@ declareModule(() => {
                             canBeClosed: true,
                         });
 
+                        /*
                         const polygonArt = new MapPolygonArt([pointOnBoard, pointOnBoard.add({ x: 10 })], 'blue', 20);
                         const operation = materialArtVersioningSystem
                             .createPrimaryOperation()
@@ -89,6 +88,8 @@ declareModule(() => {
 
                         notification.destroy();
                         operation.destroy();
+
+                        */
                     }),
                 );
             },

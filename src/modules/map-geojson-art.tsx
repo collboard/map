@@ -1,9 +1,19 @@
-import { Abstract2dArt, classNames, declareModule, ISystems, makeArtModule, React } from '@collboard/modules-sdk';
-import { Vector } from 'xyzt';
+import {
+    Abstract2dArt,
+    AsyncContentComponent,
+    declareModule,
+    ISystems,
+    makeArtModule,
+    React,
+} from '@collboard/modules-sdk';
+import { Promisable } from 'type-fest';
+import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { OsmGeojson } from '../geojson/OsmGeojson';
+import { SvgGeojsonComponent } from '../geojson/SvgGeojsonComponent';
 import { SvgGeojsonConverter } from '../geojson/SvgGeojsonConverter';
-import { IGeojson } from '../interfaces/IGeojson';
+import { IGeojson, IGeojsonFeatureCollection } from '../interfaces/IGeojson';
+import { ISvgGeojson } from '../interfaces/ISvgGeojson';
 
 export class GeojsonArt extends Abstract2dArt {
     public static serializeName = 'GeojsonArt';
@@ -24,9 +34,9 @@ export class GeojsonArt extends Abstract2dArt {
 
     // TODO: !!! Probbably delete
     private readonly geojson: IGeojson;
-    private __svg: JSX.Element;
+    private __svgGeojson: Promisable<ISvgGeojson>;
 
-    public constructor(geojson: OsmGeojson | IGeojson) {
+    public constructor(geojson: OsmGeojson | IGeojsonFeatureCollection) {
         super();
 
         if (geojson instanceof OsmGeojson) {
@@ -35,8 +45,35 @@ export class GeojsonArt extends Abstract2dArt {
             this.geojson = geojson;
         }
 
-        new SvgGeojsonConverter(this.geojson).makeSvg(1).then((svg) => (this.__svg = svg));
+        // !!! Remove this.calculateBoundingBox();
+
+        this.__svgGeojson = new SvgGeojsonConverter(this.geojson).makeSvg(1);
     }
+
+    /*
+    !!! Remove
+    private calculateBoundingBox() {
+        // TODO: Use here BoundingBox.fromPoints
+        this.pointsOnBoard = getAllPointsOf(this.geojson).map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
+
+        const xVals = this.pointsOnBoard.map((point) => point.x || 0);
+        const yVals = this.pointsOnBoard.map((point) => point.y || 0);
+        this.minX = Math.min(...xVals);
+        this.maxX = Math.max(...xVals);
+        this.minY = Math.min(...yVals);
+        this.maxY = Math.max(...yVals);
+    }
+
+    private wgs84ToBoard(pointAsWgs84: Wgs84): Vector {
+        // TODO: !!! To global utils
+        const mapCenterTile = TileAbsolute.fromWgs84(MAP_BASE);
+        const pointAsTile = TileAbsolute.fromWgs84(
+            new Wgs84({ longitude: pointAsWgs84.longitude, latitude: pointAsWgs84.latitude, zoom: MAP_BASE.zoom }),
+        );
+        const pointOnBoard = pointAsTile.subtract(mapCenterTile).multiply(TILE_SIZE);
+        return pointOnBoard;
+    }
+    */
 
     public get topLeftCorner() {
         return new Vector(this.minX, this.minY).add(this.shift);
@@ -84,18 +121,24 @@ export class GeojsonArt extends Abstract2dArt {
     }
 
     async render(selected: boolean, systems: ISystems) {
-        return (
-            <div
-                className={classNames('art', selected && 'selected')}
-                style={{
-                    position: 'absolute',
-                    left: this.minX - /* !!! svgPadding + */ (this.shift.x || 0),
-                    top: this.minY - /* !!! svgPadding + */ (this.shift.y || 0),
-                }}
-            >
-                {this.__svg}
-            </div>
-        );
+        // TODO: Do this optimalizations in AsyncContentComponent
+        if (!(this.__svgGeojson instanceof Promise)) {
+            return <SvgGeojsonComponent {...{ selected, ...(this.__svgGeojson as ISvgGeojson) }} />;
+        } else {
+            return (
+                <AsyncContentComponent
+                    alt="Generating SVG map"
+                    content={this.__svgGeojson.then((geojsonSvg) => {
+                        this.__svgGeojson = geojsonSvg;
+
+                        const { minX, maxX, minY, maxY } = geojsonSvg.boundingBox;
+                        Object.assign(this, { minX, maxX, minY, maxY });
+
+                        return <SvgGeojsonComponent {...{ selected, ...geojsonSvg }} />;
+                    })}
+                />
+            );
+        }
     }
 }
 
