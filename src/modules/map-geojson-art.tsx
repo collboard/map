@@ -6,7 +6,6 @@ import {
     makeArtModule,
     React,
 } from '@collboard/modules-sdk';
-import { Promisable } from 'type-fest';
 import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { OsmGeojson } from '../geojson/OsmGeojson';
@@ -34,7 +33,8 @@ export class GeojsonArt extends Abstract2dArt {
 
     // TODO: !!! Probbably delete
     private readonly geojson: IGeojson;
-    private __svgGeojson: Promisable<ISvgGeojson>;
+
+    private __svgGeojson: Promise<ISvgGeojson>;
 
     public constructor(geojson: OsmGeojson | IGeojsonFeatureCollection) {
         super();
@@ -47,7 +47,7 @@ export class GeojsonArt extends Abstract2dArt {
 
         // !!! Remove this.calculateBoundingBox();
 
-        this.__svgGeojson = new SvgGeojsonConverter(this.geojson).makeSvg(1);
+        this.__svgGeojson = new SvgGeojsonConverter(this.geojson).makeSvg(1, true);
     }
 
     /*
@@ -121,24 +121,24 @@ export class GeojsonArt extends Abstract2dArt {
     }
 
     async render(selected: boolean, systems: ISystems) {
-        // TODO: Do this optimalizations in AsyncContentComponent
-        if (!(this.__svgGeojson instanceof Promise)) {
-            return <SvgGeojsonComponent {...{ selected, ...(this.__svgGeojson as ISvgGeojson) }} />;
-        } else {
-            return (
-                <AsyncContentComponent
-                    alt="Generating SVG map"
-                    content={this.__svgGeojson.then((geojsonSvg) => {
-                        this.__svgGeojson = geojsonSvg;
+        // [*] TODO: Do this optimalizations in AsyncContentComponent
+        // [*] if (!(this.__svgGeojson instanceof Promise)) {
+        // [*]     return <SvgGeojsonComponent {...{ selected, ...(this.__svgGeojson as ISvgGeojson) }} />;
+        // [*] } else {
+        return (
+            <AsyncContentComponent
+                alt="Generating SVG map"
+                content={this.__svgGeojson.then((geojsonSvg) => {
+                    // [*] this.__svgGeojson = geojsonSvg;
 
-                        const { minX, maxX, minY, maxY } = geojsonSvg.boundingBox;
-                        Object.assign(this, { minX, maxX, minY, maxY });
+                    const { minX, maxX, minY, maxY } = geojsonSvg.boundingBox;
+                    Object.assign(this, { minX, maxX, minY, maxY });
 
-                        return <SvgGeojsonComponent {...{ selected, ...geojsonSvg }} />;
-                    })}
-                />
-            );
-        }
+                    return <SvgGeojsonComponent {...{ selected, ...geojsonSvg }} />;
+                })}
+            />
+        );
+        // [*] }
     }
 }
 

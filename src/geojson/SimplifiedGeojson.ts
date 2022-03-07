@@ -37,6 +37,9 @@ export class SimplifiedGeojson {
      * @param tolerance is number in degrees (e.g. lat/lon distance). 1 degree is roughly equivalent to 69 miles. the default is 0.001, which is around a city block long.
      */
     public simplify(tolerance: number): SimplifiedGeojson {
+        // !!! Make it work with simplifyGeojson
+        return this;
+
         // TODO: Minimal tolerance should be 0.001
         // TODO: Round tolerance to some level across deep zooms
         if (!this.cache[tolerance]) {

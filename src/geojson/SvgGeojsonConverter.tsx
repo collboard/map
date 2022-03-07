@@ -1,4 +1,6 @@
+import { blobToDataUrl } from '@collboard/modules-sdk';
 import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 import { Vector } from 'xyzt';
 import { MAP_BASE, TILE_SIZE } from '../config';
 import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
@@ -43,7 +45,8 @@ export class SvgGeojsonConverter {
         return pointOnBoard;
     }
 
-    public async makeSvg(z: number): Promise<ISvgGeojson> {
+    // !!! Maybe not async
+    public async makeSvg(z: number, isAsUrl: boolean): Promise<ISvgGeojson> {
         this.calculateBoundingBox();
 
         const padding = 5 / z;
@@ -53,52 +56,66 @@ export class SvgGeojsonConverter {
         // TODO: !!! Use simplifyForTransform
         const simplifiedGeojson = this.simplifiedGeojson.simplify(degradation);
 
-        return {
-            padding,
-            boundingBox: { minX: this.minX, maxX: this.maxX, minY: this.minY, maxY: this.maxY },
-            svg: (
-                <svg
-                    // TODO: Maybe use viewBox instead of width+height
-                    width={this.maxX - this.minX + 2 * padding}
-                    height={this.maxY - this.minY + 2 * padding}
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    {/*
-                    <filter id="dilate-and-xor">
-                        {/* TODO: Filters can be used also for special effects/texturing for FreehandArt * /}
-                        <feMorphology in="SourceGraphic" result="dilate-result" operator="dilate" radius={2 / z} />
-                        <feComposite in="SourceGraphic" in2="dilate-result" result="xor-result" operator="xor" />
-                    </filter>
-                    */}
-                    {simplifiedGeojson.simplePolygons.map((feature, i) => (
-                        <polygon
-                            key={i}
-                            points={getAllPointsOf(feature)
-                                .map((pointAsWgs84) => {
-                                    return this.wgs84ToBoard(pointAsWgs84)
-                                        .subtract(new Vector(this.minX - padding, this.minY - padding))
-                                        .toArray2D();
-                                })
-                                .join(' ')}
-                            onClick={() => {
-                                // TODO: Tell the region that the user clicked on it
-                            }}
-                            onMouseEnter={(event) => {
-                                // TODO: Tell the region that the user hoovered on it
-                                // + add  onMouseLeave={(event) => {
-                            }}
-                            stroke="red"
-                            // !!! Dynamic size in SVG
-                            strokeWidth={(3 + Math.random()) / z + 'px'}
-                            fill="none"
-                            strokeLinejoin="round"
-                            vectorEffect="non-scaling-stroke"
-                            // filter="url(#dilate-and-xor)"
-                        />
-                    ))}
-                </svg>
-            ),
-        };
+        const boundingBox = { minX: this.minX, maxX: this.maxX, minY: this.minY, maxY: this.maxY };
+        const element = (
+            <svg
+                // TODO: Maybe use viewBox instead of width+height
+                width={this.maxX - this.minX + 2 * padding}
+                height={this.maxY - this.minY + 2 * padding}
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                {/*
+              <filter id="dilate-and-xor">
+                  {/* TODO: Filters can be used also for special effects/texturing for FreehandArt * /}
+                  <feMorphology in="SourceGraphic" result="dilate-result" operator="dilate" radius={2 / z} />
+                  <feComposite in="SourceGraphic" in2="dilate-result" result="xor-result" operator="xor" />
+              </filter>
+              */}
+                {simplifiedGeojson.simplePolygons.map((feature, i) => (
+                    <polygon
+                        key={i}
+                        points={getAllPointsOf(feature)
+                            .map((pointAsWgs84) => {
+                                return this.wgs84ToBoard(pointAsWgs84)
+                                    .subtract(new Vector(this.minX - padding, this.minY - padding))
+                                    .toArray2D();
+                            })
+                            .join(' ')}
+                        onClick={() => {
+                            // TODO: Tell the region that the user clicked on it
+                        }}
+                        onMouseEnter={(event) => {
+                            // TODO: Tell the region that the user hoovered on it
+                            // + add  onMouseLeave={(event) => {
+                        }}
+                        stroke="red"
+                        // !!! Dynamic size in SVG
+                        strokeWidth={(3 + Math.random()) / z + 'px'}
+                        fill="none"
+                        strokeLinejoin="round"
+                        vectorEffect="non-scaling-stroke"
+                        // filter="url(#dilate-and-xor)"
+                    />
+                ))}
+            </svg>
+        );
+
+        if (!isAsUrl) {
+            return {
+                padding,
+                boundingBox,
+                element,
+            };
+        } else {
+            const svgString = ReactDOMServer.renderToStaticMarkup(element);
+            const src = await blobToDataUrl(new Blob([svgString], { type: 'image/svg+xml' }));
+
+            return {
+                padding,
+                boundingBox,
+                src,
+            };
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 import { declareModule } from '@collboard/modules-sdk';
 import { contributors, license, repository, version } from '../../package.json';
-import { IGeojson } from '../interfaces/IGeojson';
+import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 import { GeojsonArt } from './map-geojson-art';
 
 declareModule({
@@ -29,7 +29,7 @@ declareModule({
             mimeType: 'application/geo+json',
             async processFile({ file, boardPosition }) {
                 // TODO: Import GeoJson and center the map
-                const geojson = JSON.parse(await file.text()) as IGeojson;
+                const geojson = JSON.parse(await file.text()) as IGeojsonFeatureCollection;
 
                 // TODO: !!! Upload to server as a file
 
