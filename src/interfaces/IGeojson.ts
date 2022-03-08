@@ -4,6 +4,11 @@ export type IGeojson = IGeojsonFeatureCollection | IGeojsonFeature | IGeojsonPol
 
 export interface IGeojsonFeatureCollection extends IGeojsonEntity<'FeatureCollection'> {
     features: IGeojsonFeature[];
+
+    /**
+     * Additional information from Collboard
+     */
+    collboard?: any;
 }
 
 export interface IGeojsonFeature extends IGeojsonEntity<'Feature'> {

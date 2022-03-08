@@ -26,6 +26,9 @@ export class OsmGeojson {
 
         // ------
         // Problem: Openstreetmap returns geojson with two features, but strangely theese two features are duplicated
+
+        geojson.features = [geojson.features[0]];
+        /*
         // Solution: Remove duplicated features by comparing its bounding boxes and choose only first of each unique
         // TODO: Maybe to separate util
         geojson.features = geojson.features.reduce((uniqueFeatures, feature) => {
@@ -41,6 +44,7 @@ export class OsmGeojson {
 
             return uniqueFeatures;
         }, [] as IGeojsonFeatureCollection['features']);
+        */
         // -------
 
         return new OsmGeojson(geojson);

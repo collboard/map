@@ -20,7 +20,7 @@ export function SvgGeojsonComponent(props: ISvgGeojsonComponentProps) {
                 position: 'absolute',
                 left: minX - padding,
                 top: minY - padding,
-                backgroundColor: '#ff000050',
+                //backgroundColor: '#ff000050',
             }}
         >
             {(props as any).element}

@@ -1,5 +1,5 @@
 #!/usr/bin/env ts-node
-/// <reference path="../../src/simplify-geojson.d.ts" />
+/// <reference path="../../src/geojson/simplify-geojson.d.ts" />
 
 //import chalk from 'chalk';
 import del from 'del';
@@ -35,26 +35,33 @@ async function download(override: boolean) {
         try {
             geojson = (await OsmGeojson.search(feature.search)).geojson;
 
-            // TODO: Maybe use const [type, name] = Object.entries(feature.search)[0]; >.${type}.geojson
+            // Note: There can be more features in geojson - like Praha, capital of the Czech Republic vs. Praha, small village in Slovakia
+            for (const geojsonFeature of geojson.features) {
+                const geopath = geojsonFeature
+                    .properties!.display_name!.split(',')
+                    .map((part) => part.trim())
+                    .filter(
+                        // Note: Filtering out postcodes
+                        (part) => !isNumeric(part.split(/\s+/).join('')),
+                    )
+                    .reverse();
 
-            const geopath = geojson.features[0]
-                .properties!.display_name!.split(',')
-                .map((part) => part.trim())
-                .filter(
-                    // Note: Filtering out postcodes
-                    (part) => !isNumeric(part.split(/\s+/).join('')),
-                )
-                .reverse();
+                // TODO: !!! Translate all parts of path to lowercase, without diacritics English
+                const geojsonPath = join(geojsonsPath, ...geopath, `${geopath[geopath.length - 1]}.geojson`);
+                await mkdir(dirname(geojsonPath), { recursive: true });
 
-            // TODO: !!! Translate all parts of path to lowercase, without diacritics English
-            const geojsonPath = join(geojsonsPath, ...geopath, `${geopath[geopath.length - 1]}.geojson`);
-            await mkdir(dirname(geojsonPath), { recursive: true });
-
-            (geojson as any).collboard = {
-                feature,
-            };
-
-            await writeFile(geojsonPath, geojsonStringify(geojson), 'utf8');
+                await writeFile(
+                    geojsonPath,
+                    geojsonStringify({
+                        ...geojson,
+                        features: [geojsonFeature],
+                        collboard: {
+                            feature,
+                        },
+                    }),
+                    'utf8',
+                );
+            }
         } catch (error) {
             console.info(feature);
             console.info(geojson!);
