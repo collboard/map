@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "industrial",
+                "place_id": 270007304,
+                "osm_type": "way",
+                "osm_id": 899427523,
+                "display_name": "Kaplice, Blansko, Kaplice, okres Český Krumlov, Jihočeský kraj, Jihozápad, Česko",
+                "place_rank": 22,
+                "category": "landuse",
+                "importance": 0.30999999999999994
+            },
+            "bbox": [
+                14.5044705,
+                48.7319266,
+                14.5054908,
+                48.7325166
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[14.5044705,48.7321265],[14.5049778,48.7320032],[14.5052932,48.7319266],[14.5054908,48.7322951],[14.5053382,48.7323593],[14.5050593,48.7324483],[14.5047374,48.7325161],[14.5046555,48.7325166],[14.5046222,48.7325081],[14.5046323,48.7324418],[14.5044705,48.7321265]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Kaplice",
+            "cs": "Kaplice",
+            "search": {
+                "country": "czechia",
+                "q": "Kaplice"
+            }
+        }
+    }
+}

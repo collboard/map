@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "museum",
+                "place_id": 109095073,
+                "osm_type": "way",
+                "osm_id": 32070739,
+                "display_name": "Regionální muzeum, 152, Horní, Vnitřní Město, Český Krumlov, okres Český Krumlov, Jihočeský kraj, Jihozápad, 381 01, Česko",
+                "place_rank": 30,
+                "category": "tourism",
+                "importance": 0.31043043518689395,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//tourist_museum.p.20.png"
+            },
+            "bbox": [
+                14.3174585,
+                48.8105911,
+                14.3180771,
+                48.8107716
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[14.3174585,48.8107307],[14.3174748,48.8106497],[14.317482,48.8106131],[14.3179421,48.8106447],[14.3179471,48.8106215],[14.3179492,48.810604],[14.317947,48.8105911],[14.3180443,48.8105996],[14.3180771,48.8106019],[14.3180768,48.8106149],[14.3180726,48.8107146],[14.3180642,48.8107716],[14.3179368,48.8107633],[14.3176774,48.8107458],[14.3174585,48.8107307]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Jihočeský kraj",
+            "cs": "Jihočeský kraj",
+            "search": {
+                "country": "czechia",
+                "q": "Jihočeský kraj"
+            }
+        }
+    }
+}
