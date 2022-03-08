@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "school",
+                "place_id": 163879270,
+                "osm_type": "way",
+                "osm_id": 252851067,
+                "display_name": "Základní škola a mateřská škola Bohdalec, 388, Bohdalec, okres Žďár nad Sázavou, Kraj Vysočina, Jihovýchod, 59233, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.401,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//education_school.p.20.png"
+            },
+            "bbox": [
+                16.0561074,
+                49.4758986,
+                16.0564851,
+                49.4761159
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[16.0561074,49.47603],[16.0562263,49.475975],[16.0562176,49.4759669],[16.0562626,49.4759461],[16.0562713,49.4759542],[16.0563914,49.4758986],[16.0564851,49.4759853],[16.0563963,49.476026],[16.0564149,49.4760431],[16.0563852,49.4760567],[16.0563956,49.4760663],[16.0563467,49.4760888],[16.0563355,49.4760784],[16.0563059,49.4760919],[16.0562882,49.4760757],[16.0562007,49.4761159],[16.0561074,49.47603]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Okres Žďár nad Sázavou",
+            "cs": "Okres Žďár nad Sázavou",
+            "search": {
+                "country": "czechia",
+                "q": "Okres Žďár nad Sázavou"
+            }
+        }
+    }
+}

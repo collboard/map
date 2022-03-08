@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "city_block",
+                "place_id": 154796845,
+                "osm_type": "way",
+                "osm_id": 217990679,
+                "display_name": "Loket, Inre Hamnen, Norr, Malmö, Malmö kommun, Skåne län, Sverige",
+                "place_rank": 25,
+                "category": "place",
+                "importance": 0.23500000000000001
+            },
+            "bbox": [
+                12.99943,
+                55.609813,
+                13.0006273,
+                55.6105062
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[12.99943,55.6103304],[12.9994373,55.6102737],[12.9995155,55.609927],[12.9995286,55.6098515],[12.9995316,55.609813],[12.9996818,55.609845],[13.0002212,55.6099306],[13.0003023,55.6099336],[13.0003627,55.6099147],[13.000432,55.6099544],[13.0005087,55.6099811],[13.0006273,55.6099992],[13.0003653,55.6105062],[13.0001314,55.610488],[12.9996631,55.6104538],[12.9995698,55.6104375],[12.9994996,55.6104108],[12.9994583,55.6103817],[12.99943,55.6103304]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Loket",
+            "cs": "Loket",
+            "search": {
+                "country": "czechia",
+                "q": "Loket"
+            }
+        }
+    }
+}

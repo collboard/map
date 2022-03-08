@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "bus_station",
+                "place_id": 115783386,
+                "osm_type": "way",
+                "osm_id": 58008609,
+                "display_name": "Hrotovice, Sokolská, Hrotovice, okres Třebíč, Kraj Vysočina, Jihovýchod, 67555, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.11100000000000002,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//transport_bus_station.p.20.png"
+            },
+            "bbox": [
+                16.0597654,
+                49.1072326,
+                16.060926,
+                49.1075986
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[16.0597654,49.1075986],[16.0599384,49.1072326],[16.0605503,49.1073073],[16.0608193,49.1073474],[16.0608518,49.1074017],[16.060926,49.1075075],[16.0609096,49.1075493],[16.060798,49.1075469],[16.0607687,49.1074989],[16.0607294,49.1074446],[16.0606158,49.1074074],[16.0605634,49.1073902],[16.0602881,49.107579],[16.0597654,49.1075986]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Hrotovice",
+            "cs": "Hrotovice",
+            "search": {
+                "country": "czechia",
+                "q": "Hrotovice"
+            }
+        }
+    }
+}

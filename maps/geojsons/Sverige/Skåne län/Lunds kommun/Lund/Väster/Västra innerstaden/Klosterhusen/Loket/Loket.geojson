@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "city_block",
+                "place_id": 122451649,
+                "osm_type": "way",
+                "osm_id": 93592940,
+                "display_name": "Loket, Klosterhusen, Västra innerstaden, Väster, Lund, Lunds kommun, Skåne län, Sverige",
+                "place_rank": 25,
+                "category": "place",
+                "importance": 0.23500000000000001
+            },
+            "bbox": [
+                13.181922,
+                55.7077473,
+                13.1837729,
+                55.7086818
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[13.181922,55.708305],[13.1820526,55.7081317],[13.1822394,55.7078857],[13.1823406,55.7077473],[13.1823945,55.7077626],[13.1824815,55.7077872],[13.1829746,55.7078941],[13.1837362,55.7080586],[13.1837729,55.7080665],[13.1837022,55.7081746],[13.1835087,55.708436],[13.1833169,55.7086818],[13.1832736,55.7086702],[13.1820531,55.7083415],[13.1819722,55.708319],[13.181922,55.708305]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Loket",
+            "cs": "Loket",
+            "search": {
+                "country": "czechia",
+                "q": "Loket"
+            }
+        }
+    }
+}

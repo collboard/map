@@ -29,10 +29,11 @@
     ],
     "collboard": {
         "feature": {
-            "en": "Slovenia",
-            "cs": "Slovenia",
+            "en": "Aš",
+            "cs": "Aš",
             "search": {
-                "country": "Slovenia"
+                "country": "czechia",
+                "q": "Aš"
             }
         }
     }

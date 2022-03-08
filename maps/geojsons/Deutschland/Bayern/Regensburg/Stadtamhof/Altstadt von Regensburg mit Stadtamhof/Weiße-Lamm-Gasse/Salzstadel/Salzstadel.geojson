@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "government",
+                "place_id": 121613264,
+                "osm_type": "way",
+                "osm_id": 93576143,
+                "display_name": "Salzstadel, 1, Weiße-Lamm-Gasse, Altstadt von Regensburg mit Stadtamhof, Stadtamhof, Regensburg, Bayern, 93047, Deutschland",
+                "place_rank": 30,
+                "category": "building",
+                "importance": 0.17461773632832445
+            },
+            "bbox": [
+                12.0970257,
+                49.0209181,
+                12.0975116,
+                49.0212297
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[12.0970257,49.0209654],[12.0973912,49.0209181],[12.0975116,49.0210988],[12.0971125,49.021209],[12.0971142,49.02122],[12.097106,49.0212283],[12.0970889,49.0212297],[12.097068,49.0211632],[12.0970597,49.0211642],[12.0970257,49.0209654]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Solnice",
+            "cs": "Solnice",
+            "search": {
+                "country": "czechia",
+                "q": "Solnice"
+            }
+        }
+    }
+}

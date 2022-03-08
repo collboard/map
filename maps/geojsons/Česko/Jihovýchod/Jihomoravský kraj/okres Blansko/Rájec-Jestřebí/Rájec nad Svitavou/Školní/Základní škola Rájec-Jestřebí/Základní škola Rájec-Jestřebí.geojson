@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "school",
+                "place_id": 127973476,
+                "osm_type": "way",
+                "osm_id": 114444712,
+                "display_name": "Základní škola Rájec-Jestřebí, Školní, Rájec nad Svitavou, Rájec-Jestřebí, okres Blansko, Jihomoravský kraj, Jihovýchod, 67902, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.201,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//education_school.p.20.png"
+            },
+            "bbox": [
+                16.638548,
+                49.407645,
+                16.639268,
+                49.408595
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[16.638548,49.407925],[16.63882,49.407645],[16.63904,49.407735],[16.638908,49.407873],[16.639154,49.407974],[16.639163,49.407965],[16.639268,49.408009],[16.639156,49.408124],[16.639178,49.408133],[16.638755,49.408564],[16.638726,49.408553],[16.638688,49.408595],[16.638574,49.408549],[16.63865,49.408466],[16.638585,49.40844],[16.6388036,49.4082133],[16.638965,49.408046],[16.638978,49.40805],[16.639001,49.408025],[16.638828,49.407955],[16.638769,49.408016],[16.638548,49.407925]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Okres Blansko",
+            "cs": "Okres Blansko",
+            "search": {
+                "country": "czechia",
+                "q": "Okres Blansko"
+            }
+        }
+    }
+}

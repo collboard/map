@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "residential",
+                "place_id": 190971746,
+                "osm_type": "way",
+                "osm_id": 384600572,
+                "display_name": "Litomysl, Steele County, Minnesota, United States",
+                "place_rank": 22,
+                "category": "landuse",
+                "importance": 0.19999999999999996
+            },
+            "bbox": [
+                -93.1869634,
+                43.945612,
+                -93.1845025,
+                43.948551
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[-93.1869634,43.9456197],[-93.1859281,43.945612],[-93.185912,43.9463033],[-93.1845173,43.9463536],[-93.1845025,43.9485446],[-93.1862071,43.948551],[-93.1862071,43.948354],[-93.1869527,43.9483463],[-93.1869634,43.9456197]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Litomyšl",
+            "cs": "Litomyšl",
+            "search": {
+                "country": "czechia",
+                "q": "Litomyšl"
+            }
+        }
+    }
+}

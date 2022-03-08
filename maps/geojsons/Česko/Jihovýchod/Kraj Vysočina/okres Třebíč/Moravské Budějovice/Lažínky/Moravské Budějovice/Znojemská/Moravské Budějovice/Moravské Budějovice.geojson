@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "airstrip",
+                "place_id": 181832315,
+                "osm_type": "way",
+                "osm_id": 331414667,
+                "display_name": "Moravské Budějovice, Znojemská, Moravské Budějovice, Lažínky, Moravské Budějovice, okres Třebíč, Kraj Vysočina, Jihovýchod, 67602, Česko",
+                "place_rank": 30,
+                "category": "aeroway",
+                "importance": 0.201
+            },
+            "bbox": [
+                15.8240184,
+                49.0409369,
+                15.8322474,
+                49.0451424
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[15.8240184,49.0448189],[15.8320114,49.0409369],[15.8322474,49.0411479],[15.824233,49.0451424],[15.8240184,49.0448189]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Moravské Budějovice",
+            "cs": "Moravské Budějovice",
+            "search": {
+                "country": "czechia",
+                "q": "Moravské Budějovice"
+            }
+        }
+    }
+}

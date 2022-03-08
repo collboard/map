@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "quarry",
+                "place_id": 195902450,
+                "osm_type": "way",
+                "osm_id": 413112392,
+                "display_name": "písek, Fähnrichův Mlýn, Stráž nad Nežárkou, okres Jindřichův Hradec, Jihočeský kraj, Jihozápad, Česko",
+                "place_rank": 22,
+                "category": "landuse",
+                "importance": 0.29999999999999993
+            },
+            "bbox": [
+                14.8834224,
+                49.0678406,
+                14.8864715,
+                49.0703264
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[14.8834224,49.0698461],[14.8840669,49.0685056],[14.8845985,49.0678406],[14.8847798,49.0678564],[14.8847424,49.0679683],[14.8845019,49.0686877],[14.8845583,49.0689093],[14.8846791,49.0691653],[14.8847758,49.0692788],[14.884953,49.0693368],[14.885823,49.0692973],[14.8864715,49.0692893],[14.886399,49.0695031],[14.8862419,49.0696799],[14.8860123,49.0697116],[14.8857264,49.0701523],[14.8855089,49.0703264],[14.884949,49.0702367],[14.8840467,49.0700441],[14.8834224,49.0698461]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Písek",
+            "cs": "Písek",
+            "search": {
+                "country": "czechia",
+                "q": "Písek"
+            }
+        }
+    }
+}

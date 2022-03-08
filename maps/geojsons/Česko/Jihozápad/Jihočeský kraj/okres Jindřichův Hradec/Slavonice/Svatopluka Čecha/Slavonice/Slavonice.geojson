@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "bus_station",
+                "place_id": 195700867,
+                "osm_type": "way",
+                "osm_id": 406635976,
+                "display_name": "Slavonice, Svatopluka Čecha, Slavonice, okres Jindřichův Hradec, Jihočeský kraj, Jihozápad, 37881, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.11100000000000002,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//transport_bus_station.p.20.png"
+            },
+            "bbox": [
+                15.3531808,
+                48.9981574,
+                15.3541786,
+                48.9985851
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[15.3531808,48.9984042],[15.3538715,48.9981574],[15.3541786,48.9982726],[15.3541316,48.998293],[15.3541228,48.9982963],[15.3539075,48.9984048],[15.3533871,48.9985851],[15.3533459,48.9985714],[15.3533149,48.9985837],[15.3531808,48.9984042]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Slavonice",
+            "cs": "Slavonice",
+            "search": {
+                "country": "czechia",
+                "q": "Slavonice"
+            }
+        }
+    }
+}

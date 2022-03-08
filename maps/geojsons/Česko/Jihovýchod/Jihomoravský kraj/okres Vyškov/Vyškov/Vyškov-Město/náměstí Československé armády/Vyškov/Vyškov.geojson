@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "castle",
+                "place_id": 132361132,
+                "osm_type": "way",
+                "osm_id": 130305329,
+                "display_name": "Vyškov, náměstí Československé armády, Vyškov-Město, Vyškov, okres Vyškov, Jihomoravský kraj, Jihovýchod, 68201, Česko",
+                "place_rank": 30,
+                "category": "historic",
+                "importance": 0.29764122278025945,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//tourist_castle.p.20.png"
+            },
+            "bbox": [
+                16.997559,
+                49.2763658,
+                16.9983183,
+                49.2766927
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[16.997559,49.2765305],[16.9976588,49.2764634],[16.9977354,49.2765485],[16.9982313,49.2763658],[16.9983183,49.2764589],[16.9976954,49.2766927],[16.997559,49.2765305]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Vyškov",
+            "cs": "Vyškov",
+            "search": {
+                "country": "czechia",
+                "q": "Vyškov"
+            }
+        }
+    }
+}

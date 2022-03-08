@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "bus_station",
+                "place_id": 275029686,
+                "osm_type": "way",
+                "osm_id": 937961607,
+                "display_name": "Hodonín, autobusové nádraží, Dvořákova, Hodonín, okres Hodonín, Jihomoravský kraj, Jihovýchod, 69501, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.11100000000000002,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//transport_bus_station.p.20.png"
+            },
+            "bbox": [
+                17.1207376,
+                48.8534527,
+                17.1226454,
+                48.854561
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[17.1207376,48.8537305],[17.1209612,48.8534598],[17.1210162,48.8534527],[17.1213429,48.8534893],[17.1214182,48.8535006],[17.1226454,48.8539394],[17.1225604,48.8540448],[17.1222224,48.8544639],[17.1221441,48.854561],[17.1209908,48.8541491],[17.120951,48.8541058],[17.1208487,48.8540701],[17.1208084,48.8539876],[17.1207556,48.8538573],[17.1207376,48.8537305]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Hodonín",
+            "cs": "Hodonín",
+            "search": {
+                "country": "czechia",
+                "q": "Hodonín"
+            }
+        }
+    }
+}

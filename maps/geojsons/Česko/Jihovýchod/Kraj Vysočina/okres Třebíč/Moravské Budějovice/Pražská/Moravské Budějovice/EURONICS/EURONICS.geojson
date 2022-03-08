@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "hifi",
+                "place_id": 211886760,
+                "osm_type": "way",
+                "osm_id": 508447107,
+                "display_name": "EURONICS, Moravské Budějovice, 1677, Pražská, Moravské Budějovice, okres Třebíč, Kraj Vysočina, Jihovýchod, 676 02, Česko",
+                "place_rank": 30,
+                "category": "shop",
+                "importance": 0.201
+            },
+            "bbox": [
+                15.8000267,
+                49.0581706,
+                15.8003186,
+                49.0583272
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[15.8000267,49.0582171],[15.8002703,49.0581706],[15.8003186,49.0582809],[15.8000752,49.0583272],[15.8000267,49.0582171]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Moravské Budějovice",
+            "cs": "Moravské Budějovice",
+            "search": {
+                "country": "czechia",
+                "q": "Moravské Budějovice"
+            }
+        }
+    }
+}

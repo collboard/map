@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "aerodrome",
+                "place_id": 186912989,
+                "osm_type": "way",
+                "osm_id": 367301576,
+                "display_name": "Bystřice nad Pernštejnem, K Hájům, Domanínek, Bystřice nad Pernštejnem, okres Žďár nad Sázavou, Kraj Vysočina, Jihovýchod, 59301, Česko",
+                "place_rank": 30,
+                "category": "aeroway",
+                "importance": 0.30100000000000005,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//transport_airport2.p.20.png"
+            },
+            "bbox": [
+                16.230119,
+                49.52035,
+                16.2338215,
+                49.5255065
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[16.230119,49.5249742],[16.2335421,49.52035],[16.2338215,49.5208221],[16.2334355,49.5213312],[16.2332266,49.5216217],[16.232584,49.5226956],[16.2321653,49.5234249],[16.2320736,49.5236806],[16.2326319,49.5237808],[16.2325555,49.5239876],[16.2324242,49.5241752],[16.2320681,49.5245842],[16.2317277,49.5249347],[16.231132,49.5255065],[16.230119,49.5249742]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Bystřice nad Pernštejnem",
+            "cs": "Bystřice nad Pernštejnem",
+            "search": {
+                "country": "czechia",
+                "q": "Bystřice nad Pernštejnem"
+            }
+        }
+    }
+}

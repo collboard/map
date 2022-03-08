@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "school",
+                "place_id": 277391025,
+                "osm_type": "way",
+                "osm_id": 957267240,
+                "display_name": "Střední škola technická, gastronomická a automobilní, Chomutov, Pražská, Chomutov I, Chomutov, okres Chomutov, Ústecký kraj, Severozápad, CHOMUTOV, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.11100000000000002,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//education_school.p.20.png"
+            },
+            "bbox": [
+                13.421002,
+                50.4543032,
+                13.4229088,
+                50.4561719
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[13.421002,50.4547135],[13.421525,50.4543032],[13.4218099,50.4544816],[13.4219546,50.4543894],[13.422424,50.4547135],[13.4223328,50.4548262],[13.4229088,50.4554879],[13.4227535,50.4556234],[13.4219144,50.4561719],[13.4216274,50.4560124],[13.4211094,50.4557244],[13.4218612,50.4552368],[13.421002,50.4547135]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Chomutov",
+            "cs": "Chomutov",
+            "search": {
+                "country": "czechia",
+                "q": "Chomutov"
+            }
+        }
+    }
+}

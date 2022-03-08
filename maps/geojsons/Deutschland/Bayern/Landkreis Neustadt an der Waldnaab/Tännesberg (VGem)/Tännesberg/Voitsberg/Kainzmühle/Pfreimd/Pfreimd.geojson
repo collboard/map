@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "water",
+                "place_id": 331073618,
+                "osm_type": "way",
+                "osm_id": 556739934,
+                "display_name": "Pfreimd, Kainzmühle, Voitsberg, Tännesberg, Tännesberg (VGem), Landkreis Neustadt an der Waldnaab, Bayern, 92723, Deutschland",
+                "place_rank": 22,
+                "category": "natural",
+                "importance": 0.19999999999999996
+            },
+            "bbox": [
+                12.2944367,
+                49.572341,
+                12.2956113,
+                49.5733863
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[12.2944367,49.572341],[12.2946134,49.5724803],[12.2948903,49.5727347],[12.2950879,49.5728842],[12.2956113,49.5733074],[12.2954697,49.5733863],[12.2949524,49.5729411],[12.2944618,49.5724972],[12.2944367,49.572341]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Přimda",
+            "cs": "Přimda",
+            "search": {
+                "country": "czechia",
+                "q": "Přimda"
+            }
+        }
+    }
+}
