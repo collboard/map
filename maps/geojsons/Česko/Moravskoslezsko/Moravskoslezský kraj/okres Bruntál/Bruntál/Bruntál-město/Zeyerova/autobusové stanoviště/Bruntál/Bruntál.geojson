@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "bus_station",
+                "place_id": 278916141,
+                "osm_type": "way",
+                "osm_id": 967529803,
+                "display_name": "Bruntál, autobusové stanoviště, Zeyerova, Bruntál-město, Bruntál, okres Bruntál, Moravskoslezský kraj, Moravskoslezsko, 79201, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.11100000000000002,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//transport_bus_station.p.20.png"
+            },
+            "bbox": [
+                17.4626941,
+                49.9849185,
+                17.4633043,
+                49.9856441
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[17.4626941,49.985363],[17.4628061,49.9853096],[17.4627102,49.9851716],[17.4627042,49.9851492],[17.4627156,49.9851306],[17.4627491,49.9851017],[17.4628229,49.9850513],[17.4628309,49.9850591],[17.4630401,49.9849185],[17.4633043,49.9855523],[17.4629335,49.9856441],[17.4628631,49.9856295],[17.4627458,49.9854605],[17.4627732,49.985451],[17.4626941,49.985363]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Bruntál",
+            "cs": "Bruntál",
+            "search": {
+                "country": "czechia",
+                "q": "Bruntál"
+            }
+        }
+    }
+}

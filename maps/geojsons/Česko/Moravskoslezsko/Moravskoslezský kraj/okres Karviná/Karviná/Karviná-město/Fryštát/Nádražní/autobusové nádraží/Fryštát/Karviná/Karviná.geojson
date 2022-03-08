@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "bus_station",
+                "place_id": 146896320,
+                "osm_type": "way",
+                "osm_id": 192671597,
+                "display_name": "Karviná, Fryštát, autobusové nádraží, Nádražní, Fryštát, Karviná-město, Karviná, okres Karviná, Moravskoslezský kraj, Moravskoslezsko, 73506, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.11100000000000002,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//transport_bus_station.p.20.png"
+            },
+            "bbox": [
+                18.5270922,
+                49.8550558,
+                18.5283849,
+                49.8567199
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[18.5270922,49.8566086],[18.5273708,49.8561144],[18.5273306,49.8560989],[18.5275599,49.8557262],[18.5279816,49.8550558],[18.528159,49.8550994],[18.5283849,49.8554688],[18.5283753,49.855516],[18.5280573,49.8560498],[18.52771,49.8566274],[18.5273544,49.8567199],[18.5272327,49.8566952],[18.5271587,49.8566495],[18.5270922,49.8566086]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Karviná",
+            "cs": "Karviná",
+            "search": {
+                "country": "czechia",
+                "q": "Karviná"
+            }
+        }
+    }
+}

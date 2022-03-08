@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "townhall",
+                "place_id": 113833439,
+                "osm_type": "way",
+                "osm_id": 45195273,
+                "display_name": "Radnice, 1/1, náměstí Republiky, Vnitřní Město, Plzeň, okres Plzeň-město, Plzeňský kraj, Jihozápad, 30100, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.2769036315150678
+            },
+            "bbox": [
+                13.3775588,
+                49.7480712,
+                13.3779368,
+                49.7486441
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[13.3775588,49.7481033],[13.3778454,49.7480712],[13.3778969,49.7482269],[13.3779368,49.748355],[13.3777779,49.7483753],[13.3778584,49.7486267],[13.3777445,49.7486426],[13.3777342,49.7486441],[13.3777281,49.7486221],[13.3776986,49.7485168],[13.3776745,49.74845],[13.3776353,49.7483245],[13.3775893,49.7483307],[13.3775588,49.7481033]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Radnice",
+            "cs": "Radnice",
+            "search": {
+                "country": "czechia",
+                "q": "Radnice"
+            }
+        }
+    }
+}

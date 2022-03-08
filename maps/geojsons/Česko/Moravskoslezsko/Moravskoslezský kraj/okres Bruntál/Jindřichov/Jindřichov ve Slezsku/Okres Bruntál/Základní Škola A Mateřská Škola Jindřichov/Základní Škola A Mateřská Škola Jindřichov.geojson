@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "school",
+                "place_id": 175276722,
+                "osm_type": "way",
+                "osm_id": 306307231,
+                "display_name": "Základní Škola A Mateřská Škola Jindřichov, Okres Bruntál, 457, Jindřichov ve Slezsku, Jindřichov, okres Bruntál, Moravskoslezský kraj, Moravskoslezsko, 79383, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.201,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//education_school.p.20.png"
+            },
+            "bbox": [
+                17.517004,
+                50.2528651,
+                17.517917,
+                50.2539039
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[17.517004,50.253652],[17.5170071,50.2535558],[17.5170447,50.2534556],[17.517076,50.2533114],[17.5171481,50.2529387],[17.5174956,50.2529364],[17.5177874,50.2528651],[17.5178583,50.253293],[17.5179028,50.2533298],[17.5179093,50.2537088],[17.517917,50.2538943],[17.5170534,50.2539039],[17.517004,50.253652]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Okres Bruntál",
+            "cs": "Okres Bruntál",
+            "search": {
+                "country": "czechia",
+                "q": "Okres Bruntál"
+            }
+        }
+    }
+}

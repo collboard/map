@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "train_station",
+                "place_id": 119290100,
+                "osm_type": "way",
+                "osm_id": 81988976,
+                "display_name": "Rokycany, náměstí 5. května, Střed, Rokycany, okres Rokycany, Plzeňský kraj, Jihozápad, 33701, Česko",
+                "place_rank": 30,
+                "category": "building",
+                "importance": 0.11100000000000002
+            },
+            "bbox": [
+                13.5917781,
+                49.7403165,
+                13.5925123,
+                49.740631
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[13.5917781,49.7404892],[13.591975,49.740438],[13.5919429,49.7403864],[13.5920768,49.7403515],[13.5921089,49.7404026],[13.5924351,49.7403165],[13.5924961,49.7404111],[13.5925123,49.7404397],[13.592392,49.7404719],[13.592406,49.7404954],[13.5922751,49.7405293],[13.5922806,49.7405379],[13.5922517,49.7405454],[13.591996,49.7406116],[13.5919887,49.7405987],[13.5919345,49.7406128],[13.5919383,49.7406192],[13.5918938,49.740631],[13.5918905,49.7406246],[13.591866,49.7406305],[13.5917781,49.7404892]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Rokycany",
+            "cs": "Rokycany",
+            "search": {
+                "country": "czechia",
+                "q": "Rokycany"
+            }
+        }
+    }
+}

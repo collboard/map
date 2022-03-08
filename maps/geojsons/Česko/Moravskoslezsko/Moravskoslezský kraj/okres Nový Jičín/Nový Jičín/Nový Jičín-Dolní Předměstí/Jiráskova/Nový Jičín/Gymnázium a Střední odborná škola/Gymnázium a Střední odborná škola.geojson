@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "school",
+                "place_id": 214152201,
+                "osm_type": "way",
+                "osm_id": 530996597,
+                "display_name": "Gymnázium a Střední odborná škola, Nový Jičín, Jiráskova, Nový Jičín-Dolní Předměstí, Nový Jičín, okres Nový Jičín, Moravskoslezský kraj, Moravskoslezsko, 74242, Česko",
+                "place_rank": 30,
+                "category": "amenity",
+                "importance": 0.201,
+                "icon": "https://nominatim.openstreetmap.org/ui/mapicons//education_school.p.20.png"
+            },
+            "bbox": [
+                18.0022762,
+                49.5937142,
+                18.0045577,
+                49.5951409
+            ],
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[18.0022762,49.5943305],[18.0022864,49.5943206],[18.002317,49.5942906],[18.0027904,49.5938259],[18.0029044,49.5937142],[18.0036786,49.5941063],[18.0038789,49.5941991],[18.0045577,49.5947007],[18.0044931,49.5947633],[18.0041134,49.5951313],[18.0036145,49.5949181],[18.0033833,49.5951409],[18.0025405,49.5947711],[18.0027737,49.5945473],[18.0025895,49.594467],[18.002514,49.5944342],[18.0022762,49.5943305]]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Nový Jičín",
+            "cs": "Nový Jičín",
+            "search": {
+                "country": "czechia",
+                "q": "Nový Jičín"
+            }
+        }
+    }
+}
