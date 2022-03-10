@@ -29,7 +29,7 @@ async function runFeaturesGenerator() {
     };
     const features: any[] = [];
 
-    for (const csvPath of await glob(join(__dirname, '../../maps/features/countries/**/*.csv'))) {
+    for (const csvPath of await glob(join(__dirname, '../../maps/0-features-lists/countries/**/*.csv'))) {
         const country = /countries\/(?<country>.*?)\//.exec(csvPath)?.groups?.country;
 
         const csvString = await readFile(csvPath, 'utf8');

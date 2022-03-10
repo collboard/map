@@ -3,11 +3,8 @@
 import del from 'del';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
+import { jsPDF } from 'jspdf';
 import { basename, dirname, join } from 'path';
-import { SvgGeojsonConverter } from '../../src/geojson/SvgGeojsonConverter';
-import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
-
-const LODS_EXPONENTS = [/*-1, 0, 1, 2, 3, 4, 5*/ 0];
 
 /**/
 convertSvgsToPdfs(true);
@@ -25,26 +22,20 @@ async function convertSvgsToPdfs(override: boolean) {
 
     console.info(`🖨️ Converting svgs to pdfs`);
 
-    for (const geojsonPath of await glob(join(__dirname, '../../maps/2-geojsons/**/*.geojson'))) {
+    for (const svgPath of await glob(join(__dirname, '../../maps/4-svgs/**/*.svgs'))) {
         try {
-            console.info(`🗾 Converting ${basename(geojsonPath)}`);
+            console.info(`🗾 Converting ${basename(svgPath)}`);
 
-            const geojson = JSON.parse(await readFile(geojsonPath, 'utf8')) as IGeojsonFeatureCollection;
+            const geojson = await readFile(svgPath, 'utf8');
 
-            const svgGeojsonConverter = new SvgGeojsonConverter(geojson);
+            const pdf = new jsPDF();
 
-            for (const exponent of LODS_EXPONENTS) {
-                const svgString = ((await svgGeojsonConverter.makeSvg(Math.pow(1.1, exponent), true)) as any).src;
+            pdf.addImage(geojson, 'svg', 10, 78, 12, 15);
 
-                // TODO: !!! Prettify SVG
-                // TODO: !!! Add collboard branding
-                // TODO: !!! Add metadata of geo
+            const pdfBlob = pdf.output('blob');
 
-                const svgPath = geojsonPath.replace('/2-geojsons/', '/3-svgs/') + `.lod${exponent}.svg`;
-
-                await mkdir(dirname(svgPath), { recursive: true });
-                await writeFile(svgPath, svgString, 'utf8');
-            }
+            await mkdir(dirname(svgPath), { recursive: true });
+            await writeFile(svgPath, pdfBlob, 'binary');
         } catch (error) {
             console.error(error);
         }

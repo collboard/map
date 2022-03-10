@@ -19,6 +19,7 @@
         "postversion": "git push && git push --tags"
     },
     "dependencies": {
+        "jspdf": "^2.5.1",
         "puppeteer": "^13.5.0",
         "type-fest": "^2.12.0"
     },
