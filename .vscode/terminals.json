@@ -19,20 +19,32 @@
             "focus": true
         },
         {
-            "name": "🏭🎹 Run generate of features",
-            "command": "ts-node ./scripts/features-generator/features-generator.ts",
+            "name": "🏭🎹 /1/ Features generator",
+            "command": "ts-node ./scripts/1-features-generator/features-generator.ts",
             "onlySingle": true,
             "focus": true
         },
         {
-            "name": "🏭🗺️ Run geojson downloader",
-            "command": "ts-node ./scripts/geojson-downloader/geojson-downloader.ts",
+            "name": "🏭🗺️ /2/ Geojson downloader",
+            "command": "ts-node ./scripts/2-geojson-downloader/geojson-downloader.ts",
             "onlySingle": true,
             "focus": true
         },
         {
-            "name": "🏭🖼️ Run svg-geojson-converter",
-            "command": "ts-node ./scripts/svg-geojson-converter/svg-geojson-converter.ts",
+            "name": "🏭🔗 /3/ Geojson aggregator",
+            "command": "ts-node ./scripts/3-geojson-aggregator/geojson-aggregator.ts",
+            "onlySingle": true,
+            "focus": true
+        },
+        {
+            "name": "🏭🖼️ /4/ Svg from geojson converter",
+            "command": "ts-node ./scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts",
+            "onlySingle": true,
+            "focus": true
+        },
+        {
+            "name": "🏭🖨️ /5/ Pdf from svg converter",
+            "command": "ts-node ./scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts",
             "onlySingle": true,
             "focus": true
         }

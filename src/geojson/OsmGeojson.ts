@@ -4,7 +4,7 @@ import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 export class OsmGeojson {
     protected constructor(public readonly geojson: IGeojsonFeatureCollection) {}
 
-    public static async search(params: Record<string, string>): Promise<OsmGeojson> {
+    public static createSearchUrl(params: Record<string, string>): URL {
         const url = new URL(`https://nominatim.openstreetmap.org/search`);
 
         url.searchParams.set('format', 'geojson');
@@ -13,6 +13,12 @@ export class OsmGeojson {
         for (const [key, value] of Object.entries(params)) {
             url.searchParams.set(key, value);
         }
+
+        return url;
+    }
+
+    public static async search(params: Record<string, string>): Promise<OsmGeojson> {
+        const url = this.createSearchUrl(params);
 
         const response = await fetch(url.href);
         const geojson = (await response.json()) as IGeojsonFeatureCollection;

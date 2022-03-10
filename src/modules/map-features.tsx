@@ -1,5 +1,5 @@
 import { declareModule } from '@collboard/modules-sdk';
-import { FEATURES } from '../../maps/features/features';
+import { FEATURES } from '../../maps/1-features/features';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { OsmGeojsonCached } from '../geojson/OsmGeojsonCached';
 import { GeojsonArt } from './map-geojson-art';
