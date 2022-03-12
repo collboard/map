@@ -1,0 +1,11 @@
+/**
+ * Recieves country name and returns continent name
+ * @example 'Czechia' -> 'Europe'
+ * @example 'United states' -> 'North America'
+ */
+export function findContinentOfCountry(countryName: string): string {
+
+
+    
+
+}

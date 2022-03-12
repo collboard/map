@@ -9,6 +9,7 @@ import { FEATURES } from '../../maps/1-features/features';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
 import { isNumeric } from '../../src/utils/isNumeric';
+import { DebugAutomaticTranslator } from '../utils/automatic-translators/DebugAutomaticTranslator';
 import { GoogleAutomaticTranslator } from '../utils/automatic-translators/GoogleAutomaticTranslator';
 import { geojsonStringify } from './utils/geojsonStringify';
 
@@ -28,7 +29,7 @@ async function runGeojsonDownloader(override: boolean) {
 
     console.info(`🗺️ Downloading geojsons`);
 
-    const translator = new GoogleAutomaticTranslator('auto', 'en');
+    const translator = new DebugAutomaticTranslator(new GoogleAutomaticTranslator({ from: 'auto', to: 'en' }));
 
     //await translator.translate('India');
 
@@ -53,6 +54,10 @@ async function runGeojsonDownloader(override: boolean) {
 
                 // TODO: Maybe Czech places in Czech language (without diacritics)
                 const geopathInEnglish = await Promise.all(geopathAsEndonym.map((name) => translator.translate(name)));
+
+                // TODO: In future only use geoPath and compare to properties.display_name from OSM
+                geopathInEnglish.unshift(...feature.geoPath);
+
                 const geopathNormalized = geopathInEnglish.map((name) =>
                     name.trim().toLowerCase().split(/\s+/).join('-'),
                 );
@@ -85,6 +90,8 @@ async function runGeojsonDownloader(override: boolean) {
             console.error(error);
         }
     }
+
+    console.info(`[ Done ]`);
 }
 
 /**

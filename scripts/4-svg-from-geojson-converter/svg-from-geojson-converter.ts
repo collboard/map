@@ -49,6 +49,8 @@ async function convertGeojsonsToSvgs(override: boolean) {
             console.error(error);
         }
     }
+
+    console.info(`[ Done ]`);
 }
 
 /**

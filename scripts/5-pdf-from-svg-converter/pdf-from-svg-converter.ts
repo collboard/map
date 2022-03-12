@@ -40,6 +40,8 @@ async function convertSvgsToPdfs(override: boolean) {
             console.error(error);
         }
     }
+
+    console.info(`[ Done ]`);
 }
 
 /**
