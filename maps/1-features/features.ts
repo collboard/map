@@ -8,91 +8,91 @@ import { IGeopath } from 'geopath';
 export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl: string; geopath: IGeopath }> = [
     {
         en: 'China',
-        cs: 'China',
+        cs: 'Čína',
         search: { country: 'China' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=China',
         geopath: { region: 'Asia', country: 'China' },
     },
     {
         en: 'India',
-        cs: 'India',
+        cs: 'Indie',
         search: { country: 'India' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=India',
         geopath: { region: 'Asia', country: 'India' },
     },
     {
         en: 'United States',
-        cs: 'United States',
+        cs: 'Spojené státy',
         search: { country: 'United States' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=United+States',
         geopath: { region: 'Americas', country: 'United states' },
     },
     {
         en: 'Indonesia',
-        cs: 'Indonesia',
+        cs: 'Indonésie',
         search: { country: 'Indonesia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Indonesia',
         geopath: { region: 'Asia', country: 'Indonesia[b]' },
     },
     {
         en: 'Pakistan',
-        cs: 'Pakistan',
+        cs: 'Pákistán',
         search: { country: 'Pakistan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Pakistan',
         geopath: { region: 'Asia', country: 'Pakistan' },
     },
     {
         en: 'Brazil',
-        cs: 'Brazil',
+        cs: 'Brazílie',
         search: { country: 'Brazil' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Brazil',
         geopath: { region: 'Americas', country: 'Brazil' },
     },
     {
         en: 'Nigeria',
-        cs: 'Nigeria',
+        cs: 'Nigérie',
         search: { country: 'Nigeria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Nigeria',
         geopath: { region: 'Africa', country: 'Nigeria' },
     },
     {
         en: 'Bangladesh',
-        cs: 'Bangladesh',
+        cs: 'Bangladéš',
         search: { country: 'Bangladesh' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bangladesh',
         geopath: { region: 'Asia', country: 'Bangladesh' },
     },
     {
         en: 'Russia',
-        cs: 'Russia',
+        cs: 'Rusko',
         search: { country: 'Russia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Russia',
         geopath: { region: 'Europe', country: 'Russia[b]' },
     },
     {
         en: 'Mexico',
-        cs: 'Mexico',
+        cs: 'Mexiko',
         search: { country: 'Mexico' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mexico',
         geopath: { region: 'Americas', country: 'Mexico' },
     },
     {
         en: 'Japan',
-        cs: 'Japan',
+        cs: 'Japonsko',
         search: { country: 'Japan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Japan',
         geopath: { region: 'Asia', country: 'Japan' },
     },
     {
         en: 'Ethiopia',
-        cs: 'Ethiopia',
+        cs: 'Etiopie',
         search: { country: 'Ethiopia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ethiopia',
         geopath: { region: 'Africa', country: 'Ethiopia' },
     },
     {
         en: 'Philippines',
-        cs: 'Philippines',
+        cs: 'Filipíny',
         search: { country: 'Philippines' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Philippines',
         geopath: { region: 'Asia', country: 'Philippines' },
@@ -113,70 +113,70 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'DR Congo',
-        cs: 'DR Congo',
+        cs: 'Dr. Kongo',
         search: { country: 'DR Congo' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=DR+Congo',
         geopath: { region: 'Africa', country: 'Dr congo' },
     },
     {
         en: 'Iran',
-        cs: 'Iran',
+        cs: 'Írán',
         search: { country: 'Iran' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Iran',
         geopath: { region: 'Asia', country: 'Iran' },
     },
     {
         en: 'Turkey',
-        cs: 'Turkey',
+        cs: 'krocan',
         search: { country: 'Turkey' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Turkey',
         geopath: { region: 'Asia', country: 'Turkey[b]' },
     },
     {
         en: 'Germany',
-        cs: 'Germany',
+        cs: 'Německo',
         search: { country: 'Germany' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Germany',
         geopath: { region: 'Europe', country: 'Germany' },
     },
     {
         en: 'France',
-        cs: 'France',
+        cs: 'Francie',
         search: { country: 'France' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=France',
         geopath: { region: 'Europe', country: 'France' },
     },
     {
         en: 'United Kingdom',
-        cs: 'United Kingdom',
+        cs: 'Spojené království',
         search: { country: 'United Kingdom' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=United+Kingdom',
         geopath: { region: 'Europe', country: 'United kingdom' },
     },
     {
         en: 'Thailand',
-        cs: 'Thailand',
+        cs: 'Thajsko',
         search: { country: 'Thailand' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Thailand',
         geopath: { region: 'Asia', country: 'Thailand' },
     },
     {
         en: 'South Africa',
-        cs: 'South Africa',
+        cs: 'Jižní Afrika',
         search: { country: 'South Africa' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=South+Africa',
         geopath: { region: 'Africa', country: 'South africa' },
     },
     {
         en: 'Tanzania',
-        cs: 'Tanzania',
+        cs: 'Tanzanie',
         search: { country: 'Tanzania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Tanzania',
         geopath: { region: 'Africa', country: 'Tanzania' },
     },
     {
         en: 'Italy',
-        cs: 'Italy',
+        cs: 'Itálie',
         search: { country: 'Italy' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Italy',
         geopath: { region: 'Europe', country: 'Italy' },
@@ -190,28 +190,28 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'South Korea',
-        cs: 'South Korea',
+        cs: 'Jižní Korea',
         search: { country: 'South Korea' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=South+Korea',
         geopath: { region: 'Asia', country: 'South korea' },
     },
     {
         en: 'Colombia',
-        cs: 'Colombia',
+        cs: 'Kolumbie',
         search: { country: 'Colombia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Colombia',
         geopath: { region: 'Americas', country: 'Colombia' },
     },
     {
         en: 'Kenya',
-        cs: 'Kenya',
+        cs: 'Keňa',
         search: { country: 'Kenya' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Kenya',
         geopath: { region: 'Africa', country: 'Kenya' },
     },
     {
         en: 'Spain',
-        cs: 'Spain',
+        cs: 'Španělsko',
         search: { country: 'Spain' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Spain',
         geopath: { region: 'Europe', country: 'Spain' },
@@ -225,7 +225,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Algeria',
-        cs: 'Algeria',
+        cs: 'Alžírsko',
         search: { country: 'Algeria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Algeria',
         geopath: { region: 'Africa', country: 'Algeria' },
@@ -246,49 +246,49 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Iraq',
-        cs: 'Iraq',
+        cs: 'Irák',
         search: { country: 'Iraq' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Iraq',
         geopath: { region: 'Asia', country: 'Iraq' },
     },
     {
         en: 'Ukraine',
-        cs: 'Ukraine',
+        cs: 'Ukrajina',
         search: { country: 'Ukraine' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ukraine',
         geopath: { region: 'Europe', country: 'Ukraine' },
     },
     {
         en: 'Canada',
-        cs: 'Canada',
+        cs: 'Kanada',
         search: { country: 'Canada' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Canada',
         geopath: { region: 'Americas', country: 'Canada' },
     },
     {
         en: 'Poland',
-        cs: 'Poland',
+        cs: 'Polsko',
         search: { country: 'Poland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Poland',
         geopath: { region: 'Europe', country: 'Poland' },
     },
     {
         en: 'Morocco',
-        cs: 'Morocco',
+        cs: 'Maroko',
         search: { country: 'Morocco' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Morocco',
         geopath: { region: 'Africa', country: 'Morocco' },
     },
     {
         en: 'Uzbekistan',
-        cs: 'Uzbekistan',
+        cs: 'Uzbekistán',
         search: { country: 'Uzbekistan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Uzbekistan',
         geopath: { region: 'Asia', country: 'Uzbekistan' },
     },
     {
         en: 'Saudi Arabia',
-        cs: 'Saudi Arabia',
+        cs: 'Saudská arábie',
         search: { country: 'Saudi Arabia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saudi+Arabia',
         geopath: { region: 'Asia', country: 'Saudi arabia' },
@@ -302,14 +302,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Afghanistan',
-        cs: 'Afghanistan',
+        cs: 'Afghánistán',
         search: { country: 'Afghanistan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Afghanistan',
         geopath: { region: 'Asia', country: 'Afghanistan' },
     },
     {
         en: 'Malaysia',
-        cs: 'Malaysia',
+        cs: 'Malajsie',
         search: { country: 'Malaysia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Malaysia',
         geopath: { region: 'Asia', country: 'Malaysia' },
@@ -323,7 +323,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Mozambique',
-        cs: 'Mozambique',
+        cs: 'Mozambik',
         search: { country: 'Mozambique' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mozambique',
         geopath: { region: 'Africa', country: 'Mozambique' },
@@ -337,14 +337,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Yemen',
-        cs: 'Yemen',
+        cs: 'Jemen',
         search: { country: 'Yemen' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Yemen',
         geopath: { region: 'Asia', country: 'Yemen' },
     },
     {
         en: 'Nepal',
-        cs: 'Nepal',
+        cs: 'Nepál',
         search: { country: 'Nepal' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Nepal',
         geopath: { region: 'Asia', country: 'Nepal' },
@@ -358,35 +358,35 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Ivory Coast',
-        cs: 'Ivory Coast',
+        cs: 'Pobřeží slonoviny',
         search: { country: 'Ivory Coast' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ivory+Coast',
         geopath: { region: 'Africa', country: 'Ivory coast' },
     },
     {
         en: 'Madagascar',
-        cs: 'Madagascar',
+        cs: 'Madagaskar',
         search: { country: 'Madagascar' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Madagascar',
         geopath: { region: 'Africa', country: 'Madagascar' },
     },
     {
         en: 'Australia',
-        cs: 'Australia',
+        cs: 'Austrálie',
         search: { country: 'Australia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Australia',
         geopath: { region: 'Oceania', country: 'Australia' },
     },
     {
         en: 'North Korea',
-        cs: 'North Korea',
+        cs: 'Severní Korea',
         search: { country: 'North Korea' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=North+Korea',
         geopath: { region: 'Asia', country: 'North korea' },
     },
     {
         en: 'Cameroon',
-        cs: 'Cameroon',
+        cs: 'Kamerun',
         search: { country: 'Cameroon' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cameroon',
         geopath: { region: 'Africa', country: 'Cameroon' },
@@ -400,14 +400,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Taiwan',
-        cs: 'Taiwan',
+        cs: 'Tchaj-wan',
         search: { country: 'Taiwan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Taiwan',
         geopath: { region: 'Asia', country: 'Taiwan' },
     },
     {
         en: 'Sri Lanka',
-        cs: 'Sri Lanka',
+        cs: 'Srí Lanka',
         search: { country: 'Sri Lanka' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Sri+Lanka',
         geopath: { region: 'Asia', country: 'Sri lanka' },
@@ -435,14 +435,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Romania',
-        cs: 'Romania',
+        cs: 'Rumunsko',
         search: { country: 'Romania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Romania',
         geopath: { region: 'Europe', country: 'Romania' },
     },
     {
         en: 'Kazakhstan',
-        cs: 'Kazakhstan',
+        cs: 'Kazachstán',
         search: { country: 'Kazakhstan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Kazakhstan',
         geopath: { region: 'Asia', country: 'Kazakhstan[b]' },
@@ -456,28 +456,28 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Zambia',
-        cs: 'Zambia',
+        cs: 'Zambie',
         search: { country: 'Zambia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Zambia',
         geopath: { region: 'Africa', country: 'Zambia' },
     },
     {
         en: 'Syria',
-        cs: 'Syria',
+        cs: 'Sýrie',
         search: { country: 'Syria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Syria',
         geopath: { region: 'Asia', country: 'Syria' },
     },
     {
         en: 'Ecuador',
-        cs: 'Ecuador',
+        cs: 'Ekvádor',
         search: { country: 'Ecuador' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ecuador',
         geopath: { region: 'Americas', country: 'Ecuador' },
     },
     {
         en: 'Netherlands',
-        cs: 'Netherlands',
+        cs: 'Holandsko',
         search: { country: 'Netherlands' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Netherlands',
         geopath: { region: 'Europe', country: 'Netherlands' },
@@ -505,7 +505,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Somalia',
-        cs: 'Somalia',
+        cs: 'Somálsko',
         search: { country: 'Somalia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Somalia',
         geopath: { region: 'Africa', country: 'Somalia' },
@@ -519,14 +519,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Cambodia',
-        cs: 'Cambodia',
+        cs: 'Kambodža',
         search: { country: 'Cambodia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cambodia',
         geopath: { region: 'Asia', country: 'Cambodia' },
     },
     {
         en: 'South Sudan',
-        cs: 'South Sudan',
+        cs: 'jižní Súdán',
         search: { country: 'South Sudan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=South+Sudan',
         geopath: { region: 'Africa', country: 'South sudan' },
@@ -561,14 +561,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Bolivia',
-        cs: 'Bolivia',
+        cs: 'Bolívie',
         search: { country: 'Bolivia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bolivia',
         geopath: { region: 'Americas', country: 'Bolivia' },
     },
     {
         en: 'Tunisia',
-        cs: 'Tunisia',
+        cs: 'Tunisko',
         search: { country: 'Tunisia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Tunisia',
         geopath: { region: 'Africa', country: 'Tunisia' },
@@ -582,35 +582,35 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Belgium',
-        cs: 'Belgium',
+        cs: 'Belgie',
         search: { country: 'Belgium' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Belgium',
         geopath: { region: 'Europe', country: 'Belgium' },
     },
     {
         en: 'Cuba',
-        cs: 'Cuba',
+        cs: 'Kostka',
         search: { country: 'Cuba' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cuba',
         geopath: { region: 'Americas', country: 'Cuba' },
     },
     {
         en: 'Jordan',
-        cs: 'Jordan',
+        cs: 'Jordán',
         search: { country: 'Jordan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Jordan',
         geopath: { region: 'Asia', country: 'Jordan' },
     },
     {
         en: 'Greece',
-        cs: 'Greece',
+        cs: 'Řecko',
         search: { country: 'Greece' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Greece',
         geopath: { region: 'Europe', country: 'Greece' },
     },
     {
         en: 'Dominican Republic',
-        cs: 'Dominican Republic',
+        cs: 'Dominikánská republika',
         search: { country: 'Dominican Republic' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Dominican+Republic',
@@ -618,49 +618,49 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Czech Republic',
-        cs: 'Czech Republic',
+        cs: 'Česká republika',
         search: { country: 'Czech Republic' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Czech+Republic',
         geopath: { region: 'Europe', country: 'Czech republic' },
     },
     {
         en: 'Sweden',
-        cs: 'Sweden',
+        cs: 'Švédsko',
         search: { country: 'Sweden' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Sweden',
         geopath: { region: 'Europe', country: 'Sweden' },
     },
     {
         en: 'Portugal',
-        cs: 'Portugal',
+        cs: 'Portugalsko',
         search: { country: 'Portugal' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Portugal',
         geopath: { region: 'Europe', country: 'Portugal' },
     },
     {
         en: 'Azerbaijan',
-        cs: 'Azerbaijan',
+        cs: 'Ázerbajdžán',
         search: { country: 'Azerbaijan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Azerbaijan',
         geopath: { region: 'Asia', country: 'Azerbaijan[b]' },
     },
     {
         en: 'Hungary',
-        cs: 'Hungary',
+        cs: 'Maďarsko',
         search: { country: 'Hungary' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Hungary',
         geopath: { region: 'Europe', country: 'Hungary' },
     },
     {
         en: 'Tajikistan',
-        cs: 'Tajikistan',
+        cs: 'Tádžikistán',
         search: { country: 'Tajikistan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Tajikistan',
         geopath: { region: 'Asia', country: 'Tajikistan' },
     },
     {
         en: 'United Arab Emirates',
-        cs: 'United Arab Emirates',
+        cs: 'Spojené arabské emiráty',
         search: { country: 'United Arab Emirates' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=United+Arab+Emirates',
@@ -668,7 +668,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Israel',
-        cs: 'Israel',
+        cs: 'Izrael',
         search: { country: 'Israel' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Israel',
         geopath: { region: 'Asia', country: 'Israel' },
@@ -682,14 +682,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Belarus',
-        cs: 'Belarus',
+        cs: 'Bělorusko',
         search: { country: 'Belarus' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Belarus',
         geopath: { region: 'Europe', country: 'Belarus' },
     },
     {
         en: 'Papua New Guinea',
-        cs: 'Papua New Guinea',
+        cs: 'Papua-Nová Guinea',
         search: { country: 'Papua New Guinea' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Papua+New+Guinea',
@@ -697,14 +697,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Austria',
-        cs: 'Austria',
+        cs: 'Rakousko',
         search: { country: 'Austria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Austria',
         geopath: { region: 'Europe', country: 'Austria' },
     },
     {
         en: 'Switzerland',
-        cs: 'Switzerland',
+        cs: 'Švýcarsko',
         search: { country: 'Switzerland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Switzerland',
         geopath: { region: 'Europe', country: 'Switzerland' },
@@ -718,14 +718,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Togo',
-        cs: 'Togo',
+        cs: 'Jít',
         search: { country: 'Togo' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Togo',
         geopath: { region: 'Africa', country: 'Togo' },
     },
     {
         en: 'Hong Kong (China)',
-        cs: 'Hong Kong (China)',
+        cs: 'Hong Kong (Čína)',
         search: { country: 'Hong Kong (China)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Hong+Kong+%28China%29',
@@ -747,14 +747,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Libya',
-        cs: 'Libya',
+        cs: 'Libye',
         search: { country: 'Libya' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Libya',
         geopath: { region: 'Africa', country: 'Libya' },
     },
     {
         en: 'Serbia',
-        cs: 'Serbia',
+        cs: 'Srbsko',
         search: { country: 'Serbia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Serbia',
         geopath: { region: 'Europe', country: 'Serbia' },
@@ -768,28 +768,28 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Lebanon',
-        cs: 'Lebanon',
+        cs: 'Libanon',
         search: { country: 'Lebanon' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Lebanon',
         geopath: { region: 'Asia', country: 'Lebanon' },
     },
     {
         en: 'Kyrgyzstan',
-        cs: 'Kyrgyzstan',
+        cs: 'Kyrgyzstán',
         search: { country: 'Kyrgyzstan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Kyrgyzstan',
         geopath: { region: 'Asia', country: 'Kyrgyzstan' },
     },
     {
         en: 'Nicaragua',
-        cs: 'Nicaragua',
+        cs: 'Nikaragua',
         search: { country: 'Nicaragua' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Nicaragua',
         geopath: { region: 'Americas', country: 'Nicaragua' },
     },
     {
         en: 'Bulgaria',
-        cs: 'Bulgaria',
+        cs: 'Bulharsko',
         search: { country: 'Bulgaria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bulgaria',
         geopath: { region: 'Europe', country: 'Bulgaria' },
@@ -803,21 +803,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Denmark',
-        cs: 'Denmark',
+        cs: 'Dánsko',
         search: { country: 'Denmark' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Denmark',
         geopath: { region: 'Europe', country: 'Denmark' },
     },
     {
         en: 'Congo',
-        cs: 'Congo',
+        cs: 'Kongo',
         search: { country: 'Congo' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Congo',
         geopath: { region: 'Africa', country: 'Congo' },
     },
     {
         en: 'Central African Republic',
-        cs: 'Central African Republic',
+        cs: 'Středoafrická republika',
         search: { country: 'Central African Republic' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Central+African+Republic',
@@ -825,77 +825,77 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Finland',
-        cs: 'Finland',
+        cs: 'Finsko',
         search: { country: 'Finland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Finland',
         geopath: { region: 'Europe', country: 'Finland' },
     },
     {
         en: 'Singapore',
-        cs: 'Singapore',
+        cs: 'Singapur',
         search: { country: 'Singapore' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Singapore',
         geopath: { region: 'Asia', country: 'Singapore' },
     },
     {
         en: 'Slovakia',
-        cs: 'Slovakia',
+        cs: 'Slovensko',
         search: { country: 'Slovakia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Slovakia',
         geopath: { region: 'Europe', country: 'Slovakia' },
     },
     {
         en: 'Norway',
-        cs: 'Norway',
+        cs: 'Norsko',
         search: { country: 'Norway' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Norway',
         geopath: { region: 'Europe', country: 'Norway' },
     },
     {
         en: 'Palestine',
-        cs: 'Palestine',
+        cs: 'Palestina',
         search: { country: 'Palestine' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Palestine',
         geopath: { region: 'Asia', country: 'Palestine' },
     },
     {
         en: 'Costa Rica',
-        cs: 'Costa Rica',
+        cs: 'Kostarika',
         search: { country: 'Costa Rica' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Costa+Rica',
         geopath: { region: 'Americas', country: 'Costa rica' },
     },
     {
         en: 'New Zealand',
-        cs: 'New Zealand',
+        cs: 'Nový Zéland',
         search: { country: 'New Zealand' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=New+Zealand',
         geopath: { region: 'Oceania', country: 'New zealand' },
     },
     {
         en: 'Ireland',
-        cs: 'Ireland',
+        cs: 'Irsko',
         search: { country: 'Ireland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ireland',
         geopath: { region: 'Europe', country: 'Ireland' },
     },
     {
         en: 'Kuwait',
-        cs: 'Kuwait',
+        cs: 'Kuvajt',
         search: { country: 'Kuwait' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Kuwait',
         geopath: { region: 'Asia', country: 'Kuwait' },
     },
     {
         en: 'Liberia',
-        cs: 'Liberia',
+        cs: 'Libérie',
         search: { country: 'Liberia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Liberia',
         geopath: { region: 'Africa', country: 'Liberia' },
     },
     {
         en: 'Oman',
-        cs: 'Oman',
+        cs: 'Omán',
         search: { country: 'Oman' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Oman',
         geopath: { region: 'Asia', country: 'Oman' },
@@ -909,21 +909,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Mauritania',
-        cs: 'Mauritania',
+        cs: 'Mauritánie',
         search: { country: 'Mauritania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mauritania',
         geopath: { region: 'Africa', country: 'Mauritania' },
     },
     {
         en: 'Croatia',
-        cs: 'Croatia',
+        cs: 'Chorvatsko',
         search: { country: 'Croatia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Croatia',
         geopath: { region: 'Europe', country: 'Croatia' },
     },
     {
         en: 'Georgia',
-        cs: 'Georgia',
+        cs: 'Gruzie',
         search: { country: 'Georgia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Georgia',
         geopath: { region: 'Asia', country: 'Georgia[b]' },
@@ -944,14 +944,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Mongolia',
-        cs: 'Mongolia',
+        cs: 'Mongolsko',
         search: { country: 'Mongolia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mongolia',
         geopath: { region: 'Asia', country: 'Mongolia' },
     },
     {
         en: 'Bosnia and Herzegovina',
-        cs: 'Bosnia and Herzegovina',
+        cs: 'Bosna a Hercegovina',
         search: { country: 'Bosnia and Herzegovina' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bosnia+and+Herzegovina',
@@ -959,7 +959,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Puerto Rico (United States)',
-        cs: 'Puerto Rico (United States)',
+        cs: 'Puerto Rico (Spojené státy americké)',
         search: { country: 'Puerto Rico (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Puerto+Rico+%28United+States%29',
@@ -967,14 +967,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Armenia',
-        cs: 'Armenia',
+        cs: 'Arménie',
         search: { country: 'Armenia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Armenia',
         geopath: { region: 'Asia', country: 'Armenia' },
     },
     {
         en: 'Albania',
-        cs: 'Albania',
+        cs: 'Albánie',
         search: { country: 'Albania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Albania',
         geopath: { region: 'Europe', country: 'Albania' },
@@ -988,7 +988,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Lithuania',
-        cs: 'Lithuania',
+        cs: 'Litva',
         search: { country: 'Lithuania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Lithuania',
         geopath: { region: 'Europe', country: 'Lithuania' },
@@ -1002,21 +1002,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Moldova',
-        cs: 'Moldova',
+        cs: 'Moldavsko',
         search: { country: 'Moldova' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Moldova',
         geopath: { region: 'Europe', country: 'Moldova' },
     },
     {
         en: 'Namibia',
-        cs: 'Namibia',
+        cs: 'Namibie',
         search: { country: 'Namibia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Namibia',
         geopath: { region: 'Africa', country: 'Namibia' },
     },
     {
         en: 'Gambia',
-        cs: 'Gambia',
+        cs: 'Gambie',
         search: { country: 'Gambia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Gambia',
         geopath: { region: 'Africa', country: 'Gambia' },
@@ -1037,28 +1037,28 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Lesotho',
-        cs: 'Lesotho',
+        cs: 'Lesoto',
         search: { country: 'Lesotho' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Lesotho',
         geopath: { region: 'Africa', country: 'Lesotho' },
     },
     {
         en: 'Slovenia',
-        cs: 'Slovenia',
+        cs: 'Slovinsko',
         search: { country: 'Slovenia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Slovenia',
         geopath: { region: 'Europe', country: 'Slovenia' },
     },
     {
         en: 'Latvia',
-        cs: 'Latvia',
+        cs: 'Lotyšsko',
         search: { country: 'Latvia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Latvia',
         geopath: { region: 'Europe', country: 'Latvia' },
     },
     {
         en: 'North Macedonia',
-        cs: 'North Macedonia',
+        cs: 'Severní Makedonie',
         search: { country: 'North Macedonia' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=North+Macedonia',
@@ -1080,7 +1080,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Equatorial Guinea',
-        cs: 'Equatorial Guinea',
+        cs: 'Rovníková Guinea',
         search: { country: 'Equatorial Guinea' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Equatorial+Guinea',
@@ -1088,14 +1088,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Bahrain',
-        cs: 'Bahrain',
+        cs: 'Bahrajn',
         search: { country: 'Bahrain' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bahrain',
         geopath: { region: 'Asia', country: 'Bahrain' },
     },
     {
         en: 'Trinidad and Tobago',
-        cs: 'Trinidad and Tobago',
+        cs: 'Trinidad a Tobago',
         search: { country: 'Trinidad and Tobago' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Trinidad+and+Tobago',
@@ -1103,21 +1103,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Estonia',
-        cs: 'Estonia',
+        cs: 'Estonsko',
         search: { country: 'Estonia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Estonia',
         geopath: { region: 'Europe', country: 'Estonia' },
     },
     {
         en: 'East Timor',
-        cs: 'East Timor',
+        cs: 'Východní Timor',
         search: { country: 'East Timor' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=East+Timor',
         geopath: { region: 'Asia', country: 'East timor' },
     },
     {
         en: 'Mauritius',
-        cs: 'Mauritius',
+        cs: 'Mauricius',
         search: { country: 'Mauritius' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mauritius',
         geopath: { region: 'Africa', country: 'Mauritius' },
@@ -1131,21 +1131,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Djibouti',
-        cs: 'Djibouti',
+        cs: 'Džibuti',
         search: { country: 'Djibouti' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Djibouti',
         geopath: { region: 'Africa', country: 'Djibouti' },
     },
     {
         en: 'Fiji',
-        cs: 'Fiji',
+        cs: 'Fidži',
         search: { country: 'Fiji' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Fiji',
         geopath: { region: 'Oceania', country: 'Fiji' },
     },
     {
         en: 'Cyprus',
-        cs: 'Cyprus',
+        cs: 'Kypr',
         search: { country: 'Cyprus' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cyprus',
         geopath: { region: 'Asia', country: 'Cyprus[c]' },
@@ -1159,7 +1159,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Bhutan',
-        cs: 'Bhutan',
+        cs: 'Bhútán',
         search: { country: 'Bhutan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bhutan',
         geopath: { region: 'Asia', country: 'Bhutan' },
@@ -1173,7 +1173,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Solomon Islands',
-        cs: 'Solomon Islands',
+        cs: 'Solomonovy ostrovy',
         search: { country: 'Solomon Islands' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Solomon+Islands',
@@ -1181,7 +1181,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Macau (China)',
-        cs: 'Macau (China)',
+        cs: 'Macau (Čína)',
         search: { country: 'Macau (China)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Macau+%28China%29',
@@ -1189,35 +1189,35 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Luxembourg',
-        cs: 'Luxembourg',
+        cs: 'Lucembursko',
         search: { country: 'Luxembourg' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Luxembourg',
         geopath: { region: 'Europe', country: 'Luxembourg' },
     },
     {
         en: 'Montenegro',
-        cs: 'Montenegro',
+        cs: 'Černá Hora',
         search: { country: 'Montenegro' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Montenegro',
         geopath: { region: 'Europe', country: 'Montenegro' },
     },
     {
         en: 'Western Sahara',
-        cs: 'Western Sahara',
+        cs: 'západní Sahara',
         search: { country: 'Western Sahara' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Western+Sahara',
         geopath: { region: 'Africa', country: 'Western sahara' },
     },
     {
         en: 'Suriname',
-        cs: 'Suriname',
+        cs: 'Surinam',
         search: { country: 'Suriname' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Suriname',
         geopath: { region: 'Americas', country: 'Suriname' },
     },
     {
         en: 'Cape Verde',
-        cs: 'Cape Verde',
+        cs: 'Kapverdy',
         search: { country: 'Cape Verde' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cape+Verde',
         geopath: { region: 'Africa', country: 'Cape verde' },
@@ -1238,7 +1238,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Brunei',
-        cs: 'Brunei',
+        cs: 'Brunej',
         search: { country: 'Brunei' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Brunei',
         geopath: { region: 'Asia', country: 'Brunei' },
@@ -1252,14 +1252,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Maldives',
-        cs: 'Maldives',
+        cs: 'Maledivy',
         search: { country: 'Maldives' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Maldives',
         geopath: { region: 'Asia', country: 'Maldives' },
     },
     {
         en: 'Northern Cyprus',
-        cs: 'Northern Cyprus',
+        cs: 'Severní Kypr',
         search: { country: 'Northern Cyprus' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Northern+Cyprus',
@@ -1267,14 +1267,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Iceland',
-        cs: 'Iceland',
+        cs: 'Island',
         search: { country: 'Iceland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Iceland',
         geopath: { region: 'Europe', country: 'Iceland' },
     },
     {
         en: 'Transnistria',
-        cs: 'Transnistria',
+        cs: 'Podněstří',
         search: { country: 'Transnistria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Transnistria',
         geopath: { region: 'Europe', country: 'Transnistria' },
@@ -1295,7 +1295,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'French Polynesia (France)',
-        cs: 'French Polynesia (France)',
+        cs: 'Francouzská Polynésie (Francie)',
         search: { country: 'French Polynesia (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=French+Polynesia+%28France%29',
@@ -1303,7 +1303,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'New Caledonia (France)',
-        cs: 'New Caledonia (France)',
+        cs: 'Nová Caledonia (Francie)',
         search: { country: 'New Caledonia (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=New+Caledonia+%28France%29',
@@ -1318,7 +1318,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'São Tomé and Príncipe',
-        cs: 'São Tomé and Príncipe',
+        cs: 'São Tomé a Principe',
         search: { country: 'São Tomé and Príncipe' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=S%C3%A3o+Tom%C3%A9+and+Pr%C3%ADncipe',
@@ -1333,14 +1333,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Lucia',
-        cs: 'Saint Lucia',
+        cs: 'Svatý Lucie',
         search: { country: 'Saint Lucia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Lucia',
         geopath: { region: 'Americas', country: 'Saint lucia' },
     },
     {
         en: 'Guam (United States)',
-        cs: 'Guam (United States)',
+        cs: 'Guam (Spojené státy)',
         search: { country: 'Guam (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Guam+%28United+States%29',
@@ -1348,7 +1348,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Curaçao (Netherlands)',
-        cs: 'Curaçao (Netherlands)',
+        cs: 'Curaçao (Nizozemsko)',
         search: { country: 'Curaçao (Netherlands)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cura%C3%A7ao+%28Netherlands%29',
@@ -1356,7 +1356,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Republic of Artsakh',
-        cs: 'Republic of Artsakh',
+        cs: 'Republika Artsakh',
         search: { country: 'Republic of Artsakh' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Republic+of+Artsakh',
@@ -1378,7 +1378,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Aruba (Netherlands)',
-        cs: 'Aruba (Netherlands)',
+        cs: 'Aruba (Nizozemsko)',
         search: { country: 'Aruba (Netherlands)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Aruba+%28Netherlands%29',
@@ -1386,7 +1386,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Vincent and the Grenadines',
-        cs: 'Saint Vincent and the Grenadines',
+        cs: 'Svatý Vincent a Grenadiny',
         search: { country: 'Saint Vincent and the Grenadines' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Vincent+and+the+Grenadines',
@@ -1394,7 +1394,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Jersey (British Crown Dependency)',
-        cs: 'Jersey (British Crown Dependency)',
+        cs: 'Jersey (britská korunová závislost)',
         search: { country: 'Jersey (British Crown Dependency)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Jersey+%28British+Crown+Dependency%29',
@@ -1402,7 +1402,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Micronesia',
-        cs: 'Micronesia',
+        cs: 'Mikronésie',
         search: { country: 'Micronesia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Micronesia',
         geopath: { region: 'Oceania', country: 'Micronesia' },
@@ -1416,7 +1416,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Antigua and Barbuda',
-        cs: 'Antigua and Barbuda',
+        cs: 'Antigua a Barbuda',
         search: { country: 'Antigua and Barbuda' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Antigua+and+Barbuda',
@@ -1431,7 +1431,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'U.S. Virgin Islands (United States)',
-        cs: 'U.S. Virgin Islands (United States)',
+        cs: 'U.S. Panenské ostrovy (Spojené státy)',
         search: { country: 'U.S. Virgin Islands (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=U.S.+Virgin+Islands+%28United+States%29',
@@ -1439,7 +1439,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Isle of Man (British Crown Dependency)',
-        cs: 'Isle of Man (British Crown Dependency)',
+        cs: 'Isle of Man (britská korunová závislost)',
         search: { country: 'Isle of Man (British Crown Dependency)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Isle+of+Man+%28British+Crown+Dependency%29',
@@ -1454,14 +1454,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Dominica',
-        cs: 'Dominica',
+        cs: 'Dominika',
         search: { country: 'Dominica' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Dominica',
         geopath: { region: 'Americas', country: 'Dominica' },
     },
     {
         en: 'Cayman Islands (United Kingdom)',
-        cs: 'Cayman Islands (United Kingdom)',
+        cs: 'Kajmanské ostrovy (Spojené království)',
         search: { country: 'Cayman Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cayman+Islands+%28United+Kingdom%29',
@@ -1469,7 +1469,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Bermuda (United Kingdom)',
-        cs: 'Bermuda (United Kingdom)',
+        cs: 'Bermudy (Spojené království)',
         search: { country: 'Bermuda (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bermuda+%28United+Kingdom%29',
@@ -1477,7 +1477,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Guernsey (British Crown Dependency)',
-        cs: 'Guernsey (British Crown Dependency)',
+        cs: 'Guernsey (závislost britské koruny)',
         search: { country: 'Guernsey (British Crown Dependency)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Guernsey+%28British+Crown+Dependency%29',
@@ -1485,7 +1485,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Greenland (Denmark)',
-        cs: 'Greenland (Denmark)',
+        cs: 'Grónsko (Dánsko)',
         search: { country: 'Greenland (Denmark)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Greenland+%28Denmark%29',
@@ -1493,7 +1493,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Marshall Islands',
-        cs: 'Marshall Islands',
+        cs: 'Marshallovy ostrovy',
         search: { country: 'Marshall Islands' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Marshall+Islands',
@@ -1501,7 +1501,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Kitts and Nevis',
-        cs: 'Saint Kitts and Nevis',
+        cs: 'Svatý Kryštof a Nevis',
         search: { country: 'Saint Kitts and Nevis' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Kitts+and+Nevis',
@@ -1509,7 +1509,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Faroe Islands (Denmark)',
-        cs: 'Faroe Islands (Denmark)',
+        cs: 'Faerské ostrovy (Dánsko)',
         search: { country: 'Faroe Islands (Denmark)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Faroe+Islands+%28Denmark%29',
@@ -1517,14 +1517,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'South Ossetia',
-        cs: 'South Ossetia',
+        cs: 'Jižní Osetia',
         search: { country: 'South Ossetia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=South+Ossetia',
         geopath: { region: 'Asia', country: 'South ossetia' },
     },
     {
         en: 'American Samoa (United States)',
-        cs: 'American Samoa (United States)',
+        cs: 'American Samoa (Spojené státy)',
         search: { country: 'American Samoa (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=American+Samoa+%28United+States%29',
@@ -1532,7 +1532,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Northern Mariana Islands (United States)',
-        cs: 'Northern Mariana Islands (United States)',
+        cs: 'Severní Mariánské ostrovy (Spojené státy)',
         search: { country: 'Northern Mariana Islands (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Northern+Mariana+Islands+%28United+States%29',
@@ -1540,7 +1540,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Turks and Caicos Islands (United Kingdom)',
-        cs: 'Turks and Caicos Islands (United Kingdom)',
+        cs: 'Turci a Caicos ostrovy (Spojené království)',
         search: { country: 'Turks and Caicos Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Turks+and+Caicos+Islands+%28United+Kingdom%29',
@@ -1548,7 +1548,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Sint Maarten (Netherlands)',
-        cs: 'Sint Maarten (Netherlands)',
+        cs: 'Sint Maarten (Nizozemsko)',
         search: { country: 'Sint Maarten (Netherlands)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Sint+Maarten+%28Netherlands%29',
@@ -1556,21 +1556,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Liechtenstein',
-        cs: 'Liechtenstein',
+        cs: 'Lichtenštejnsko',
         search: { country: 'Liechtenstein' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Liechtenstein',
         geopath: { region: 'Europe', country: 'Liechtenstein' },
     },
     {
         en: 'Monaco',
-        cs: 'Monaco',
+        cs: 'Monako',
         search: { country: 'Monaco' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Monaco',
         geopath: { region: 'Europe', country: 'Monaco' },
     },
     {
         en: 'Gibraltar (United Kingdom)',
-        cs: 'Gibraltar (United Kingdom)',
+        cs: 'Gibraltar (Spojené království)',
         search: { country: 'Gibraltar (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Gibraltar+%28United+Kingdom%29',
@@ -1585,7 +1585,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Martin (France)',
-        cs: 'Saint Martin (France)',
+        cs: 'Svatý Martin (Francie)',
         search: { country: 'Saint Martin (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Martin+%28France%29',
@@ -1593,7 +1593,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Åland (Finland)',
-        cs: 'Åland (Finland)',
+        cs: 'Åland (Finsko)',
         search: { country: 'Åland (Finland)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=%C3%85land+%28Finland%29',
@@ -1601,7 +1601,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'British Virgin Islands (United Kingdom)',
-        cs: 'British Virgin Islands (United Kingdom)',
+        cs: 'Britské Panenské ostrovy (Spojené království)',
         search: { country: 'British Virgin Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=British+Virgin+Islands+%28United+Kingdom%29',
@@ -1609,14 +1609,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Palau',
-        cs: 'Palau',
+        cs: 'Pálivý',
         search: { country: 'Palau' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Palau',
         geopath: { region: 'Oceania', country: 'Palau' },
     },
     {
         en: 'Cook Islands (New Zealand)',
-        cs: 'Cook Islands (New Zealand)',
+        cs: 'Cookovy ostrovy (Nový Zéland)',
         search: { country: 'Cook Islands (New Zealand)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cook+Islands+%28New+Zealand%29',
@@ -1624,7 +1624,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Anguilla (United Kingdom)',
-        cs: 'Anguilla (United Kingdom)',
+        cs: 'Anguilla (Spojené království)',
         search: { country: 'Anguilla (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Anguilla+%28United+Kingdom%29',
@@ -1639,7 +1639,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Wallis and Futuna (France)',
-        cs: 'Wallis and Futuna (France)',
+        cs: 'Wallis a Futuna (Francie)',
         search: { country: 'Wallis and Futuna (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Wallis+and+Futuna+%28France%29',
@@ -1654,7 +1654,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Barthélemy (France)',
-        cs: 'Saint Barthélemy (France)',
+        cs: 'Saint Barthélemy (Francie)',
         search: { country: 'Saint Barthélemy (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Barth%C3%A9lemy+%28France%29',
@@ -1662,7 +1662,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Helena, Ascension and Tristan da Cunha (United Kingdom)',
-        cs: 'Saint Helena, Ascension and Tristan da Cunha (United Kingdom)',
+        cs: 'Svatá Helena, vzestup a Tristan da Cunha (Spojené království)',
         search: { country: 'Saint Helena, Ascension and Tristan da Cunha (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Helena%2C+Ascension+and+Tristan+da+Cunha+%28United+Kingdom%29',
@@ -1670,7 +1670,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Pierre and Miquelon (France)',
-        cs: 'Saint Pierre and Miquelon (France)',
+        cs: 'Svatý Pierre a Miquelon (Francie)',
         search: { country: 'Saint Pierre and Miquelon (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Pierre+and+Miquelon+%28France%29',
@@ -1678,7 +1678,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Montserrat (United Kingdom)',
-        cs: 'Montserrat (United Kingdom)',
+        cs: 'Montserrat (Spojené království)',
         search: { country: 'Montserrat (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Montserrat+%28United+Kingdom%29',
@@ -1686,7 +1686,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Falkland Islands (United Kingdom)',
-        cs: 'Falkland Islands (United Kingdom)',
+        cs: 'Falklandské ostrovy (Spojené království)',
         search: { country: 'Falkland Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Falkland+Islands+%28United+Kingdom%29',
@@ -1694,7 +1694,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Christmas Island (Australia)',
-        cs: 'Christmas Island (Australia)',
+        cs: 'Vánoční ostrov (Austrálie)',
         search: { country: 'Christmas Island (Australia)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Christmas+Island+%28Australia%29',
@@ -1702,7 +1702,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Norfolk Island (Australia)',
-        cs: 'Norfolk Island (Australia)',
+        cs: 'Norfolk Island (Austrálie)',
         search: { country: 'Norfolk Island (Australia)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Norfolk+Island+%28Australia%29',
@@ -1710,7 +1710,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Niue (New Zealand)',
-        cs: 'Niue (New Zealand)',
+        cs: 'Niue (Nový Zéland)',
         search: { country: 'Niue (New Zealand)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Niue+%28New+Zealand%29',
@@ -1718,7 +1718,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Tokelau (New Zealand)',
-        cs: 'Tokelau (New Zealand)',
+        cs: 'Tokelau (Nový Zéland)',
         search: { country: 'Tokelau (New Zealand)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Tokelau+%28New+Zealand%29',
@@ -1726,14 +1726,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Vatican City',
-        cs: 'Vatican City',
+        cs: 'Vatikán',
         search: { country: 'Vatican City' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Vatican+City',
         geopath: { region: 'Europe', country: 'Vatican city' },
     },
     {
         en: 'Cocos (Keeling) Islands (Australia)',
-        cs: 'Cocos (Keeling) Islands (Australia)',
+        cs: 'Cocos (Keeling) Ostrovy (Austrálie)',
         search: { country: 'Cocos (Keeling) Islands (Australia)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cocos+%28Keeling%29+Islands+%28Australia%29',
@@ -1741,7 +1741,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Pitcairn Islands (United Kingdom)',
-        cs: 'Pitcairn Islands (United Kingdom)',
+        cs: 'Pitcairn Islands (Spojené království)',
         search: { country: 'Pitcairn Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Pitcairn+Islands+%28United+Kingdom%29',
