@@ -3,7 +3,7 @@ import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
 import { MapManager } from '../classes/MapManager';
 import { TileProvider } from '../classes/TileProvider';
-import { MAP_PROVIDERS } from '../config';
+import { MAP_PROVIDERS } from "../config.mapProviders";
 
 const pickedMapProviders: Record<string, TileProvider> = { hot: MAP_PROVIDERS.hot };
 

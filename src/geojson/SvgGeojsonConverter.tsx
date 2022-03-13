@@ -1,4 +1,3 @@
-import { blobToDataUrl } from '@collboard/modules-sdk';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Vector } from 'xyzt';
@@ -7,6 +6,7 @@ import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 import { ISvgGeojson } from '../interfaces/ISvgGeojson';
 import { TileAbsolute } from '../semantic/TileAbsolute';
 import { Wgs84 } from '../semantic/Wgs84';
+import { blobToDataUrl } from '../utils/blobToDataUrl';
 import { getAllPointsOf } from './getAllPointsOf';
 import { SimplifiedGeojson } from './SimplifiedGeojson';
 
@@ -121,4 +121,6 @@ export class SvgGeojsonConverter {
 
 /**
  * TODO: !!! DRY+Use this in GeojsonArt
+ * TODO: In makeSvg just return element of recieve format: 'JSX'|'STRING'|'URL'
+ * TODO: In makeSvg write overloaded typing
  */
