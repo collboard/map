@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Wallis and Futuna (France)",
+            "cs": "Wallis a Futuna (Francie)",
+            "search": {
+                "country": "Wallis and Futuna (France)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Wallis+and+Futuna+%28France%29",
+            "geopath": {
+                "region": "Oceania",
+                "country": "Wallis and futuna (france)"
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Niue (New Zealand)",
+            "cs": "Niue (Nový Zéland)",
+            "search": {
+                "country": "Niue (New Zealand)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Niue+%28New+Zealand%29",
+            "geopath": {
+                "region": "Oceania",
+                "country": "Niue (new zealand)"
+            }
+        }
+    }
+}

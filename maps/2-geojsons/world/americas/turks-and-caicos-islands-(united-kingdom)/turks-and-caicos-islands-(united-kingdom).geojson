@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Turks and Caicos Islands (United Kingdom)",
+            "cs": "Turci a Caicos ostrovy (Spojené království)",
+            "search": {
+                "country": "Turks and Caicos Islands (United Kingdom)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Turks+and+Caicos+Islands+%28United+Kingdom%29",
+            "geopath": {
+                "region": "Americas",
+                "country": "Turks and caicos islands (united kingdom)"
+            }
+        }
+    }
+}

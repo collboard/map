@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Cayman Islands (United Kingdom)",
+            "cs": "Kajmanské ostrovy (Spojené království)",
+            "search": {
+                "country": "Cayman Islands (United Kingdom)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cayman+Islands+%28United+Kingdom%29",
+            "geopath": {
+                "region": "Americas",
+                "country": "Cayman islands (united kingdom)"
+            }
+        }
+    }
+}

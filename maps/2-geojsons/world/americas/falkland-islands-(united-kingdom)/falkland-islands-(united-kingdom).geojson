@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Falkland Islands (United Kingdom)",
+            "cs": "Falklandské ostrovy (Spojené království)",
+            "search": {
+                "country": "Falkland Islands (United Kingdom)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Falkland+Islands+%28United+Kingdom%29",
+            "geopath": {
+                "region": "Americas",
+                "country": "Falkland islands (united kingdom)"
+            }
+        }
+    }
+}

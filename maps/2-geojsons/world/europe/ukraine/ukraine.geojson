@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Ukraine",
+            "cs": "Ukrajina",
+            "search": {
+                "country": "Ukraine"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ukraine",
+            "geopath": {
+                "region": "Europe",
+                "country": "Ukraine"
+            }
+        }
+    }
+}

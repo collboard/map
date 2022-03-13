@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Christmas Island (Australia)",
+            "cs": "Vánoční ostrov (Austrálie)",
+            "search": {
+                "country": "Christmas Island (Australia)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Christmas+Island+%28Australia%29",
+            "geopath": {
+                "region": "Oceania",
+                "country": "Christmas island (australia)"
+            }
+        }
+    }
+}

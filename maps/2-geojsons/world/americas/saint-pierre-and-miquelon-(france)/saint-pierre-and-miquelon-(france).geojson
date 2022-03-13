@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Saint Pierre and Miquelon (France)",
+            "cs": "Svatý Pierre a Miquelon (Francie)",
+            "search": {
+                "country": "Saint Pierre and Miquelon (France)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Pierre+and+Miquelon+%28France%29",
+            "geopath": {
+                "region": "Americas",
+                "country": "Saint pierre and miquelon (france)"
+            }
+        }
+    }
+}

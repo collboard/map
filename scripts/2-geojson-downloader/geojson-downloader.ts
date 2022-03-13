@@ -10,6 +10,7 @@ import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
 import { DebugAutomaticTranslator } from '../utils/automatic-translators/DebugAutomaticTranslator';
 import { GoogleAutomaticTranslator } from '../utils/automatic-translators/GoogleAutomaticTranslator';
+import { removeDiacritics } from '../utils/removeDiacritics';
 import { geojsonStringify } from './utils/geojsonStringify';
 
 /**/
@@ -20,7 +21,7 @@ async function runGeojsonDownloader(override: boolean) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
 
     console.info(`🧹 Making cleenup`);
-    const geojsonsPath = join(__dirname, `../../maps/2-geojsons/`);
+    const geojsonsPath = join(__dirname, `../../maps/2-geojsons/world`);
 
     if (override) {
         await del(geojsonsPath);
@@ -33,7 +34,7 @@ async function runGeojsonDownloader(override: boolean) {
     //await translator.translate('India');
 
     for (const feature of FEATURES) {
-        console.info(`⬇️ Downloading ${feature.en}`);
+        console.info(`⬇️ Downloading ${feature.en || feature.cs}`);
 
         let geojson: IGeojsonFeatureCollection;
 
@@ -68,10 +69,12 @@ async function runGeojsonDownloader(override: boolean) {
                 // console.log({ geopathAsEndonym, geopathInEnglish });
                 */
 
-                // TODO: !!! Translate all parts of path to lowercase, without diacritics English
+                const geopathNormalized = Object.values(feature.geopath).map((geopart) =>
+                    removeDiacritics(geopart).split(/\s+/).join('-').toLowerCase(),
+                );
                 const geojsonPath = join(
                     geojsonsPath,
-                    ...Object.values(feature.geopath).map(removeDiacritics),
+                    ...geopathNormalized,
                     `${geopathNormalized[geopathNormalized.length - 1]}.geojson`,
                 );
                 await mkdir(dirname(geojsonPath), { recursive: true });

@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Tokelau (New Zealand)",
+            "cs": "Tokelau (Nový Zéland)",
+            "search": {
+                "country": "Tokelau (New Zealand)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Tokelau+%28New+Zealand%29",
+            "geopath": {
+                "region": "Oceania",
+                "country": "Tokelau (new zealand)"
+            }
+        }
+    }
+}

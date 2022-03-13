@@ -54,7 +54,7 @@ async function runFeaturesGenerator(isDebug = false) {
             await prettify(
                 spaceTrim(
                     (block) => `
-                      import { IGeopath } from 'geopath';
+                      import { IGeopath } from './geopath';
 
                       ${block(GENERATOR_WARNING)}
 

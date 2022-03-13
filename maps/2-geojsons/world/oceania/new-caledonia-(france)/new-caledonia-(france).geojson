@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "New Caledonia (France)",
+            "cs": "Nová Caledonia (Francie)",
+            "search": {
+                "country": "New Caledonia (France)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=New+Caledonia+%28France%29",
+            "geopath": {
+                "region": "Oceania",
+                "country": "New caledonia (france)"
+            }
+        }
+    }
+}

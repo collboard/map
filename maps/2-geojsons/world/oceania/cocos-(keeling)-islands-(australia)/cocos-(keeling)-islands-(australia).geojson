@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Cocos (Keeling) Islands (Australia)",
+            "cs": "Cocos (Keeling) Ostrovy (Austrálie)",
+            "search": {
+                "country": "Cocos (Keeling) Islands (Australia)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cocos+%28Keeling%29+Islands+%28Australia%29",
+            "geopath": {
+                "region": "Oceania",
+                "country": "Cocos (keeling) islands (australia)"
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Hong Kong (China)",
+            "cs": "Hong Kong (Čína)",
+            "search": {
+                "country": "Hong Kong (China)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Hong+Kong+%28China%29",
+            "geopath": {
+                "region": "Asia",
+                "country": "Hong kong (china)"
+            }
+        }
+    }
+}

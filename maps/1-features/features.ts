@@ -1,4 +1,4 @@
-import { IGeopath } from 'geopath';
+import { IGeopath } from './geopath';
 
 /**
  * 🏭 GENERATED WITH features-generator

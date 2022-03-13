@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Greenland (Denmark)",
+            "cs": "Grónsko (Dánsko)",
+            "search": {
+                "country": "Greenland (Denmark)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Greenland+%28Denmark%29",
+            "geopath": {
+                "region": "Americas",
+                "country": "Greenland (denmark)"
+            }
+        }
+    }
+}

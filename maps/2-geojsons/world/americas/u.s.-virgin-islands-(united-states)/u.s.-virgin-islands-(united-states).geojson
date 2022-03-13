@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "U.S. Virgin Islands (United States)",
+            "cs": "U.S. Panenské ostrovy (Spojené státy)",
+            "search": {
+                "country": "U.S. Virgin Islands (United States)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=U.S.+Virgin+Islands+%28United+States%29",
+            "geopath": {
+                "region": "Americas",
+                "country": "U.s. virgin islands (united states)"
+            }
+        }
+    }
+}

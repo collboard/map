@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        null
+    ],
+    "collboard": {
+        "feature": {
+            "en": "Jersey (British Crown Dependency)",
+            "cs": "Jersey (britská korunová závislost)",
+            "search": {
+                "country": "Jersey (British Crown Dependency)"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Jersey+%28British+Crown+Dependency%29",
+            "geopath": {
+                "region": "Europe",
+                "country": "Jersey (british crown dependency)"
+            }
+        }
+    }
+}
