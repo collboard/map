@@ -8,7 +8,6 @@ import { dirname, join } from 'path';
 import { FEATURES } from '../../maps/1-features/features';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
-import { isNumeric } from '../../src/utils/isNumeric';
 import { DebugAutomaticTranslator } from '../utils/automatic-translators/DebugAutomaticTranslator';
 import { GoogleAutomaticTranslator } from '../utils/automatic-translators/GoogleAutomaticTranslator';
 import { geojsonStringify } from './utils/geojsonStringify';
@@ -42,7 +41,11 @@ async function runGeojsonDownloader(override: boolean) {
             geojson = (await OsmGeojson.search(feature.search)).geojson;
 
             // Note: There can be more features in geojson - like Praha, capital of the Czech Republic vs. Praha, small village in Slovakia
-            for (const geojsonFeature of geojson.features) {
+            // Solution: Picking the best one (vs. picking the first one) (vs. picking all)
+            for (const geojsonFeature of [geojson.features[0]]) {
+                /*
+                TODO: Check that feature.geopath corresponds to geojsonFeature.properties!.display_name!.split(',')
+
                 const geopathAsEndonym = geojsonFeature
                     .properties!.display_name!.split(',')
                     .map((part) => part.trim())
@@ -55,19 +58,20 @@ async function runGeojsonDownloader(override: boolean) {
                 // TODO: Maybe Czech places in Czech language (without diacritics)
                 const geopathInEnglish = await Promise.all(geopathAsEndonym.map((name) => translator.translate(name)));
 
-                // TODO: In future only use geoPath and compare to properties.display_name from OSM
-                geopathInEnglish.unshift(...feature.geoPath);
+                // TODO: In future only use geopath and compare to properties.display_name from OSM
+                geopathInEnglish.unshift(...feature.geopath);
 
                 const geopathNormalized = geopathInEnglish.map((name) =>
                     name.trim().toLowerCase().split(/\s+/).join('-'),
                 );
 
                 // console.log({ geopathAsEndonym, geopathInEnglish });
+                */
 
                 // TODO: !!! Translate all parts of path to lowercase, without diacritics English
                 const geojsonPath = join(
                     geojsonsPath,
-                    ...geopathNormalized,
+                    ...Object.values(feature.geopath).map(removeDiacritics),
                     `${geopathNormalized[geopathNormalized.length - 1]}.geojson`,
                 );
                 await mkdir(dirname(geojsonPath), { recursive: true });

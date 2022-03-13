@@ -11,7 +11,10 @@ import { DebugAutomaticTranslator } from '../utils/automatic-translators/DebugAu
 import { FakeAutomaticTranslator } from '../utils/automatic-translators/FakeAutomaticTranslator';
 import { GoogleAutomaticTranslator } from '../utils/automatic-translators/GoogleAutomaticTranslator';
 import { MultiAutomaticTranslator } from '../utils/automatic-translators/MultiAutomaticTranslator';
+import { capitalizeFirstLetter } from '../utils/capitalizeFirstLetter';
 import { prettify } from '../utils/prettify';
+import { completeGeopath } from './utils/completeGeopath';
+import { isGeopathValid } from './utils/isGeopathValid';
 
 const GENERATOR_WARNING = spaceTrim(`
   /**
@@ -21,7 +24,7 @@ const GENERATOR_WARNING = spaceTrim(`
 `);
 
 /**/
-runFeaturesGenerator(true);
+runFeaturesGenerator(false);
 /**/
 
 async function runFeaturesGenerator(isDebug = false) {
@@ -51,9 +54,11 @@ async function runFeaturesGenerator(isDebug = false) {
             await prettify(
                 spaceTrim(
                     (block) => `
+                      import { IGeopath } from 'geopath';
+
                       ${block(GENERATOR_WARNING)}
 
-                      export const FEATURES: Array<{ en?: string; cs?: string; search: any, searchUrl: string, geoPath: Array<string|null> }> = [
+                      export const FEATURES: Array<{ en?: string; cs?: string; search: any, searchUrl: string, geopath: IGeopath }> = [
                         ${block(features.map((feature) => JSON.stringify(feature)).join(',\n'))}
                       ];
 
@@ -81,11 +86,11 @@ async function runFeaturesGenerator(isDebug = false) {
         const featureLanguage = csvCountry === 'czechia' ? 'cs' : 'en';
 
         for (const row of data as any) {
-            const geoRegion: string | null = row['Region'] || 'Europe';
-            const geoCountry: string | null = csvCountry || row['Country'] || null;
-            const geoCounty: string | null = row['County'] || null;
-            const geoDistrict: string | null = row['District'] || null;
-            const geoCity: string | null = row['City'] || null;
+            const region: string | null = capitalizeFirstLetter(row['Region'] || 'Europe');
+            const country: string | null = capitalizeFirstLetter(csvCountry || row['Country'] || null);
+            const county: string | null = capitalizeFirstLetter(row['County'] || null);
+            const district: string | null = capitalizeFirstLetter(row['District'] || null);
+            const city: string | null = capitalizeFirstLetter(row['City'] || null);
 
             const featureName: string = row[featureNameKey].split(/\[[a-zA-Z0-9]\]/g).join('');
 
@@ -104,9 +109,11 @@ async function runFeaturesGenerator(isDebug = false) {
                 cs: await translator.translate({ from: featureLanguage, to: 'cs', message: featureName }),
                 search,
                 searchUrl: OsmGeojson.createSearchUrl(search),
-                geoPath: ['World', geoRegion, geoCountry, geoCounty, geoDistrict, geoCity] /*.filter(
-                    (geoPart) => geoPart !== null,
-                )*/,
+                geopath: Object.fromEntries(
+                    Object.entries({ region, country, county, district, city }).filter(
+                        ([key, value]) => value !== null,
+                    ),
+                ),
             };
 
             if (csvCountry !== 'czechia') {
@@ -116,10 +123,20 @@ async function runFeaturesGenerator(isDebug = false) {
                 };
             }
 
+            for (const checkedFeature of features) {
+                checkedFeature.geopath = completeGeopath({ model: feature.geopath, reciever: checkedFeature.geopath });
+            }
+
             features.push(feature);
 
             if (!isDebug && features.length % 64 === 0) {
                 await save();
+            }
+        }
+
+        for (const checkedFeature of features) {
+            if (!isGeopathValid(checkedFeature.geopath)) {
+                console.warn(`🚨 Gap in geopath of ${checkedFeature.cs}`);
             }
         }
 
