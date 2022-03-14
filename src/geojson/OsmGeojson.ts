@@ -32,8 +32,10 @@ export class OsmGeojson {
 
         // ------
         // Problem: Openstreetmap returns geojson with two features, but strangely theese two features are duplicated
+        //          OR There can be more features in geojson - like Praha, capital of the Czech Republic vs. Praha, small village in Slovakia
+        // Solution: Picking the best one (vs. picking the first one) (vs. picking all)
+        geojson.features = geojson.features.splice(0, 1);
 
-        geojson.features = [geojson.features[0]];
         /*
         // Solution: Remove duplicated features by comparing its bounding boxes and choose only first of each unique
         // TODO: Maybe to separate util

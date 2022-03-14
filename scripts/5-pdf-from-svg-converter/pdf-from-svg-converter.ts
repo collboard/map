@@ -1,22 +1,22 @@
 #!/usr/bin/env ts-node
 
 import del from 'del';
-import { mkdir, readFile, writeFile } from 'fs/promises';
+import { mkdir, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
-import { jsPDF } from 'jspdf';
-import { basename, dirname, join } from 'path';
-import sharp from 'sharp';
+import { basename, dirname, join, relative } from 'path';
+import puppeteer from 'puppeteer';
+import { spaceTrim } from 'spacetrim';
 
 /**/
-convertSvgsToPdfs(true);
+convertSvgsToPdfs({ isCleanupPerformed: true });
 /**/
 
-async function convertSvgsToPdfs(override: boolean) {
+async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: true }) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
 
     const geojsonsPath = join(__dirname, `../../maps/5-pdfs/`);
 
-    if (override) {
+    if (isCleanupPerformed) {
         console.info(`🧹 Making cleenup`);
         await del(geojsonsPath);
     }
@@ -27,6 +27,36 @@ async function convertSvgsToPdfs(override: boolean) {
         try {
             console.info(`🗾 Converting ${basename(svgPath)}`);
 
+            const htmlPath = svgPath.replace('/4-svgs/', '/5-pdfs/') + `.html`;
+
+            const geojsonHtml = spaceTrim(`
+                <!DOCTYPE html>
+                <html lang="cs" dir="ltr">
+                  <head>
+                    <meta charset="UTF-8">
+                    <title>Titulek stránky</title>
+                  </head>
+                  <body>
+                    <img src="${relative(dirname(htmlPath), svgPath)}"/>
+                  </body>
+                </html>
+            `);
+
+            await mkdir(dirname(htmlPath), { recursive: true });
+            await writeFile(htmlPath, geojsonHtml, 'utf8');
+
+            const pdfPath = svgPath.replace('/4-svgs/', '/5-pdfs/') + `.pdf`;
+            await mkdir(dirname(pdfPath), { recursive: true });
+
+            const browser = await puppeteer.launch();
+            const page = await browser.newPage();
+            await page.goto(htmlPath);
+            await page.pdf({
+                path: pdfPath,
+            });
+
+            /*
+            !!! Remove
             const geojsonSvg = await readFile(svgPath, 'utf8');
             const geojsonPng = await sharp(Buffer.from(geojsonSvg)).png().toBuffer();
 
@@ -40,13 +70,14 @@ async function convertSvgsToPdfs(override: boolean) {
             pdf.addImage(geojsonPng, 'svg', 0, 0, 12, 15);
 
             const pdfData = pdf.output(
-                'arraybuffer' /* Note: Cannot use 'blob' because Blob is not defined in Node context */,
+                'arraybuffer' /* Note: Cannot use 'blob' because Blob is not defined in Node context * /,
             );
 
 
             const pdfPath = svgPath.replace('/4-svgs/', '/5-pdfs/') + `.pdf`;
             await mkdir(dirname(pdfPath), { recursive: true });
             await writeFile(pdfPath, new Buffer(pdfData), 'binary');
+            */
         } catch (error) {
             console.error(error);
         }

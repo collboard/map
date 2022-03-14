@@ -14,16 +14,14 @@ import { removeDiacritics } from '../utils/removeDiacritics';
 import { geojsonStringify } from './utils/geojsonStringify';
 
 /**/
-runGeojsonDownloader(true);
+runGeojsonDownloader({ isCleanupPerformed: true });
 /**/
 
-async function runGeojsonDownloader(override: boolean) {
-    //console.info(chalk.bgGrey(` Scraping Czech names`));
-
-    console.info(`🧹 Making cleenup`);
+async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed: boolean }) {
     const geojsonsPath = join(__dirname, `../../maps/2-geojsons/world`);
 
-    if (override) {
+    if (isCleanupPerformed) {
+        console.info(`🧹 Making cleenup`);
         await del(geojsonsPath);
     }
 
@@ -41,56 +39,54 @@ async function runGeojsonDownloader(override: boolean) {
         try {
             geojson = (await OsmGeojson.search(feature.search)).geojson;
 
-            // Note: There can be more features in geojson - like Praha, capital of the Czech Republic vs. Praha, small village in Slovakia
-            // Solution: Picking the best one (vs. picking the first one) (vs. picking all)
-            for (const geojsonFeature of [geojson.features[0]]) {
-                /*
-                TODO: Check that feature.geopath corresponds to geojsonFeature.properties!.display_name!.split(',')
+            /*
+              TODO: Check that feature.geopath corresponds to geojsonFeature.properties!.display_name!.split(',')
 
-                const geopathAsEndonym = geojsonFeature
-                    .properties!.display_name!.split(',')
-                    .map((part) => part.trim())
-                    .filter(
-                        // Note: Filtering out postcodes
-                        (part) => !isNumeric(part.split(/\s+/).join('')),
-                    )
-                    .reverse();
+              const geopathAsEndonym = geojsonFeature
+                  .properties!.display_name!.split(',')
+                  .map((part) => part.trim())
+                  .filter(
+                      // Note: Filtering out postcodes
+                      (part) => !isNumeric(part.split(/\s+/).join('')),
+                  )
+                  .reverse();
 
-                // TODO: Maybe Czech places in Czech language (without diacritics)
-                const geopathInEnglish = await Promise.all(geopathAsEndonym.map((name) => translator.translate(name)));
+              // TODO: Maybe Czech places in Czech language (without diacritics)
+              const geopathInEnglish = await Promise.all(geopathAsEndonym.map((name) => translator.translate(name)));
 
-                // TODO: In future only use geopath and compare to properties.display_name from OSM
-                geopathInEnglish.unshift(...feature.geopath);
+              // TODO: In future only use geopath and compare to properties.display_name from OSM
+              geopathInEnglish.unshift(...feature.geopath);
 
-                const geopathNormalized = geopathInEnglish.map((name) =>
-                    name.trim().toLowerCase().split(/\s+/).join('-'),
-                );
+              const geopathNormalized = geopathInEnglish.map((name) =>
+                  name.trim().toLowerCase().split(/\s+/).join('-'),
+              );
 
-                // console.log({ geopathAsEndonym, geopathInEnglish });
-                */
+              // console.log({ geopathAsEndonym, geopathInEnglish });
+              */
 
-                const geopathNormalized = Object.values(feature.geopath).map((geopart) =>
-                    removeDiacritics(geopart).split(/\s+/).join('-').toLowerCase(),
-                );
-                const geojsonPath = join(
-                    geojsonsPath,
-                    ...geopathNormalized,
-                    `${geopathNormalized[geopathNormalized.length - 1]}.geojson`,
-                );
-                await mkdir(dirname(geojsonPath), { recursive: true });
+            const geopathNormalized = Object.values(feature.geopath).map((geopart) =>
+                // TODO: Make one normalizeGeoname function
+                //       "Wallis and futuna (france)" -> "wallis-and-futuna-france"
+                removeDiacritics(geopart).split(/\s+/).join('-').toLowerCase(),
+            );
+            const geojsonPath = join(
+                geojsonsPath,
+                ...geopathNormalized,
+                `${geopathNormalized[geopathNormalized.length - 1]}.geojson`,
+            );
+            await mkdir(dirname(geojsonPath), { recursive: true });
 
-                await writeFile(
-                    geojsonPath,
-                    geojsonStringify({
-                        ...geojson,
-                        features: [geojsonFeature],
-                        collboard: {
-                            feature,
-                        },
-                    }),
-                    'utf8',
-                );
-            }
+            await writeFile(
+                geojsonPath,
+                geojsonStringify({
+                    ...geojson,
+
+                    collboard: {
+                        feature,
+                    },
+                }),
+                'utf8',
+            );
         } catch (error) {
             console.info(feature);
             console.info(geojson!);

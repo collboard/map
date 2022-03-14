@@ -53,15 +53,17 @@ export class SvgGeojsonConverter {
 
         const degradation = 0.001 / z; // Math.pow(2, z * 5);
 
+        // console.log({ degradation });
+
         // TODO: !!! Use simplifyForTransform
         const simplifiedGeojson = this.simplifiedGeojson.simplify(degradation);
 
         const boundingBox = { minX: this.minX, maxX: this.maxX, minY: this.minY, maxY: this.maxY };
         const element = (
             <svg
-                // TODO: Maybe use viewBox instead of width+height
-                width={this.maxX - this.minX + 2 * padding}
-                height={this.maxY - this.minY + 2 * padding}
+                viewBox={`0 0 ${this.maxX - this.minX + 2 * padding} ${this.maxY - this.minY + 2 * padding}`}
+                width="1000" /* <- TODO: !!! Some configurable ratio */
+                /* TODO: Also height according to ratio + some smart count of reasonable width+height */
                 xmlns="http://www.w3.org/2000/svg"
             >
                 {/*
@@ -123,4 +125,7 @@ export class SvgGeojsonConverter {
  * TODO: !!! DRY+Use this in GeojsonArt
  * TODO: In makeSvg just return element of recieve format: 'JSX'|'STRING'|'URL'
  * TODO: In makeSvg write overloaded typing
+ * TODO: Strip decimal places
+ * TODO: Remove OSM specific stuff
+ * TODO: Add steganography CLBRD data
  */

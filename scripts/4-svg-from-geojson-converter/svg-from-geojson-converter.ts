@@ -8,25 +8,28 @@ import ReactDOMServer from 'react-dom/server';
 import { SvgGeojsonConverter } from '../../src/geojson/SvgGeojsonConverter';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
 
-const LODS_EXPONENTS = [/*-1, 0, 1, 2, 3, 4, 5*/ 0];
+const LODS_EXPONENTS = [-5]; //[/*-1,*/ -30, -10, 0, 5 /*1, 2, 3, 4*/, 10];
 
 /**/
-convertGeojsonsToSvgs(true);
+convertGeojsonsToSvgs({ isCleanupPerformed: true });
 /**/
 
-async function convertGeojsonsToSvgs(override: boolean) {
+async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerformed: true }) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
 
-    console.info(`🧹 Making cleenup`);
     const geojsonsPath = join(__dirname, `../../maps/4-svgs/`);
 
-    if (override) {
+    if (isCleanupPerformed) {
+        console.info(`🧹 Making cleenup`);
         await del(geojsonsPath);
     }
 
     console.info(`🖼️ Converting geojsons to svgs`);
 
-    for (const geojsonPath of await glob(join(__dirname, '../../maps/2-geojsons/**/*.geojson'))) {
+    for (const geojsonPath of [
+        ...(await glob(join(__dirname, '../../maps/2-geojsons/**/*.geojson'))),
+        ...(await glob(join(__dirname, '../../maps/3-geojsons-aggregated/**/*.geojson'))),
+    ]) {
         try {
             console.info(`🗾 Converting ${basename(geojsonPath)}`);
 
@@ -42,7 +45,9 @@ async function convertGeojsonsToSvgs(override: boolean) {
                 // TODO: !!! Add collboard branding
                 // TODO: !!! Add metadata of geo
 
-                const svgPath = geojsonPath.replace('/2-geojsons/', '/4-svgs/') + `.lod${exponent}.svg`;
+                const svgPath =
+                    geojsonPath.replace('/2-geojsons/', '/4-svgs/').replace('/3-geojsons-aggregated/', '/4-svgs/') +
+                    `.lod${exponent > 0 ? '+' : '-'}${Math.abs(exponent)}.svg`;
 
                 await mkdir(dirname(svgPath), { recursive: true });
                 await writeFile(svgPath, svgString, 'utf8');

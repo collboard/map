@@ -15,3 +15,7 @@ export function isGeopathValid(geopath: IGeopath): boolean {
 
     return true;
 }
+
+/**
+ * TODO: Check order region, country, county, district, city
+ */

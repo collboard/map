@@ -18,5 +18,6 @@ export function completeGeopath({ model, reciever }: ICompleteGeopathOptions): I
         }
     }
 
-    return result;
+    const { region, country, county, district, city } = result;
+    return { region, country, county, district, city };
 }

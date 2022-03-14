@@ -24,10 +24,10 @@ const GENERATOR_WARNING = spaceTrim(`
 `);
 
 /**/
-runFeaturesGenerator(false);
+runFeaturesGenerator({ isDebug: false });
 /**/
 
-async function runFeaturesGenerator(isDebug = false) {
+async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
     console.info(`🎹 Genetaing features`);
 
     const translator = new MultiAutomaticTranslator({
