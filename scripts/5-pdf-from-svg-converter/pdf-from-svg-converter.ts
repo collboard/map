@@ -1,11 +1,10 @@
 #!/usr/bin/env ts-node
 
 import del from 'del';
-import { mkdir, writeFile } from 'fs/promises';
+import { mkdir, readFile, unlink, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import { basename, dirname, join, relative } from 'path';
 import puppeteer from 'puppeteer';
-import { spaceTrim } from 'spacetrim';
 
 /**/
 convertSvgsToPdfs({ isCleanupPerformed: true });
@@ -23,37 +22,39 @@ async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: t
 
     console.info(`🖨️ Converting svgs to pdfs`);
 
+    const template = await readFile(join(__dirname, './sample.svg'), 'utf8');
+
     for (const svgPath of await glob(join(__dirname, '../../maps/4-svgs/**/*.svg'))) {
         try {
             console.info(`🗾 Converting ${basename(svgPath)}`);
 
-            const htmlPath = svgPath.replace('/4-svgs/', '/5-pdfs/') + `.html`;
+            const svgTmpPath = svgPath.replace('/4-svgs/', '/5-pdfs/') + `.tmp.svg`;
 
-            const geojsonHtml = spaceTrim(`
-                <!DOCTYPE html>
-                <html lang="cs" dir="ltr">
-                  <head>
-                    <meta charset="UTF-8">
-                    <title>Titulek stránky</title>
-                  </head>
-                  <body>
-                    <img src="${relative(dirname(htmlPath), svgPath)}"/>
-                  </body>
-                </html>
-            `);
-
-            await mkdir(dirname(htmlPath), { recursive: true });
-            await writeFile(htmlPath, geojsonHtml, 'utf8');
+            const svgTmpData = template.replace(
+                '"../../maps/4-svgs/world/africa/africa.aggregated2.geojson.lod-5.svg"',
+                '"' +
+                    join(relative(svgTmpPath, svgPath))
+                        .split('\\')
+                        .join('/')
+                        .replace(/^\.\.\//, '') +
+                    '"',
+            );
 
             const pdfPath = svgPath.replace('/4-svgs/', '/5-pdfs/') + `.pdf`;
-            await mkdir(dirname(pdfPath), { recursive: true });
+            await mkdir(dirname(pdfPath /* Note: This path is shared with svgTmpPath */), { recursive: true });
+            await writeFile(svgTmpPath, svgTmpData, 'utf8');
 
             const browser = await puppeteer.launch();
             const page = await browser.newPage();
-            await page.goto(htmlPath);
+            await page.goto(svgTmpPath);
             await page.pdf({
                 path: pdfPath,
+                margin: { left: 0, right: 0, top: 0, bottom: 0 },
+                printBackground: true,
+                pageRanges: '1',
             });
+
+            await unlink(svgTmpPath);
 
             /*
             !!! Remove

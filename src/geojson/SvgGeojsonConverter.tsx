@@ -7,6 +7,7 @@ import { ISvgGeojson } from '../interfaces/ISvgGeojson';
 import { TileAbsolute } from '../semantic/TileAbsolute';
 import { Wgs84 } from '../semantic/Wgs84';
 import { blobToDataUrl } from '../utils/blobToDataUrl';
+import { minmax } from '../utils/minmax';
 import { getAllPointsOf } from './getAllPointsOf';
 import { SimplifiedGeojson } from './SimplifiedGeojson';
 
@@ -29,10 +30,13 @@ export class SvgGeojsonConverter {
 
         const xVals = this.pointsOnBoard.map((point) => point.x || 0);
         const yVals = this.pointsOnBoard.map((point) => point.y || 0);
-        this.minX = Math.min(...xVals);
-        this.maxX = Math.max(...xVals);
-        this.minY = Math.min(...yVals);
-        this.maxY = Math.max(...yVals);
+
+        const { min: minX, max: maxX } = minmax(xVals);
+        const { min: minY, max: maxY } = minmax(yVals);
+        this.minX = minX;
+        this.maxX = maxX;
+        this.minY = minY;
+        this.maxY = maxY;
     }
 
     private wgs84ToBoard(pointAsWgs84: Wgs84): Vector {
@@ -90,7 +94,7 @@ export class SvgGeojsonConverter {
                             // TODO: Tell the region that the user hoovered on it
                             // + add  onMouseLeave={(event) => {
                         }}
-                        stroke="red"
+                        stroke="#009edd"
                         // !!! Dynamic size in SVG
                         strokeWidth={(3 + Math.random()) / z + 'px'}
                         fill="none"

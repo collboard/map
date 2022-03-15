@@ -5,7 +5,6 @@ import glob from 'glob-promise';
 import papaparse from 'papaparse';
 import { basename, join } from 'path';
 import spaceTrim from 'spacetrim';
-import { forEver } from 'waitasecond';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { isNumeric } from '../../src/utils/isNumeric';
 import { DebugAutomaticTranslator } from '../utils/automatic-translators/DebugAutomaticTranslator';
@@ -42,6 +41,7 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
                     async translate(message: string) {
                         let translated = await translator.translate(message);
                         translated = translated.replace(/\.$/, '');
+                        translated = translated.replace('[b]', '');
                         return translated;
                     },
                 };

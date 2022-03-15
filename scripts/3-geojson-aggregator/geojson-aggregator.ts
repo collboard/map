@@ -20,30 +20,51 @@ async function runGeojsonAggregator({ isCleanupPerformed }: { isCleanupPerformed
 
     console.info(`🧩 Aggregating geojsons`);
 
-    for (const geojsonPath of await glob(join(__dirname, '../../maps/2-geojsons/**/*.geojson'))) {
-        try {
-            const subGeojsonsPaths = await glob(dirname(geojsonPath) + '/**/*.geojson');
-
-            if (subGeojsonsPaths.length > 1) {
-                console.info(`🧩 Aggregating ${basename(geojsonPath)}`);
-
-                const subGeojsons = (await Promise.all(subGeojsonsPaths.map((path) => readFile(path, 'utf8')))).map(
-                    (geojson) => JSON.parse(geojson) as IGeojsonFeatureCollection,
+    for (const geojsonPath of Array.from(
+        new Set((await glob(join(__dirname, '../../maps/2-geojsons/**/*'))).map((path) => dirname(path))),
+    )) {
+        for (const level of [1, 2, 3, 4]) {
+            try {
+                const subGeojsonsPaths = (await glob(geojsonPath + '/**/*.geojson')).filter(
+                    (subGeojsonPath) =>
+                        subGeojsonPath.split(/[\/\\]/g).length - geojsonPath.split(/[\/\\]/g).length <= level,
                 );
+                // TODO: If there are multiple levels the same, just keep lower one
 
-                const geojson: IGeojsonFeatureCollection = {
-                    ...subGeojsons[0],
-                    features: subGeojsons.flatMap((subGeojson) => subGeojson.features),
-                    collboard: subGeojsons.map((subGeojson) => subGeojson.collboard),
-                };
+                if (subGeojsonsPaths.length === 0 || subGeojsonsPaths.length === 1) {
+                    // console.info(`🈳 Nothing to aggregate ${basename(geojsonPath)} on level ${level}`);
+                } else if (subGeojsonsPaths.length > 100) {
+                    console.info(
+                        `🤯 Too big set of ${subGeojsonsPaths.length} geojsons to agregate ${basename(
+                            geojsonPath,
+                        )} on level ${level}`,
+                    );
+                } else {
+                    console.info(
+                        `🧩 Aggregating ${subGeojsonsPaths.length} geojsons ${basename(geojsonPath)} on level ${level}`,
+                    );
 
-                const aggregatedGeojsonPath = geojsonPath.replace('/2-geojsons/', '/3-geojsons-aggregated/');
+                    const subGeojsons = (await Promise.all(subGeojsonsPaths.map((path) => readFile(path, 'utf8')))).map(
+                        (geojson) => JSON.parse(geojson) as IGeojsonFeatureCollection,
+                    );
 
-                await mkdir(dirname(aggregatedGeojsonPath), { recursive: true });
-                await writeFile(aggregatedGeojsonPath, geojsonStringify(geojson), 'utf8');
+                    const geojson: IGeojsonFeatureCollection = {
+                        ...subGeojsons[0],
+                        features: subGeojsons.flatMap((subGeojson) => subGeojson.features),
+                        collboard: subGeojsons.map((subGeojson) => subGeojson.collboard),
+                    };
+
+                    const aggregatedGeojsonPath = join(
+                        geojsonPath.replace('/2-geojsons/', '/3-geojsons-aggregated/'),
+                        `${basename(geojsonPath)}.aggregated${level}.geojson`,
+                    );
+
+                    await mkdir(dirname(aggregatedGeojsonPath), { recursive: true });
+                    await writeFile(aggregatedGeojsonPath, geojsonStringify(geojson), 'utf8');
+                }
+            } catch (error) {
+                console.error(error);
             }
-        } catch (error) {
-            console.error(error);
         }
     }
 

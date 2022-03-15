@@ -8,91 +8,91 @@ import { IGeopath } from './geopath';
 export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl: string; geopath: IGeopath }> = [
     {
         en: 'China',
-        cs: 'Čína',
+        cs: 'China',
         search: { country: 'China' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=China',
         geopath: { region: 'Asia', country: 'China' },
     },
     {
         en: 'India',
-        cs: 'Indie',
+        cs: 'India',
         search: { country: 'India' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=India',
         geopath: { region: 'Asia', country: 'India' },
     },
     {
         en: 'United States',
-        cs: 'Spojené státy',
+        cs: 'United States',
         search: { country: 'United States' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=United+States',
         geopath: { region: 'Americas', country: 'United states' },
     },
     {
         en: 'Indonesia',
-        cs: 'Indonésie',
+        cs: 'Indonesia',
         search: { country: 'Indonesia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Indonesia',
         geopath: { region: 'Asia', country: 'Indonesia[b]' },
     },
     {
         en: 'Pakistan',
-        cs: 'Pákistán',
+        cs: 'Pakistan',
         search: { country: 'Pakistan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Pakistan',
         geopath: { region: 'Asia', country: 'Pakistan' },
     },
     {
         en: 'Brazil',
-        cs: 'Brazílie',
+        cs: 'Brazil',
         search: { country: 'Brazil' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Brazil',
         geopath: { region: 'Americas', country: 'Brazil' },
     },
     {
         en: 'Nigeria',
-        cs: 'Nigérie',
+        cs: 'Nigeria',
         search: { country: 'Nigeria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Nigeria',
         geopath: { region: 'Africa', country: 'Nigeria' },
     },
     {
         en: 'Bangladesh',
-        cs: 'Bangladéš',
+        cs: 'Bangladesh',
         search: { country: 'Bangladesh' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bangladesh',
         geopath: { region: 'Asia', country: 'Bangladesh' },
     },
     {
         en: 'Russia',
-        cs: 'Rusko',
+        cs: 'Russia',
         search: { country: 'Russia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Russia',
         geopath: { region: 'Europe', country: 'Russia[b]' },
     },
     {
         en: 'Mexico',
-        cs: 'Mexiko',
+        cs: 'Mexico',
         search: { country: 'Mexico' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mexico',
         geopath: { region: 'Americas', country: 'Mexico' },
     },
     {
         en: 'Japan',
-        cs: 'Japonsko',
+        cs: 'Japan',
         search: { country: 'Japan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Japan',
         geopath: { region: 'Asia', country: 'Japan' },
     },
     {
         en: 'Ethiopia',
-        cs: 'Etiopie',
+        cs: 'Ethiopia',
         search: { country: 'Ethiopia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ethiopia',
         geopath: { region: 'Africa', country: 'Ethiopia' },
     },
     {
         en: 'Philippines',
-        cs: 'Filipíny',
+        cs: 'Philippines',
         search: { country: 'Philippines' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Philippines',
         geopath: { region: 'Asia', country: 'Philippines' },
@@ -113,70 +113,70 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'DR Congo',
-        cs: 'Dr. Kongo',
+        cs: 'DR Congo',
         search: { country: 'DR Congo' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=DR+Congo',
         geopath: { region: 'Africa', country: 'Dr congo' },
     },
     {
         en: 'Iran',
-        cs: 'Írán',
+        cs: 'Iran',
         search: { country: 'Iran' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Iran',
         geopath: { region: 'Asia', country: 'Iran' },
     },
     {
         en: 'Turkey',
-        cs: 'krocan',
+        cs: 'Turkey',
         search: { country: 'Turkey' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Turkey',
         geopath: { region: 'Asia', country: 'Turkey[b]' },
     },
     {
         en: 'Germany',
-        cs: 'Německo',
+        cs: 'Germany',
         search: { country: 'Germany' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Germany',
         geopath: { region: 'Europe', country: 'Germany' },
     },
     {
         en: 'France',
-        cs: 'Francie',
+        cs: 'France',
         search: { country: 'France' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=France',
         geopath: { region: 'Europe', country: 'France' },
     },
     {
         en: 'United Kingdom',
-        cs: 'Spojené království',
+        cs: 'United Kingdom',
         search: { country: 'United Kingdom' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=United+Kingdom',
         geopath: { region: 'Europe', country: 'United kingdom' },
     },
     {
         en: 'Thailand',
-        cs: 'Thajsko',
+        cs: 'Thailand',
         search: { country: 'Thailand' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Thailand',
         geopath: { region: 'Asia', country: 'Thailand' },
     },
     {
         en: 'South Africa',
-        cs: 'Jižní Afrika',
+        cs: 'South Africa',
         search: { country: 'South Africa' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=South+Africa',
         geopath: { region: 'Africa', country: 'South africa' },
     },
     {
         en: 'Tanzania',
-        cs: 'Tanzanie',
+        cs: 'Tanzania',
         search: { country: 'Tanzania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Tanzania',
         geopath: { region: 'Africa', country: 'Tanzania' },
     },
     {
         en: 'Italy',
-        cs: 'Itálie',
+        cs: 'Italy',
         search: { country: 'Italy' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Italy',
         geopath: { region: 'Europe', country: 'Italy' },
@@ -190,28 +190,28 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'South Korea',
-        cs: 'Jižní Korea',
+        cs: 'South Korea',
         search: { country: 'South Korea' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=South+Korea',
         geopath: { region: 'Asia', country: 'South korea' },
     },
     {
         en: 'Colombia',
-        cs: 'Kolumbie',
+        cs: 'Colombia',
         search: { country: 'Colombia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Colombia',
         geopath: { region: 'Americas', country: 'Colombia' },
     },
     {
         en: 'Kenya',
-        cs: 'Keňa',
+        cs: 'Kenya',
         search: { country: 'Kenya' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Kenya',
         geopath: { region: 'Africa', country: 'Kenya' },
     },
     {
         en: 'Spain',
-        cs: 'Španělsko',
+        cs: 'Spain',
         search: { country: 'Spain' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Spain',
         geopath: { region: 'Europe', country: 'Spain' },
@@ -225,7 +225,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Algeria',
-        cs: 'Alžírsko',
+        cs: 'Algeria',
         search: { country: 'Algeria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Algeria',
         geopath: { region: 'Africa', country: 'Algeria' },
@@ -246,49 +246,49 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Iraq',
-        cs: 'Irák',
+        cs: 'Iraq',
         search: { country: 'Iraq' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Iraq',
         geopath: { region: 'Asia', country: 'Iraq' },
     },
     {
         en: 'Ukraine',
-        cs: 'Ukrajina',
+        cs: 'Ukraine',
         search: { country: 'Ukraine' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ukraine',
         geopath: { region: 'Europe', country: 'Ukraine' },
     },
     {
         en: 'Canada',
-        cs: 'Kanada',
+        cs: 'Canada',
         search: { country: 'Canada' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Canada',
         geopath: { region: 'Americas', country: 'Canada' },
     },
     {
         en: 'Poland',
-        cs: 'Polsko',
+        cs: 'Poland',
         search: { country: 'Poland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Poland',
         geopath: { region: 'Europe', country: 'Poland' },
     },
     {
         en: 'Morocco',
-        cs: 'Maroko',
+        cs: 'Morocco',
         search: { country: 'Morocco' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Morocco',
         geopath: { region: 'Africa', country: 'Morocco' },
     },
     {
         en: 'Uzbekistan',
-        cs: 'Uzbekistán',
+        cs: 'Uzbekistan',
         search: { country: 'Uzbekistan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Uzbekistan',
         geopath: { region: 'Asia', country: 'Uzbekistan' },
     },
     {
         en: 'Saudi Arabia',
-        cs: 'Saudská arábie',
+        cs: 'Saudi Arabia',
         search: { country: 'Saudi Arabia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saudi+Arabia',
         geopath: { region: 'Asia', country: 'Saudi arabia' },
@@ -302,14 +302,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Afghanistan',
-        cs: 'Afghánistán',
+        cs: 'Afghanistan',
         search: { country: 'Afghanistan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Afghanistan',
         geopath: { region: 'Asia', country: 'Afghanistan' },
     },
     {
         en: 'Malaysia',
-        cs: 'Malajsie',
+        cs: 'Malaysia',
         search: { country: 'Malaysia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Malaysia',
         geopath: { region: 'Asia', country: 'Malaysia' },
@@ -323,7 +323,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Mozambique',
-        cs: 'Mozambik',
+        cs: 'Mozambique',
         search: { country: 'Mozambique' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mozambique',
         geopath: { region: 'Africa', country: 'Mozambique' },
@@ -337,14 +337,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Yemen',
-        cs: 'Jemen',
+        cs: 'Yemen',
         search: { country: 'Yemen' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Yemen',
         geopath: { region: 'Asia', country: 'Yemen' },
     },
     {
         en: 'Nepal',
-        cs: 'Nepál',
+        cs: 'Nepal',
         search: { country: 'Nepal' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Nepal',
         geopath: { region: 'Asia', country: 'Nepal' },
@@ -358,35 +358,35 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Ivory Coast',
-        cs: 'Pobřeží slonoviny',
+        cs: 'Ivory Coast',
         search: { country: 'Ivory Coast' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ivory+Coast',
         geopath: { region: 'Africa', country: 'Ivory coast' },
     },
     {
         en: 'Madagascar',
-        cs: 'Madagaskar',
+        cs: 'Madagascar',
         search: { country: 'Madagascar' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Madagascar',
         geopath: { region: 'Africa', country: 'Madagascar' },
     },
     {
         en: 'Australia',
-        cs: 'Austrálie',
+        cs: 'Australia',
         search: { country: 'Australia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Australia',
         geopath: { region: 'Oceania', country: 'Australia' },
     },
     {
         en: 'North Korea',
-        cs: 'Severní Korea',
+        cs: 'North Korea',
         search: { country: 'North Korea' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=North+Korea',
         geopath: { region: 'Asia', country: 'North korea' },
     },
     {
         en: 'Cameroon',
-        cs: 'Kamerun',
+        cs: 'Cameroon',
         search: { country: 'Cameroon' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cameroon',
         geopath: { region: 'Africa', country: 'Cameroon' },
@@ -400,14 +400,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Taiwan',
-        cs: 'Tchaj-wan',
+        cs: 'Taiwan',
         search: { country: 'Taiwan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Taiwan',
         geopath: { region: 'Asia', country: 'Taiwan' },
     },
     {
         en: 'Sri Lanka',
-        cs: 'Srí Lanka',
+        cs: 'Sri Lanka',
         search: { country: 'Sri Lanka' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Sri+Lanka',
         geopath: { region: 'Asia', country: 'Sri lanka' },
@@ -435,14 +435,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Romania',
-        cs: 'Rumunsko',
+        cs: 'Romania',
         search: { country: 'Romania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Romania',
         geopath: { region: 'Europe', country: 'Romania' },
     },
     {
         en: 'Kazakhstan',
-        cs: 'Kazachstán',
+        cs: 'Kazakhstan',
         search: { country: 'Kazakhstan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Kazakhstan',
         geopath: { region: 'Asia', country: 'Kazakhstan[b]' },
@@ -456,28 +456,28 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Zambia',
-        cs: 'Zambie',
+        cs: 'Zambia',
         search: { country: 'Zambia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Zambia',
         geopath: { region: 'Africa', country: 'Zambia' },
     },
     {
         en: 'Syria',
-        cs: 'Sýrie',
+        cs: 'Syria',
         search: { country: 'Syria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Syria',
         geopath: { region: 'Asia', country: 'Syria' },
     },
     {
         en: 'Ecuador',
-        cs: 'Ekvádor',
+        cs: 'Ecuador',
         search: { country: 'Ecuador' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ecuador',
         geopath: { region: 'Americas', country: 'Ecuador' },
     },
     {
         en: 'Netherlands',
-        cs: 'Holandsko',
+        cs: 'Netherlands',
         search: { country: 'Netherlands' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Netherlands',
         geopath: { region: 'Europe', country: 'Netherlands' },
@@ -505,7 +505,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Somalia',
-        cs: 'Somálsko',
+        cs: 'Somalia',
         search: { country: 'Somalia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Somalia',
         geopath: { region: 'Africa', country: 'Somalia' },
@@ -519,14 +519,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Cambodia',
-        cs: 'Kambodža',
+        cs: 'Cambodia',
         search: { country: 'Cambodia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cambodia',
         geopath: { region: 'Asia', country: 'Cambodia' },
     },
     {
         en: 'South Sudan',
-        cs: 'jižní Súdán',
+        cs: 'South Sudan',
         search: { country: 'South Sudan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=South+Sudan',
         geopath: { region: 'Africa', country: 'South sudan' },
@@ -561,14 +561,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Bolivia',
-        cs: 'Bolívie',
+        cs: 'Bolivia',
         search: { country: 'Bolivia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bolivia',
         geopath: { region: 'Americas', country: 'Bolivia' },
     },
     {
         en: 'Tunisia',
-        cs: 'Tunisko',
+        cs: 'Tunisia',
         search: { country: 'Tunisia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Tunisia',
         geopath: { region: 'Africa', country: 'Tunisia' },
@@ -582,35 +582,35 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Belgium',
-        cs: 'Belgie',
+        cs: 'Belgium',
         search: { country: 'Belgium' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Belgium',
         geopath: { region: 'Europe', country: 'Belgium' },
     },
     {
         en: 'Cuba',
-        cs: 'Kostka',
+        cs: 'Cuba',
         search: { country: 'Cuba' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cuba',
         geopath: { region: 'Americas', country: 'Cuba' },
     },
     {
         en: 'Jordan',
-        cs: 'Jordán',
+        cs: 'Jordan',
         search: { country: 'Jordan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Jordan',
         geopath: { region: 'Asia', country: 'Jordan' },
     },
     {
         en: 'Greece',
-        cs: 'Řecko',
+        cs: 'Greece',
         search: { country: 'Greece' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Greece',
         geopath: { region: 'Europe', country: 'Greece' },
     },
     {
         en: 'Dominican Republic',
-        cs: 'Dominikánská republika',
+        cs: 'Dominican Republic',
         search: { country: 'Dominican Republic' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Dominican+Republic',
@@ -618,49 +618,49 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Czech Republic',
-        cs: 'Česká republika',
+        cs: 'Czech Republic',
         search: { country: 'Czech Republic' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Czech+Republic',
         geopath: { region: 'Europe', country: 'Czech republic' },
     },
     {
         en: 'Sweden',
-        cs: 'Švédsko',
+        cs: 'Sweden',
         search: { country: 'Sweden' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Sweden',
         geopath: { region: 'Europe', country: 'Sweden' },
     },
     {
         en: 'Portugal',
-        cs: 'Portugalsko',
+        cs: 'Portugal',
         search: { country: 'Portugal' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Portugal',
         geopath: { region: 'Europe', country: 'Portugal' },
     },
     {
         en: 'Azerbaijan',
-        cs: 'Ázerbajdžán',
+        cs: 'Azerbaijan',
         search: { country: 'Azerbaijan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Azerbaijan',
         geopath: { region: 'Asia', country: 'Azerbaijan[b]' },
     },
     {
         en: 'Hungary',
-        cs: 'Maďarsko',
+        cs: 'Hungary',
         search: { country: 'Hungary' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Hungary',
         geopath: { region: 'Europe', country: 'Hungary' },
     },
     {
         en: 'Tajikistan',
-        cs: 'Tádžikistán',
+        cs: 'Tajikistan',
         search: { country: 'Tajikistan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Tajikistan',
         geopath: { region: 'Asia', country: 'Tajikistan' },
     },
     {
         en: 'United Arab Emirates',
-        cs: 'Spojené arabské emiráty',
+        cs: 'United Arab Emirates',
         search: { country: 'United Arab Emirates' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=United+Arab+Emirates',
@@ -668,7 +668,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Israel',
-        cs: 'Izrael',
+        cs: 'Israel',
         search: { country: 'Israel' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Israel',
         geopath: { region: 'Asia', country: 'Israel' },
@@ -682,14 +682,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Belarus',
-        cs: 'Bělorusko',
+        cs: 'Belarus',
         search: { country: 'Belarus' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Belarus',
         geopath: { region: 'Europe', country: 'Belarus' },
     },
     {
         en: 'Papua New Guinea',
-        cs: 'Papua-Nová Guinea',
+        cs: 'Papua New Guinea',
         search: { country: 'Papua New Guinea' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Papua+New+Guinea',
@@ -697,14 +697,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Austria',
-        cs: 'Rakousko',
+        cs: 'Austria',
         search: { country: 'Austria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Austria',
         geopath: { region: 'Europe', country: 'Austria' },
     },
     {
         en: 'Switzerland',
-        cs: 'Švýcarsko',
+        cs: 'Switzerland',
         search: { country: 'Switzerland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Switzerland',
         geopath: { region: 'Europe', country: 'Switzerland' },
@@ -718,14 +718,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Togo',
-        cs: 'Jít',
+        cs: 'Togo',
         search: { country: 'Togo' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Togo',
         geopath: { region: 'Africa', country: 'Togo' },
     },
     {
         en: 'Hong Kong (China)',
-        cs: 'Hong Kong (Čína)',
+        cs: 'Hong Kong (China)',
         search: { country: 'Hong Kong (China)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Hong+Kong+%28China%29',
@@ -747,14 +747,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Libya',
-        cs: 'Libye',
+        cs: 'Libya',
         search: { country: 'Libya' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Libya',
         geopath: { region: 'Africa', country: 'Libya' },
     },
     {
         en: 'Serbia',
-        cs: 'Srbsko',
+        cs: 'Serbia',
         search: { country: 'Serbia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Serbia',
         geopath: { region: 'Europe', country: 'Serbia' },
@@ -768,28 +768,28 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Lebanon',
-        cs: 'Libanon',
+        cs: 'Lebanon',
         search: { country: 'Lebanon' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Lebanon',
         geopath: { region: 'Asia', country: 'Lebanon' },
     },
     {
         en: 'Kyrgyzstan',
-        cs: 'Kyrgyzstán',
+        cs: 'Kyrgyzstan',
         search: { country: 'Kyrgyzstan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Kyrgyzstan',
         geopath: { region: 'Asia', country: 'Kyrgyzstan' },
     },
     {
         en: 'Nicaragua',
-        cs: 'Nikaragua',
+        cs: 'Nicaragua',
         search: { country: 'Nicaragua' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Nicaragua',
         geopath: { region: 'Americas', country: 'Nicaragua' },
     },
     {
         en: 'Bulgaria',
-        cs: 'Bulharsko',
+        cs: 'Bulgaria',
         search: { country: 'Bulgaria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bulgaria',
         geopath: { region: 'Europe', country: 'Bulgaria' },
@@ -803,21 +803,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Denmark',
-        cs: 'Dánsko',
+        cs: 'Denmark',
         search: { country: 'Denmark' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Denmark',
         geopath: { region: 'Europe', country: 'Denmark' },
     },
     {
         en: 'Congo',
-        cs: 'Kongo',
+        cs: 'Congo',
         search: { country: 'Congo' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Congo',
         geopath: { region: 'Africa', country: 'Congo' },
     },
     {
         en: 'Central African Republic',
-        cs: 'Středoafrická republika',
+        cs: 'Central African Republic',
         search: { country: 'Central African Republic' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Central+African+Republic',
@@ -825,77 +825,77 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Finland',
-        cs: 'Finsko',
+        cs: 'Finland',
         search: { country: 'Finland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Finland',
         geopath: { region: 'Europe', country: 'Finland' },
     },
     {
         en: 'Singapore',
-        cs: 'Singapur',
+        cs: 'Singapore',
         search: { country: 'Singapore' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Singapore',
         geopath: { region: 'Asia', country: 'Singapore' },
     },
     {
         en: 'Slovakia',
-        cs: 'Slovensko',
+        cs: 'Slovakia',
         search: { country: 'Slovakia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Slovakia',
         geopath: { region: 'Europe', country: 'Slovakia' },
     },
     {
         en: 'Norway',
-        cs: 'Norsko',
+        cs: 'Norway',
         search: { country: 'Norway' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Norway',
         geopath: { region: 'Europe', country: 'Norway' },
     },
     {
         en: 'Palestine',
-        cs: 'Palestina',
+        cs: 'Palestine',
         search: { country: 'Palestine' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Palestine',
         geopath: { region: 'Asia', country: 'Palestine' },
     },
     {
         en: 'Costa Rica',
-        cs: 'Kostarika',
+        cs: 'Costa Rica',
         search: { country: 'Costa Rica' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Costa+Rica',
         geopath: { region: 'Americas', country: 'Costa rica' },
     },
     {
         en: 'New Zealand',
-        cs: 'Nový Zéland',
+        cs: 'New Zealand',
         search: { country: 'New Zealand' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=New+Zealand',
         geopath: { region: 'Oceania', country: 'New zealand' },
     },
     {
         en: 'Ireland',
-        cs: 'Irsko',
+        cs: 'Ireland',
         search: { country: 'Ireland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Ireland',
         geopath: { region: 'Europe', country: 'Ireland' },
     },
     {
         en: 'Kuwait',
-        cs: 'Kuvajt',
+        cs: 'Kuwait',
         search: { country: 'Kuwait' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Kuwait',
         geopath: { region: 'Asia', country: 'Kuwait' },
     },
     {
         en: 'Liberia',
-        cs: 'Libérie',
+        cs: 'Liberia',
         search: { country: 'Liberia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Liberia',
         geopath: { region: 'Africa', country: 'Liberia' },
     },
     {
         en: 'Oman',
-        cs: 'Omán',
+        cs: 'Oman',
         search: { country: 'Oman' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Oman',
         geopath: { region: 'Asia', country: 'Oman' },
@@ -909,21 +909,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Mauritania',
-        cs: 'Mauritánie',
+        cs: 'Mauritania',
         search: { country: 'Mauritania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mauritania',
         geopath: { region: 'Africa', country: 'Mauritania' },
     },
     {
         en: 'Croatia',
-        cs: 'Chorvatsko',
+        cs: 'Croatia',
         search: { country: 'Croatia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Croatia',
         geopath: { region: 'Europe', country: 'Croatia' },
     },
     {
         en: 'Georgia',
-        cs: 'Gruzie',
+        cs: 'Georgia',
         search: { country: 'Georgia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Georgia',
         geopath: { region: 'Asia', country: 'Georgia[b]' },
@@ -944,14 +944,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Mongolia',
-        cs: 'Mongolsko',
+        cs: 'Mongolia',
         search: { country: 'Mongolia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mongolia',
         geopath: { region: 'Asia', country: 'Mongolia' },
     },
     {
         en: 'Bosnia and Herzegovina',
-        cs: 'Bosna a Hercegovina',
+        cs: 'Bosnia and Herzegovina',
         search: { country: 'Bosnia and Herzegovina' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bosnia+and+Herzegovina',
@@ -959,7 +959,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Puerto Rico (United States)',
-        cs: 'Puerto Rico (Spojené státy americké)',
+        cs: 'Puerto Rico (United States)',
         search: { country: 'Puerto Rico (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Puerto+Rico+%28United+States%29',
@@ -967,14 +967,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Armenia',
-        cs: 'Arménie',
+        cs: 'Armenia',
         search: { country: 'Armenia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Armenia',
         geopath: { region: 'Asia', country: 'Armenia' },
     },
     {
         en: 'Albania',
-        cs: 'Albánie',
+        cs: 'Albania',
         search: { country: 'Albania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Albania',
         geopath: { region: 'Europe', country: 'Albania' },
@@ -988,7 +988,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Lithuania',
-        cs: 'Litva',
+        cs: 'Lithuania',
         search: { country: 'Lithuania' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Lithuania',
         geopath: { region: 'Europe', country: 'Lithuania' },
@@ -1002,21 +1002,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Moldova',
-        cs: 'Moldavsko',
+        cs: 'Moldova',
         search: { country: 'Moldova' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Moldova',
         geopath: { region: 'Europe', country: 'Moldova' },
     },
     {
         en: 'Namibia',
-        cs: 'Namibie',
+        cs: 'Namibia',
         search: { country: 'Namibia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Namibia',
         geopath: { region: 'Africa', country: 'Namibia' },
     },
     {
         en: 'Gambia',
-        cs: 'Gambie',
+        cs: 'Gambia',
         search: { country: 'Gambia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Gambia',
         geopath: { region: 'Africa', country: 'Gambia' },
@@ -1037,28 +1037,28 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Lesotho',
-        cs: 'Lesoto',
+        cs: 'Lesotho',
         search: { country: 'Lesotho' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Lesotho',
         geopath: { region: 'Africa', country: 'Lesotho' },
     },
     {
         en: 'Slovenia',
-        cs: 'Slovinsko',
+        cs: 'Slovenia',
         search: { country: 'Slovenia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Slovenia',
         geopath: { region: 'Europe', country: 'Slovenia' },
     },
     {
         en: 'Latvia',
-        cs: 'Lotyšsko',
+        cs: 'Latvia',
         search: { country: 'Latvia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Latvia',
         geopath: { region: 'Europe', country: 'Latvia' },
     },
     {
         en: 'North Macedonia',
-        cs: 'Severní Makedonie',
+        cs: 'North Macedonia',
         search: { country: 'North Macedonia' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=North+Macedonia',
@@ -1080,7 +1080,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Equatorial Guinea',
-        cs: 'Rovníková Guinea',
+        cs: 'Equatorial Guinea',
         search: { country: 'Equatorial Guinea' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Equatorial+Guinea',
@@ -1088,14 +1088,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Bahrain',
-        cs: 'Bahrajn',
+        cs: 'Bahrain',
         search: { country: 'Bahrain' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bahrain',
         geopath: { region: 'Asia', country: 'Bahrain' },
     },
     {
         en: 'Trinidad and Tobago',
-        cs: 'Trinidad a Tobago',
+        cs: 'Trinidad and Tobago',
         search: { country: 'Trinidad and Tobago' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Trinidad+and+Tobago',
@@ -1103,21 +1103,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Estonia',
-        cs: 'Estonsko',
+        cs: 'Estonia',
         search: { country: 'Estonia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Estonia',
         geopath: { region: 'Europe', country: 'Estonia' },
     },
     {
         en: 'East Timor',
-        cs: 'Východní Timor',
+        cs: 'East Timor',
         search: { country: 'East Timor' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=East+Timor',
         geopath: { region: 'Asia', country: 'East timor' },
     },
     {
         en: 'Mauritius',
-        cs: 'Mauricius',
+        cs: 'Mauritius',
         search: { country: 'Mauritius' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Mauritius',
         geopath: { region: 'Africa', country: 'Mauritius' },
@@ -1131,21 +1131,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Djibouti',
-        cs: 'Džibuti',
+        cs: 'Djibouti',
         search: { country: 'Djibouti' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Djibouti',
         geopath: { region: 'Africa', country: 'Djibouti' },
     },
     {
         en: 'Fiji',
-        cs: 'Fidži',
+        cs: 'Fiji',
         search: { country: 'Fiji' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Fiji',
         geopath: { region: 'Oceania', country: 'Fiji' },
     },
     {
         en: 'Cyprus',
-        cs: 'Kypr',
+        cs: 'Cyprus',
         search: { country: 'Cyprus' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cyprus',
         geopath: { region: 'Asia', country: 'Cyprus[c]' },
@@ -1159,7 +1159,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Bhutan',
-        cs: 'Bhútán',
+        cs: 'Bhutan',
         search: { country: 'Bhutan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bhutan',
         geopath: { region: 'Asia', country: 'Bhutan' },
@@ -1173,7 +1173,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Solomon Islands',
-        cs: 'Solomonovy ostrovy',
+        cs: 'Solomon Islands',
         search: { country: 'Solomon Islands' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Solomon+Islands',
@@ -1181,7 +1181,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Macau (China)',
-        cs: 'Macau (Čína)',
+        cs: 'Macau (China)',
         search: { country: 'Macau (China)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Macau+%28China%29',
@@ -1189,35 +1189,35 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Luxembourg',
-        cs: 'Lucembursko',
+        cs: 'Luxembourg',
         search: { country: 'Luxembourg' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Luxembourg',
         geopath: { region: 'Europe', country: 'Luxembourg' },
     },
     {
         en: 'Montenegro',
-        cs: 'Černá Hora',
+        cs: 'Montenegro',
         search: { country: 'Montenegro' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Montenegro',
         geopath: { region: 'Europe', country: 'Montenegro' },
     },
     {
         en: 'Western Sahara',
-        cs: 'západní Sahara',
+        cs: 'Western Sahara',
         search: { country: 'Western Sahara' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Western+Sahara',
         geopath: { region: 'Africa', country: 'Western sahara' },
     },
     {
         en: 'Suriname',
-        cs: 'Surinam',
+        cs: 'Suriname',
         search: { country: 'Suriname' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Suriname',
         geopath: { region: 'Americas', country: 'Suriname' },
     },
     {
         en: 'Cape Verde',
-        cs: 'Kapverdy',
+        cs: 'Cape Verde',
         search: { country: 'Cape Verde' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cape+Verde',
         geopath: { region: 'Africa', country: 'Cape verde' },
@@ -1238,7 +1238,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Brunei',
-        cs: 'Brunej',
+        cs: 'Brunei',
         search: { country: 'Brunei' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Brunei',
         geopath: { region: 'Asia', country: 'Brunei' },
@@ -1252,14 +1252,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Maldives',
-        cs: 'Maledivy',
+        cs: 'Maldives',
         search: { country: 'Maldives' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Maldives',
         geopath: { region: 'Asia', country: 'Maldives' },
     },
     {
         en: 'Northern Cyprus',
-        cs: 'Severní Kypr',
+        cs: 'Northern Cyprus',
         search: { country: 'Northern Cyprus' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Northern+Cyprus',
@@ -1267,14 +1267,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Iceland',
-        cs: 'Island',
+        cs: 'Iceland',
         search: { country: 'Iceland' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Iceland',
         geopath: { region: 'Europe', country: 'Iceland' },
     },
     {
         en: 'Transnistria',
-        cs: 'Podněstří',
+        cs: 'Transnistria',
         search: { country: 'Transnistria' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Transnistria',
         geopath: { region: 'Europe', country: 'Transnistria' },
@@ -1295,7 +1295,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'French Polynesia (France)',
-        cs: 'Francouzská Polynésie (Francie)',
+        cs: 'French Polynesia (France)',
         search: { country: 'French Polynesia (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=French+Polynesia+%28France%29',
@@ -1303,7 +1303,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'New Caledonia (France)',
-        cs: 'Nová Caledonia (Francie)',
+        cs: 'New Caledonia (France)',
         search: { country: 'New Caledonia (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=New+Caledonia+%28France%29',
@@ -1318,7 +1318,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'São Tomé and Príncipe',
-        cs: 'São Tomé a Principe',
+        cs: 'São Tomé and Príncipe',
         search: { country: 'São Tomé and Príncipe' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=S%C3%A3o+Tom%C3%A9+and+Pr%C3%ADncipe',
@@ -1333,14 +1333,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Lucia',
-        cs: 'Svatý Lucie',
+        cs: 'Saint Lucia',
         search: { country: 'Saint Lucia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Lucia',
         geopath: { region: 'Americas', country: 'Saint lucia' },
     },
     {
         en: 'Guam (United States)',
-        cs: 'Guam (Spojené státy)',
+        cs: 'Guam (United States)',
         search: { country: 'Guam (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Guam+%28United+States%29',
@@ -1348,7 +1348,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Curaçao (Netherlands)',
-        cs: 'Curaçao (Nizozemsko)',
+        cs: 'Curaçao (Netherlands)',
         search: { country: 'Curaçao (Netherlands)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cura%C3%A7ao+%28Netherlands%29',
@@ -1356,7 +1356,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Republic of Artsakh',
-        cs: 'Republika Artsakh',
+        cs: 'Republic of Artsakh',
         search: { country: 'Republic of Artsakh' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Republic+of+Artsakh',
@@ -1378,7 +1378,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Aruba (Netherlands)',
-        cs: 'Aruba (Nizozemsko)',
+        cs: 'Aruba (Netherlands)',
         search: { country: 'Aruba (Netherlands)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Aruba+%28Netherlands%29',
@@ -1386,7 +1386,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Vincent and the Grenadines',
-        cs: 'Svatý Vincent a Grenadiny',
+        cs: 'Saint Vincent and the Grenadines',
         search: { country: 'Saint Vincent and the Grenadines' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Vincent+and+the+Grenadines',
@@ -1394,7 +1394,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Jersey (British Crown Dependency)',
-        cs: 'Jersey (britská korunová závislost)',
+        cs: 'Jersey (British Crown Dependency)',
         search: { country: 'Jersey (British Crown Dependency)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Jersey+%28British+Crown+Dependency%29',
@@ -1402,7 +1402,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Micronesia',
-        cs: 'Mikronésie',
+        cs: 'Micronesia',
         search: { country: 'Micronesia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Micronesia',
         geopath: { region: 'Oceania', country: 'Micronesia' },
@@ -1416,7 +1416,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Antigua and Barbuda',
-        cs: 'Antigua a Barbuda',
+        cs: 'Antigua and Barbuda',
         search: { country: 'Antigua and Barbuda' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Antigua+and+Barbuda',
@@ -1431,7 +1431,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'U.S. Virgin Islands (United States)',
-        cs: 'U.S. Panenské ostrovy (Spojené státy)',
+        cs: 'U.S. Virgin Islands (United States)',
         search: { country: 'U.S. Virgin Islands (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=U.S.+Virgin+Islands+%28United+States%29',
@@ -1439,7 +1439,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Isle of Man (British Crown Dependency)',
-        cs: 'Isle of Man (britská korunová závislost)',
+        cs: 'Isle of Man (British Crown Dependency)',
         search: { country: 'Isle of Man (British Crown Dependency)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Isle+of+Man+%28British+Crown+Dependency%29',
@@ -1454,14 +1454,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Dominica',
-        cs: 'Dominika',
+        cs: 'Dominica',
         search: { country: 'Dominica' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Dominica',
         geopath: { region: 'Americas', country: 'Dominica' },
     },
     {
         en: 'Cayman Islands (United Kingdom)',
-        cs: 'Kajmanské ostrovy (Spojené království)',
+        cs: 'Cayman Islands (United Kingdom)',
         search: { country: 'Cayman Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cayman+Islands+%28United+Kingdom%29',
@@ -1469,7 +1469,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Bermuda (United Kingdom)',
-        cs: 'Bermudy (Spojené království)',
+        cs: 'Bermuda (United Kingdom)',
         search: { country: 'Bermuda (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Bermuda+%28United+Kingdom%29',
@@ -1477,7 +1477,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Guernsey (British Crown Dependency)',
-        cs: 'Guernsey (závislost britské koruny)',
+        cs: 'Guernsey (British Crown Dependency)',
         search: { country: 'Guernsey (British Crown Dependency)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Guernsey+%28British+Crown+Dependency%29',
@@ -1485,7 +1485,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Greenland (Denmark)',
-        cs: 'Grónsko (Dánsko)',
+        cs: 'Greenland (Denmark)',
         search: { country: 'Greenland (Denmark)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Greenland+%28Denmark%29',
@@ -1493,7 +1493,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Marshall Islands',
-        cs: 'Marshallovy ostrovy',
+        cs: 'Marshall Islands',
         search: { country: 'Marshall Islands' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Marshall+Islands',
@@ -1501,7 +1501,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Kitts and Nevis',
-        cs: 'Svatý Kryštof a Nevis',
+        cs: 'Saint Kitts and Nevis',
         search: { country: 'Saint Kitts and Nevis' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Kitts+and+Nevis',
@@ -1509,7 +1509,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Faroe Islands (Denmark)',
-        cs: 'Faerské ostrovy (Dánsko)',
+        cs: 'Faroe Islands (Denmark)',
         search: { country: 'Faroe Islands (Denmark)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Faroe+Islands+%28Denmark%29',
@@ -1517,14 +1517,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'South Ossetia',
-        cs: 'Jižní Osetia',
+        cs: 'South Ossetia',
         search: { country: 'South Ossetia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=South+Ossetia',
         geopath: { region: 'Asia', country: 'South ossetia' },
     },
     {
         en: 'American Samoa (United States)',
-        cs: 'American Samoa (Spojené státy)',
+        cs: 'American Samoa (United States)',
         search: { country: 'American Samoa (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=American+Samoa+%28United+States%29',
@@ -1532,7 +1532,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Northern Mariana Islands (United States)',
-        cs: 'Severní Mariánské ostrovy (Spojené státy)',
+        cs: 'Northern Mariana Islands (United States)',
         search: { country: 'Northern Mariana Islands (United States)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Northern+Mariana+Islands+%28United+States%29',
@@ -1540,7 +1540,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Turks and Caicos Islands (United Kingdom)',
-        cs: 'Turci a Caicos ostrovy (Spojené království)',
+        cs: 'Turks and Caicos Islands (United Kingdom)',
         search: { country: 'Turks and Caicos Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Turks+and+Caicos+Islands+%28United+Kingdom%29',
@@ -1548,7 +1548,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Sint Maarten (Netherlands)',
-        cs: 'Sint Maarten (Nizozemsko)',
+        cs: 'Sint Maarten (Netherlands)',
         search: { country: 'Sint Maarten (Netherlands)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Sint+Maarten+%28Netherlands%29',
@@ -1556,21 +1556,21 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Liechtenstein',
-        cs: 'Lichtenštejnsko',
+        cs: 'Liechtenstein',
         search: { country: 'Liechtenstein' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Liechtenstein',
         geopath: { region: 'Europe', country: 'Liechtenstein' },
     },
     {
         en: 'Monaco',
-        cs: 'Monako',
+        cs: 'Monaco',
         search: { country: 'Monaco' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Monaco',
         geopath: { region: 'Europe', country: 'Monaco' },
     },
     {
         en: 'Gibraltar (United Kingdom)',
-        cs: 'Gibraltar (Spojené království)',
+        cs: 'Gibraltar (United Kingdom)',
         search: { country: 'Gibraltar (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Gibraltar+%28United+Kingdom%29',
@@ -1585,7 +1585,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Martin (France)',
-        cs: 'Svatý Martin (Francie)',
+        cs: 'Saint Martin (France)',
         search: { country: 'Saint Martin (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Martin+%28France%29',
@@ -1593,7 +1593,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Åland (Finland)',
-        cs: 'Åland (Finsko)',
+        cs: 'Åland (Finland)',
         search: { country: 'Åland (Finland)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=%C3%85land+%28Finland%29',
@@ -1601,7 +1601,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'British Virgin Islands (United Kingdom)',
-        cs: 'Britské Panenské ostrovy (Spojené království)',
+        cs: 'British Virgin Islands (United Kingdom)',
         search: { country: 'British Virgin Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=British+Virgin+Islands+%28United+Kingdom%29',
@@ -1609,14 +1609,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Palau',
-        cs: 'Pálivý',
+        cs: 'Palau',
         search: { country: 'Palau' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Palau',
         geopath: { region: 'Oceania', country: 'Palau' },
     },
     {
         en: 'Cook Islands (New Zealand)',
-        cs: 'Cookovy ostrovy (Nový Zéland)',
+        cs: 'Cook Islands (New Zealand)',
         search: { country: 'Cook Islands (New Zealand)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cook+Islands+%28New+Zealand%29',
@@ -1624,7 +1624,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Anguilla (United Kingdom)',
-        cs: 'Anguilla (Spojené království)',
+        cs: 'Anguilla (United Kingdom)',
         search: { country: 'Anguilla (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Anguilla+%28United+Kingdom%29',
@@ -1639,7 +1639,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Wallis and Futuna (France)',
-        cs: 'Wallis a Futuna (Francie)',
+        cs: 'Wallis and Futuna (France)',
         search: { country: 'Wallis and Futuna (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Wallis+and+Futuna+%28France%29',
@@ -1654,7 +1654,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Barthélemy (France)',
-        cs: 'Saint Barthélemy (Francie)',
+        cs: 'Saint Barthélemy (France)',
         search: { country: 'Saint Barthélemy (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Barth%C3%A9lemy+%28France%29',
@@ -1662,7 +1662,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Helena, Ascension and Tristan da Cunha (United Kingdom)',
-        cs: 'Svatá Helena, vzestup a Tristan da Cunha (Spojené království)',
+        cs: 'Saint Helena, Ascension and Tristan da Cunha (United Kingdom)',
         search: { country: 'Saint Helena, Ascension and Tristan da Cunha (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Helena%2C+Ascension+and+Tristan+da+Cunha+%28United+Kingdom%29',
@@ -1670,7 +1670,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Saint Pierre and Miquelon (France)',
-        cs: 'Svatý Pierre a Miquelon (Francie)',
+        cs: 'Saint Pierre and Miquelon (France)',
         search: { country: 'Saint Pierre and Miquelon (France)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Saint+Pierre+and+Miquelon+%28France%29',
@@ -1678,7 +1678,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Montserrat (United Kingdom)',
-        cs: 'Montserrat (Spojené království)',
+        cs: 'Montserrat (United Kingdom)',
         search: { country: 'Montserrat (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Montserrat+%28United+Kingdom%29',
@@ -1686,7 +1686,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Falkland Islands (United Kingdom)',
-        cs: 'Falklandské ostrovy (Spojené království)',
+        cs: 'Falkland Islands (United Kingdom)',
         search: { country: 'Falkland Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Falkland+Islands+%28United+Kingdom%29',
@@ -1694,7 +1694,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Christmas Island (Australia)',
-        cs: 'Vánoční ostrov (Austrálie)',
+        cs: 'Christmas Island (Australia)',
         search: { country: 'Christmas Island (Australia)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Christmas+Island+%28Australia%29',
@@ -1702,7 +1702,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Norfolk Island (Australia)',
-        cs: 'Norfolk Island (Austrálie)',
+        cs: 'Norfolk Island (Australia)',
         search: { country: 'Norfolk Island (Australia)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Norfolk+Island+%28Australia%29',
@@ -1710,7 +1710,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Niue (New Zealand)',
-        cs: 'Niue (Nový Zéland)',
+        cs: 'Niue (New Zealand)',
         search: { country: 'Niue (New Zealand)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Niue+%28New+Zealand%29',
@@ -1718,7 +1718,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Tokelau (New Zealand)',
-        cs: 'Tokelau (Nový Zéland)',
+        cs: 'Tokelau (New Zealand)',
         search: { country: 'Tokelau (New Zealand)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Tokelau+%28New+Zealand%29',
@@ -1726,14 +1726,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Vatican City',
-        cs: 'Vatikán',
+        cs: 'Vatican City',
         search: { country: 'Vatican City' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Vatican+City',
         geopath: { region: 'Europe', country: 'Vatican city' },
     },
     {
         en: 'Cocos (Keeling) Islands (Australia)',
-        cs: 'Cocos (Keeling) Ostrovy (Austrálie)',
+        cs: 'Cocos (Keeling) Islands (Australia)',
         search: { country: 'Cocos (Keeling) Islands (Australia)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Cocos+%28Keeling%29+Islands+%28Australia%29',
@@ -1741,7 +1741,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Pitcairn Islands (United Kingdom)',
-        cs: 'Pitcairn Islands (Spojené království)',
+        cs: 'Pitcairn Islands (United Kingdom)',
         search: { country: 'Pitcairn Islands (United Kingdom)' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Pitcairn+Islands+%28United+Kingdom%29',
@@ -1761,9 +1761,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-město',
             city: 'Brno',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -1774,9 +1774,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres ostrava-město',
             city: 'Ostrava',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -1787,9 +1787,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-město',
             city: 'Plzeň',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -1800,9 +1800,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Liberec',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -1813,9 +1813,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres olomouc',
             city: 'Olomouc',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -1826,9 +1826,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres české budějovice',
             city: 'České budějovice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -1839,9 +1839,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres hradec králové',
             city: 'Hradec králové',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -1852,9 +1852,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres ústí nad labem',
             city: 'Ústí nad labem',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -1865,9 +1865,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres pardubice',
             city: 'Pardubice',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -1875,7 +1875,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         search: { country: 'czechia', q: 'Zlín' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Zl%C3%ADn',
-        geopath: { region: 'Europe', country: 'Czechia', district: 'Okres zlín', city: 'Zlín', county: 'Zlínský kraj' },
+        geopath: { region: 'Europe', country: 'Czechia', county: 'Zlínský kraj', district: 'Okres zlín', city: 'Zlín' },
     },
     {
         cs: 'Havířov',
@@ -1885,9 +1885,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres karviná',
             city: 'Havířov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -1898,16 +1898,16 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kladno',
             city: 'Kladno',
-            county: 'Středočeský kraj',
         },
     },
     {
         cs: 'Most',
         search: { country: 'czechia', q: 'Most' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Most',
-        geopath: { region: 'Europe', country: 'Czechia', district: 'Okres most', city: 'Most', county: 'Ústecký kraj' },
+        geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj', district: 'Okres most', city: 'Most' },
     },
     {
         cs: 'Opava',
@@ -1917,9 +1917,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres opava',
             city: 'Opava',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -1930,9 +1930,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres frýdek-místek',
             city: 'Frýdek-místek',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -1943,9 +1943,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres jihlava',
             city: 'Jihlava',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -1956,9 +1956,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres karviná',
             city: 'Karviná',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -1969,9 +1969,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres teplice',
             city: 'Teplice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -1982,9 +1982,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres chomutov',
             city: 'Chomutov',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -1995,9 +1995,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Karlovy vary',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -2008,9 +2008,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Děčín',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2021,9 +2021,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
             city: 'Jablonec nad nisou',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -2034,9 +2034,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mladá boleslav',
             city: 'Mladá boleslav',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2047,9 +2047,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres prostějov',
             city: 'Prostějov',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -2060,9 +2060,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres přerov',
             city: 'Přerov',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -2073,9 +2073,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Česká lípa',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -2086,9 +2086,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres třebíč',
             city: 'Třebíč',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -2099,9 +2099,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres frýdek-místek',
             city: 'Třinec',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -2112,9 +2112,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres tábor',
             city: 'Tábor',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -2125,9 +2125,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres znojmo',
             city: 'Znojmo',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -2138,9 +2138,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kolín',
             city: 'Kolín',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2151,9 +2151,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres příbram',
             city: 'Příbram',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2163,9 +2163,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Cheb',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -2176,9 +2176,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres písek',
             city: 'Písek',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -2189,9 +2189,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Trutnov',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -2202,9 +2202,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres kroměříž',
             city: 'Kroměříž',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -2215,9 +2215,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres karviná',
             city: 'Orlová',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -2228,9 +2228,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres vsetín',
             city: 'Vsetín',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -2241,9 +2241,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres šumperk',
             city: 'Šumperk',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -2254,9 +2254,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres uherské hradiště',
             city: 'Uherské hradiště',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -2267,9 +2267,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres břeclav',
             city: 'Břeclav',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -2280,9 +2280,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres hodonín',
             city: 'Hodonín',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -2293,9 +2293,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres karviná',
             city: 'Český těšín',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -2306,9 +2306,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Litoměřice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2319,9 +2319,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres most',
             city: 'Litvínov',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2332,9 +2332,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres havlíčkův brod',
             city: 'Havlíčkův brod',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -2345,9 +2345,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres nový jičín',
             city: 'Nový jičín',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -2358,9 +2358,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Chrudim',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -2371,9 +2371,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres bruntál',
             city: 'Krnov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -2384,9 +2384,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Sokolov',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -2397,9 +2397,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres strakonice',
             city: 'Strakonice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -2410,9 +2410,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres vsetín',
             city: 'Valašské meziříčí',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -2423,9 +2423,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Klatovy',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -2436,9 +2436,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres nový jičín',
             city: 'Kopřivnice',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -2449,9 +2449,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Jindřichův hradec',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -2462,9 +2462,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kutná hora',
             city: 'Kutná hora',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2475,9 +2475,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres vyškov',
             city: 'Vyškov',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -2488,9 +2488,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres žďár nad sázavou',
             city: 'Žďár nad sázavou',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -2501,9 +2501,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres karviná',
             city: 'Bohumín',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -2514,9 +2514,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres blansko',
             city: 'Blansko',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -2527,9 +2527,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres beroun',
             city: 'Beroun',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2540,9 +2540,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Náchod',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -2553,9 +2553,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mělník',
             city: 'Mělník',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2566,9 +2566,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-východ',
             city: 'Brandýs nad labem-stará boleslav',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2579,9 +2579,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres chomutov',
             city: 'Jirkov',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2592,9 +2592,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres louny',
             city: 'Žatec',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2605,9 +2605,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mělník',
             city: 'Kralupy nad vltavou',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2618,9 +2618,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres louny',
             city: 'Louny',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2631,9 +2631,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres chomutov',
             city: 'Kadaň',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2644,9 +2644,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres přerov',
             city: 'Hranice',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -2657,9 +2657,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres zlín',
             city: 'Otrokovice',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -2670,9 +2670,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres teplice',
             city: 'Bílina',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2683,9 +2683,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres benešov',
             city: 'Benešov',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2696,9 +2696,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres svitavy',
             city: 'Svitavy',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -2709,9 +2709,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Jičín',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -2722,9 +2722,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Ostrov',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -2735,9 +2735,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres uherské hradiště',
             city: 'Uherský brod',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -2748,9 +2748,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres vsetín',
             city: 'Rožnov pod radhoštěm',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -2761,9 +2761,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-východ',
             city: 'Říčany',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2774,9 +2774,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mělník',
             city: 'Neratovice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2787,9 +2787,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres pelhřimov',
             city: 'Pelhřimov',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -2800,9 +2800,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kladno',
             city: 'Slaný',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2813,9 +2813,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres bruntál',
             city: 'Bruntál',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -2826,9 +2826,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres rakovník',
             city: 'Rakovník',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2839,9 +2839,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Dvůr králové nad labem',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -2852,9 +2852,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Česká třebová',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -2865,9 +2865,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Varnsdorf',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2878,9 +2878,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres nymburk',
             city: 'Nymburk',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2891,9 +2891,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres nymburk',
             city: 'Poděbrady',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -2904,9 +2904,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres semily',
             city: 'Turnov',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -2917,9 +2917,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres chomutov',
             city: 'Klášterec nad ohří',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -2930,9 +2930,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres rokycany',
             city: 'Rokycany',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -2943,9 +2943,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Ústí nad orlicí',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -2956,9 +2956,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres opava',
             city: 'Hlučín',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -2969,9 +2969,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres šumperk',
             city: 'Zábřeh',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -2982,9 +2982,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres olomouc',
             city: 'Šternberk',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -2995,9 +2995,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Aš',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -3008,9 +3008,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Chodov',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -3021,9 +3021,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres tachov',
             city: 'Tachov',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -3034,9 +3034,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres český krumlov',
             city: 'Český krumlov',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -3047,9 +3047,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Roudnice nad labem',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -3060,9 +3060,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Mariánské lázně',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -3073,9 +3073,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres teplice',
             city: 'Krupka',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -3086,9 +3086,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Jaroměř',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -3099,9 +3099,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-východ',
             city: 'Čelákovice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3112,9 +3112,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Vrchlabí',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -3125,9 +3125,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Vysoké mýto',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -3138,9 +3138,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres nymburk',
             city: 'Milovice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3151,9 +3151,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres blansko',
             city: 'Boskovice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -3164,9 +3164,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Nový bor',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -3177,9 +3177,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres kroměříž',
             city: 'Holešov',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -3190,9 +3190,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres benešov',
             city: 'Vlašim',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3203,9 +3203,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres žďár nad sázavou',
             city: 'Velké meziříčí',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -3216,9 +3216,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres olomouc',
             city: 'Uničov',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -3229,9 +3229,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres hodonín',
             city: 'Kyjov',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -3242,9 +3242,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres domažlice',
             city: 'Domažlice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -3255,9 +3255,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Kuřim',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -3268,9 +3268,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres jeseník',
             city: 'Jeseník',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -3281,9 +3281,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres pelhřimov',
             city: 'Humpolec',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -3294,9 +3294,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Sušice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -3307,9 +3307,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Rumburk',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -3320,9 +3320,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
             city: 'Rychnov nad kněžnou',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -3333,9 +3333,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres hodonín',
             city: 'Veselí nad moravou',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -3346,9 +3346,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres nový jičín',
             city: 'Frenštát pod radhoštěm',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -3359,9 +3359,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres prachatice',
             city: 'Prachatice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -3372,9 +3372,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kutná hora',
             city: 'Čáslav',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3385,9 +3385,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres svitavy',
             city: 'Litomyšl',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -3398,9 +3398,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres žďár nad sázavou',
             city: 'Nové město na moravě',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -3411,9 +3411,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Jesenice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3424,9 +3424,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres beroun',
             city: 'Králův dvůr',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3437,9 +3437,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres frýdek-místek',
             city: 'Frýdlant nad ostravicí',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -3450,9 +3450,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres pardubice',
             city: 'Přelouč',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -3463,9 +3463,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Ivančice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -3476,9 +3476,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres nymburk',
             city: 'Lysá nad labem',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3489,9 +3489,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Lanškroun',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -3502,9 +3502,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres svitavy',
             city: 'Moravská třebová',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -3515,9 +3515,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres olomouc',
             city: 'Litovel',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -3528,9 +3528,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Hlinsko',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -3541,9 +3541,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres nový jičín',
             city: 'Studénka',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -3554,9 +3554,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Nové město nad metují',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -3567,9 +3567,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Tišnov',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -3580,9 +3580,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres šumperk',
             city: 'Mohelnice',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -3593,9 +3593,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres havlíčkův brod',
             city: 'Chotěboř',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -3606,9 +3606,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Nová paka',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -3619,9 +3619,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Hostivice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3632,9 +3632,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mladá boleslav',
             city: 'Mnichovo hradiště',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3645,9 +3645,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres příbram',
             city: 'Dobříš',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3658,9 +3658,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres svitavy',
             city: 'Polička',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -3671,9 +3671,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Roztoky',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3684,9 +3684,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Lovosice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -3697,9 +3697,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Štětí',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -3710,9 +3710,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Choceň',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -3723,9 +3723,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres teplice',
             city: 'Duchcov',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -3736,9 +3736,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Hořice',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -3749,9 +3749,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres nový jičín',
             city: 'Příbor',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -3762,9 +3762,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Červený kostelec',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -3775,9 +3775,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres semily',
             city: 'Semily',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -3788,9 +3788,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres písek',
             city: 'Milevsko',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -3801,9 +3801,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Třeboň',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -3814,9 +3814,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres kroměříž',
             city: 'Bystřice pod hostýnem',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -3827,9 +3827,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres bruntál',
             city: 'Rýmařov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -3840,9 +3840,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres žďár nad sázavou',
             city: 'Bystřice nad pernštejnem',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -3853,9 +3853,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres přerov',
             city: 'Lipník nad bečvou',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -3866,9 +3866,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres české budějovice',
             city: 'Týn nad vltavou',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -3879,9 +3879,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres teplice',
             city: 'Dubí',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -3892,9 +3892,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Nejdek',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -3905,9 +3905,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Hrádek nad nisou',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -3918,9 +3918,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Šlapanice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -3931,9 +3931,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres tachov',
             city: 'Stříbro',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -3944,9 +3944,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mladá boleslav',
             city: 'Benátky nad jizerou',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -3957,9 +3957,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres karviná',
             city: 'Rychvald',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -3970,9 +3970,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres břeclav',
             city: 'Mikulov',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -3983,9 +3983,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Frýdlant',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -3996,9 +3996,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres prachatice',
             city: 'Vimperk',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -4009,9 +4009,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres nový jičín',
             city: 'Bílovec',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4022,9 +4022,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Černošice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4035,9 +4035,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres ostrava-město',
             city: 'Vratimov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4048,9 +4048,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres karviná',
             city: 'Petřvald',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4060,9 +4060,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres nový jičín',
             city: 'Odry',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4073,9 +4073,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Broumov',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -4086,9 +4086,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres třebíč',
             city: 'Moravské budějovice',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -4099,9 +4099,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres český krumlov',
             city: 'Kaplice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -4112,9 +4112,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Dačice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -4125,9 +4125,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres tábor',
             city: 'Sezimovo ústí',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -4138,9 +4138,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres zlín',
             city: 'Napajedla',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -4151,9 +4151,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kolín',
             city: 'Český brod',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4164,9 +4164,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-jih',
             city: 'Přeštice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -4177,9 +4177,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres vyškov',
             city: 'Slavkov u brna',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4190,9 +4190,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-východ',
             city: 'Úvaly',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4203,9 +4203,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres strakonice',
             city: 'Vodňany',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -4216,9 +4216,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Nýřany',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -4229,9 +4229,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres beroun',
             city: 'Hořovice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4242,9 +4242,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres tábor',
             city: 'Soběslav',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -4255,9 +4255,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres hradec králové',
             city: 'Nový bydžov',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -4268,9 +4268,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres příbram',
             city: 'Sedlčany',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4281,9 +4281,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres blansko',
             city: 'Letovice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4294,9 +4294,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Kraslice',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -4307,9 +4307,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres kroměříž',
             city: 'Hulín',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -4320,9 +4320,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres opava',
             city: 'Kravaře',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4333,9 +4333,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
             city: 'Dobruška',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -4346,9 +4346,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres pardubice',
             city: 'Holice',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -4359,9 +4359,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres uherské hradiště',
             city: 'Staré město',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -4372,9 +4372,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres strakonice',
             city: 'Blatná',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -4385,9 +4385,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres vyškov',
             city: 'Bučovice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4398,9 +4398,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Letohrad',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -4411,9 +4411,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres havlíčkův brod',
             city: 'Světlá nad sázavou',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -4424,9 +4424,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres ostrava-město',
             city: 'Šenov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4437,9 +4437,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres louny',
             city: 'Podbořany',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -4450,9 +4450,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Mimoň',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -4463,9 +4463,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Rosice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4476,9 +4476,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres tábor',
             city: 'Veselí nad lužnicí',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -4489,9 +4489,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres hodonín',
             city: 'Dubňany',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4502,9 +4502,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres zlín',
             city: 'Slavičín',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -4515,9 +4515,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Chrastava',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -4528,9 +4528,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-východ',
             city: 'Odolena voda',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4541,9 +4541,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
             city: 'Kostelec nad orlicí',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -4554,9 +4554,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-jih',
             city: 'Dobřany',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -4567,9 +4567,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
             city: 'Tanvald',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -4580,9 +4580,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Mníšek pod brdy',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4593,9 +4593,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Hronov',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -4606,9 +4606,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
             city: 'Týniště nad orlicí',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -4619,9 +4619,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Žamberk',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -4632,9 +4632,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
             city: 'Železný brod',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -4645,9 +4645,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres břeclav',
             city: 'Hustopeče',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4658,9 +4658,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres přerov',
             city: 'Kojetín',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -4671,9 +4671,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres vyškov',
             city: 'Rousínov',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4684,9 +4684,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Šluknov',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -4697,9 +4697,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres hradec králové',
             city: 'Třebechovice pod orebem',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -4710,9 +4710,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres benešov',
             city: 'Týnec nad sázavou',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4723,9 +4723,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres znojmo',
             city: 'Moravský krumlov',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4736,9 +4736,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres jihlava',
             city: 'Třešť',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -4749,9 +4749,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Úpice',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -4762,9 +4762,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres opava',
             city: 'Vítkov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4775,9 +4775,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres rakovník',
             city: 'Nové strašecí',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4788,9 +4788,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres hradec králové',
             city: 'Chlumec nad cidlinou',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -4801,9 +4801,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres nový jičín',
             city: 'Fulnek',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4814,9 +4814,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres zlín',
             city: 'Brumov-bylnice',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -4827,9 +4827,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres vsetín',
             city: 'Zubří',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -4840,9 +4840,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres semily',
             city: 'Lomnice nad popelkou',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -4853,9 +4853,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres uherské hradiště',
             city: 'Kunovice',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -4866,9 +4866,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres opava',
             city: 'Hradec nad moravicí',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4879,9 +4879,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres hodonín',
             city: 'Strážnice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4892,9 +4892,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres české budějovice',
             city: 'Hluboká nad vltavou',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -4905,9 +4905,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres frýdek-místek',
             city: 'Jablunkov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -4918,9 +4918,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres semily',
             city: 'Jilemnice',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -4931,9 +4931,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Františkovy lázně',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -4944,9 +4944,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Modřice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -4957,9 +4957,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kladno',
             city: 'Stochov',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -4970,9 +4970,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres tachov',
             city: 'Planá',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -4983,9 +4983,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Horní slavkov',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -4996,9 +4996,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres české budějovice',
             city: 'Trhové sviny',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -5009,9 +5009,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres jihlava',
             city: 'Telč',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -5022,9 +5022,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Pohořelice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -5035,9 +5035,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres žďár nad sázavou',
             city: 'Velká bíteš',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -5048,9 +5048,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Horažďovice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5061,9 +5061,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres jihlava',
             city: 'Polná',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -5074,9 +5074,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Česká kamenice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -5087,9 +5087,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Doksy',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -5100,9 +5100,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mladá boleslav',
             city: 'Kosmonosy',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5113,9 +5113,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-město',
             city: 'Starý plzenec',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5126,9 +5126,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Rudná',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5139,9 +5139,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-jih',
             city: 'Holýšov',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5152,9 +5152,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres domažlice',
             city: 'Kdyně',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5165,9 +5165,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mladá boleslav',
             city: 'Bakov nad jizerou',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5178,9 +5178,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Třemošná',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5191,9 +5191,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Jílové',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -5204,9 +5204,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres zlín',
             city: 'Luhačovice',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -5217,9 +5217,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Skuteč',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -5230,9 +5230,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Česká skalice',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -5243,9 +5243,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres domažlice',
             city: 'Horšovský týn',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5256,9 +5256,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres tábor',
             city: 'Bechyně',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -5269,9 +5269,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres havlíčkův brod',
             city: 'Ledeč nad sázavou',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -5282,9 +5282,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres bruntál',
             city: 'Vrbno pod pradědem',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -5295,9 +5295,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Nýrsko',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5308,9 +5308,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres zlín',
             city: 'Valašské klobouky',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -5321,9 +5321,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Jílové u prahy',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5334,9 +5334,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres most',
             city: 'Meziboří',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -5347,9 +5347,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres kroměříž',
             city: 'Chropyně',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -5360,9 +5360,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres zlín',
             city: 'Vizovice',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -5373,9 +5373,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Habartov',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -5386,9 +5386,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kutná hora',
             city: 'Zruč nad sázavou',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5399,9 +5399,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres třebíč',
             city: 'Náměšť nad oslavou',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -5412,9 +5412,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kladno',
             city: 'Unhošť',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5425,9 +5425,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kolín',
             city: 'Pečky',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5438,9 +5438,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Heřmanův městec',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -5451,9 +5451,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres písek',
             city: 'Protivín',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -5464,9 +5464,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mladá boleslav',
             city: 'Bělá pod bezdězem',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5477,9 +5477,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Kynšperk nad ohří',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -5490,9 +5490,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Oslavany',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -5503,9 +5503,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres louny',
             city: 'Postoloprty',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -5515,9 +5515,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres teplice',
             city: 'Osek',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -5528,9 +5528,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres pelhřimov',
             city: 'Pacov',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -5541,9 +5541,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
             city: 'Vamberk',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -5554,9 +5554,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres hodonín',
             city: 'Vracov',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -5567,9 +5567,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres benešov',
             city: 'Votice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5580,9 +5580,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres blansko',
             city: 'Adamov',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -5593,9 +5593,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres české budějovice',
             city: 'Lišov',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -5606,9 +5606,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Cvikov',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -5619,9 +5619,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres ostrava-město',
             city: 'Klimkovice',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -5631,9 +5631,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres tachov',
             city: 'Bor',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5644,9 +5644,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres benešov',
             city: 'Bystřice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5657,9 +5657,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres hodonín',
             city: 'Bzenec',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -5670,9 +5670,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres uherské hradiště',
             city: 'Bojkovice',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -5683,9 +5683,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Hostinné',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -5695,9 +5695,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres uherské hradiště',
             city: 'Hluk',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -5708,9 +5708,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres ústí nad labem',
             city: 'Chlumec',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -5721,9 +5721,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres příbram',
             city: 'Rožmitál pod třemšínem',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5734,9 +5734,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres tábor',
             city: 'Planá nad lužnicí',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -5747,9 +5747,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mělník',
             city: 'Kostelec nad labem',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5760,9 +5760,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres uherské hradiště',
             city: 'Uherský ostroh',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -5773,9 +5773,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Slatiňany',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -5786,9 +5786,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres beroun',
             city: 'Zdice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5799,9 +5799,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres české budějovice',
             city: 'Borovany',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -5812,9 +5812,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Králíky',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -5825,9 +5825,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Nová role',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -5838,9 +5838,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres třebíč',
             city: 'Jaroměřice nad rokytnou',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -5851,9 +5851,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Horní bříza',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5864,9 +5864,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres frýdek-místek',
             city: 'Brušperk',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -5877,9 +5877,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-jih',
             city: 'Blovice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -5890,9 +5890,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres opava',
             city: 'Dolní benešov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -5903,9 +5903,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres pardubice',
             city: 'Sezemice',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -5916,9 +5916,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Police nad metují',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -5929,9 +5929,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres třebíč',
             city: 'Jemnice',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -5942,9 +5942,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres havlíčkův brod',
             city: 'Přibyslav',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -5955,9 +5955,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Rajhrad',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -5968,9 +5968,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-východ',
             city: 'Mnichovice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -5981,9 +5981,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Kamenický šenov',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -5994,9 +5994,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres frýdek-místek',
             city: 'Paskov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -6007,9 +6007,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres břeclav',
             city: 'Velké bílovice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6020,9 +6020,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Stráž pod ralskem',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -6033,9 +6033,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres český krumlov',
             city: 'Velešín',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -6046,9 +6046,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres český krumlov',
             city: 'Větřní',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -6059,9 +6059,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Židlochovice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6072,9 +6072,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-východ',
             city: 'Kostelec nad černými lesy',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6085,9 +6085,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres jihlava',
             city: 'Brtnice',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -6098,9 +6098,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
             city: 'Smržovka',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -6111,9 +6111,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres benešov',
             city: 'Sázava',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6124,9 +6124,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres blansko',
             city: 'Rájec-jestřebí',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6137,9 +6137,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres pelhřimov',
             city: 'Kamenice nad lipou',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -6150,9 +6150,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Zbýšov',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6163,9 +6163,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Dobřichovice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6176,9 +6176,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres prachatice',
             city: 'Volary',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -6189,9 +6189,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-jih',
             city: 'Nepomuk',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -6202,9 +6202,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres zlín',
             city: 'Fryšták',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -6215,9 +6215,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres jeseník',
             city: 'Zlaté hory',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -6228,9 +6228,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres břeclav',
             city: 'Lanžhot',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6241,16 +6241,16 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Nové město pod smrkem',
-            county: 'Liberecký kraj',
         },
     },
     {
         cs: 'Lom',
         search: { country: 'czechia', q: 'Lom' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Lom',
-        geopath: { region: 'Europe', country: 'Czechia', district: 'Okres most', city: 'Lom', county: 'Ústecký kraj' },
+        geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj', district: 'Okres most', city: 'Lom' },
     },
     {
         cs: 'Lázně Bělohrad',
@@ -6260,9 +6260,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Lázně bělohrad',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -6273,9 +6273,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-východ',
             city: 'Klecany',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6286,9 +6286,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Benešov nad ploučnicí',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -6299,9 +6299,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Jablonné v podještědí',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -6312,9 +6312,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Toužim',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -6325,9 +6325,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kladno',
             city: 'Buštěhrad',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6338,9 +6338,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres blansko',
             city: 'Velké opatovice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6351,9 +6351,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Řevnice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6364,9 +6364,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Jiříkov',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -6377,9 +6377,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres břeclav',
             city: 'Valtice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6389,9 +6389,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-jih',
             city: 'Stod',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -6402,9 +6402,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Suchdol nad lužnicí',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -6415,9 +6415,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres pardubice',
             city: 'Lázně bohdaneč',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -6427,9 +6427,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres české budějovice',
             city: 'Zliv',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -6440,9 +6440,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres olomouc',
             city: 'Štěpánov',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -6453,9 +6453,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres příbram',
             city: 'Březnice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6466,9 +6466,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'České velenice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -6479,9 +6479,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres olomouc',
             city: 'Velká bystřice',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -6492,9 +6492,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Libochovice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -6505,9 +6505,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres bruntál',
             city: 'Město albrechtice',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -6518,9 +6518,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres praha-západ',
             city: 'Libčice nad vltavou',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6531,9 +6531,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres nový jičín',
             city: 'Štramberk',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -6544,9 +6544,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Kralovice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -6557,9 +6557,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mladá boleslav',
             city: 'Dobrovice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6570,9 +6570,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Veverská bítýška',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6583,9 +6583,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Krásná lípa',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -6596,9 +6596,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Újezd u brna',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6609,9 +6609,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kladno',
             city: 'Libušín',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6622,9 +6622,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres ústí nad labem',
             city: 'Trmice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -6635,9 +6635,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres domažlice',
             city: 'Staňkov',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -6648,9 +6648,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres znojmo',
             city: 'Hrušovany nad jevišovkou',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6661,9 +6661,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Nová bystřice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -6674,9 +6674,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres nymburk',
             city: 'Sadská',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6687,9 +6687,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres teplice',
             city: 'Košťany',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -6700,9 +6700,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Chrast',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -6713,9 +6713,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Jablonné nad orlicí',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -6726,9 +6726,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres havlíčkův brod',
             city: 'Ždírec nad doubravou',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -6739,9 +6739,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Žacléř',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -6752,9 +6752,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kutná hora',
             city: 'Uhlířské janovice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6765,9 +6765,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres břeclav',
             city: 'Velké pavlovice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6778,9 +6778,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
             city: 'Desná',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -6791,9 +6791,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
             city: 'Opočno',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -6804,9 +6804,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Loket',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -6817,9 +6817,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kladno',
             city: 'Velvary',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -6830,9 +6830,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Kaznějov',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -6843,9 +6843,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres bruntál',
             city: 'Břidličná',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -6856,9 +6856,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Třemošnice',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -6869,9 +6869,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres šumperk',
             city: 'Hanušovice',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -6882,9 +6882,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres břeclav',
             city: 'Podivín',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6895,9 +6895,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres znojmo',
             city: 'Miroslav',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -6908,9 +6908,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres strakonice',
             city: 'Volyně',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -6921,9 +6921,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Hodkovice nad mohelkou',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -6934,9 +6934,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Rtyně v podkrkonoší',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -6947,9 +6947,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Teplá',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -6960,9 +6960,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres kroměříž',
             city: 'Morkovice-slížany',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -6973,9 +6973,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres šumperk',
             city: 'Loštice',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -6986,9 +6986,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres zlín',
             city: 'Slušovice',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -6999,9 +6999,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Úštěk',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -7012,9 +7012,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres pardubice',
             city: 'Chvaletice',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -7025,9 +7025,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres vyškov',
             city: 'Ivanovice na hané',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -7038,9 +7038,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres hradec králové',
             city: 'Smiřice',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -7051,9 +7051,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres pelhřimov',
             city: 'Žirovnice',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -7064,9 +7064,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres olomouc',
             city: 'Moravský beroun',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -7077,9 +7077,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres opava',
             city: 'Budišov nad budišovkou',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -7090,9 +7090,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Rotava',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -7103,9 +7103,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres prostějov',
             city: 'Kostelec na hané',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -7116,9 +7116,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-jih',
             city: 'Spálené poříčí',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -7129,9 +7129,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres chomutov',
             city: 'Vejprty',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -7142,9 +7142,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres příbram',
             city: 'Sedlec-prčice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -7155,9 +7155,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Terezín',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -7168,9 +7168,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Zákupy',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -7181,9 +7181,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Raspenava',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -7194,9 +7194,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres rokycany',
             city: 'Hrádek',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -7207,9 +7207,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mladá boleslav',
             city: 'Dolní bousov',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -7220,9 +7220,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Český dub',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -7233,9 +7233,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres blansko',
             city: 'Kunštát',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -7246,9 +7246,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres svitavy',
             city: 'Jevíčko',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -7259,9 +7259,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres nymburk',
             city: 'Městec králové',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -7272,9 +7272,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
             city: 'Rychnov u jablonce nad nisou',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -7285,9 +7285,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Plasy',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -7298,9 +7298,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres prostějov',
             city: 'Konice',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -7311,9 +7311,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Hejnice',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -7324,9 +7324,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres jeseník',
             city: 'Javorník',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -7337,9 +7337,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres tábor',
             city: 'Mladá vožice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -7350,9 +7350,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres kroměříž',
             city: 'Koryčany',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -7363,9 +7363,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres havlíčkův brod',
             city: 'Golčův jeníkov',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -7376,9 +7376,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres vsetín',
             city: 'Kelč',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -7389,9 +7389,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
             city: 'Velké hamry',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -7402,9 +7402,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres benešov',
             city: 'Neveklov',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -7415,9 +7415,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Březová',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -7428,9 +7428,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres český krumlov',
             city: 'Vyšší brod',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -7441,9 +7441,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Luže',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -7454,9 +7454,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Nové sedlo',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -7467,9 +7467,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres semily',
             city: 'Rokytnice nad jizerou',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -7480,9 +7480,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres české budějovice',
             city: 'Rudolfov',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -7493,9 +7493,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres prachatice',
             city: 'Netolice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -7506,9 +7506,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres pelhřimov',
             city: 'Počátky',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -7519,9 +7519,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres ústí nad labem',
             city: 'Chabařovice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -7532,9 +7532,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres české budějovice',
             city: 'Nové hrady',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -7545,9 +7545,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres rokycany',
             city: 'Zbiroh',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -7558,9 +7558,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres hodonín',
             city: 'Ždánice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -7571,9 +7571,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres břeclav',
             city: 'Klobouky u brna',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -7584,9 +7584,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Bohušovice nad ohří',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -7597,9 +7597,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres tábor',
             city: 'Chýnov',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -7610,9 +7610,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres brno-venkov',
             city: 'Dolní kounice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -7623,9 +7623,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres přerov',
             city: 'Tovačov',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -7636,9 +7636,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Zlínský kraj',
             district: 'Okres vsetín',
             city: 'Karolinka',
-            county: 'Zlínský kraj',
         },
     },
     {
@@ -7649,9 +7649,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Jáchymov',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -7662,9 +7662,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Sobotka',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -7675,9 +7675,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres pardubice',
             city: 'Dašice',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -7688,9 +7688,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Meziměstí',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -7701,9 +7701,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres louny',
             city: 'Kryry',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -7714,9 +7714,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres hradec králové',
             city: 'Nechanice',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -7727,9 +7727,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Slavonice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -7740,9 +7740,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Janovice nad úhlavou',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -7753,9 +7753,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres prostějov',
             city: 'Plumlov',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -7766,9 +7766,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres rokycany',
             city: 'Mirošov',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -7779,9 +7779,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Nová včelnice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -7792,9 +7792,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mělník',
             city: 'Veltrusy',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -7805,9 +7805,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Žlutice',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -7818,9 +7818,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
             city: 'Solnice',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -7831,9 +7831,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres most',
             city: 'Horní jiřetín',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -7844,9 +7844,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres bruntál',
             city: 'Horní benešov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -7857,9 +7857,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Kardašova řečice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -7870,9 +7870,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres beroun',
             city: 'Žebrák',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -7883,9 +7883,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Město touškov',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -7896,9 +7896,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Hranice',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -7909,9 +7909,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Budyně nad ohří',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -7921,9 +7921,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Luby',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -7934,9 +7934,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Ralsko',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -7947,9 +7947,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Kopidlno',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -7960,9 +7960,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Mikulášovice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -7973,9 +7973,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
             city: 'Borohrádek',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -7986,9 +7986,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kolín',
             city: 'Týnec nad labem',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -7999,9 +7999,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres příbram',
             city: 'Nový knín',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8012,9 +8012,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Proseč',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -8025,9 +8025,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres benešov',
             city: 'Pyšely',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8038,9 +8038,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres pardubice',
             city: 'Horní jelení',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -8051,9 +8051,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Hrochův týnec',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -8064,9 +8064,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres český krumlov',
             city: 'Horní planá',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -8077,9 +8077,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Hroznětín',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -8090,9 +8090,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Svoboda nad úpou',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -8103,9 +8103,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres tábor',
             city: 'Jistebnice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -8115,9 +8115,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres teplice',
             city: 'Hrob',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -8128,9 +8128,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kolín',
             city: 'Zásmuky',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8141,9 +8141,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Skalná',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -8154,9 +8154,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
             city: 'Rokytnice v orlických horách',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -8167,9 +8167,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres šumperk',
             city: 'Štíty',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -8180,9 +8180,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Velký šenov',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -8193,9 +8193,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres prostějov',
             city: 'Němčice nad hanou',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -8206,9 +8206,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Plesná',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -8219,9 +8219,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Třebenice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -8232,9 +8232,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Libáň',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -8245,9 +8245,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kladno',
             city: 'Smečno',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8258,9 +8258,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Bochov',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -8271,9 +8271,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres kolín',
             city: 'Kouřim',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8284,9 +8284,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
             city: 'Lučany nad nisou',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -8297,9 +8297,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Žandov',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -8310,9 +8310,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres pelhřimov',
             city: 'Horní cerekev',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -8323,9 +8323,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres louny',
             city: 'Vroutek',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -8336,9 +8336,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres beroun',
             city: 'Hostomice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8349,9 +8349,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres rokycany',
             city: 'Radnice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8362,9 +8362,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Lomnice nad lužnicí',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -8375,9 +8375,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres třebíč',
             city: 'Hrotovice',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -8388,9 +8388,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres pelhřimov',
             city: 'Černovice',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -8401,9 +8401,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres domažlice',
             city: 'Bělá nad radbuzou',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8414,9 +8414,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Seč',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -8427,9 +8427,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres litoměřice',
             city: 'Hoštka',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -8440,9 +8440,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Dolní poustevna',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -8453,9 +8453,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres prachatice',
             city: 'Vlachovo březí',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -8466,9 +8466,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres česká lípa',
             city: 'Dubá',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -8479,9 +8479,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Ronov nad doubravou',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -8492,9 +8492,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres rakovník',
             city: 'Jesenice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8505,9 +8505,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres šumperk',
             city: 'Staré město',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -8518,9 +8518,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres chrudim',
             city: 'Nasavrky',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -8531,9 +8531,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres blansko',
             city: 'Olešnice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -8544,9 +8544,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Švihov',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8557,9 +8557,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Plánice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8570,9 +8570,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Oloví',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -8583,9 +8583,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres nymburk',
             city: 'Rožďalovice',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8596,9 +8596,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres strakonice',
             city: 'Bavorov',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -8609,9 +8609,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres tachov',
             city: 'Kladruby',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8622,9 +8622,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Železná ruda',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8635,9 +8635,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres svitavy',
             city: 'Březová nad svitavou',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -8648,9 +8648,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Všeruby',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8661,9 +8661,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres písek',
             city: 'Mirovice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -8674,9 +8674,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Teplice nad metují',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -8687,9 +8687,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres semily',
             city: 'Jablonec nad jizerou',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -8700,9 +8700,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres tachov',
             city: 'Přimda',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8713,9 +8713,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres domažlice',
             city: 'Poběžovice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8726,9 +8726,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres rokycany',
             city: 'Mýto',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8739,9 +8739,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres svitavy',
             city: 'Bystré',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -8752,9 +8752,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Kožlany',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8765,9 +8765,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Strmilov',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -8778,9 +8778,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mělník',
             city: 'Mšeno',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8791,9 +8791,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres prachatice',
             city: 'Husinec',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -8804,9 +8804,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres cheb',
             city: 'Lázně kynžvart',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -8817,9 +8817,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Strážov',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8830,9 +8830,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres benešov',
             city: 'Trhový štěpánov',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -8843,9 +8843,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Kašperské hory',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8856,9 +8856,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres žďár nad sázavou',
             city: 'Svratka',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -8869,9 +8869,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Chřibská',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -8882,9 +8882,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
             city: 'Harrachov',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -8895,9 +8895,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres havlíčkův brod',
             city: 'Habry',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -8908,9 +8908,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Železnice',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -8921,9 +8921,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-jih',
             city: 'Kasejovice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -8934,9 +8934,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Pardubický kraj',
             district: 'Okres ústí nad orlicí',
             city: 'Brandýs nad orlicí',
-            county: 'Pardubický kraj',
         },
     },
     {
@@ -8947,9 +8947,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres semily',
             city: 'Rovensko pod troskami',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -8960,9 +8960,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres semily',
             city: 'Vysoké nad jizerou',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -8973,9 +8973,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres jeseník',
             city: 'Vidnava',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -8986,9 +8986,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres strakonice',
             city: 'Sedlice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -8999,9 +8999,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres písek',
             city: 'Mirotice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -9012,9 +9012,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Pilníkov',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -9025,9 +9025,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres domažlice',
             city: 'Hostouň',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9038,9 +9038,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres jeseník',
             city: 'Žulová',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -9051,9 +9051,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres tachov',
             city: 'Černošín',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9064,9 +9064,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres přerov',
             city: 'Potštát',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -9077,9 +9077,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Liberecký kraj',
             district: 'Okres liberec',
             city: 'Osečná',
-            county: 'Liberecký kraj',
         },
     },
     {
@@ -9090,9 +9090,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres děčín',
             city: 'Verneřice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -9103,9 +9103,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Nalžovské hory',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9116,9 +9116,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Olomoucký kraj',
             district: 'Okres šumperk',
             city: 'Úsov',
-            county: 'Olomoucký kraj',
         },
     },
     {
@@ -9129,9 +9129,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihomoravský kraj',
             district: 'Okres znojmo',
             city: 'Jevišovice',
-            county: 'Jihomoravský kraj',
         },
     },
     {
@@ -9142,9 +9142,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Manětín',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9155,9 +9155,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Měčín',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9168,9 +9168,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres příbram',
             city: 'Krásná hora nad vltavou',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -9181,9 +9181,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Špindlerův mlýn',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -9194,9 +9194,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Středočeský kraj',
             district: 'Okres mělník',
             city: 'Liběchov',
-            county: 'Středočeský kraj',
         },
     },
     {
@@ -9207,9 +9207,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres pelhřimov',
             city: 'Červená řečice',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -9220,9 +9220,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres louny',
             city: 'Blšany',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -9233,9 +9233,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres strakonice',
             city: 'Bělčice',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -9246,9 +9246,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Bečov nad teplou',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -9259,9 +9259,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Hartmanice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9272,9 +9272,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres tachov',
             city: 'Bezdružice',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9285,9 +9285,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Miletín',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -9298,9 +9298,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Abertamy',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -9311,9 +9311,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Stráž nad nežárkou',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -9324,9 +9324,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres jičín',
             city: 'Vysoké veselí',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -9337,9 +9337,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
             city: 'Deštná',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -9350,9 +9350,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Krásno',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -9363,9 +9363,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Janské lázně',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -9376,9 +9376,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres náchod',
             city: 'Stárkov',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -9389,9 +9389,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Kraj vysočina',
             district: 'Okres havlíčkův brod',
             city: 'Lipnice nad sázavou',
-            county: 'Kraj vysočina',
         },
     },
     {
@@ -9402,9 +9402,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Královéhradecký kraj',
             district: 'Okres trutnov',
             city: 'Pec pod sněžkou',
-            county: 'Královéhradecký kraj',
         },
     },
     {
@@ -9415,9 +9415,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Chyše',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -9428,9 +9428,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres chomutov',
             city: 'Mašťov',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -9441,9 +9441,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres teplice',
             city: 'Ledvice',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -9454,9 +9454,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Rabí',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9467,9 +9467,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres plzeň-sever',
             city: 'Úterý',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9480,9 +9480,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres most',
             city: 'Hora svaté kateřiny',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -9493,9 +9493,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres chomutov',
             city: 'Výsluní',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -9506,9 +9506,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Horní blatná',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -9519,9 +9519,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Krásné údolí',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -9532,9 +9532,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Jihočeský kraj',
             district: 'Okres český krumlov',
             city: 'Rožmberk nad vltavou',
-            county: 'Jihočeský kraj',
         },
     },
     {
@@ -9545,9 +9545,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres bruntál',
             city: 'Andělská hora',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -9558,9 +9558,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Moravskoslezský kraj',
             district: 'Okres bruntál',
             city: 'Janov',
-            county: 'Moravskoslezský kraj',
         },
     },
     {
@@ -9571,9 +9571,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Plzeňský kraj',
             district: 'Okres klatovy',
             city: 'Rejštejn',
-            county: 'Plzeňský kraj',
         },
     },
     {
@@ -9584,9 +9584,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres karlovy vary',
             city: 'Boží dar',
-            county: 'Karlovarský kraj',
         },
     },
     {
@@ -9597,9 +9597,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Ústecký kraj',
             district: 'Okres chomutov',
             city: 'Loučná pod klínovcem',
-            county: 'Ústecký kraj',
         },
     },
     {
@@ -9610,9 +9610,9 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         geopath: {
             region: 'Europe',
             country: 'Czechia',
+            county: 'Karlovarský kraj',
             district: 'Okres sokolov',
             city: 'Přebuz',
-            county: 'Karlovarský kraj',
         },
     },
     {
