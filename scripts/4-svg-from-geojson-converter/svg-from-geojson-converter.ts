@@ -20,7 +20,7 @@ async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerforme
     const geojsonsPath = join(__dirname, `../../maps/4-svgs/`);
 
     if (isCleanupPerformed) {
-        console.info(`🧹 Making cleenup`);
+        console.info(`🧹 Making cleenup for 🖼️ Converting geojsons to svgs`);
         await del(geojsonsPath);
     }
 
@@ -57,7 +57,8 @@ async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerforme
         }
     }
 
-    console.info(`[ Done ]`);
+    console.info(`[ Done 🖼️ Converting geojsons to svgs ]`);
+    process.exit(0);
 }
 
 /**

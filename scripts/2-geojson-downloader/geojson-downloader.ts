@@ -21,7 +21,7 @@ async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed
     const geojsonsPath = join(__dirname, `../../maps/2-geojsons/world`);
 
     if (isCleanupPerformed) {
-        console.info(`🧹 Making cleenup`);
+        console.info(`🧹 Making cleenup for 🗺️ Downloading geojsons`);
         await del(geojsonsPath);
     }
 
@@ -94,7 +94,8 @@ async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed
         }
     }
 
-    console.info(`[ Done ]`);
+    console.info(`[ Done 🗺️ Downloading geojsons ]`);
+    process.exit(0);
 }
 
 /**

@@ -14,11 +14,11 @@ runGeojsonAggregator({ isCleanupPerformed: true });
 
 async function runGeojsonAggregator({ isCleanupPerformed }: { isCleanupPerformed: boolean }) {
     if (isCleanupPerformed) {
-        console.info(`🧹 Making cleenup`);
+        console.info(`🧹 Making cleenup for 🧩 Aggregating geojsons`);
         await del(join(__dirname, `../../maps/3-geojsons-aggregated`));
     }
 
-    console.info(`🏭🧩 Aggregating geojsons`);
+    console.info(`🧩 Aggregating geojsons`);
 
     for (const geojsonPath of await glob(join(__dirname, '../../maps/2-geojsons/**/*.geojson'))) {
         try {
@@ -47,7 +47,8 @@ async function runGeojsonAggregator({ isCleanupPerformed }: { isCleanupPerformed
         }
     }
 
-    console.info(`[ Done ]`);
+    console.info(`[ Done 🧩 Aggregating geojsons ]`);
+    process.exit(0);
 }
 
 /**

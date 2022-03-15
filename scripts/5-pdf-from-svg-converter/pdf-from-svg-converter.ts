@@ -17,7 +17,7 @@ async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: t
     const geojsonsPath = join(__dirname, `../../maps/5-pdfs/`);
 
     if (isCleanupPerformed) {
-        console.info(`🧹 Making cleenup`);
+        console.info(`🧹 Making cleenup for 🖨️ Converting svgs to pdfs`);
         await del(geojsonsPath);
     }
 
@@ -83,7 +83,8 @@ async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: t
         }
     }
 
-    console.info(`[ Done ]`);
+    console.info(`[ Done 🖨️ Converting svgs to pdfs ]`);
+    process.exit(0);
 }
 
 /**

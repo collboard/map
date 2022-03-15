@@ -3,13 +3,15 @@
 import { readFile, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import papaparse from 'papaparse';
-import { join } from 'path';
+import { basename, join } from 'path';
 import spaceTrim from 'spacetrim';
+import { forEver } from 'waitasecond';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { isNumeric } from '../../src/utils/isNumeric';
 import { DebugAutomaticTranslator } from '../utils/automatic-translators/DebugAutomaticTranslator';
 import { FakeAutomaticTranslator } from '../utils/automatic-translators/FakeAutomaticTranslator';
 import { GoogleAutomaticTranslator } from '../utils/automatic-translators/GoogleAutomaticTranslator';
+import { IAutomaticTranslator } from '../utils/automatic-translators/IAutomaticTranslator';
 import { MultiAutomaticTranslator } from '../utils/automatic-translators/MultiAutomaticTranslator';
 import { capitalizeFirstLetter } from '../utils/capitalizeFirstLetter';
 import { prettify } from '../utils/prettify';
@@ -24,7 +26,7 @@ const GENERATOR_WARNING = spaceTrim(`
 `);
 
 /**/
-runFeaturesGenerator({ isDebug: false });
+runFeaturesGenerator({ isDebug: true });
 /**/
 
 async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
@@ -36,13 +38,15 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
                 return new FakeAutomaticTranslator();
             } else {
                 const translator = new GoogleAutomaticTranslator({ ...options, headless: true });
-                return new DebugAutomaticTranslator({
+                const geoTranslator: IAutomaticTranslator = {
                     async translate(message: string) {
                         let translated = await translator.translate(message);
                         translated = translated.replace(/\.$/, '');
                         return translated;
                     },
-                });
+                };
+                return geoTranslator;
+                return new DebugAutomaticTranslator(geoTranslator);
             }
         },
     });
@@ -72,6 +76,7 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
     const features: any[] = [];
 
     for (const csvPath of await glob(join(__dirname, '../../maps/0-features-lists/**/*.csv'))) {
+        console.info(`🗄️ Processing file ${basename(csvPath)}`);
         const csvCountry = /0-features-lists\/(?<country>.*?)\//.exec(csvPath)?.groups?.country;
 
         const csvString = await readFile(csvPath, 'utf8');
@@ -133,16 +138,17 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
                 await save();
             }
         }
-
-        for (const checkedFeature of features) {
-            if (!isGeopathValid(checkedFeature.geopath)) {
-                console.warn(`🚨 Gap in geopath of ${checkedFeature.cs}`);
-            }
-        }
-
-        await save();
-        console.info(`[ Done ]`);
     }
+
+    for (const checkedFeature of features) {
+        if (!isGeopathValid(checkedFeature.geopath)) {
+            console.warn(`🚨 Gap in geopath of ${checkedFeature.cs}`);
+        }
+    }
+
+    await save();
+    console.info(`[ Done 🎹 Genetaing features ]`);
+    process.exit(0);
 }
 
 /**
