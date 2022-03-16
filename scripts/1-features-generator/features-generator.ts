@@ -25,7 +25,7 @@ const GENERATOR_WARNING = spaceTrim(`
 `);
 
 /**/
-runFeaturesGenerator({ isDebug: true });
+runFeaturesGenerator({ isDebug: false });
 /**/
 
 async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {

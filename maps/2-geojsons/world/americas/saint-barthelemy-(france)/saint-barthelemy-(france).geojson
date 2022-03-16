@@ -1,9 +1,7 @@
 {
     "type": "FeatureCollection",
     "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
-    "features": [
-        null
-    ],
+    "features": [],
     "collboard": {
         "feature": {
             "en": "Saint Barthélemy (France)",
