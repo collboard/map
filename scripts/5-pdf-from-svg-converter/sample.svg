@@ -1,5 +1,23 @@
 <svg width="297mm" height="210mm" xmlns="http://www.w3.org/2000/svg">
 
+  <title>Africa</title>
+
+  <desc>
+    Map of Arfica continent created in cooperation of Collboard.com and capital city of Prague.
+  </desc>
+
+  <metadata>
+    <!--
+      TODO: How to put metadata into SVG propperly?
+      TODO: What is the best structure for metadata? (maybe just 1:1 with some json structure)
+      TODO: Probbably use collboard:module xml scope
+      TODO: Probbably define xmlns
+    -->
+    <collboard>
+      <module name="@collboard/map-svg-geojson" />
+    </collboard>
+  </metadata>
+
 
   <defs>
 
@@ -36,5 +54,6 @@
 
   </style>
   -->
+
 
 </svg>
