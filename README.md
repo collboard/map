@@ -25,6 +25,7 @@ Maps for the geography class for the [Collboard.com](https://collboard.com/) in 
 
 ## ✨ Partners
 
+
 <a href="https://www.h-edu.org/">
 <img src="https://www.h-edu.org/media/favicon.png" alt="H-edu logo" width="50"  />
 </a>
@@ -32,6 +33,7 @@ Maps for the geography class for the [Collboard.com](https://collboard.com/) in 
 <a href="https://collboard.com/">
 <img src="https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.12.1/logo-small.png" alt="Collboard logo" width="50"  />
 </a>
+
 
 [Become a partner](https://www.pavolhejny.com/contact/)
 
