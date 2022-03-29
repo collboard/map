@@ -1,0 +1,59 @@
+<svg width="297mm" height="210mm" xmlns="http://www.w3.org/2000/svg">
+
+  <title>Africa</title>
+
+  <desc>
+    Map of Arfica continent created in cooperation of Collboard.com and capital city of Prague.
+  </desc>
+
+  <metadata>
+    <!--
+      TODO: How to put metadata into SVG propperly?
+      TODO: What is the best structure for metadata? (maybe just 1:1 with some json structure)
+      TODO: Probbably use collboard:module xml scope
+      TODO: Probbably define xmlns
+    -->
+    <collboard>
+      <module name="@collboard/map-svg-geojson" />
+    </collboard>
+  </metadata>
+
+
+  <defs>
+
+    <pattern id="Board" x="0" y="0" width="1cm" height="1cm" patternUnits="userSpaceOnUse">
+      <!--<rect x="0" y="0" width="100%" height="100%" fill="skyblue" />-->
+      <circle cx="0.5cm" cy="0.5cm" r="0.05cm" fill="black" fill-opacity="0.07" />
+    </pattern>
+
+
+  </defs>
+
+
+  <!-- Note: This is a sample template of country on A4 paper-->
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#Board)" />
+
+
+  <image x="0" y="0" height="100%" href="../../../../../../../4-svgs/world/europe/czechia/jihocesky-kraj/okres-prachatice/vlachovo-brezi/vlachovo-brezi.geojson.lod-5.svg" />
+
+
+  <a href="#test">
+    <image x="5cm" y="15cm" width="4cm" height="4cm" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https://collboard.com" />
+  </a>
+
+
+  <!--!!! Detete
+  <style>
+
+    .board{
+       fill: #fff;
+      background-size: 30px 30px;
+      background-image: url('https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.23.0/patterns/dots.svg');
+      opacity: 0.07;
+    }
+
+  </style>
+  -->
+
+
+</svg>
