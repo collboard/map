@@ -120,7 +120,7 @@ export class GeojsonArt extends Abstract2dArt {
         */
     }
 
-    async render(selected: boolean, systems: ISystems) {
+    public async render(selected: boolean, systems: ISystems) {
         // [*] TODO: Do this optimalizations in AsyncContentComponent
         // [*] if (!(this.__svgGeojson instanceof Promise)) {
         // [*]     return <SvgGeojsonComponent {...{ selected, ...(this.__svgGeojson as ISvgGeojson) }} />;
