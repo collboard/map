@@ -1,4 +1,5 @@
 import { declareModule } from '@collboard/modules-sdk';
+import { Registration } from 'destroyable';
 import { contributors, license, repository, version } from '../../package.json';
 import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 import { GeojsonArt } from './map-geojson-art';
@@ -12,6 +13,9 @@ declareModule({
         license,
         repository,
         version,
+        supports: {
+            fileImport: 'application/geo+json',
+        },
     },
     async setup(systems) {
         const { importSystem, virtualArtVersioningSystem, apiClient, appState, materialArtVersioningSystem } =
@@ -26,8 +30,9 @@ declareModule({
         // Note: For lot of systems we are using this makeWhatever helpers. I am trying one system - ImportSystem without make helper to modules just to use this systems methods directly.
         return importSystem.registerFileSupport({
             priority: 0,
-            mimeType: 'application/geo+json',
-            async processFile({ file, boardPosition }) {
+            //mimeType: 'application/geo+json',
+            async processFile({ file, boardPosition, next }) {
+                return next();
                 // TODO: Import GeoJson and center the map
                 const geojson = JSON.parse(await file.text()) as IGeojsonFeatureCollection;
 
@@ -38,6 +43,7 @@ declareModule({
 
                 materialArtVersioningSystem.createPrimaryOperation().newArts(geojsonArt).persist();
 
+                return Registration.void();
                 /*
 
 

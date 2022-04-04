@@ -13,7 +13,7 @@ const pickedFeatures = FEATURES.filter((feature) => feature.cs === 'Praha');
 for (const feature of pickedFeatures) {
     declareModule({
         manifest: {
-            name: `@collboard/map-feature-${feature.en.toLowerCase()}`,
+            name: `@collboard/map-feature-${(feature as any).en.toLowerCase()}`,
             version,
             description,
             contributors,

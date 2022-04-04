@@ -1,11 +1,20 @@
+/*/
 import './modules/map';
 // import './modules/map-switcher';
 import './modules/map-features';
 import './modules/map-geojson-import-support';
 import './modules/map-picking-tool';
 import './modules/map-shortcuts';
+/**/
 
-// import './modules/map-toolbar-persisting';
+/**/
+import './modules/tray-module/map-tray-art.module';
+import './modules/tray-module/map-tray-tool.module';
+/**/
+
+/*/
+import './modules/map-toolbar-persisting';
+/**/
 
 /**
  * TODO: !!! Make multimodule packs
