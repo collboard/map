@@ -1,6 +1,7 @@
 import { ITrayItemList, ITrayToolbarItems, React, Translate } from '@collboard/modules-sdk';
-import { itemsArrows, toolbarArrows } from './items/arrows';
-import { itemsEvenOdd, toolbarEvenOdd } from './items/evenOdd';
+import { itemsArrows, toolbarArrows } from './items/--arrows';
+import { itemsEvenOdd, toolbarEvenOdd } from './items/--evenOdd';
+import { itemsFeatures, toolbarFeatures } from './items/features';
 
 export class MontessoriItemsGenerator {
     static privateItems: ITrayItemList;
@@ -26,6 +27,7 @@ export class MontessoriItemsGenerator {
         return {
             ...itemsEvenOdd(),
             ...itemsArrows(),
+            ...itemsFeatures(),
         };
     }
 
@@ -44,10 +46,17 @@ export class MontessoriItemsGenerator {
                 scale: 0.6,
                 items: toolbarArrows(),
             },
+            {
+                name: <Translate name={`Montessori / arrows`}>Šipky k perlovému materiálu</Translate>,
+                icon: 'arrows.svg',
+                scale: 0.6,
+                items: toolbarFeatures(),
+            },
         ];
     }
 }
 
 /**
  * TODO: !!! Translations in modules
+ * TODO: !!! Fulltext replace of Montessori/montessori
  */

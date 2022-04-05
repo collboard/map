@@ -1,6 +1,6 @@
 import { ITrayItemList, ITrayToolbarGroup, Translate } from '@collboard/modules-sdk';
 import React from 'react';
-import { montessoriColors } from '../MontessoriDefaultColors';
+import { montessoriColors } from '../--MontessoriDefaultColors';
 
 
 

@@ -1,6 +1,6 @@
-import { AbstractTrayArt, declareModule, ITrayDefinition, makeArtModule, makeTrayModule } from '@collboard/modules-sdk';
+import { declareModule, ImageArt, ITrayDefinition, makeTrayModule } from '@collboard/modules-sdk';
+// import pragueGeojson from '../../../maps/2-geojsons/world/europe/czechia/praha/hlavni-mesto-praha/praha.geojson';
 import { contributors, license, repository, version } from '../../../package.json';
-import { TrayMapArt } from './map-tray-art.module';
 import { MontessoriItemsGenerator } from './MontessoriItems';
 
 const trayDefinition: ITrayDefinition = {
@@ -29,6 +29,10 @@ declareModule(
             boardCursor: 'default',
         },
         trayDefinition,
-        newArtMaker: (...args) => new TrayMapArt(...args),
+        newArtMaker(...args){
+
+          return new ImageArt('https://collboard.com/api/files/collboard/a3221f41-e64b-4ea5-84b1-bf431a72d88f.svg','Prague!!!');
+          //return new GeojsonArt(pragueGeojson);
+          //new TrayMapArt(...args)},
     }),
 );
