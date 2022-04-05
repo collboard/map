@@ -34,6 +34,12 @@ export class MontessoriItemsGenerator {
     private static createToolbar(): ITrayToolbarItems {
         return [
             {
+                name: <Translate name={`Montessori / arrows`}>Šipky k perlovému materiálu</Translate>,
+                icon: 'https://collboard.com/api/files/collboard/a3221f41-e64b-4ea5-84b1-bf431a72d88f.svg',
+                scale: 0.6,
+                items: toolbarFeatures(),
+            },
+            {
                 name: <Translate name={`Montessori / even odd`}>Sudá a lichá</Translate>,
                 icon: 'evenOdd.svg',
                 scale: 0.9,
@@ -45,12 +51,6 @@ export class MontessoriItemsGenerator {
                 icon: 'arrows.svg',
                 scale: 0.6,
                 items: toolbarArrows(),
-            },
-            {
-                name: <Translate name={`Montessori / arrows`}>Šipky k perlovému materiálu</Translate>,
-                icon: 'arrows.svg',
-                scale: 0.6,
-                items: toolbarFeatures(),
             },
         ];
     }
