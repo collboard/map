@@ -8,8 +8,8 @@ import './modules/map-shortcuts';
 /**/
 
 /**/
-import './modules/tray-module/map-tray-art.module';
-import './modules/tray-module/map-tray-tool.module';
+
+import './modules/map-tray-tool/map-tray-tool.module';
 /**/
 
 /*/
