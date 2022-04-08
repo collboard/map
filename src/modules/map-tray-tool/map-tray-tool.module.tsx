@@ -1,52 +1,31 @@
-import {
-    declareModule,
-    ImageArt,
-    ITrayItemList,
-    ITrayToolbarGroup,
-    makeTrayModule,
-    React,
-} from '@collboard/modules-sdk';
+import { declareModule, ImageArt, makeTrayModule, React } from '@collboard/modules-sdk';
 import { Vector } from 'xyzt';
 import { contributors, license, repository, version } from '../../../package.json';
+import { SVG_LIST } from './svgList';
 
-function generateFeatures() {
-    const result: ITrayItemList = {};
+declareModule(() => {
+    const items = Object.fromEntries(
+        SVG_LIST.map((src) => [
+            `map-${src}`,
+            {
+                src,
+                content: (
+                    <g>
+                        <image href={src} height="200" width="200" />
+                        {/* TODO: [lib] Som way how to add text nativelly */}
+                        <text x="0" y="0" style={{ font: 'bold 13px comenia-sans-web, sans-serif' }}>
+                            Prague !!!
+                        </text>
+                    </g>
+                ),
+                defaultColor: 'rgba(78, 78, 78, 0.5)' /* <- [lib] Weird, change API */,
 
-    for (let i = 1; i <= 9; i++) {
-        result['features' + i] = {
-            content: (
-                <g>
-                    <image
-                        href="https://collboard.com/api/files/collboard/a3221f41-e64b-4ea5-84b1-bf431a72d88f.svg"
-                        height="200"
-                        width="200"
-                    />
-                </g>
-            ),
-            defaultColor: 'red',
-        };
-    }
+                // TODO: Allow custom params NOT hardcoded color
+            },
+        ]),
+    );
 
-    return result;
-}
-
-export function itemsFeatures(): ITrayItemList {
-    return {
-        ...generateFeatures(),
-    };
-}
-
-export function toolbarFeatures(): ITrayToolbarGroup {
-    return [
-        {
-            title: <>bbb!!!</> /*<Translate name={`Montessori / features / ones features`}>Jednotkové šipky</Translate>*/,
-            itemIds: Object.keys(generateFeatures()),
-        },
-    ];
-}
-
-declareModule(
-    makeTrayModule({
+    return makeTrayModule({
         manifest: {
             name: '@collboard/map-tray-tool',
             title: { en: 'Map tray tool' },
@@ -64,31 +43,46 @@ declareModule(
         },
         trayDefinition: {
             className: 'REMOVE_MontessoriModule',
-            getItems: itemsFeatures,
+            getItems: () => /* TODO: [lib] Not function */ items,
             getToolbarItems: () => [
                 {
-                    name: <>aaa</> /*<Translate name={`Montessori / arrows`}>Šipky k perlovému materiálu</Translate>*/,
-                    icon: 'https://collboard.com/api/files/collboard/a3221f41-e64b-4ea5-84b1-bf431a72d88f.svg',
+                    name: <>Česká republika</>,
+                    icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
                     scale: 0.6,
-                    items: toolbarFeatures(),
+                    items: [
+                        {
+                            title: <>Kraje</>,
+                            itemIds: Object.keys(items),
+                        },
+                    ],
+                },
+                {
+                    name: <>Slovenská republika</>,
+                    icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/sk.svg',
+                    scale: 0.6,
+                    items: [
+                        {
+                            title: <>Kraje</>,
+                            itemIds: Object.keys(items),
+                        },
+                    ],
                 },
             ],
         },
-        newArtMaker(...args) {
-            console.log('newArtMaker', args);
-            const imageArt = new ImageArt(
-                'https://collboard.com/api/files/collboard/a3221f41-e64b-4ea5-84b1-bf431a72d88f.svg',
-                'Prague!!!',
-            );
-            imageArt.size = new Vector(100, 200);
+        newArtMaker(itemId) {
+            const { src } = items[itemId];
+
+            const imageArt = new ImageArt(src, 'Prague!!!');
+            imageArt.size = new Vector(600, 300 /* !!! */);
             return imageArt;
         },
-    }),
-);
+    })(/* TODO: [lib] Multiple levels of factorable */);
+});
 
 /**
  * TODO: Maybe in future create directly GeoJsonArts
  * TODO: Tile map under GeoJsonArts
  * TODO: !!! Translations in modules
  * TODO: !!! Fulltext replace of Montessori/montessori
+ * TODO: Touch only inside the polygon
  */
