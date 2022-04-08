@@ -13,7 +13,7 @@ declareModule(() => {
                     <g>
                         <image href={src} height="200" width="200" />
                         {/* TODO: [lib] Som way how to add text nativelly */}
-                        <text x="0" y="0" style={{ font: 'bold 13px comenia-sans-web, sans-serif' }}>
+                        <text x="0" y="0" style={{ font: `bold ${(10 / 0.6) * 0.8}px comenia-sans-web, sans-serif` }}>
                             Prague !!!
                         </text>
                     </g>

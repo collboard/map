@@ -25,7 +25,8 @@
                 "ts-node ./scripts/2-geojson-downloader/geojson-downloader.ts",
                 "ts-node ./scripts/3-geojson-aggregator/geojson-aggregator.ts",
                 "ts-node ./scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts",
-                "ts-node ./scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts"
+                "ts-node ./scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts",
+                "ts-node ./scripts/6-tray-from-svg-converter/tray-from-svg-converter.ts"
             ],
             "onlySingle": true,
             "focus": true
@@ -57,6 +58,12 @@
         {
             "name": "🏭/5/🖨️ Pdf from svg converter",
             "command": "ts-node ./scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts",
+            "onlySingle": true,
+            "focus": true
+        },
+        {
+            "name": "🏭/6/🚡 Tray from svg converter",
+            "command": " ts-node ./scripts/6-tray-from-svg-converter/tray-from-svg-converter.ts",
             "onlySingle": true,
             "focus": true
         }
