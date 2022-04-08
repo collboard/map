@@ -197,7 +197,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Colombia',
-        cs: 'Kolumbie',
+        cs: 'C',
         search: { country: 'Colombia' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Colombia',
         geopath: { region: 'Americas', country: 'Colombia' },
