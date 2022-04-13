@@ -2,7 +2,7 @@
 
 import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
 import { contributors, license, repository, version } from '../../../package.json';
-import { TRAY_FEATURES_DEFINITION } from './svgList';
+import { TRAY_FEATURES_DEFINITION } from './svgList.ts.x';
 
 declareModule(() => {
 

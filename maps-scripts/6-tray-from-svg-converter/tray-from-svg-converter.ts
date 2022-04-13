@@ -31,51 +31,63 @@ async function convertSvgsToTrayDefinitions({ isCleanupPerformed }: { isCleanupP
         }
 
         if (pathForTrayDefinition !== 'C:/Users/me/work/collboard/map/maps/4-svgs/world/europe/czechia') {
-            // Note: Temporary only for czechia
+            // Note+TODO: Temporary only for czechia
             continue;
         }
 
         console.info(`📦 Making module from ${basename(pathForTrayDefinition)}`);
 
-        const trayDefinition = await generateTrayDefinition(pathForTrayDefinition);
         const modulePath = join(
             trayModulesPath,
             relative(join(__dirname, '../../maps/4-svgs/'), pathForTrayDefinition) + '.tsx',
         );
-        const moduleContent = await prettify(`
+        const trayDefinition = await generateTrayDefinition(pathForTrayDefinition);
+        let trayDefinitionJson = JSON.stringify(trayDefinition);
+        const importAliases: { alias: string; path: string }[] = [];
+        for (const match of trayDefinitionJson.matchAll(/import\((?<path>.*?)\)/g)) {
+            const path = match.groups!.path;
+            const alias = `x${Math.random().toString(36).substr(2, 9)}`; // <- Better foe example> jihoceskyKrajAggregated2Geojson
+            importAliases.push({ alias, path });
+            trayDefinitionJson = trayDefinitionJson.replace(`"import(${path})"`, alias);
+        }
 
-          import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
-          import { contributors, license, repository, version } from '${relative(
-              modulePath,
-              join(__dirname, '../../package.json'),
-          )
-              .split('\\')
-              .join('/')}';
-          // !!! Imports of SVGs
+        const moduleContent = await prettify(
+            // TODO: Also organize imports
+            `
+              import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
+              import { contributors, license, repository, version } from '${relative(
+                  dirname(modulePath),
+                  join(__dirname, '../../package.json'),
+              )
+                  .split('\\')
+                  .join('/')}';
+              ${importAliases.map(({ alias, path }) => `import ${alias} from "${path}";`).join('\n')}
 
-          // TODO: !!! Generator warning
 
-          declareModule(
-            makeTraySimpleModule({
-                manifest: {
-                    name: '@collboard/map-tray-tool',
-                    title: { en: 'Map tray tool' },
-                    description: { en: 'Tray tool for the map' },
-                    contributors,
-                    license,
-                    repository,
-                    version,
-                },
+              // TODO: !!! Generator warning
 
-                icon: {
-                    order: 60,
-                    icon: 'earth' /* <- TODO: Better, Czechia borders */,
-                    boardCursor: 'default',
-                },
-                trayDefinition: ${JSON.stringify(trayDefinition)}
-            }),
-          );
-        `);
+              declareModule(
+                makeTraySimpleModule({
+                    manifest: {
+                        name: '@collboard/map-tray-tool',
+                        title: { en: 'Map tray tool' },
+                        description: { en: 'Tray tool for the map' },
+                        contributors,
+                        license,
+                        repository,
+                        version,
+                    },
+
+                    icon: {
+                        order: 60,
+                        icon: 'earth' /* <- TODO: Better, Czechia borders */,
+                        boardCursor: 'default',
+                    },
+                    trayDefinition: ${trayDefinitionJson}
+                }),
+              );
+            `,
+        );
 
         await mkdir(dirname(modulePath), { recursive: true });
         await writeFile(modulePath, moduleContent, 'utf8');
@@ -122,7 +134,7 @@ async function generateTrayItems(...svgsPaths: string[]): Promise<ITraySimpleDef
     for (const svgPath of svgsPaths) {
         items.push({
             title: basename(svgPath) /* <- TODO: Make title from title inside metadata of SVG - like getTitleOfSvg */,
-            imageSrc: svgPath,
+            imageSrc: `import(${svgPath})`,
             // Note: Using only imageSrc not artSrc
         });
     }

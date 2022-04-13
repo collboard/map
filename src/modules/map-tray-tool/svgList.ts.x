@@ -45,7 +45,7 @@ import xxx41 from '../../../maps/4-svgs/world/europe/czechia/zlinsky-kraj/zlinsk
 import xxx42 from '../../../maps/4-svgs/world/europe/czechia/zlinsky-kraj/zlinsky-kraj.aggregated3.geojson.lod-5.svg';
 import xxx43 from '../../../maps/4-svgs/world/europe/czechia/zlinsky-kraj/zlinsky-kraj.aggregated4.geojson.lod-5.svg';
 
-export const TRAY_FEATURES_DEFINITION:ITraySimpleDefinition  = [
+export const TRAY_FEATURES_DEFINITION: ITraySimpleDefinition = [
     {
         title: 'Czechia',
         icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
@@ -56,7 +56,6 @@ export const TRAY_FEATURES_DEFINITION:ITraySimpleDefinition  = [
                     {
                         title: 'Moravskoslezsky kraj',
                         imageSrc: xxx01,
-
                     },
                     {
                         title: 'Moravskoslezsky kraj',
