@@ -1,31 +1,13 @@
-import { declareModule, ImageArt, makeTrayModule, React } from '@collboard/modules-sdk';
-import { Vector } from 'xyzt';
+// !!! Delete this file with generated one
+
+import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
 import { contributors, license, repository, version } from '../../../package.json';
-import { SVG_LIST } from './svgList';
+import { TRAY_FEATURES_DEFINITION } from './svgList';
 
 declareModule(() => {
-    const items = Object.fromEntries(
-        SVG_LIST.map((src) => [
-            `map-${src}`,
-            {
-                src,
-                content: (
-                    <g>
-                        <image href={src} height="200" width="200" />
-                        {/* TODO: [lib] Som way how to add text nativelly */}
-                        <text x="0" y="0" style={{ font: `bold ${(10 / 0.6) * 0.8}px comenia-sans-web, sans-serif` }}>
-                            Prague !!!
-                        </text>
-                    </g>
-                ),
-                defaultColor: 'rgba(78, 78, 78, 0.5)' /* <- [lib] Weird, change API */,
 
-                // TODO: Allow custom params NOT hardcoded color
-            },
-        ]),
-    );
 
-    return makeTrayModule({
+    return makeTraySimpleModule({
         manifest: {
             name: '@collboard/map-tray-tool',
             title: { en: 'Map tray tool' },
@@ -38,13 +20,16 @@ declareModule(() => {
 
         icon: {
             order: 60,
-            icon: 'earth',
+            icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
             boardCursor: 'default',
         },
-        trayDefinition: {
-            className: 'REMOVE_MontessoriModule',
-            getItems: () => /* TODO: [lib] Not function */ items,
-            getToolbarItems: () => [
+        trayDefinition:TRAY_FEATURES_DEFINITION,
+
+
+
+        /*
+        !!! Remove
+        [
                 {
                     name: <>Česká republika</>,
                     icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
@@ -68,15 +53,11 @@ declareModule(() => {
                     ],
                 },
             ],
-        },
-        newArtMaker(itemId) {
-            const { src } = items[itemId];
+        }]
+        */
 
-            const imageArt = new ImageArt(src, 'Prague!!!');
-            imageArt.size = new Vector(600, 300 /* !!! */);
-            return imageArt;
-        },
-    })(/* TODO: [lib] Multiple levels of factorable */);
+
+
 });
 
 /**

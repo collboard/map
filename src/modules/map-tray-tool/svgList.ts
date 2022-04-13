@@ -1,3 +1,6 @@
+// !!! Delete this file with generated one
+
+import { ITraySimpleDefinition } from '@collboard/modules-sdk';
 import xxx01 from '../../../maps/4-svgs/world/europe/czechia/hlavni-mesto-praha/hlavni-mesto-praha.geojson.lod-5.svg';
 import xxx02 from '../../../maps/4-svgs/world/europe/czechia/jihocesky-kraj/jihocesky-kraj.aggregated2.geojson.lod-5.svg';
 import xxx03 from '../../../maps/4-svgs/world/europe/czechia/jihocesky-kraj/jihocesky-kraj.aggregated3.geojson.lod-5.svg';
@@ -42,7 +45,7 @@ import xxx41 from '../../../maps/4-svgs/world/europe/czechia/zlinsky-kraj/zlinsk
 import xxx42 from '../../../maps/4-svgs/world/europe/czechia/zlinsky-kraj/zlinsky-kraj.aggregated3.geojson.lod-5.svg';
 import xxx43 from '../../../maps/4-svgs/world/europe/czechia/zlinsky-kraj/zlinsky-kraj.aggregated4.geojson.lod-5.svg';
 
-export const TRAY_FEATURES_DEFINITION:  = [
+export const TRAY_FEATURES_DEFINITION:ITraySimpleDefinition  = [
     {
         title: 'Czechia',
         icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
