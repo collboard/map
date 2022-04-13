@@ -55,15 +55,16 @@ export const TRAY_FEATURES_DEFINITION:ITraySimpleDefinition  = [
                 items: [
                     {
                         title: 'Moravskoslezsky kraj',
-                        artSrc: xxx01,
+                        imageSrc: xxx01,
+
                     },
                     {
                         title: 'Moravskoslezsky kraj',
-                        artSrc: xxx01,
+                        imageSrc: xxx01,
                     },
                     {
                         title: 'Moravskoslezsky kraj',
-                        artSrc: xxx01,
+                        imageSrc: xxx01,
                     },
                 ],
             },

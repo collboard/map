@@ -8,8 +8,9 @@ import './modules/map-shortcuts';
 /**/
 
 /**/
-
-import './modules/map-tray-tool/map-tray-tool.module';
+import '../maps/6-tray-modules/index';
+// !!! Remove import './modules/map-tray-tool/map-tray-tool.module';
+// !!! SVG plus import module
 /**/
 
 /*/

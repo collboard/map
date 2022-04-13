@@ -1,99 +1,62 @@
 #!/usr/bin/env ts-node
 
 import { ITraySimpleDefinition } from '@collboard/modules-sdk';
+import del from 'del';
 import { mkdir, stat, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import { basename, dirname, join, relative } from 'path';
-import { spaceTrim } from 'spacetrim';
+import { prettify } from '../utils/prettify';
 
 /**/
-convertSvgsToTrayDefinitions();
+convertSvgsToTrayDefinitions({ isCleanupPerformed: true });
 /**/
 
-async function convertSvgsToTrayDefinitions() {
+async function convertSvgsToTrayDefinitions({ isCleanupPerformed }: { isCleanupPerformed: true }) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
 
-    const geojsonsPath = join(__dirname, `../../maps/5-pdfs/`);
+    const trayModulesPath = join(__dirname, `../../maps/6-tray-modules/`);
+
+    if (isCleanupPerformed) {
+        console.info(`🧹 Making cleenup for 🖨️ Converting svgs to pdfs`);
+        await del(trayModulesPath);
+    }
 
     console.info(`🚡 Tray from svg converter`);
 
     const modulesPaths: string[] = [];
 
-    for (const svgDirPath of await glob(join(__dirname, '../../maps/4-svgs/**/*'))) {
-        if (!(await stat(svgDirPath).then((stat) => stat.isDirectory()))) {
+    for (const pathForTrayDefinition of await glob(join(__dirname, '../../maps/4-svgs/**/*'))) {
+        if (!(await stat(pathForTrayDefinition).then((stat) => stat.isDirectory()))) {
             continue;
         }
 
-        if (svgDirPath !== 'C:/Users/me/work/collboard/map/maps/4-svgs/world/europe/czechia') {
+        if (pathForTrayDefinition !== 'C:/Users/me/work/collboard/map/maps/4-svgs/world/europe/czechia') {
             // Note: Temporary only for czechia
             continue;
         }
 
-        console.info(`📦 Making module from ${basename(svgDirPath)}`);
+        console.info(`📦 Making module from ${basename(pathForTrayDefinition)}`);
 
-        const trayDefinition: ITraySimpleDefinition = [];
-        for (const svgPath of await glob(join(svgDirPath, '/**/*/.svg'))) {
-            trayDefinition.push({
-                title: 'Czechia',
-                icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
-                groups: [
-                    {
-                        title: 'Kraje',
-                        items: [
-                            {
-                                title: 'Moravskoslezsky kraj',
-                                imageSrc: svgPath,
-                                artSrc: svgPath,
-                            },
-                            {
-                                title: 'Moravskoslezsky kraj',
-                                imageSrc: svgPath,
-                                artSrc: svgPath,
-                            },
-                            {
-                                title: 'Moravskoslezsky kraj',
-                                imageSrc: svgPath,
-                                artSrc: svgPath,
-                            },
-                        ],
-                    },
-                    {
-                        title: 'Kraje 2',
-                        items: [
-                            {
-                                title: 'Moravskoslezsky kraj',
-                                imageSrc: svgPath,
-                                artSrc: svgPath,
-                            },
-                            {
-                                title: 'Moravskoslezsky kraj',
-                                imageSrc: svgPath,
-                                artSrc: svgPath,
-                            },
-                            {
-                                title: 'Moravskoslezsky kraj',
-                                imageSrc: svgPath,
-                                artSrc: svgPath,
-                            },
-                        ],
-                    },
-                ],
-            });
-        }
+        const trayDefinition = await generateTrayDefinition(pathForTrayDefinition);
+        const modulePath = join(
+            trayModulesPath,
+            relative(join(__dirname, '../../maps/4-svgs/'), pathForTrayDefinition) + '.tsx',
+        );
+        const moduleContent = await prettify(`
 
-        // TODO: Not spaceTrim but prettify
-        const moduleContent = spaceTrim(`
+          import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
+          import { contributors, license, repository, version } from '${relative(
+              modulePath,
+              join(__dirname, '../../package.json'),
+          )
+              .split('\\')
+              .join('/')}';
+          // !!! Imports of SVGs
 
-        import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
-        import { contributors, license, repository, version } from '../../../package.json';
-        // !!! Imports of SVGs
+          // TODO: !!! Generator warning
 
-        // TODO: !!! Generator warning
-
-        declareModule(() => {
-
-
-            return makeTraySimpleModule({
+          declareModule(
+            makeTraySimpleModule({
                 manifest: {
                     name: '@collboard/map-tray-tool',
                     title: { en: 'Map tray tool' },
@@ -106,22 +69,14 @@ async function convertSvgsToTrayDefinitions() {
 
                 icon: {
                     order: 60,
-                    icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+                    icon: 'earth' /* <- TODO: Better, Czechia borders */,
                     boardCursor: 'default',
                 },
-                trayDefinition:${JSON.stringify(trayDefinition)},
+                trayDefinition: ${JSON.stringify(trayDefinition)}
+            }),
+          );
+        `);
 
-
-
-        });
-      `);
-
-        const modulePath = join(
-            __dirname,
-            '../../maps/6-tray-modules/',
-            relative(join(__dirname, '../../maps/4-svgs/**/*'), svgDirPath),
-            'xxx.tsx',
-        );
         await mkdir(dirname(modulePath), { recursive: true });
         await writeFile(modulePath, moduleContent, 'utf8');
 
@@ -129,14 +84,77 @@ async function convertSvgsToTrayDefinitions() {
     }
 
     // TODO: Not spaceTrim but prettify OR block
-    const indexContent = spaceTrim(`
+    const indexContent = await prettify(`
 
       // TODO: !!! Generator warning
-      ${modulesPaths.map((modulePath) => `import '${modulePath}';`).join('\n')}
+      ${modulesPaths
+          .map((modulePath) => `import './${relative(trayModulesPath, modulePath).split('\\').join('/')}';`)
+          .join('\n')}
     `);
 
-    await writeFile(join(__dirname, '../../maps/6-tray-modules/index.ts'), indexContent, 'utf8');
+    await writeFile(join(trayModulesPath, 'index.ts'), indexContent, 'utf8');
 
     console.info(`[ Done 🚡 Tray from svg converter ]`);
     process.exit(0);
 }
+
+async function generateTrayDefinition(path: string): Promise<ITraySimpleDefinition> {
+    return [
+        {
+            title: 'Kraje',
+            icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+            groups: [
+                // Note: Using only one group - make it more semantic
+                {
+                    title: `` /* <- Note: No name for (no)group */,
+                    items: await generateTrayItems(
+                        ...(await findSvgs({ path, level: 2, basenamePattern: /\.aggregated2\./ })),
+                    ),
+                },
+            ],
+        },
+    ];
+}
+
+async function generateTrayItems(...svgsPaths: string[]): Promise<ITraySimpleDefinition[0]['groups'][0]['items']> {
+    const items: ITraySimpleDefinition[0]['groups'][0]['items'] = [];
+
+    for (const svgPath of svgsPaths) {
+        items.push({
+            title: basename(svgPath) /* <- TODO: Make title from title inside metadata of SVG - like getTitleOfSvg */,
+            imageSrc: svgPath,
+            // Note: Using only imageSrc not artSrc
+        });
+    }
+
+    return items;
+}
+
+interface IFindSvgsOptions {
+    path: string;
+    level: number;
+    basenamePattern: RegExp;
+}
+
+async function findSvgs({ path, level, basenamePattern }: IFindSvgsOptions): Promise<string[]> {
+    const svgsPaths: string[] = [];
+
+    for (const svgPath of await glob(join(path, '/**/*.svg'))) {
+        const svgLevel = svgPath.split(/[\/\\]/g).length - path.split(/[\/\\]/g).length;
+
+        if (svgLevel !== level) {
+            continue;
+        }
+
+        if (!basename(svgPath).match(basenamePattern)) {
+            continue;
+        }
+
+        svgsPaths.push(svgPath);
+    }
+
+    return svgsPaths;
+}
+
+// !!! to files
+// console.info(`➕ Making adding ${basename(pathForTrayGroup)} to ${basename(pathForTrayDefinition)}`);
