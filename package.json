@@ -18,13 +18,12 @@
         "preversion": "npm run lint && npm test",
         "postversion": "git push && git push --tags"
     },
-    "dependencies": {
+    "dependencies": {},
+    "devDependencies": {
         "jspdf": "2.5.1",
         "puppeteer": "13.5.0",
         "sharp": "0.30.3",
-        "type-fest": "2.12.0"
-    },
-    "devDependencies": {
+        "type-fest": "2.12.0",
         "@collboard/modules-sdk": "18.45.0",
         "@types/isomorphic-fetch": "0.0.35",
         "@types/jest": "27.4.0",
