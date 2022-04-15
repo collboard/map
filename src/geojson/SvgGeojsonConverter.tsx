@@ -1,6 +1,8 @@
+/// <reference path="./elements.d.ts" />
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Vector } from 'xyzt';
+import { version } from '../../package.json';
 import { MAP_BASE, TILE_SIZE } from '../config';
 import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 import { ISvgGeojson } from '../interfaces/ISvgGeojson';
@@ -10,7 +12,6 @@ import { blobToDataUrl } from '../utils/blobToDataUrl';
 import { minmax } from '../utils/minmax';
 import { getAllPointsOf } from './getAllPointsOf';
 import { SimplifiedGeojson } from './SimplifiedGeojson';
-
 export class SvgGeojsonConverter {
     private pointsOnBoard: Vector[] = [];
     private minX: number = 0;
@@ -70,13 +71,29 @@ export class SvgGeojsonConverter {
                 /* TODO: Also height according to ratio + some smart count of reasonable width+height */
                 xmlns="http://www.w3.org/2000/svg"
             >
+                <>
+                    <title>{this.simplifiedGeojson.title}</title>
+                    <desc>{this.simplifiedGeojson.description}</desc>
+                    <metadata>
+                        {/*
+                    TODO: How to put metadata into SVG propperly?
+                    TODO: What is the best structure for metadata? (maybe just 1:1 with some json structure)
+                    TODO: Probbably use collboard:module xml scope
+                    TODO: Probbably define xmlns
+                    */}
+                        <collboard>
+                            <support-module name="@collboard/map-svg-geojson-import" {...{ version }} />
+                            {/* TODO: !!! <scale from="1px" to="10km" />*/}
+                        </collboard>
+                    </metadata>
+                </>
                 {/*
-              <filter id="dilate-and-xor">
-                  {/* TODO: Filters can be used also for special effects/texturing for FreehandArt * /}
-                  <feMorphology in="SourceGraphic" result="dilate-result" operator="dilate" radius={2 / z} />
-                  <feComposite in="SourceGraphic" in2="dilate-result" result="xor-result" operator="xor" />
-              </filter>
-              */}
+                <filter id="dilate-and-xor">
+                    {/* TODO: Filters can be used also for special effects/texturing for FreehandArt * /}
+                    <feMorphology in="SourceGraphic" result="dilate-result" operator="dilate" radius={2 / z} />
+                    <feComposite in="SourceGraphic" in2="dilate-result" result="xor-result" operator="xor" />
+                </filter>
+                */}
                 {simplifiedGeojson.simplePolygons.map((feature, i) => (
                     <polygon
                         key={i}

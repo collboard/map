@@ -11,11 +11,11 @@ export async function convertSvgsToTrayDefinitions({ isCleanupPerformed }: { isC
     const trayModulesPath = join(__dirname, `../../maps/6-tray-modules/`);
 
     if (isCleanupPerformed) {
-        console.info(`🧹 Making cleenup for 🖨️ Converting svgs to pdfs`);
+        console.info(`🧹 Making cleenup for 🖨️  Converting svgs to pdfs`);
         await del(trayModulesPath);
     }
 
-    console.info(`🚡 Tray from svg converter`);
+    console.info(`🚡  Tray from svg converter`);
 
     const modulesPaths: string[] = [];
 

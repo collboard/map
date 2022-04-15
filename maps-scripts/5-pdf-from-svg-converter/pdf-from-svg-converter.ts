@@ -16,17 +16,17 @@ async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: t
     const geojsonsPath = join(__dirname, `../../maps/5-pdfs/`);
 
     if (isCleanupPerformed) {
-        console.info(`🧹 Making cleenup for 🖨️ Converting svgs to pdfs`);
+        console.info(`🧹 Making cleenup for 🖨️  Converting svgs to pdfs`);
         await del(geojsonsPath);
     }
 
-    console.info(`🖨️ Converting svgs to pdfs`);
+    console.info(`🖨️  Converting svgs to pdfs`);
 
     const template = await readFile(join(__dirname, './sample.svg'), 'utf8');
 
     for (const svgPath of await glob(join(__dirname, '../../maps/4-svgs/**/*.svg'))) {
         try {
-            console.info(`🗾 Converting ${basename(svgPath)}`);
+            console.info(`🗾  Converting ${basename(svgPath)}`);
 
             const svgTmpPath = svgPath.replace('/4-svgs/', '/5-pdfs/') + `.tmp.svg`;
 
@@ -84,7 +84,7 @@ async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: t
         }
     }
 
-    console.info(`[ Done 🖨️ Converting svgs to pdfs ]`);
+    console.info(`[ Done 🖨️  Converting svgs to pdfs ]`);
     process.exit(0);
 }
 

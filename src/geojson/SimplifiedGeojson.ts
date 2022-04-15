@@ -3,6 +3,7 @@
 import simplifyGeojson from 'simplify-geojson';
 import { IGeojson, IGeojsonFeatureCollection, IGeojsonSimplePolygon } from '../interfaces/IGeojson';
 import { Wgs84 } from '../semantic/Wgs84';
+import { pickTitle } from '../utils/pickTitle';
 import { getAllPointsOf } from './getAllPointsOf';
 import { getAllSimplePolygonsOf } from './getAllSimplePolygonsOf';
 import { OsmGeojson } from './OsmGeojson';
@@ -13,7 +14,7 @@ import { OsmGeojson } from './OsmGeojson';
 export class SimplifiedGeojson {
     private cache: Record<number, SimplifiedGeojson>;
 
-    private readonly originalGeojson: IGeojson;
+    public readonly originalGeojson: IGeojson;
 
     public constructor(geojson: OsmGeojson | IGeojsonFeatureCollection, cache?: Record<number, SimplifiedGeojson>) {
         if (geojson instanceof OsmGeojson) {
@@ -48,6 +49,19 @@ export class SimplifiedGeojson {
         }
 
         return this.cache[tolerance];
+    }
+
+    public get title(): string {
+        return pickTitle(
+            ...((this.originalGeojson as IGeojsonFeatureCollection).features
+                .map((feature) => feature?.properties?.display_name)
+                .filter((title) => title) as string[]),
+        );
+    }
+
+    public get description(): string {
+        // TODO: !!! Better description
+        return `Geojson of ${this.title}`;
     }
 
     get simplePolygons(): IGeojsonSimplePolygon[] {
