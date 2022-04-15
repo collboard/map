@@ -1,1 +1,10 @@
-<svg viewBox="0 0 18.372063057802066 19.299047622494314" width="1000" xmlns="http://www.w3.org/2000/svg"><polygon points="8.052550000000338,8.874298299582506 8.052550000000338,8.874298299582506" stroke="#009edd" stroke-width="5.122522851437451px" fill="none" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polygon></svg>
+<svg viewBox="0 0 18.372063057802066 19.299047622494314" width="1000" xmlns="http://www.w3.org/2000/svg">
+  <title>Rotava, Dolní Rotava, Rotava, okres Sokolov, Karlovarský kraj, Severozápad, Česko</title>
+  <desc>Geojson of Rotava, Dolní Rotava, Rotava, okres Sokolov, Karlovarský kraj, Severozápad, Česko</desc>
+  <metadata>
+    <collboard>
+      <support-module name="@collboard/map-svg-geojson" version="0.11.0"></support-module>
+    </collboard>
+  </metadata>
+  <polygon points="8.052550000000338,8.874298299582506 8.052550000000338,8.874298299582506" stroke="#009edd" stroke-width="5.774834069594789px" fill="none" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polygon>
+</svg>
