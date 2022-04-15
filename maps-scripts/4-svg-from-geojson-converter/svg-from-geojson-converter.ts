@@ -7,6 +7,7 @@ import { basename, dirname, join } from 'path';
 import ReactDOMServer from 'react-dom/server';
 import { SvgGeojsonConverter } from '../../src/geojson/SvgGeojsonConverter';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
+import { prettify } from '../utils/prettify';
 
 const LODS_EXPONENTS = [-5]; //[/*-1,*/ -30, -10, 0, 5 /*1, 2, 3, 4*/, 10];
 
@@ -39,7 +40,7 @@ async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerforme
 
             for (const exponent of LODS_EXPONENTS) {
                 const svgGeojson = (await svgGeojsonConverter.makeSvg(Math.pow(1.1, exponent), false)) as any;
-                const svgString = ReactDOMServer.renderToStaticMarkup(svgGeojson.element);
+                const svgString = await prettify(ReactDOMServer.renderToStaticMarkup(svgGeojson.element), 'xml');
 
                 // TODO: !!! Prettify SVG
                 // TODO: !!! Add collboard branding
