@@ -67,7 +67,10 @@ export class SvgGeojsonConverter {
         const element = (
             <svg
                 viewBox={`0 0 ${this.maxX - this.minX + 2 * padding} ${this.maxY - this.minY + 2 * padding}`}
-                width="1000" /* <- TODO: !!! Some configurable ratio */
+                width={this.maxX - this.minX + 2 * padding}
+                height={this.maxY - this.minY + 2 * padding}
+                /*  width="1000" /* <- TODO: Maybe use + Some configurable ratio */
+                /* TODO: Prevent width="NaN" height="NaN" */
                 /* TODO: Also height according to ratio + some smart count of reasonable width+height */
                 xmlns="http://www.w3.org/2000/svg"
             >

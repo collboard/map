@@ -2,7 +2,6 @@ import {
     blobToDataUrl,
     centerArts,
     declareModule,
-    fitInside,
     ImageArt,
     measureImageSize,
     patternToRegExp,
@@ -24,7 +23,7 @@ declareModule({
             isHidden: true /* <- TODO: (File) support modules should be always hidden*/,
         },
         supports: {
-            fileImport: mimeTypes,
+            fileImport: mimeTypes /* <- TODO: [⭕] In future no need for fileImport: mimeTypes */,
         },
     },
     async setup(systems) {
@@ -45,7 +44,7 @@ declareModule({
         );
 
         return importSystem.registerFileSupport({
-            priority: 100 /* <- TODO: !!! In future no need for extra priority because imported file itself will tell to use <support-module name="@collboard/map-svg-geojson-import" */,
+            priority: 100 /* <- TODO: [⭕] In future no need for extra priority because imported file itself will tell to use <support-module name="@collboard/map-svg-geojson-import" */,
             async processFile({ logger, file, boardPosition, next, willCommitArts, previewOperation }) {
                 if (!mimeTypes.some((mimeType) => patternToRegExp(mimeType).test(file.type))) {
                     return next();
@@ -53,19 +52,26 @@ declareModule({
 
                 // TODO: Also test for <collboard><support-module name="@collboard/map-svg-geojson-import" version="0.11.0"></support-module></collboard>
 
-                alert('Wohohohoho');
-
                 willCommitArts();
 
                 let imageSrc = await blobToDataUrl(file);
 
                 // await previewImage(imageSrc);
 
-                const imageScaledSize = fitInside({
+                const imageSize = await measureImageSize(imageSrc); //.divide(appState.transform.scale);
+                const imageScaledSize = imageSize.scale(1 / 3);
+
+                logger.info('imageSize', imageSize);
+                /*
+                fitInside({
                     isUpscaling: false,
-                    objectSize: await (await measureImageSize(imageSrc)).divide(appState.transform.scale),
+                    objectSize: imageSize,
                     containerSize: appState.windowSize.divide(appState.transform.scale),
                 });
+
+                const imageSizeRatio = imageSize.x / imageScaledSize.x;
+                logger.info('imageSizeRatio', imageSizeRatio);
+                */
 
                 const imageArt = new ImageArt(imageSrc, 'image');
                 imageArt.size = imageScaledSize;
@@ -77,7 +83,7 @@ declareModule({
 
                 previewOperation.update(imageArt);
 
-                // TODO: Limit here max size of images> if(imageSize.x>this.systems.appState.windowSize*transform)
+                //await forEver(/*until file doubleupload optimization*/);
 
                 imageSrc = await apiClient.fileUpload(file);
                 imageArt.src = imageSrc;
