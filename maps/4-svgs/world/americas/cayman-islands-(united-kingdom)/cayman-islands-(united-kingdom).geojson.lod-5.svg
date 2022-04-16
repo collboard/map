@@ -1,9 +1,9 @@
-<svg viewBox="0 0 NaN NaN" width="1000" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 NaN NaN" width="NaN" height="NaN" xmlns="http://www.w3.org/2000/svg">
   <title>Untitled</title>
   <desc>Geojson of Untitled</desc>
   <metadata>
     <collboard>
-      <support-module name="@collboard/map-svg-geojson" version="0.11.0"></support-module>
+      <support-module name="@collboard/map-svg-geojson-import" version="0.11.0"></support-module>
     </collboard>
   </metadata>
 </svg>
