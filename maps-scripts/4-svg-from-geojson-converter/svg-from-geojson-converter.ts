@@ -8,6 +8,7 @@ import ReactDOMServer from 'react-dom/server';
 import xmlFormatter from 'xml-formatter';
 import { SvgGeojsonConverter } from '../../src/geojson/SvgGeojsonConverter';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
+import { forPlay } from '../utils/forPlay';
 
 const LODS_EXPONENTS = [-5]; //[/*-1,*/ -30, -10, 0, 5 /*1, 2, 3, 4*/, 10];
 
@@ -57,6 +58,7 @@ async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerforme
 
                 // TODO: Messages in every script at end with relative path to generated resource
                 console.info(`🗾 ${relative(process.cwd(), svgPath)}`);
+                await forPlay();
             }
         } catch (error) {
             console.error(error);
