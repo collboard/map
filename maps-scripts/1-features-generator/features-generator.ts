@@ -14,6 +14,7 @@ import { GoogleAutomaticTranslator } from '../utils/automatic-translators/Google
 import { IAutomaticTranslator } from '../utils/automatic-translators/IAutomaticTranslator';
 import { MultiAutomaticTranslator } from '../utils/automatic-translators/MultiAutomaticTranslator';
 import { capitalizeFirstLetter } from '../utils/capitalizeFirstLetter';
+import { forPlay } from '../utils/forPlay';
 import { prettify } from '../utils/prettify';
 import { completeGeopath } from './utils/completeGeopath';
 import { isGeopathValid } from './utils/isGeopathValid';
@@ -79,6 +80,7 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
     const features: any[] = [];
 
     for (const csvPath of await glob(join(__dirname, '../../maps/0-features-lists/**/*.csv'))) {
+        await forPlay();
         console.info(`🗄️ Processing file ${basename(csvPath)}`);
         const csvCountry = /0-features-lists\/(?<country>.*?)\//.exec(csvPath)?.groups?.country;
 

@@ -6,6 +6,7 @@ import glob from 'glob-promise';
 import { basename, dirname, join, relative } from 'path';
 import puppeteer from 'puppeteer';
 import { commit } from '../utils/autocommit/commit';
+import { forPlay } from '../utils/forPlay';
 
 /**/
 convertSvgsToPdfs({ isCleanupPerformed: true });
@@ -27,6 +28,7 @@ async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: t
 
     for (const svgPath of await glob(join(__dirname, '../../maps/4-svgs/**/*.svg'))) {
         try {
+            await forPlay();
             console.info(`🗾  Converting ${basename(svgPath)}`);
 
             const svgTmpPath = svgPath.replace('/4-svgs/', '/5-pdfs/') + `.tmp.svg`;

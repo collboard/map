@@ -3,6 +3,7 @@ import { mkdir, stat, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import { basename, dirname, join, relative } from 'path';
 import { commit } from '../utils/autocommit/commit';
+import { forPlay } from '../utils/forPlay';
 import { prettify } from '../utils/prettify';
 import { generateTrayDefinition } from './2-generateTrayDefinition';
 
@@ -30,6 +31,7 @@ export async function convertSvgsToTrayDefinitions({ isCleanupPerformed }: { isC
             continue;
         }
 
+        await forPlay();
         console.info(`📦 Making module from ${basename(pathForTrayDefinition)}`);
 
         const modulePath = join(

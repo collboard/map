@@ -8,6 +8,7 @@ import { basename, dirname, join } from 'path';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
 import { geojsonStringify } from '../2-geojson-downloader/utils/geojsonStringify';
 import { commit } from '../utils/autocommit/commit';
+import { forPlay } from '../utils/forPlay';
 
 /**/
 runGeojsonAggregator({ isCleanupPerformed: true });
@@ -28,6 +29,7 @@ async function runGeojsonAggregator({ isCleanupPerformed }: { isCleanupPerformed
     )) {
         for (const level of [1, 2, 3, 4]) {
             try {
+                await forPlay();
                 const subGeojsonsPaths = (await glob(geojsonPath + '/**/*.geojson')).filter(
                     (subGeojsonPath) =>
                         subGeojsonPath.split(/[\/\\]/g).length - geojsonPath.split(/[\/\\]/g).length <= level,

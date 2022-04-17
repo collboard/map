@@ -39,6 +39,7 @@ async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerforme
             const svgGeojsonConverter = new SvgGeojsonConverter(geojson);
 
             for (const exponent of LODS_EXPONENTS) {
+                await forPlay();
                 const svgElement = (await svgGeojsonConverter.makeSvg(Math.pow(1.1, exponent), false)) as any;
                 const svgString = xmlFormatter(ReactDOMServer.renderToStaticMarkup(svgElement.element), {
                     indentation: '  ',
@@ -59,7 +60,6 @@ async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerforme
 
                 // TODO: Messages in every script at end with relative path to generated resource
                 console.info(`🗾 ${relative(process.cwd(), svgPath)}`);
-                await forPlay();
             }
         } catch (error) {
             console.error(error);

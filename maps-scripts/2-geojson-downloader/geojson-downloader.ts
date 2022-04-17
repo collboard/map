@@ -5,12 +5,13 @@
 import del from 'del';
 import { mkdir, writeFile } from 'fs/promises';
 import { dirname, join } from 'path';
-import { commit } from '../utils/autocommit/commit';
 import { FEATURES } from '../../maps/1-features/features';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
+import { commit } from '../utils/autocommit/commit';
 import { DebugAutomaticTranslator } from '../utils/automatic-translators/DebugAutomaticTranslator';
 import { GoogleAutomaticTranslator } from '../utils/automatic-translators/GoogleAutomaticTranslator';
+import { forPlay } from '../utils/forPlay';
 import { removeDiacritics } from '../utils/removeDiacritics';
 import { geojsonStringify } from './utils/geojsonStringify';
 
@@ -19,7 +20,6 @@ runGeojsonDownloader({ isCleanupPerformed: true });
 /**/
 
 async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed: boolean }) {
-
     const geojsonsPath = join(__dirname, `../../maps/2-geojsons/world`);
 
     if (isCleanupPerformed) {
@@ -34,6 +34,7 @@ async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed
     //await translator.translate('India');
 
     for (const feature of FEATURES) {
+        await forPlay();
         console.info(`⬇️ Downloading ${feature.en || feature.cs}`);
 
         let geojson: IGeojsonFeatureCollection;
