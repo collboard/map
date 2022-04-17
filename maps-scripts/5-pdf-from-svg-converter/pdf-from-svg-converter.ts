@@ -5,6 +5,7 @@ import { mkdir, readFile, unlink, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import { basename, dirname, join, relative } from 'path';
 import puppeteer from 'puppeteer';
+import { commit } from '../utils/autocommit/commit';
 
 /**/
 convertSvgsToPdfs({ isCleanupPerformed: true });
@@ -13,11 +14,11 @@ convertSvgsToPdfs({ isCleanupPerformed: true });
 async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: true }) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
 
-    const geojsonsPath = join(__dirname, `../../maps/5-pdfs/`);
+    const pdfsPath = join(__dirname, `../../maps/5-pdfs/`);
 
     if (isCleanupPerformed) {
         console.info(`🧹 Making cleenup for 🖨️  Converting svgs to pdfs`);
-        await del(geojsonsPath);
+        await del(pdfsPath);
     }
 
     console.info(`🖨️  Converting svgs to pdfs`);
@@ -83,6 +84,8 @@ async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: t
             console.error(error);
         }
     }
+
+    await commit(pdfsPath, `🖨️ Create pdfs from svgs `);
 
     console.info(`[ Done 🖨️  Converting svgs to pdfs ]`);
     process.exit(0);

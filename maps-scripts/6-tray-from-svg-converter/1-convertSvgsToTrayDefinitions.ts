@@ -2,6 +2,7 @@ import del from 'del';
 import { mkdir, stat, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import { basename, dirname, join, relative } from 'path';
+import { commit } from '../utils/autocommit/commit';
 import { prettify } from '../utils/prettify';
 import { generateTrayDefinition } from './2-generateTrayDefinition';
 
@@ -104,6 +105,8 @@ export async function convertSvgsToTrayDefinitions({ isCleanupPerformed }: { isC
     `);
 
     await writeFile(join(trayModulesPath, 'index.ts'), indexContent, 'utf8');
+
+    await commit(trayModulesPath, `🚡 Make tray module from svgs`);
 
     console.info(`[ Done 🚡 Tray from svg converter ]`);
     process.exit(0);

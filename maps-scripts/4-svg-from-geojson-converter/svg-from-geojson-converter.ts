@@ -8,6 +8,7 @@ import ReactDOMServer from 'react-dom/server';
 import xmlFormatter from 'xml-formatter';
 import { SvgGeojsonConverter } from '../../src/geojson/SvgGeojsonConverter';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
+import { commit } from '../utils/autocommit/commit';
 import { forPlay } from '../utils/forPlay';
 
 const LODS_EXPONENTS = [-5]; //[/*-1,*/ -30, -10, 0, 5 /*1, 2, 3, 4*/, 10];
@@ -19,11 +20,11 @@ convertGeojsonsToSvgs({ isCleanupPerformed: true });
 async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerformed: true }) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
 
-    const geojsonsPath = join(__dirname, `../../maps/4-svgs/`);
+    const svgsPath = join(__dirname, `../../maps/4-svgs/`);
 
     if (isCleanupPerformed) {
         console.info(`🧹 Making cleenup for 🖼️  Converting geojsons to svgs`);
-        await del(geojsonsPath);
+        await del(svgsPath);
     }
 
     console.info(`🖼️  Converting geojsons to svgs`);
@@ -63,10 +64,15 @@ async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerforme
         } catch (error) {
             console.error(error);
         }
+
+        if (Math.random() > 0.9) {
+            break;
+        }
     }
 
     // TODO: Cleanup should be here (with comparision of new and old)
-    // TODO: Autocommit
+
+    await commit(svgsPath, `🖼️ Create svgs from geojsons`);
 
     console.info(`[ Done 🖼️  Converting geojsons to svgs ]`);
     process.exit(0);

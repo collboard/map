@@ -5,6 +5,7 @@
 import del from 'del';
 import { mkdir, writeFile } from 'fs/promises';
 import { dirname, join } from 'path';
+import { commit } from '../utils/autocommit/commit';
 import { FEATURES } from '../../maps/1-features/features';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
@@ -18,6 +19,7 @@ runGeojsonDownloader({ isCleanupPerformed: true });
 /**/
 
 async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed: boolean }) {
+
     const geojsonsPath = join(__dirname, `../../maps/2-geojsons/world`);
 
     if (isCleanupPerformed) {
@@ -93,6 +95,8 @@ async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed
             console.error(error);
         }
     }
+
+    await commit(geojsonsPath, `🗺️ Download geojsons`);
 
     console.info(`[ Done 🗺️ Downloading geojsons ]`);
     process.exit(0);

@@ -7,18 +7,21 @@ import glob from 'glob-promise';
 import { basename, dirname, join } from 'path';
 import { IGeojsonFeatureCollection } from '../../src/interfaces/IGeojson';
 import { geojsonStringify } from '../2-geojson-downloader/utils/geojsonStringify';
+import { commit } from '../utils/autocommit/commit';
 
 /**/
 runGeojsonAggregator({ isCleanupPerformed: true });
 /**/
 
 async function runGeojsonAggregator({ isCleanupPerformed }: { isCleanupPerformed: boolean }) {
+    const geojsonsAggregatedPath = join(__dirname, `../../maps/3-geojsons-aggregated`);
+
     if (isCleanupPerformed) {
         console.info(`🧹 Making cleenup for 🧩 Aggregating geojsons`);
-        await del(join(__dirname, `../../maps/3-geojsons-aggregated`));
+        await del(geojsonsAggregatedPath);
     }
 
-    console.info(`🧩 Aggregating geojsons`);
+    console.info(`🧩  Aggregating geojsons`);
 
     for (const geojsonPath of Array.from(
         new Set((await glob(join(__dirname, '../../maps/2-geojsons/**/*'))).map((path) => dirname(path))),
@@ -68,7 +71,9 @@ async function runGeojsonAggregator({ isCleanupPerformed }: { isCleanupPerformed
         }
     }
 
-    console.info(`[ Done 🧩 Aggregating geojsons ]`);
+    await commit(geojsonsAggregatedPath, `🧩 Aggregate geojsons`);
+
+    console.info(`[ Done 🧩  Aggregating geojsons ]`);
     process.exit(0);
 }
 

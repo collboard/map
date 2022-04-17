@@ -7,6 +7,7 @@ import { basename, join } from 'path';
 import spaceTrim from 'spacetrim';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { isNumeric } from '../../src/utils/isNumeric';
+import { commit } from '../utils/autocommit/commit';
 import { DebugAutomaticTranslator } from '../utils/automatic-translators/DebugAutomaticTranslator';
 import { FakeAutomaticTranslator } from '../utils/automatic-translators/FakeAutomaticTranslator';
 import { GoogleAutomaticTranslator } from '../utils/automatic-translators/GoogleAutomaticTranslator';
@@ -29,6 +30,8 @@ runFeaturesGenerator({ isDebug: false });
 /**/
 
 async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
+    const featuresPath = join(__dirname, '../../maps/1-features/features.ts');
+
     console.info(`🎹 Genetaing features`);
 
     const translator = new MultiAutomaticTranslator({
@@ -54,7 +57,7 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
     async function save() {
         console.info(`💾 Saving`);
         await writeFile(
-            join(__dirname, '../../maps/1-features/features.ts'),
+            featuresPath,
             await prettify(
                 spaceTrim(
                     (block) => `
@@ -147,6 +150,9 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
     }
 
     await save();
+
+    await commit(featuresPath, `🎹 Generate features`);
+
     console.info(`[ Done 🎹 Genetaing features ]`);
     process.exit(0);
 }
