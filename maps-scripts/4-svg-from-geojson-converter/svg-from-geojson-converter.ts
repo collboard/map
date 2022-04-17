@@ -64,10 +64,6 @@ async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerforme
         } catch (error) {
             console.error(error);
         }
-
-        if (Math.random() > 0.9) {
-            break;
-        }
     }
 
     // TODO: Cleanup should be here (with comparision of new and old)
