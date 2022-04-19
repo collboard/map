@@ -8,12 +8,18 @@ import { prettify } from '../utils/prettify';
 import { generateTrayDefinition } from './2-generateTrayDefinition';
 
 /**/
-export async function convertSvgsToTrayDefinitions({ isCleanupPerformed }: { isCleanupPerformed: true }) {
+export async function convertSvgsToTrayDefinitions({
+    isCleanupPerformed,
+    isCommited,
+}: {
+    isCleanupPerformed: boolean;
+    isCommited: boolean;
+}) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
     const trayModulesPath = join(__dirname, `../../maps/6-tray-modules/`);
 
     if (isCleanupPerformed) {
-        console.info(`🧹 Making cleenup for 🖨️  Converting svgs to pdfs`);
+        console.info(`🧹 Making cleenup for 🚡  Tray from svg converter`);
         await del(trayModulesPath);
     }
 
@@ -22,9 +28,11 @@ export async function convertSvgsToTrayDefinitions({ isCleanupPerformed }: { isC
     const modulesPaths: string[] = [];
 
     for (const pathForTrayDefinition of await glob(join(__dirname, '../../maps/4-svgs/**/*'))) {
+        console.log(1, pathForTrayDefinition);
         if (!(await stat(pathForTrayDefinition).then((stat) => stat.isDirectory()))) {
             continue;
         }
+        console.log(2);
 
         if (pathForTrayDefinition !== 'C:/Users/me/work/collboard/map/maps/4-svgs/world/europe/czechia') {
             // Note+TODO: Temporary only for czechia
@@ -106,10 +114,12 @@ export async function convertSvgsToTrayDefinitions({ isCleanupPerformed }: { isC
           .join('\n')}
     `);
 
+    await mkdir(dirname(trayModulesPath), { recursive: true });
     await writeFile(join(trayModulesPath, 'index.ts'), indexContent, 'utf8');
 
-    await commit(trayModulesPath, `🚡 Make tray module from svgs`);
+    if (isCommited) {
+        await commit(trayModulesPath, `🚡 Make tray module from svgs`);
+    }
 
     console.info(`[ Done 🚡 Tray from svg converter ]`);
-    process.exit(0);
 }

@@ -21,12 +21,12 @@
         {
             "name": "🏭🏭🏭 Run all generators",
             "commands": [
-                "ts-node ./maps-scripts/1-features-generator/features-generator.ts",
-                "ts-node ./maps-scripts/2-geojson-downloader/geojson-downloader.ts",
-                "ts-node ./maps-scripts/3-geojson-aggregator/geojson-aggregator.ts",
-                "ts-node ./maps-scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts",
-                "ts-node ./maps-scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts",
-                "ts-node ./maps-scripts/6-tray-from-svg-converter/0-tray-from-svg-converter.ts"
+                "ts-node ./maps-scripts/1-features-generator/features-generator.ts --commit",
+                "ts-node ./maps-scripts/2-geojson-downloader/geojson-downloader.ts --commit",
+                "ts-node ./maps-scripts/3-geojson-aggregator/geojson-aggregator.ts --commit",
+                "ts-node ./maps-scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts --commit",
+                "ts-node ./maps-scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts --commit",
+                "ts-node ./maps-scripts/6-tray-from-svg-converter/0-tray-from-svg-converter.ts --commit"
             ],
             "onlySingle": true,
             "focus": true
