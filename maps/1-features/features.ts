@@ -782,7 +782,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Nicaragua',
-        cs: 'Nikaragua',
+        cs: 'Nikara',
         search: { country: 'Nicaragua' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Nicaragua',
         geopath: { region: 'Americas', country: 'Nicaragua' },
@@ -796,7 +796,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
     },
     {
         en: 'Turkmenistan',
-        cs: 'Turkmenistan',
+        cs: 'T',
         search: { country: 'Turkmenistan' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Turkmenistan',
         geopath: { region: 'Asia', country: 'Turkmenistan' },
