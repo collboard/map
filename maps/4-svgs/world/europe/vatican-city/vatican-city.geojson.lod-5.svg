@@ -1,0 +1,10 @@
+<svg viewBox="0 0 25.29550455110372 23.13506878874547" width="25.29550455110372" height="23.13506878874547" xmlns="http://www.w3.org/2000/svg">
+  <title>Civitas Vaticana - Città del Vaticano</title>
+  <desc>Geojson of Civitas Vaticana - Città del Vaticano</desc>
+  <metadata>
+    <collboard>
+      <support-module name="@collboard/map-svg-geojson-import" version="0.11.0"></support-module>
+    </collboard>
+  </metadata>
+  <polygon points="8.05255000000011,13.365237740326847 14.23710950220243,15.038102725542558 14.439470106655563,15.082518788745801 17.241206924438075,13.155576141485653 17.24295455110382,13.073296245704114 15.271704488877504,9.12216832269769 15.109320844443346,8.052550000000338 12.133695173317165,8.846448849690205 11.514744062187447,8.927755889635591 8.05255000000011,13.365237740326847" stroke="#009edd" stroke-width="5.983936400703759px" fill="none" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polygon>
+</svg>
