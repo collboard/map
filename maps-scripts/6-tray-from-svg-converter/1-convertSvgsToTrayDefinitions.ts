@@ -28,11 +28,9 @@ export async function convertSvgsToTrayDefinitions({
     const modulesPaths: string[] = [];
 
     for (const pathForTrayDefinition of await glob(join(__dirname, '../../maps/4-svgs/**/*'))) {
-        console.log(1, pathForTrayDefinition);
         if (!(await stat(pathForTrayDefinition).then((stat) => stat.isDirectory()))) {
             continue;
         }
-        console.log(2);
 
         if (pathForTrayDefinition !== 'C:/Users/me/work/collboard/map/maps/4-svgs/world/europe/czechia') {
             // Note+TODO: Temporary only for czechia
