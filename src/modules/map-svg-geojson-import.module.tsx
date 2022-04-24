@@ -30,14 +30,14 @@ declareModule({
         const {
             importSystem,
             virtualArtVersioningSystem,
-            apiClient,
+            usercontentSystem,
             appState,
             materialArtVersioningSystem,
             notificationSystem,
         } = await systems.request(
             'importSystem',
             'virtualArtVersioningSystem',
-            'apiClient',
+            'usercontentSystem',
             'appState',
             'materialArtVersioningSystem',
             'notificationSystem',
@@ -85,7 +85,7 @@ declareModule({
 
                 //await forEver(/*until file doubleupload optimization*/);
 
-                imageSrc = await apiClient.fileUpload(file);
+                imageSrc = await usercontentSystem.upload(file);
                 imageArt.src = imageSrc;
                 imageArt.opacity = 1;
 
