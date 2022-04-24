@@ -58,7 +58,7 @@ declareModule({
 
                 // await previewImage(imageSrc);
 
-                const imageSize = await measureImageSize(imageSrc); //.divide(appState.transform.scale);
+                const imageSize = await measureImageSize(imageSrc); // .divide(appState.transform.scale);
                 const imageScaledSize = imageSize.scale(1 / 3);
 
                 logger.info('imageSize', imageSize);
@@ -83,7 +83,7 @@ declareModule({
 
                 previewOperation.update(imageArt);
 
-                //await forEver(/*until file doubleupload optimization*/);
+                // await forEver(/*until file doubleupload optimization*/);
 
                 imageSrc = await usercontentSystem.upload(file);
                 imageArt.src = imageSrc;

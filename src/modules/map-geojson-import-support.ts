@@ -30,7 +30,7 @@ declareModule({
         // Note: For lot of systems we are using this makeWhatever helpers. I am trying one system - ImportSystem without make helper to modules just to use this systems methods directly.
         return importSystem.registerFileSupport({
             priority: 0,
-            //mimeType: 'application/geo+json',
+            // mimeType: 'application/geo+json',
             async processFile({ file, boardPosition, next }) {
                 return next();
                 // TODO: Import GeoJson and center the map

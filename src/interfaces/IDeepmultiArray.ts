@@ -1,1 +1,1 @@
-export type IDeepmultiArray<T> = T | IDeepmultiArray<T>[];
+export type IDeepmultiArray<T> = T | Array<IDeepmultiArray<T>>;
