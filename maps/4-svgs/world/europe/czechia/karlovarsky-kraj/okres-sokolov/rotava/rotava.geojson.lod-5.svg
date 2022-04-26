@@ -3,8 +3,8 @@
   <desc>Geojson of Rotava, Dolní Rotava, Rotava, okres Sokolov, Karlovarský kraj, Severozápad, Česko</desc>
   <metadata>
     <collboard>
-      <support-module name="@collboard/map-svg-geojson-import" version="0.11.0"></support-module>
+      <support-module name="@collboard/map-svg-geojson-import" version="0.11.1"></support-module>
     </collboard>
   </metadata>
-  <polygon points="8.05255000000011,8.257987074895595 8.05255000000011,8.257987074895595" stroke="#009edd" stroke-width="5.732922986833557px" fill="none" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polygon>
+  <polygon points="8.05255000000011,8.257987074895595 8.05255000000011,8.257987074895595" stroke="#009edd" stroke-width="5.480567666185344px" fill="none" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polygon>
 </svg>
