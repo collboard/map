@@ -79,6 +79,11 @@ async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed
             );
             await mkdir(dirname(geojsonPath), { recursive: true });
 
+            if (geojsonPath.includes('maps/4-svgs/world/europe/czechia/praha')) {
+                // TODO: !!! Is this working?
+                continue;
+            }
+
             await writeFile(
                 geojsonPath,
                 geojsonStringify({
