@@ -6,6 +6,7 @@ import { IGeopath } from './geopath';
  */
 
 export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl: string; geopath: IGeopath }> = [
+    /*
     {
         en: 'China',
         cs: 'Čína',
@@ -1747,6 +1748,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=Pitcairn+Islands+%28United+Kingdom%29',
         geopath: { region: 'Oceania', country: 'Pitcairn islands (united kingdom)' },
     },
+    */
     {
         cs: 'Praha',
         search: { country: 'czechia', q: 'Praha' },

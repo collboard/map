@@ -31,7 +31,7 @@ async function convertGeojsonsToSvgs({ isCleanupPerformed }: { isCleanupPerforme
 
     for (const geojsonPath of [
         ...(await glob(join(__dirname, '../../maps/2-geojsons/**/*.geojson'))),
-        ...(await glob(join(__dirname, '../../maps/3-geojsons-aggregated/**/*.geojson'))),
+        //...(await glob(join(__dirname, '../../maps/3-geojsons-aggregated/**/*.geojson'))),
     ]) {
         try {
             const geojson = JSON.parse(await readFile(geojsonPath, 'utf8')) as IGeojsonFeatureCollection;

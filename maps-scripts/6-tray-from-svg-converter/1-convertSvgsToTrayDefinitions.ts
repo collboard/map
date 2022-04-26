@@ -4,8 +4,11 @@ import glob from 'glob-promise';
 import { basename, dirname, join, relative } from 'path';
 import { commit } from '../utils/autocommit/commit';
 import { forPlay } from '../utils/forPlay';
+import { normalizeToCamelCase } from '../utils/normalizeToCamelCase';
 import { prettify } from '../utils/prettify';
+import { removeDiacritics } from '../utils/removeDiacritics';
 import { generateTrayDefinition } from './2-generateTrayDefinition';
+import { getTitleOfSvg } from './getTitleOfSvg';
 
 /**/
 export async function convertSvgsToTrayDefinitions({
@@ -49,7 +52,15 @@ export async function convertSvgsToTrayDefinitions({
         const importAliases: { alias: string; path: string }[] = [];
         for (const match of trayDefinitionJson.matchAll(/import\((?<path>.*?)\)/g)) {
             const path = match.groups!.path;
-            const alias = `x${Math.random().toString(36).substr(2, 9)}`; // <- Better foe example> jihoceskyKrajAggregated2Geojson
+            const baseAlias = await getTitleOfSvg(path).then(removeDiacritics).then(normalizeToCamelCase);
+
+            let alias = baseAlias;
+            let i = 0;
+            while (importAliases.some(({ alias: alias2 }) => alias === alias2)) {
+                i++;
+                alias = `${baseAlias}${i}`;
+            }
+
             importAliases.push({ alias, path });
             trayDefinitionJson = trayDefinitionJson.replace(`"import(${path})"`, alias);
         }
