@@ -2,6 +2,7 @@
 /// <reference path="../../src/geojson/simplify-geojson.d.ts" />
 
 //import chalk from 'chalk';
+import commander from 'commander';
 import del from 'del';
 import { mkdir, writeFile } from 'fs/promises';
 import { dirname, join } from 'path';
@@ -16,10 +17,28 @@ import { removeDiacritics } from '../utils/removeDiacritics';
 import { geojsonStringify } from './utils/geojsonStringify';
 
 /**/
-runGeojsonDownloader({ isCleanupPerformed: true });
+
+const program = new commander.Command();
+program.option('--commit', `Autocommit changes`);
+program.parse(process.argv);
+const { commit: isCommited } = program.opts();
+
+runGeojsonDownloader({ isCleanupPerformed: true, isCommited })
+    .catch((error) => {
+        console.error(error);
+    })
+    .then(() => {
+        process.exit(0);
+    });
 /**/
 
-async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed: boolean }) {
+async function runGeojsonDownloader({
+    isCleanupPerformed,
+    isCommited,
+}: {
+    isCleanupPerformed: boolean;
+    isCommited: boolean;
+}) {
     const geojsonsPath = join(__dirname, `../../maps/2-geojsons/world`);
 
     if (isCleanupPerformed) {
@@ -102,7 +121,9 @@ async function runGeojsonDownloader({ isCleanupPerformed }: { isCleanupPerformed
         }
     }
 
-    await commit(geojsonsPath, `🗺️ Download geojsons`);
+    if (isCommited) {
+        await commit(geojsonsPath, `🗺️ Download geojsons`);
+    }
 
     console.info(`[ Done 🗺️ Downloading geojsons ]`);
     process.exit(0);

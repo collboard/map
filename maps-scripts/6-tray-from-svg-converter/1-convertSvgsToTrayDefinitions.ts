@@ -41,12 +41,14 @@ export async function convertSvgsToTrayDefinitions({
         }
 
         await forPlay();
-        console.info(`📦 Making module from ${basename(pathForTrayDefinition)}`);
-
         const modulePath = join(
             trayModulesPath,
             relative(join(__dirname, '../../maps/4-svgs/'), pathForTrayDefinition) + '-tray.module.tsx',
         );
+        console.info(
+            `📦  ${basename(pathForTrayDefinition)} 📦  ${relative(process.cwd(), modulePath).split('\\').join('/')}`,
+        );
+
         const trayDefinition = await generateTrayDefinition(pathForTrayDefinition);
         let trayDefinitionJson = JSON.stringify(trayDefinition);
         const importAliases: { alias: string; path: string }[] = [];
@@ -68,6 +70,14 @@ export async function convertSvgsToTrayDefinitions({
         const moduleContent = await prettify(
             // TODO: Also organize imports
             `
+
+/**
+ * 🏭 GENERATED WITH 🚡 Tray from svg converter
+ * ⚠️ Warning: Do not edit by hand, all changes will be lost on next execution!
+ */
+
+
+
               import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
               import { contributors, license, repository, version } from '${relative(
                   dirname(modulePath),

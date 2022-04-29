@@ -1,6 +1,7 @@
 #!/usr/bin/env ts-node
 /// <reference path="../../src/geojson/simplify-geojson.d.ts" />
 
+import commander from 'commander';
 import del from 'del';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
@@ -11,10 +12,28 @@ import { commit } from '../utils/autocommit/commit';
 import { forPlay } from '../utils/forPlay';
 
 /**/
-runGeojsonAggregator({ isCleanupPerformed: true });
+
+const program = new commander.Command();
+program.option('--commit', `Autocommit changes`);
+program.parse(process.argv);
+const { commit: isCommited } = program.opts();
+
+runGeojsonAggregator({ isCleanupPerformed: true, isCommited })
+    .catch((error) => {
+        console.error(error);
+    })
+    .then(() => {
+        process.exit(0);
+    });
 /**/
 
-async function runGeojsonAggregator({ isCleanupPerformed }: { isCleanupPerformed: boolean }) {
+async function runGeojsonAggregator({
+    isCleanupPerformed,
+    isCommited,
+}: {
+    isCleanupPerformed: boolean;
+    isCommited: boolean;
+}) {
     const geojsonsAggregatedPath = join(__dirname, `../../maps/3-geojsons-aggregated`);
 
     if (isCleanupPerformed) {
@@ -27,7 +46,7 @@ async function runGeojsonAggregator({ isCleanupPerformed }: { isCleanupPerformed
     for (const geojsonPath of Array.from(
         new Set((await glob(join(__dirname, '../../maps/2-geojsons/**/*'))).map((path) => dirname(path))),
     )) {
-        for (const level of [1, 2, 3, 4]) {
+        for (const level of [1, 2, 3 /* Note: For Czechia makes most sence to have 3 aggregation levels */]) {
             try {
                 await forPlay();
                 const subGeojsonsPaths = (await glob(geojsonPath + '/**/*.geojson')).filter(
@@ -73,7 +92,9 @@ async function runGeojsonAggregator({ isCleanupPerformed }: { isCleanupPerformed
         }
     }
 
-    await commit(geojsonsAggregatedPath, `🧩 Aggregate geojsons`);
+    if (isCommited) {
+        await commit(geojsonsAggregatedPath, `🧩 Aggregate geojsons`);
+    }
 
     console.info(`[ Done 🧩  Aggregating geojsons ]`);
     process.exit(0);

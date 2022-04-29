@@ -88,4 +88,20 @@ describe('picking of title', () => {
             ),
         ).toBe('Česko');
     });
+
+    /*
+    TODO: [🎡] via parseGeopath
+
+    it('should return best matching part', () => {
+        expect(
+            pickTitle(
+                'Karlovarský kraj, Severozápad, Česko',
+                'okres Cheb, Karlovarský kraj, Severozápad, Česko',
+                'okres Karlovy Vary, Karlovarský kraj, Severozápad, Česko',
+                'okres Sokolov, Karlovarský kraj, Severozápad, Česko',
+            ),
+        ).toBe('Karlovarský kraj');
+    });
+
+    */
 });

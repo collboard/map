@@ -16,5 +16,3 @@ convertSvgsToTrayDefinitions({ isCleanupPerformed: true, isCommited: commit })
     .then(() => {
         process.exit(0);
     });
-
-// TODO: !!! Same pattern for all scripts

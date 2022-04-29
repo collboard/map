@@ -1,5 +1,6 @@
 #!/usr/bin/env ts-node
 
+import commander from 'commander';
 import { readFile, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import papaparse from 'papaparse';
@@ -27,10 +28,23 @@ const GENERATOR_WARNING = spaceTrim(`
 `);
 
 /**/
-runFeaturesGenerator({ isDebug: false });
+
+const program = new commander.Command();
+program.option('--commit', `Autocommit changes`);
+program.parse(process.argv);
+const { commit: isCommited } = program.opts();
+
+runFeaturesGenerator({ isDebug: false, isCommited })
+    .catch((error) => {
+        console.error(error);
+    })
+    .then(() => {
+        process.exit(0);
+    });
+
 /**/
 
-async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
+async function runFeaturesGenerator({ isDebug, isCommited }: { isDebug: boolean; isCommited: boolean }) {
     const featuresPath = join(__dirname, '../../maps/1-features/features.ts');
 
     console.info(`🎹 Genetaing features`);
@@ -80,6 +94,7 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
     const features: any[] = [];
 
     for (const csvPath of await glob(join(__dirname, '../../maps/0-features-lists/**/*.csv'))) {
+        const fileFeatures: any[] = [];
         await forPlay();
         console.info(`🗄️ Processing file ${basename(csvPath)}`);
         const csvCountry = /0-features-lists\/(?<country>.*?)\//.exec(csvPath)?.groups?.country;
@@ -133,10 +148,11 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
                 };
             }
 
-            for (const checkedFeature of features) {
+            for (const checkedFeature of fileFeatures) {
                 checkedFeature.geopath = completeGeopath({ model: feature.geopath, reciever: checkedFeature.geopath });
             }
 
+            fileFeatures.push(feature);
             features.push(feature);
 
             if (!isDebug && features.length % 64 === 0) {
@@ -153,7 +169,9 @@ async function runFeaturesGenerator({ isDebug }: { isDebug: boolean }) {
 
     await save();
 
-    await commit(featuresPath, `🎹 Generate features`);
+    if (isCommited) {
+        await commit(featuresPath, `🎹 Generate features`);
+    }
 
     console.info(`[ Done 🎹 Genetaing features ]`);
     process.exit(0);

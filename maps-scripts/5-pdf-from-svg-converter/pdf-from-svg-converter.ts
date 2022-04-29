@@ -1,5 +1,6 @@
 #!/usr/bin/env ts-node
 
+import commander from 'commander';
 import del from 'del';
 import { mkdir, readFile, unlink, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
@@ -8,11 +9,26 @@ import puppeteer from 'puppeteer';
 import { commit } from '../utils/autocommit/commit';
 import { forPlay } from '../utils/forPlay';
 
-/**/
-convertSvgsToPdfs({ isCleanupPerformed: true });
-/**/
+const program = new commander.Command();
+program.option('--commit', `Autocommit changes`);
+program.parse(process.argv);
+const { commit: isCommited } = program.opts();
 
-async function convertSvgsToPdfs({ isCleanupPerformed }: { isCleanupPerformed: true }) {
+convertSvgsToPdfs({ isCleanupPerformed: true, isCommited })
+    .catch((error) => {
+        console.error(error);
+    })
+    .then(() => {
+        process.exit(0);
+    });
+
+async function convertSvgsToPdfs({
+    isCleanupPerformed,
+    isCommited,
+}: {
+    isCleanupPerformed: true;
+    isCommited: boolean;
+}) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
 
     const pdfsPath = join(__dirname, `../../maps/5-pdfs/`);
