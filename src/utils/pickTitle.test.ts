@@ -8,6 +8,10 @@ describe('picking of title', () => {
         expect(pickTitle('')).toBe('Untitled');
     });
 
+    /*
+    TODO: [🎡] via parseGeopath
+
+
     it('should return given title', () => {
         expect(pickTitle('Aaaaa')).toBe('Aaaaa');
         expect(pickTitle('Aaaaa', 'Aaaaa')).toBe('Aaaaa');
