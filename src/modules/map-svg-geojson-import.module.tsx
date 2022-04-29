@@ -59,7 +59,7 @@ declareModule({
                 // await previewImage(imageSrc);
 
                 const imageSize = await measureImageSize(imageSrc); // .divide(appState.transform.scale);
-                const imageScaledSize = imageSize.scale(1 / 3);
+                const imageScaledSize = imageSize.scale(2);
 
                 logger.info('imageSize', imageSize);
                 /*

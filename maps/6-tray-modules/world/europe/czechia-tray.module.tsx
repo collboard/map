@@ -36,14 +36,13 @@ import usteckyKraj from '../../../4-svgs/world/europe/czechia/ustecky-kraj/ustec
 import zlinskyKraj1 from '../../../4-svgs/world/europe/czechia/zlinsky-kraj/zlinsky-kraj.aggregated2.geojson.lodn10.svg';
 import zlinskyKraj from '../../../4-svgs/world/europe/czechia/zlinsky-kraj/zlinsky-kraj.geojson.lodn10.svg';
 
-// TODO: !!! Generator warning
-
 declareModule(
     makeTraySimpleModule({
         manifest: {
-            name: '@collboard/map-tray-tool',
-            title: { en: 'Map tray tool' },
-            description: { en: 'Tray tool for the map' },
+            name: '@collboard/map-tray-tool-czechia-counties-and-districts',
+            icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+            title: { cs: 'Kraje a okresy České republiky', en: 'Czechia counties and districts' },
+            description: { cs: 'Lišta s kraji České republiky', en: 'Tray with Czechia counties and districts' },
             contributors,
             license,
             repository,
@@ -52,32 +51,36 @@ declareModule(
 
         icon: {
             order: 60,
-            icon: 'earth' /* <- TODO: Better, Czechia borders */,
+            // icon: 'earth' /* <- TODO: Better, Czechia borders */,
+            char: '🇨🇿',
+            // TODO: !!! Custom icon OR make flag images from UTF-8 country codes like "🇨🇿"
             boardCursor: 'default',
         },
         trayDefinition: [
             {
                 title: 'Česká republika',
-                icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+                // !!!! Icons
+                icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/sk.svg',
                 groups: [
                     {
                         title: '',
                         items: [
-                            { title: 'Hlavní město Praha, Praha, Česko', imageSrc: hlavniMestoPrahaPrahaCesko },
-                            { title: 'Hlavní město Praha, Praha, Česko', imageSrc: hlavniMestoPrahaPrahaCesko1 },
-                            { title: 'Untitled', imageSrc: untitled },
+                            { title: 'Okresy České republiky', imageSrc: hlavniMestoPrahaPrahaCesko },
+                            { title: 'Kraje České republiky', imageSrc: hlavniMestoPrahaPrahaCesko1 },
+                            { title: 'Česká republika', imageSrc: untitled },
                         ],
                     },
                 ],
             },
             {
                 title: 'Kraje České republiky',
-                icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+                icon: hlavniMestoPrahaPrahaCesko1,
                 groups: [
                     {
                         title: '',
                         items: [
-                            { title: 'Hlavní město Praha, Praha, Česko', imageSrc: hlavniMestoPrahaPrahaCesko2 },
+                            { title: 'Kraje České republiky', imageSrc: hlavniMestoPrahaPrahaCesko1 },
+                            { title: 'Praha', imageSrc: hlavniMestoPrahaPrahaCesko2 },
                             { title: 'Jihomoravský kraj', imageSrc: jihomoravskyKraj },
                             { title: 'Jihočeský kraj', imageSrc: jihoceskyKraj },
                             { title: 'Karlovarský kraj', imageSrc: karlovarskyKraj },
@@ -97,11 +100,13 @@ declareModule(
             },
             {
                 title: 'Okresy České republiky',
-                icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+                icon: hlavniMestoPrahaPrahaCesko,
                 groups: [
                     {
                         title: '',
                         items: [
+                            { title: 'Okresy České republiky', imageSrc: hlavniMestoPrahaPrahaCesko },
+                            { title: 'Praha', imageSrc: hlavniMestoPrahaPrahaCesko2 },
                             { title: 'Jihomoravský kraj', imageSrc: jihomoravskyKraj1 },
                             { title: 'Jihočeský kraj', imageSrc: jihoceskyKraj1 },
                             { title: 'Karlovarský kraj', imageSrc: karlovarskyKraj1 },
@@ -112,8 +117,8 @@ declareModule(
                             { title: 'Olomoucký kraj', imageSrc: olomouckyKraj1 },
                             { title: 'Pardubický kraj', imageSrc: pardubickyKraj1 },
                             { title: 'Plzeňský kraj', imageSrc: plzenskyKraj1 },
+                            { title: 'Středočeský kraj', imageSrc: okresBenesovStredniCechyCesko },
                             { title: 'Zlínský kraj', imageSrc: zlinskyKraj1 },
-                            { title: 'okres Benešov, Střední Čechy, Česko', imageSrc: okresBenesovStredniCechyCesko },
                             { title: 'Ústecký kraj', imageSrc: usteckyKraj1 },
                         ],
                     },

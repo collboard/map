@@ -93,7 +93,6 @@ export async function convertSvgsToTrayDefinitions({
                   .join('\n')}
 
 
-              // TODO: !!! Generator warning
 
               declareModule(
                 makeTraySimpleModule({
@@ -127,7 +126,11 @@ export async function convertSvgsToTrayDefinitions({
     // TODO: Not spaceTrim but prettify OR block
     const indexContent = await prettify(`
 
-      // TODO: !!! Generator warning
+/**
+ * 🏭 GENERATED WITH 🚡 Tray from svg converter
+ * ⚠️ Warning: Do not edit by hand, all changes will be lost on next execution!
+ */
+
       ${modulesPaths
           .map((modulePath) => `import './${relative(trayModulesPath, modulePath).split('\\').join('/')}';`)
           .join('\n')}
