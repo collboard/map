@@ -1,15 +1,15 @@
 export function pickTitle(...titles: string[]): string {
     // TODO: !!! Just a hack
     titles = titles.filter((title) => title !== 'Česko');
-    const title = titles[0];
-    if (!title) {
+    const firstTitle = titles[0];
+    if (!firstTitle) {
         return 'Untitled';
     }
     return (
-        title
+        firstTitle
             .split(',')
             .map((part) => part.trim())
-            .find((part) => part.endsWith('kraj')) || title
+            .find((part) => part.endsWith('kraj')) || firstTitle
     );
 
     /*
