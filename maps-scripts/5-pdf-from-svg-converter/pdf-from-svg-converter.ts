@@ -31,6 +31,9 @@ async function convertSvgsToPdfs({
 }) {
     //console.info(chalk.bgGrey(` Scraping Czech names`));
 
+    // TODO: !!! Temporary blocked - not doing anything with PDFs now
+    return;
+
     const pdfsPath = join(__dirname, `../../maps/5-pdfs/`);
 
     if (isCleanupPerformed) {

@@ -13,7 +13,11 @@ import { getTitleOfSvg } from '../6-tray-from-svg-converter/getTitleOfSvg';
 import { commit } from '../utils/autocommit/commit';
 import { forPlay } from '../utils/forPlay';
 
-const LODS_EXPONENTS = [-13]; //[/*-1,*/ -30, -10, 0, 5 /*1, 2, 3, 4*/, 10];
+const LODS_EXPONENTS = [
+    -10,
+    // Note: 10 is best ballance between quality and pefrormance for the web
+    // Other LODs> -50, -30, -10, 0, 5, 1, 2, 3, 4, 10, 30
+];
 
 /**/
 const program = new commander.Command();
@@ -80,7 +84,7 @@ async function convertGeojsonsToSvgs({
 
                 const svgPath =
                     geojsonPath.replace('/2-geojsons/', '/4-svgs/').replace('/3-geojsons-aggregated/', '/4-svgs/') +
-                    `.lod${exponent > 0 ? '+' : '-'}${Math.abs(exponent)}.svg`;
+                    `.lod${exponent === 0 ? '' : exponent > 0 ? 'p' : 'n'}${Math.abs(exponent)}.svg`;
 
                 await mkdir(dirname(svgPath), { recursive: true });
                 await writeFile(svgPath, svgString, 'utf8');

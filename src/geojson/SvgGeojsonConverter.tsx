@@ -54,7 +54,9 @@ export class SvgGeojsonConverter {
     public async makeSvg(z: number, isAsUrl: boolean): Promise<ISvgGeojson> {
         this.calculateBoundingBox();
 
-        const padding = 5 / z;
+        // TODO: !!! Better name and move into config
+        const GEOJSON_SVG_SCALE = 0.1;
+        const GEOJSON_SVG_PADDING = 5;
 
         const degradation = 0.001 / z; // Math.pow(2, z * 5);
 
@@ -64,11 +66,16 @@ export class SvgGeojsonConverter {
         const simplifiedGeojson = this.simplifiedGeojson.simplify(degradation);
 
         const boundingBox = { minX: this.minX, maxX: this.maxX, minY: this.minY, maxY: this.maxY };
+        const size = new Vector(
+            (this.maxX - this.minX) * GEOJSON_SVG_SCALE + 2 * GEOJSON_SVG_PADDING,
+            (this.maxY - this.minY) * GEOJSON_SVG_SCALE + 2 * GEOJSON_SVG_PADDING,
+        );
+
         const element = (
             <svg
-                viewBox={`0 0 ${this.maxX - this.minX + 2 * padding} ${this.maxY - this.minY + 2 * padding}`}
-                width={this.maxX - this.minX + 2 * padding}
-                height={this.maxY - this.minY + 2 * padding}
+                viewBox={`0 0 ${size.x} ${size.y}`}
+                width={size.x}
+                height={size.y}
                 /*  width="1000" /* <- TODO: Maybe use + Some configurable ratio */
                 /* TODO: Prevent width="NaN" height="NaN" */
                 /* TODO: Also height according to ratio + some smart count of reasonable width+height */
@@ -103,8 +110,15 @@ export class SvgGeojsonConverter {
                         points={getAllPointsOf(feature)
                             .map((pointAsWgs84) => {
                                 return this.wgs84ToBoard(pointAsWgs84)
-                                    .subtract(new Vector(this.minX - padding, this.minY - padding))
+                                    .subtract(
+                                        new Vector(
+                                            this.minX - GEOJSON_SVG_PADDING / z,
+                                            this.minY - GEOJSON_SVG_PADDING / z,
+                                        ),
+                                    )
+                                    .scale(GEOJSON_SVG_SCALE)
                                     .toArray2D();
+                                // TODO: Optimize numbers as in https://www.svgviewer.dev/svg-to-png
                             })
                             .join(' ')}
                         onClick={() => {
@@ -115,11 +129,10 @@ export class SvgGeojsonConverter {
                             // + add  onMouseLeave={(event) => {
                         }}
                         stroke="#009edd"
-                        // !!! Dynamic size in SVG
-                        strokeWidth={(3 + Math.random()) / z + 'px'}
                         fill="none"
-                        strokeLinejoin="round"
+                        strokeWidth="5px"
                         vectorEffect="non-scaling-stroke"
+                        strokeLinejoin="round"
                         // filter="url(#dilate-and-xor)"
                     />
                 ))}
@@ -128,7 +141,7 @@ export class SvgGeojsonConverter {
 
         if (!isAsUrl) {
             return {
-                padding,
+                padding: GEOJSON_SVG_PADDING / z,
                 boundingBox,
                 element,
             };
@@ -137,7 +150,7 @@ export class SvgGeojsonConverter {
             const src = await blobToDataUrl(new Blob([svgString], { type: 'image/svg+xml' }));
 
             return {
-                padding,
+                padding: GEOJSON_SVG_PADDING / z,
                 boundingBox,
                 src,
             };
