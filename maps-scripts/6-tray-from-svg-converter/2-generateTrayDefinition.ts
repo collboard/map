@@ -6,7 +6,7 @@ export async function generateTrayDefinition(path: string): Promise<ITraySimpleD
     return [
         {
             title: 'Česká republika',
-            icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+            icon: 'import(../../../../assets/icons/cs.svg)',
             groups: [
                 {
                     title: `` /* <- Note: No name for (no)group */,
@@ -16,7 +16,7 @@ export async function generateTrayDefinition(path: string): Promise<ITraySimpleD
         },
         {
             title: 'Kraje České republiky',
-            icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+            icon: 'import(../../../../assets/icons/czechia-counties.png)',
             groups: [
                 {
                     title: `` /* <- Note: No name for (no)group */,
@@ -28,7 +28,7 @@ export async function generateTrayDefinition(path: string): Promise<ITraySimpleD
         },
         {
             title: 'Okresy České republiky',
-            icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+            icon: 'import(../../../../assets/icons/czechia-districts.png)',
             groups: [
                 // Note: Using only one group - make it more semantic
                 {

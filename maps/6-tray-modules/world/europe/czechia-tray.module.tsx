@@ -4,6 +4,9 @@
  */
 
 import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
+import czechiaIcon from '../../../../assets/icons/cs.svg';
+import countiesIcon from '../../../../assets/icons/czechia-counties.png';
+import districtsIcon from '../../../../assets/icons/czechia-districts.png';
 import { contributors, license, repository, version } from '../../../../package.json';
 import hlavniMestoPrahaPrahaCesko1 from '../../../4-svgs/world/europe/czechia/czechia.aggregated2.geojson.lodn10.svg';
 import hlavniMestoPrahaPrahaCesko from '../../../4-svgs/world/europe/czechia/czechia.aggregated3.geojson.lodn10.svg';
@@ -59,22 +62,21 @@ declareModule(
         trayDefinition: [
             {
                 title: 'Česká republika',
-                // !!!! Icons
-                icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/sk.svg',
+                icon: czechiaIcon,
                 groups: [
                     {
                         title: '',
                         items: [
-                            { title: 'Okresy České republiky', imageSrc: hlavniMestoPrahaPrahaCesko },
-                            { title: 'Kraje České republiky', imageSrc: hlavniMestoPrahaPrahaCesko1 },
                             { title: 'Česká republika', imageSrc: untitled },
+                            { title: 'Kraje České republiky', imageSrc: hlavniMestoPrahaPrahaCesko1 },
+                            { title: 'Okresy České republiky', imageSrc: hlavniMestoPrahaPrahaCesko },
                         ],
                     },
                 ],
             },
             {
                 title: 'Kraje České republiky',
-                icon: hlavniMestoPrahaPrahaCesko1,
+                icon: countiesIcon,
                 groups: [
                     {
                         title: '',
@@ -100,7 +102,7 @@ declareModule(
             },
             {
                 title: 'Okresy České republiky',
-                icon: hlavniMestoPrahaPrahaCesko,
+                icon: districtsIcon,
                 groups: [
                     {
                         title: '',
