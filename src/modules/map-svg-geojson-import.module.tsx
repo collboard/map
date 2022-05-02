@@ -50,6 +50,10 @@ declareModule({
                     return next();
                 }
 
+                if ((await file.text()).includes(`@collboard/map-svg-geojson-import`) /* <- TODO: Better */) {
+                    return next();
+                }
+
                 // TODO: Also test for <collboard><support-module name="@collboard/map-svg-geojson-import" version="0.11.0"></support-module></collboard>
 
                 willCommitArts();
