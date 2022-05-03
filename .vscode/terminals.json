@@ -32,6 +32,15 @@
             "focus": true
         },
         {
+            "name": "🏭🏭 Generate SVGs + Tray",
+            "commands": [
+                "ts-node ./maps-scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts --commit",
+                "ts-node ./maps-scripts/6-tray-from-svg-converter/0-tray-from-svg-converter.ts --commit"
+            ],
+            "onlySingle": true,
+            "focus": true
+        },
+        {
             "name": "🏭/1/🎹 Features generator",
             "command": "ts-node ./maps-scripts/1-features-generator/features-generator.ts",
             "onlySingle": true,
