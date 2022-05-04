@@ -55,7 +55,7 @@ declareModule(
         icon: {
             order: 60,
             // icon: 'earth' /* <- TODO: Better, Czechia borders */,
-            char: '🇨🇿',
+            icon: '🇨🇿',
             // TODO: !!! Custom icon OR make flag images from UTF-8 country codes like "🇨🇿"
             boardCursor: 'default',
         },
