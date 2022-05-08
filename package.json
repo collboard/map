@@ -4,7 +4,8 @@
     "description": "Maps for the geography class for the Collboard.com in cooperation with The Capital City of Prague. See all file support modules for Collboard.",
     "license": "SEE LICENSE IN LICENSE",
     "contributors": [
-        "Pavol Hejný <pavol.hejny@collboard.com> (https://collboard.com/-/about/team)"
+        "Pavol Hejný <pavol.hejny@collboard.com> (https://collboard.com/-/about/team)",
+        "Hlavní město Praha"
     ],
     "repository": {
         "type": "git",
