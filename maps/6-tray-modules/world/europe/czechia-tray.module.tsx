@@ -7,6 +7,8 @@ import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
 import czechiaIcon from '../../../../assets/icons/cs.svg';
 import countiesIcon from '../../../../assets/icons/czechia-counties.png';
 import districtsIcon from '../../../../assets/icons/czechia-districts.png';
+import mapComapss from '../../../../assets/map-tools/map-compass.svg';
+import mapScale from '../../../../assets/map-tools/map-scale.svg';
 import { contributors, license, repository, version } from '../../../../package.json';
 import hlavniMestoPrahaPrahaCesko1 from '../../../4-svgs/world/europe/czechia/czechia.aggregated2.geojson.lodn13.svg';
 import hlavniMestoPrahaPrahaCesko from '../../../4-svgs/world/europe/czechia/czechia.aggregated3.geojson.lodn13.svg';
@@ -55,7 +57,7 @@ declareModule(
         icon: {
             order: 60,
             // icon: 'earth' /* <- TODO: Better, Czechia borders */,
-            icon: '🇨🇿',
+            icon: czechiaIcon,
             // TODO: !!! Custom icon OR make flag images from UTF-8 country codes like "🇨🇿"
             boardCursor: 'default',
         },
@@ -65,11 +67,18 @@ declareModule(
                 icon: czechiaIcon,
                 groups: [
                     {
-                        title: '',
+                        title: 'Česká republika',
                         items: [
                             { title: 'Česká republika', imageSrc: untitled },
                             { title: 'Kraje České republiky', imageSrc: hlavniMestoPrahaPrahaCesko1 },
                             { title: 'Okresy České republiky', imageSrc: hlavniMestoPrahaPrahaCesko },
+                        ],
+                    },
+                    {
+                        title: 'Nástroje',
+                        items: [
+                            { title: 'Měřítko' /* TODO: { cs: 'Měřítko', en: 'Scale' }*/, imageSrc: mapScale },
+                            { title: 'Kompas' /* TODO: { cs: 'Kompas', en: 'Comapss' }*/, imageSrc: mapComapss },
                         ],
                     },
                 ],

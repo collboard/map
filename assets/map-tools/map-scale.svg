@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" id="svg2" sodipodi:docname="_svgclean2.svg" viewBox="0 0 104.48 20.819" version="1.1" inkscape:version="0.48.3.1 r9886">
+  <title id="title5266">Map Scale Bar</title>
+
+  <metadata>
+    <collboard>
+      <support-module name="@collboard/map-svg-geojson-import" version="1.2.0"></support-module>
+    </collboard>
+  </metadata>
+
+  <sodipodi:namedview id="base" fit-margin-left="10" inkscape:zoom="5.6" borderopacity="1.0" inkscape:current-layer="layer1" inkscape:cx="43.611741" inkscape:cy="-954.76122" inkscape:snap-page="true" inkscape:window-maximized="0" showgrid="false" fit-margin-right="10" inkscape:snap-global="true" showguides="true" bordercolor="#666666" inkscape:window-x="0" inkscape:guide-bbox="true" inkscape:window-y="0" fit-margin-bottom="10" inkscape:window-width="512" inkscape:pageopacity="0.0" inkscape:pageshadow="2" pagecolor="#ffffff" inkscape:document-units="px" inkscape:window-height="452" fit-margin-top="10">
+    <sodipodi:guide id="guide5202" position="102.26,-1011.4264" orientation="1,0" />
+    <sodipodi:guide id="guide5216" position="27.26,-1011.4264" orientation="1,0" />
+    <sodipodi:guide id="guide5218" position="52.26,-1011.4264" orientation="1,0" />
+    <sodipodi:guide id="guide5220" position="77.26,-1011.4264" orientation="1,0" />
+    <sodipodi:guide id="guide5222" position="-7.74,-1001.4264" orientation="0,1" />
+    <sodipodi:guide id="guide5244" position="-7.74,-991.42641" orientation="0,1" />
+    <sodipodi:guide id="guide5248" position="2.26,-1011.4264" orientation="1,0" />
+  </sodipodi:namedview>
+  <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer" transform="translate(-7.74 -1031.7)">
+    <rect id="rect5210" style="fill:#000000" height="5" width="25" y="1032.1" x="10" />
+    <rect id="rect5212" style="fill:#000000" height="5" width="50" y="1032.1" x="60" />
+    <rect id="rect5214" style="fill:#000000" height="5" width="25" y="1037.1" x="35" />
+    <rect id="rect5226" style="stroke:#000000;fill:none" height="10.179" width="100" y="1032.2" x="10" />
+    <text id="text5228" style="font-size:10px;font-family:Times New Roman;fill:#009edd;letter-spacing:0px;text-anchor:middle;line-height:125%;word-spacing:0px;text-align:center" xml:space="preserve" y="1052.3622" x="10" sodipodi:linespacing="125%">
+      <tspan id="tspan5230" sodipodi:role="line" x="10" y="1052.3622">0</tspan>
+    </text>
+    <text id="text5232" style="font-size:10px;font-family:Times New Roman;fill:#009edd;letter-spacing:0px;text-anchor:middle;line-height:125%;word-spacing:0px;text-align:center" xml:space="preserve" y="1052.3622" x="35" sodipodi:linespacing="125%">
+      <tspan id="tspan5234" sodipodi:role="line" x="35" y="1052.3622">1km</tspan>
+    </text>
+    <text id="text5250" style="font-size:10px;font-family:Times New Roman;fill:#009edd;letter-spacing:0px;text-anchor:middle;line-height:125%;word-spacing:0px;text-align:center" sodipodi:linespacing="125%" y="1052.3622" x="60" xml:space="preserve">
+      <tspan id="tspan5262" y="1052.3622" x="60" sodipodi:role="line">2km</tspan>
+    </text>
+    <text id="text5258" style="font-size:10px;font-family:Times New Roman;fill:#009edd;letter-spacing:0px;text-anchor:middle;line-height:125%;word-spacing:0px;text-align:center" sodipodi:linespacing="125%" y="1052.3622" x="110" xml:space="preserve">
+      <tspan id="tspan5260" y="1052.3622" x="110" sodipodi:role="line">4km</tspan>
+    </text>
+  </g>
+  <metadata id="metadata26">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

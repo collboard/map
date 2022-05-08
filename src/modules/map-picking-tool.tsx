@@ -26,7 +26,7 @@ declareModule(() => {
             name: 'functionBuilder',
             autoSelect: true,
             order: 10000,
-            char: '🚩',
+            icon: '🚩',
             boardCursor: 'default',
         },
         moduleActivatedByIcon: {
