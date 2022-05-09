@@ -5,11 +5,14 @@ import {
     ImageArt,
     measureImageSize,
     patternToRegExp,
+    string_data_url,
     string_mime_type_with_wildcard,
 } from '@collboard/modules-sdk';
+import ReactDOMServer from 'react-dom/server';
 import { contributors, description, license, repository, version } from '../../package.json';
+import { SvgGeojsonConverter } from '../geojson/SvgGeojsonConverter';
 
-const mimeTypes: string_mime_type_with_wildcard[] = ['image/svg', 'image/svg+xml'];
+const mimeTypes: string_mime_type_with_wildcard[] = ['image/svg', 'image/svg+xml', 'application/geo+json'];
 
 declareModule({
     manifest: {
@@ -50,14 +53,25 @@ declareModule({
                     return next();
                 }
 
-                if (!(await file.text()).includes(`@collboard/map-svg-geojson-import`) /* <- TODO: Better */) {
-                    // TODO: Test this inside Collboard engine <collboard><support-module name="@collboard/map-svg-geojson-import" version="0.11.0"></support-module></collboard>
+                let fileSvg: Blob;
+
+                if (file.type === 'application/geo+json') {
+                    willCommitArts();
+
+                    const svgGeojsonConverter = new SvgGeojsonConverter(JSON.parse(await file.text()));
+                    const svgElement = (await svgGeojsonConverter.makeSvg(Math.pow(1.1, -13 /* [➿] */), false)) as any;
+                    const imageString = ReactDOMServer.renderToStaticMarkup(svgElement.element);
+                    fileSvg = new Blob([imageString], { type: 'image/svg+xml' });
+                }
+                // TODO: Test this inside Collboard engine <collboard><support-module name="@collboard/map-svg-geojson-import" version="0.11.0"></support-module></collboard>
+                else if ((await file.text()).includes(`@collboard/map-svg-geojson-import`) /* <- TODO: Better */) {
+                    fileSvg = file;
+                } else {
                     return next();
                 }
 
                 willCommitArts();
-
-                let imageSrc = await blobToDataUrl(file);
+                let imageSrc: string_data_url = await blobToDataUrl(fileSvg);
 
                 // await previewImage(imageSrc);
 
@@ -88,7 +102,7 @@ declareModule({
 
                 // await forEver(/*until file doubleupload optimization*/);
 
-                imageSrc = await usercontentSystem.upload(file);
+                imageSrc = await usercontentSystem.upload(fileSvg);
                 imageArt.src = imageSrc;
                 imageArt.opacity = 1;
 

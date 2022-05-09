@@ -8,7 +8,7 @@ import czechiaIcon from '../../../../assets/icons/cs.svg';
 import countiesIcon from '../../../../assets/icons/czechia-counties.png';
 import districtsIcon from '../../../../assets/icons/czechia-districts.png';
 import mapComapss from '../../../../assets/map-tools/map-compass.svg';
-import mapScale from '../../../../assets/map-tools/map-scale.svg';
+// import mapScale from '../../../../assets/map-tools/map-scale.svg';
 import { contributors, license, repository, version } from '../../../../package.json';
 import hlavniMestoPrahaPrahaCesko1 from '../../../4-svgs/world/europe/czechia/czechia.aggregated2.geojson.lodn13.svg';
 import hlavniMestoPrahaPrahaCesko from '../../../4-svgs/world/europe/czechia/czechia.aggregated3.geojson.lodn13.svg';
@@ -77,7 +77,7 @@ declareModule(
                     {
                         title: 'Nástroje',
                         items: [
-                            { title: 'Měřítko' /* TODO: { cs: 'Měřítko', en: 'Scale' }*/, imageSrc: mapScale },
+                            // { title: 'Měřítko' /* TODO: { cs: 'Měřítko', en: 'Scale' }*/, imageSrc: mapScale },
                             { title: 'Kompas' /* TODO: { cs: 'Kompas', en: 'Comapss' }*/, imageSrc: mapComapss },
                         ],
                     },
