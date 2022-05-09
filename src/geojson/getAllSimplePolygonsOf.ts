@@ -19,7 +19,20 @@ export function getAllSimplePolygonsOf(geojson: IGeojson): IGeojsonSimplePolygon
                 coordinates,
             }));
 
+        case 'MultiLineString':
+            // Note: Polygons and MultiPolygons will be separated by contained data
+            return parseCoordinates(geojson.coordinates).map((coordinates) => ({
+                type: 'Polygon',
+                coordinates,
+            }));
+
+            case 'Point':
+              // Note: Polygons and MultiPolygons will be separated by contained data
+              return [/* TODO: Probbably better */];
+
         default:
             throw Error(`Unknown geojson entity type: ${(geojson as any).type}`);
+
+        // TODO: [🎽] Add support for all entity types @see https://www.ibm.com/docs/en/db2/11.5?topic=formats-geojson-format
     }
 }

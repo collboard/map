@@ -16,7 +16,13 @@ export interface IGeojsonFeature extends IGeojsonEntity<'Feature'> {
     geometry: IGeojsonSimplePolygon | IGeojsonPolygon;
 }
 
-export interface IGeojsonPolygon extends IGeojsonEntity<'Polygon' | 'MultiPolygon'> {
+export interface IGeojsonPolygon
+    extends IGeojsonEntity<
+        | 'Point'
+        | 'Polygon'
+        | 'MultiPolygon'
+        | 'MultiLineString' /*  TODO: [🎽] Add support for all entity types @see https://www.ibm.com/docs/en/db2/11.5?topic=formats-geojson-format */
+    > {
     coordinates: IDeepmultiArray<IGeojsonCoords>;
 }
 
