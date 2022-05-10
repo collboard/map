@@ -113,6 +113,7 @@ async function runFeaturesGenerator({ isDebug, isCommited }: { isDebug: boolean;
         for (const row of data as any) {
             const region: string | null = capitalizeFirstLetter(row['Region'] || 'Europe');
             const country: string | null = capitalizeFirstLetter(csvCountry || row['Country'] || null);
+            const river: string | null = capitalizeFirstLetter(csvCountry || row['Řeka'] || null);
             const county: string | null = capitalizeFirstLetter(row['County'] || null);
             const district: string | null = capitalizeFirstLetter(row['District'] || null);
             const city: string | null = capitalizeFirstLetter(row['City'] || null);
@@ -135,7 +136,7 @@ async function runFeaturesGenerator({ isDebug, isCommited }: { isDebug: boolean;
                 search,
                 searchUrl: OsmGeojson.createSearchUrl(search),
                 geopath: Object.fromEntries(
-                    Object.entries({ region, country, county, district, city }).filter(
+                    Object.entries({ region, country, river, county, district, city }).filter(
                         ([key, value]) => value !== null,
                     ),
                 ),
