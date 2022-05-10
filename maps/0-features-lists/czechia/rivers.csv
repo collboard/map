@@ -1,0 +1,20 @@
+Řeka,Délka v ČRv km[2][3],Délka celkemv km[4],Povodí v ČRv km²[3],Povodí celkemv km²[5][6][7],Průtok[5]v m³/s,Pramení v katastru,Ústí v katastru,Ústí do,OSM,Cizízemě[8]
+Vltava,430.2,430.2,27006.7,28099.73,151,Pěkná,Mělník,Labe,1730536,"AT(p),DE(p)"
+Labe,368.07,1094,49889.3,148268,308,Špindlerův Mlýn,Cuxhaven / Friedrichskoog (DE),Severní moře,123822,"AT(p),DE(d),PL(p)"
+Morava,269.36,353.1,20692.4,23924.12,110,Dolní Morava,Markthof (AT) / Devín (SK),Dunaj,1741294,"AT(d), SK(d)"
+Ohře,246.55,304.6,4601.05,5606.05,38,Weißenstadter Forst-Süd (DE),Litoměřice,Labe,1736630,DE(d)
+Sázava,225.93,225.93,4349.75,4349.75,25,Cikháj,Hradištko / Sázava,Vltava,1772080,
+Dyje,196.22,234.2,11160.8,13440.4,44,Raabs an der Thaya (AT),Lanžhot (CZ) / Hohenau (AT),Morava,966493,AT(d)
+Jihlava,180.8,180.8,2996.5,2996.5,14,Jihlávka,Ivaň,Svratka,1772996,
+Svratka,168.49,168.49,7115.6,7115.6,27,Cikháj,Mušov / Dolní Věstonice,Dyje,1773013,
+Jizera,167.04,167.04,2145.24,2192.22,24,Lázně Libverda,Lázně Toušeň,Labe,1773018,PL(h)
+Lužnice,157.66,208,3526.4,4234.61,24,Bad Großpertholz (AT),Hosty / Týn nad Vltavou,Vltava,967114,AT(d)
+Berounka,139.45,139.45,8819,8855.43,36,Plzeň,Praha-Lahovice,Vltava,1768356,DE(p)
+Odra,134.32,854.3,7217,118861,62,Velká Střelná,Jasienica (PL),Štětínský záliv,387605,"DE(h),PL(d)"
+Otava,111.7,111.7,3826.88,3840.21,26,Paště / Svojše,Zvíkovské Podhradí / Zbonín,Vltava,7016972,DE(p)
+Opava,110.66,110.66,1813.66,2087.48,18,Mnichov,Třebovice,Odra,2850770,PL(h)
+Radbuza,109.66,109.66,2189.57,2189.57,11,Závist,Plzeň,Berounka,1768412,DE(p)
+Chrudimka,105.97,105.97,866.21,866.21,6,Krouna,Pardubice,Labe,7021243,
+Úhlava,103.96,103.96,908.49,915.38,5.8,Hojsova Stráž,Plzeň,Radbuza,7021244,DE(p)
+Želivka,103.89,103.89,1188.38,1188.38,7,Častrov,Soutice,Sázava,7021679,
+Mže,102.78,106.5,1792.25,1824.13,8.6,Mähring (DE),Plzeň,Berounka,406691,DE(d)

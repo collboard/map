@@ -679,4 +679,134 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+%C5%BD%C4%8F%C3%A1r+nad+S%C3%A1zavou',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Kraj vysočina', district: 'Okres žďár nad sázavou' },
     },
+    {
+        cs: 'Vltava',
+        search: { country: 'czechia', q: 'Vltava' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Vltava',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Labe',
+        search: { country: 'czechia', q: 'Labe' },
+        searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Labe',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Morava',
+        search: { country: 'czechia', q: 'Morava' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Morava',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Ohře',
+        search: { country: 'czechia', q: 'Ohře' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Oh%C5%99e',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Sázava',
+        search: { country: 'czechia', q: 'Sázava' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=S%C3%A1zava',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Dyje',
+        search: { country: 'czechia', q: 'Dyje' },
+        searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Dyje',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Jihlava',
+        search: { country: 'czechia', q: 'Jihlava' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Jihlava',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Svratka',
+        search: { country: 'czechia', q: 'Svratka' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Svratka',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Jizera',
+        search: { country: 'czechia', q: 'Jizera' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Jizera',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Lužnice',
+        search: { country: 'czechia', q: 'Lužnice' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Lu%C5%BEnice',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Berounka',
+        search: { country: 'czechia', q: 'Berounka' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Berounka',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Odra',
+        search: { country: 'czechia', q: 'Odra' },
+        searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Odra',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Otava',
+        search: { country: 'czechia', q: 'Otava' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Otava',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Opava',
+        search: { country: 'czechia', q: 'Opava' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Opava',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Radbuza',
+        search: { country: 'czechia', q: 'Radbuza' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Radbuza',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Chrudimka',
+        search: { country: 'czechia', q: 'Chrudimka' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Chrudimka',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Úhlava',
+        search: { country: 'czechia', q: 'Úhlava' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=%C3%9Ahlava',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Želivka',
+        search: { country: 'czechia', q: 'Želivka' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=%C5%BDelivka',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
+    {
+        cs: 'Mže',
+        search: { country: 'czechia', q: 'Mže' },
+        searchUrl:
+            'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=M%C5%BEe',
+        geopath: { region: 'Europe', country: 'Czechia' },
+    },
 ];

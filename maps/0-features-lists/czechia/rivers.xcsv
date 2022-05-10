@@ -1,0 +1,115 @@
+Řeka,Délka v ČRv km[2][3],Délka celkemv km[4],Povodí v ČRv km²[3],Povodí celkemv km²[5][6][7],Průtok[5]v m³/s,Pramení v katastru,Ústí v katastru,Ústí do,OSM,Cizízemě[8]
+Vltava[9][10],430.2,430.2,27006.7,28099.73,151,Pěkná,Mělník,Labe,1730536,"AT(p),DE(p)"
+Labe[10],368.07,1094,49889.3,148268,308,Špindlerův Mlýn,Cuxhaven / Friedrichskoog (DE),Severní moře,123822,"AT(p),DE(d),PL(p)"
+Morava,269.36,353.1,20692.4,23924.12,110,Dolní Morava,Markthof (AT) / Devín (SK),Dunaj,1741294,"AT(d), SK(d)"
+Ohře,246.55,304.6,4601.05,5606.05,38,Weißenstadter Forst-Süd (DE),Litoměřice,Labe,1736630,DE(d)
+Sázava,225.93,225.93,4349.75,4349.75,25,Cikháj,Hradištko / Sázava,Vltava,1772080,
+Dyje[9],196.22,234.2,11160.8,13440.4,44,Raabs an der Thaya (AT),Lanžhot (CZ) / Hohenau (AT),Morava,966493,AT(d)
+Jihlava,180.8,180.8,2996.5,2996.5,14,Jihlávka,Ivaň,Svratka,1772996,
+Svratka,168.49,168.49,7115.6,7115.6,27,Cikháj,Mušov / Dolní Věstonice,Dyje,1773013,
+Jizera,167.04,167.04,2145.24,2192.22,24,Lázně Libverda,Lázně Toušeň,Labe,1773018,PL(h)
+Lužnice,157.66,208,3526.4,4234.61,24,Bad Großpertholz (AT),Hosty / Týn nad Vltavou,Vltava,967114,AT(d)
+Berounka[9],139.45,139.45,8819,8855.43,36,Plzeň,Praha-Lahovice,Vltava,1768356,DE(p)
+Odra,134.32,854.3,7217,118861,62,Velká Střelná,Jasienica (PL),Štětínský záliv,387605,"DE(h),PL(d)"
+Otava[9],111.7,111.7,3826.88,3840.21,26,Paště / Svojše,Zvíkovské Podhradí / Zbonín,Vltava,7016972,DE(p)
+Opava[9],110.66,110.66,1813.66,2087.48,18,Mnichov,Třebovice,Odra,2850770,PL(h)
+Radbuza,109.66,109.66,2189.57,2189.57,11,Závist,Plzeň,Berounka,1768412,DE(p)
+Chrudimka,105.97,105.97,866.21,866.21,6,Krouna,Pardubice,Labe,7021243,
+Úhlava,103.96,103.96,908.49,915.38,5.8,Hojsova Stráž,Plzeň,Radbuza,7021244,DE(p)
+Želivka[11],103.89,103.89,1188.38,1188.38,7,Častrov,Soutice,Sázava,7021679,
+Mže,102.78,106.5,1792.25,1824.13,8.6,Mähring (DE),Plzeň,Berounka,406691,DE(d)
+Tichá Orlice,101.75,101.75,756.39,758.31,7.5,Horní Orlice,Žďár nad Orlicí,Orlice,1729766,PL(p)
+Střela,101.65,101.65,921.85,921.85,3.5,Prachomety,Liblín,Berounka,7021680,
+Ploučnice,101.44,101.44,1188.07,1193.77,10,Světlá pod Ještědem,Děčín,Labe,7025610,DE(p)
+Moravice,100.53,100.53,899.88,899.88,8,Malá Morávka,Předměstí / Komárov,Opava,7021681,
+Oslava,99.24,99.24,867.03,867.03,3.6,Matějov,Ivančice,Jihlava,1957879,
+Svitava,98.39,98.39,1149.43,1149.43,5.8,Lačnov,Přízřenice,Svratka,7021682,
+Úslava[11],96.26,96.26,755.69,755.69,3.6,Lukoviště,Doubravka,Berounka,7028966,
+Divoká Orlice,96.11,99.3,705.9,777.35,14,Szczytna (PL),Žďár nad Orlicí,Orlice,1729755,PL(d)
+Blanice (přítok Otavy),94.73,94.73,861.91,861.91,4.7,Ondřejov (vojenský újezd Boletice),Putim,Otava,7028967,
+Malše,89.3,99.3,869.23,978.74,7.3,Sandl (AT),České Budějovice 1 / 2 / 7,Vltava,2217040,AT(d)
+Doubrava,88.34,88.34,591.4,591.4,4.5,Radostín,Záboří nad Labem,Labe,7029196,
+Rokytná,88.17,88.17,584.31,584.31,1.3,Chlístov,Kounické Předměstí,Jihlava,7029299,
+Kyjovka[11],88.13,88.13,678.28,678.28,1.1,Staré Hutě,Lanžhot,Dyje,7029300,
+Cidlina,87.27,87.27,1164.51,1164.51,4.9,Košov,Libice nad Cidlinou / Poděbrady,Labe,7031933,
+Bílina,81.96,81.96,1082.47,1082.47,7,Blatno,Ústí nad Labem,Labe,7031857,
+Jevišovka,81.72,81.72,787.05,787.05,1.4,Komárovice / Budkov,Jevišovka,Dyje,7032230,
+Loučná,80.28,80.28,724.73,724.73,4.5,Ostrý Kámen,Kunětice,Labe,7032231,
+Metuje,78.18,78.18,511.37,610.97,5.8,Hodkovice,Josefov,Labe,1721671,PL(p)
+Úpa,78.14,78.14,490.29,509.79,7,Pec pod Sněžkou,Jaroměř,Labe,1721693,PL(p)
+Olše,73.1,99,636.08,1112.18,13.8,Kamesznica (PL),Bohumín (CZ) / Olza (PL),Odra,3258549,PL(d)
+Blanice (přítok Sázavy),66.02,66.02,543.34,543.34,2.6,Blanička,Zdebuzeves / Český Šternberk,Sázava,1267938,
+Teplá,65.06,65.06,384.85,384.85,2.5,Mariánské Lázně,Karlovy Vary,Ohře,7033124,
+Loděnice,64.72,64.72,270.24,270.24,0.53,Řevničov,Tetín / Srbsko,Berounka,7033123,
+Bystřice (přítok Cidliny),62.71,62.71,379.21,379.21,1.55,Horní Brusnice,Chlumec nad Cidlinou,Cidlina,7031935,
+Bobrůvka[11][12],62.61,62.61,389.67,389.67,2.12,Vlachovice,Předklášteří,Svratka,7032456,
+Výrovka[11],61.89,61.89,542.49,542.49,1.94,Kochánov,Kostomlátky,Labe,7033125,
+Bečva[9],61.57,61.57,1613.29,1626.21,17.5,Poličná / Krásno nad Bečvou,Tovačov,Morava,7021073,SK(p)
+Vsetínská Bečva,59.38,59.38,727.51,734.43,9.18,Velké Karlovice,Poličná / Krásno nad Bečvou,Bečva,7021074,SK(p)
+Lomnice,59.27,59.27,830.74,830.74,3.28,Rožmitál pod Třemšínem,Varvažov / Zbonín / Dědovice,Otava,7033414,
+Litava[11],58.55,58.55,788.36,788.36,1.53,Chvalnov,Židlochovice,Svratka,7033415,
+Stropnice,58.38,58.38,386.89,402.4,2.45,Moorbad Harbach (AT),Doudleby,Malše,7033416,AT(d)
+Dědina,56.65,56.65,367.66,367.66,2.28,Sedloňov,Třebechovice pod Orebem,Orlice,7032457,
+Trnava,56.28,56.28,340.14,340.14,2.06,Domamyšl,Želiv,Želivka,7033413,
+Bystřice (přítok Moravy),56.14,56.14,266.01,266.01,2,Ryžoviště,Olomouc-město / Hodolany,Morava,7035060,
+Nežárka[9],56.04,56.04,1000.84,1000.84,12.3,Jarošov nad Nežárkou,Veselí nad Lužnicí,Lužnice,7035062,
+Želetavka,55.84,55.84,367.55,374.9,1.11,Svojkovice / Želetava,Vysočany / Bítov,Dyje,7032232,AT(p)
+Moravská Dyje,55.56,68.2,561.73,630,3,Panenská Rozsíčka,Raabs an der Thaya (AT),Dyje,2209186,AT(d)
+Lužická Nisa,55.25,252,360.48,370.26,5.4,Nová Ves nad Nisou,Ratzdorf (DE) / Kosarzyn (PL),Odra,406565,"DE(d),PL(d)"
+Litavka,54.93,54.93,628.75,628.75,2.6,Vranovice,Beroun,Berounka,7035064,
+Ostravice[9],54.79,54.79,826.74,826.74,15.6,Staré Hamry 1,Hrušov,Odra,6048107,
+Teplá Vltava,54.3,54.3,321.24,347.58,5.9,Bučina,Pěkná,Vltava,5873031,DE(p)
+Moravská Sázava,53.91,53.91,510.64,510.64,4.52,Valteřice,Zvole,Morava,7035061,
+Skalice,52.34,52.34,374.94,374.94,1.45,Hutě pod Třemšínem,Dědovice / Varvažov,Lomnice,7041249,
+Klabava,51.22,51.22,373.05,373.05,2.1,Věšín,Chrást u Plzně,Berounka,7035063,
+Blšanka,50.79,50.79,482.74,482.74,1.05,Tureč,Zálužice,Ohře,7041250,
+Chomutovka,50.43,50.43,185.69,185.69,1.02,Nová Ves,Postoloprty,Ohře,7041251,
+Oskava,50.29,50.29,569.2,569.2,2.04,Bedřichov,Chomoutov,Morava,7051408,
+Mrlina,49.62,49.62,656.72,656.72,1.62,Příchvoj,Nymburk,Labe,7057913,
+Romže[11],49.58,49.58,455.68,455.68,1.4,Dzbel,Uhřičice,Morava,7051409,
+Novohradka,49.2,49.2,469.95,469.95,2.52,Paseky,Úhřetice,Chrudimka,7033412,
+Třebůvka,48.23,48.23,579.75,579.75,2.7,Křenov,Moravičany,Morava,7051411,
+Smutná,47.79,47.79,247.01,247.01,1.01,Orlov,Bechyně,Lužnice,7070515,
+Smědá[11],47.77,51.9,251.33,331,4.1,Jizerka,Radomierzyce (PL),Lužická Nisa,7031861,PL(d)
+Kocába,47.65,47.65,312.59,312.59,0.62,Příbram,Štěchovice,Vltava,7057916,
+Liboc,46.38,46.38,339.53,339.53,1.55,Tureč,Žatec,Ohře,7041252,
+Volyňka,46.13,46.13,426.66,426.66,3.09,Černá Lada,Strakonice I / II,Otava,7057625,
+Moštěnka,45.57,45.57,354.59,354.59,1.23,Loukov,Chropyně / Kroměříž,Morava,7051412,
+Blata,45.31,45.31,313.08,313.08,0.64,Vilémov,Lobodice,Morava,7051413,
+Olšava,44.9,44.9,520.53,520.53,2.14,Šanov,Kunovice,Morava,7052179,
+Třemošná[11],43.66,43.66,249.23,249.23,0.5,Trhomné,Kaceřov / Planá u Nynic,Berounka,7070516,
+Desná[11],43.36,43.36,337.79,337.79,4.08,Rejhotice,Postřelmov,Morava,7057623,
+Trkmanka[11],41.68,41.68,363.26,363.26,0.44,Ždánice,Podivín,Dyje,7052177,
+Dřevnice,41.62,41.62,435.19,435.19,3.15,Držková,Otrokovice,Morava,7052178,
+Mohelka,41.55,41.55,176.46,176.46,1.82,Kokonín,Mohelnice nad Jizerou,Jizera,7070518,
+Úhlavka,41.42,41.42,296.62,296.62,1.2,Přimda,Stříbro,Mže,7070517,
+Ostružná[11],41.25,41.25,172.54,172.54,1.22,Zhůří,Dobršín,Otava,7057627,
+Třebovka,41.17,41.17,195.95,195.95,1.24,Koclířov,Ústí nad Orlicí,Tichá Orlice,7057915,
+Bělá,40.57,40.57,214.99,214.99,2.62,Sedloňov,Častolovice,Divoká Orlice,7031931,
+Klejnárka,40.26,40.26,350.08,350.08,1.32,Dobrovítov,Konárovice,Labe,7057914,
+Velička,40.24,40.24,184.73,184.73,0.9,Horní Němčí,Vracov,Morava,7035129,
+Merklínka,39.4,39.4,157.3,157.3,0.6,Němčice,Stod,Radbuza,7057624,
+Javorka,39.05,39.05,208,208,0.94,Borovnice,Skřivany / Červeněves,Cidlina,7031934,
+Šlapanka,39,39,265.2,265.2,1.21,Řehořov,Havlíčkův Brod,Sázava,7016486,
+Říčka,38.88,38.88,144.3,144.3,0.28,Račice,Měnín,Litava,7052180,
+Lučina,38.6,38.6,197.1,197.1,2.39,Vyšní Lhoty/Komorní Lhotka,Slezská Ostrava,Ostravice,7041619,
+Rožnovská Bečva,37.98,37.98,254.4,254.4,3.5,Horní Bečva,Valašské Meziříčí,Bečva,7021075,
+Libochovka,37.89,37.89,146.6,146.6,0.56,Dobrá Voda,Dolní Loučky,Bobrůvka,7035152,
+Kamenice (přítok Jizery),37.75,37.75,218.61,218.61,4.65,Bedřichov u Jablonce n./N.,Spálov,Jizera,7031858,
+Bobrava,37.59,37.59,187.32,187.32,0.43,Rudka,Popovice,Svratka,7032455,
+Vlkava,37.52,37.52,234.9,234.9,0.61,Ledce,Kostomlaty nad Labem,Labe,7035153,
+Rokytka,37.18,37.18,140.33,140.33,0.39,Tehovec,Libeň,Vltava,7032149,
+Lubina,37.1,37.1,194.1,194.1,2.36,Trojanovice,Košatka nad Odrou,Odra,7041618,
+Haná[9],35.8,35.8,612.33,612.33,2,Dědice,Postoupky,Morava,7035151,
+Osoblaha,35,65.5,474.36,993,2.08,Petrovice,Krapkowice (Polsko),Odra,3484937,PL(d)
+Stěnava,20.7,62,234.79,594,2.3,Unisław Śląski (PL),Ścinawice (Polsko),Kladská Nisa,7031862,PL(d)
+Orlice[9],32.5,32.5,1964.53,2038.45,21.8,Žďár nad Orlicí,Hradec Králové,Labe,1729747,PL(p)
+Šatava[11][13],29.2,29.2,102.86,102.86,0.13,Hlína u Ivančic,Uherčice,Svratka,7052181,
+Vlára,33,47.6,342.54,371.6,"3,4[14]",Tichov,Nemšová (SK),Váh,5581386,SK(d)
+Kamenice (přítok Labe),35.6,35.6,217.2,217.2,2.65,Svor,Hřensko,Labe,7029298,
+Opavice,35.7,35.7,N/A,N/A,1.51,Heřmanovice,Krnov,Opava,7040994,PL(d)
+Zdobnice,34.2,34.2,124.8,124.8,1.95,Velký Uhřínov,Doudleby nad Orlicí,Divoká Orlice,7073633,
+Oleška,34.2,34.2,171.1,171.1,1.74,Rovnáčov,Semily,Jizera,7070519,
+Rolava,36.7,36.7,137.3,137.3,2.35,Rolava,Karlovy Vary,Ohře,7070520,
+Chotýšanka,37.1,37.1,125.1,125.1,0.59,Budenín,Libež,Blanice,7070521,
+Sitka,35.1,35.1,66.4,66.4,0.81,Stránské,Chomoutov,Oskava,7070522,
