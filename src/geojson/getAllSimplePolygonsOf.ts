@@ -19,16 +19,20 @@ export function getAllSimplePolygonsOf(geojson: IGeojson): IGeojsonSimplePolygon
                 coordinates,
             }));
 
+        case 'LineString':
         case 'MultiLineString':
             // Note: Polygons and MultiPolygons will be separated by contained data
-            return parseCoordinates(geojson.coordinates).map((coordinates) => ({
+
+            const polygon = parseCoordinates(geojson.coordinates).map((coordinates) => ({
                 type: 'Polygon',
-                coordinates,
+                coordinates: [...coordinates, ...[...coordinates].reverse(/* TODO: Make this in optimal way */)],
             }));
 
-            case 'Point':
-              // Note: Polygons and MultiPolygons will be separated by contained data
-              return [/* TODO: Probbably better */];
+        case 'Point':
+            // Note: Polygons and MultiPolygons will be separated by contained data
+            return [
+                /* TODO: Probbably better - make some circle or sth like that */
+            ];
 
         default:
             throw Error(`Unknown geojson entity type: ${(geojson as any).type}`);

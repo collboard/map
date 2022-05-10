@@ -21,6 +21,7 @@ export interface IGeojsonPolygon
         | 'Point'
         | 'Polygon'
         | 'MultiPolygon'
+        | 'LineString'
         | 'MultiLineString' /*  TODO: [🎽] Add support for all entity types @see https://www.ibm.com/docs/en/db2/11.5?topic=formats-geojson-format */
     > {
     coordinates: IDeepmultiArray<IGeojsonCoords>;
