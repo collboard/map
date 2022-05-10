@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+// !!!! Not working in Colldev> import fetch from 'isomorphic-fetch';
 import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 
 export class OsmGeojson {
