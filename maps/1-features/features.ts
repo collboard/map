@@ -5,13 +5,21 @@ import { IGeopath } from './geopath';
  * ⚠️ Warning: Do not edit by hand, all changes will be lost on next execution
  */
 
-export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl: string; geopath: IGeopath }> = [
+export const FEATURES: Array<{
+    en?: string;
+    cs?: string;
+    search: any;
+    searchUrl: string;
+    geopath: IGeopath;
+    fromFile: string;
+}> = [
     {
         cs: 'Hlavní město Praha',
         search: { country: 'czechia', q: 'Hlavní město Praha' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Hlavn%C3%AD+m%C4%9Bsto+Praha',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Hlavní město praha' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Středočeský kraj',
@@ -19,6 +27,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=St%C5%99edo%C4%8Desk%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Jihočeský kraj',
@@ -26,6 +35,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Jiho%C4%8Desk%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihočeský kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Plzeňský kraj',
@@ -33,6 +43,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Plze%C5%88sk%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Plzeňský kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Karlovarský kraj',
@@ -40,6 +51,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Karlovarsk%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Karlovarský kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Ústecký kraj',
@@ -47,6 +59,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=%C3%9Asteck%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Liberecký kraj',
@@ -54,6 +67,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Libereck%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Liberecký kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Královéhradecký kraj',
@@ -61,6 +75,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Kr%C3%A1lov%C3%A9hradeck%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Královéhradecký kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Pardubický kraj',
@@ -68,6 +83,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Pardubick%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Pardubický kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Kraj Vysočina',
@@ -75,6 +91,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Kraj+Vyso%C4%8Dina',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Kraj vysočina' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Jihomoravský kraj',
@@ -82,6 +99,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Jihomoravsk%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihomoravský kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Olomoucký kraj',
@@ -89,6 +107,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Olomouck%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Olomoucký kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Moravskoslezský kraj',
@@ -96,6 +115,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Moravskoslezsk%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Moravskoslezský kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Zlínský kraj',
@@ -103,12 +123,14 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Zl%C3%ADnsk%C3%BD+kraj',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Zlínský kraj' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: '',
         search: { country: 'czechia', q: '' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=',
         geopath: { region: 'Europe', country: 'Czechia' },
+        fromFile: 'czechia/counties.csv',
     },
     {
         cs: 'Okres Benešov',
@@ -116,6 +138,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Bene%C5%A1ov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres benešov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Beroun',
@@ -123,6 +146,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Beroun',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres beroun' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Blansko',
@@ -130,6 +154,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Blansko',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihomoravský kraj', district: 'Okres blansko' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Brno-město',
@@ -137,6 +162,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Brno-m%C4%9Bsto',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihomoravský kraj', district: 'Okres brno-město' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Brno-venkov',
@@ -144,6 +170,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Brno-venkov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihomoravský kraj', district: 'Okres brno-venkov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Bruntál',
@@ -151,6 +178,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Brunt%C3%A1l',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Moravskoslezský kraj', district: 'Okres bruntál' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Břeclav',
@@ -158,6 +186,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+B%C5%99eclav',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihomoravský kraj', district: 'Okres břeclav' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Česká Lípa',
@@ -165,6 +194,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+%C4%8Cesk%C3%A1+L%C3%ADpa',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Liberecký kraj', district: 'Okres česká lípa' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres České Budějovice',
@@ -172,6 +202,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+%C4%8Cesk%C3%A9+Bud%C4%9Bjovice',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihočeský kraj', district: 'Okres české budějovice' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Český Krumlov',
@@ -179,6 +210,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+%C4%8Cesk%C3%BD+Krumlov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihočeský kraj', district: 'Okres český krumlov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Děčín',
@@ -186,6 +218,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+D%C4%9B%C4%8D%C3%ADn',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj', district: 'Okres děčín' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Domažlice',
@@ -193,6 +226,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Doma%C5%BElice',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Plzeňský kraj', district: 'Okres domažlice' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Frýdek-Místek',
@@ -205,6 +239,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
             county: 'Moravskoslezský kraj',
             district: 'Okres frýdek-místek',
         },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Havlíčkův Brod',
@@ -212,6 +247,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Havl%C3%AD%C4%8Dk%C5%AFv+Brod',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Kraj vysočina', district: 'Okres havlíčkův brod' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Hodonín',
@@ -219,6 +255,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Hodon%C3%ADn',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihomoravský kraj', district: 'Okres hodonín' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Hradec Králové',
@@ -231,6 +268,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
             county: 'Královéhradecký kraj',
             district: 'Okres hradec králové',
         },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Cheb',
@@ -238,6 +276,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Cheb',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Karlovarský kraj', district: 'Okres cheb' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Chomutov',
@@ -245,6 +284,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Chomutov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj', district: 'Okres chomutov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Chrudim',
@@ -252,6 +292,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Chrudim',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Pardubický kraj', district: 'Okres chrudim' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Jablonec nad Nisou',
@@ -264,6 +305,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
             county: 'Liberecký kraj',
             district: 'Okres jablonec nad nisou',
         },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Jeseník',
@@ -271,6 +313,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Jesen%C3%ADk',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Olomoucký kraj', district: 'Okres jeseník' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Jičín',
@@ -278,6 +321,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Ji%C4%8D%C3%ADn',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Královéhradecký kraj', district: 'Okres jičín' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Jihlava',
@@ -285,6 +329,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Jihlava',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Kraj vysočina', district: 'Okres jihlava' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Jindřichův Hradec',
@@ -297,6 +342,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
             county: 'Jihočeský kraj',
             district: 'Okres jindřichův hradec',
         },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Karlovy Vary',
@@ -304,6 +350,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Karlovy+Vary',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Karlovarský kraj', district: 'Okres karlovy vary' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Karviná',
@@ -311,6 +358,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Karvin%C3%A1',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Moravskoslezský kraj', district: 'Okres karviná' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Kladno',
@@ -318,6 +366,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Kladno',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres kladno' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Klatovy',
@@ -325,6 +374,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Klatovy',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Plzeňský kraj', district: 'Okres klatovy' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Kolín',
@@ -332,6 +382,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Kol%C3%ADn',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres kolín' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Kroměříž',
@@ -339,6 +390,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Krom%C4%9B%C5%99%C3%AD%C5%BE',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Zlínský kraj', district: 'Okres kroměříž' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Kutná Hora',
@@ -346,6 +398,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Kutn%C3%A1+Hora',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres kutná hora' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Liberec',
@@ -353,6 +406,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Liberec',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Liberecký kraj', district: 'Okres liberec' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Litoměřice',
@@ -360,6 +414,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Litom%C4%9B%C5%99ice',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj', district: 'Okres litoměřice' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Louny',
@@ -367,6 +422,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Louny',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj', district: 'Okres louny' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Mělník',
@@ -374,6 +430,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+M%C4%9Bln%C3%ADk',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres mělník' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Mladá Boleslav',
@@ -381,6 +438,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Mlad%C3%A1+Boleslav',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres mladá boleslav' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Most',
@@ -388,6 +446,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Most',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj', district: 'Okres most' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Náchod',
@@ -395,6 +454,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+N%C3%A1chod',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Královéhradecký kraj', district: 'Okres náchod' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Nový Jičín',
@@ -402,6 +462,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Nov%C3%BD+Ji%C4%8D%C3%ADn',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Moravskoslezský kraj', district: 'Okres nový jičín' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Nymburk',
@@ -409,6 +470,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Nymburk',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres nymburk' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Olomouc',
@@ -416,6 +478,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Olomouc',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Olomoucký kraj', district: 'Okres olomouc' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Opava',
@@ -423,6 +486,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Opava',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Moravskoslezský kraj', district: 'Okres opava' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Ostrava-město',
@@ -435,6 +499,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
             county: 'Moravskoslezský kraj',
             district: 'Okres ostrava-město',
         },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Pardubice',
@@ -442,6 +507,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Pardubice',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Pardubický kraj', district: 'Okres pardubice' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Pelhřimov',
@@ -449,6 +515,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Pelh%C5%99imov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Kraj vysočina', district: 'Okres pelhřimov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Písek',
@@ -456,6 +523,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+P%C3%ADsek',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihočeský kraj', district: 'Okres písek' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Plzeň-jih',
@@ -463,6 +531,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Plze%C5%88-jih',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Plzeňský kraj', district: 'Okres plzeň-jih' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Plzeň-město',
@@ -470,6 +539,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Plze%C5%88-m%C4%9Bsto',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Plzeňský kraj', district: 'Okres plzeň-město' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Plzeň-sever',
@@ -477,6 +547,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Plze%C5%88-sever',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Plzeňský kraj', district: 'Okres plzeň-sever' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Hlavní město Praha',
@@ -484,6 +555,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Hlavn%C3%AD+m%C4%9Bsto+Praha',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Praha', district: 'Hlavní město praha' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Praha-východ',
@@ -491,6 +563,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Praha-v%C3%BDchod',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres praha-východ' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Praha-západ',
@@ -498,6 +571,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Praha-z%C3%A1pad',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres praha-západ' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Prachatice',
@@ -505,6 +579,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Prachatice',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihočeský kraj', district: 'Okres prachatice' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Prostějov',
@@ -512,6 +587,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Prost%C4%9Bjov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Olomoucký kraj', district: 'Okres prostějov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Přerov',
@@ -519,6 +595,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+P%C5%99erov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Olomoucký kraj', district: 'Okres přerov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Příbram',
@@ -526,6 +603,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+P%C5%99%C3%ADbram',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres příbram' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Rakovník',
@@ -533,6 +611,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Rakovn%C3%ADk',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Středočeský kraj', district: 'Okres rakovník' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Rokycany',
@@ -540,6 +619,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Rokycany',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Plzeňský kraj', district: 'Okres rokycany' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Rychnov nad Kněžnou',
@@ -552,6 +632,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
             county: 'Královéhradecký kraj',
             district: 'Okres rychnov nad kněžnou',
         },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Semily',
@@ -559,6 +640,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Semily',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Liberecký kraj', district: 'Okres semily' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Sokolov',
@@ -566,6 +648,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Sokolov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Karlovarský kraj', district: 'Okres sokolov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Strakonice',
@@ -573,6 +656,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Strakonice',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihočeský kraj', district: 'Okres strakonice' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Svitavy',
@@ -580,6 +664,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Svitavy',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Pardubický kraj', district: 'Okres svitavy' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Šumperk',
@@ -587,6 +672,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+%C5%A0umperk',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Olomoucký kraj', district: 'Okres šumperk' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Tábor',
@@ -594,6 +680,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+T%C3%A1bor',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihočeský kraj', district: 'Okres tábor' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Tachov',
@@ -601,6 +688,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Tachov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Plzeňský kraj', district: 'Okres tachov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Teplice',
@@ -608,6 +696,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Teplice',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj', district: 'Okres teplice' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Trutnov',
@@ -615,6 +704,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Trutnov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Královéhradecký kraj', district: 'Okres trutnov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Třebíč',
@@ -622,6 +712,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+T%C5%99eb%C3%AD%C4%8D',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Kraj vysočina', district: 'Okres třebíč' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Uherské Hradiště',
@@ -629,6 +720,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Uhersk%C3%A9+Hradi%C5%A1t%C4%9B',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Zlínský kraj', district: 'Okres uherské hradiště' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Ústí nad Labem',
@@ -636,6 +728,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+%C3%9Ast%C3%AD+nad+Labem',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Ústecký kraj', district: 'Okres ústí nad labem' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Ústí nad Orlicí',
@@ -643,6 +736,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+%C3%9Ast%C3%AD+nad+Orlic%C3%AD',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Pardubický kraj', district: 'Okres ústí nad orlicí' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Vsetín',
@@ -650,6 +744,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Vset%C3%ADn',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Zlínský kraj', district: 'Okres vsetín' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Vyškov',
@@ -657,6 +752,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Vy%C5%A1kov',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihomoravský kraj', district: 'Okres vyškov' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Zlín',
@@ -664,6 +760,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Zl%C3%ADn',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Zlínský kraj', district: 'Okres zlín' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Znojmo',
@@ -671,6 +768,7 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+Znojmo',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Jihomoravský kraj', district: 'Okres znojmo' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Okres Žďár nad Sázavou',
@@ -678,135 +776,155 @@ export const FEATURES: Array<{ en?: string; cs?: string; search: any; searchUrl:
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Okres+%C5%BD%C4%8F%C3%A1r+nad+S%C3%A1zavou',
         geopath: { region: 'Europe', country: 'Czechia', county: 'Kraj vysočina', district: 'Okres žďár nad sázavou' },
+        fromFile: 'czechia/districts.csv',
     },
     {
         cs: 'Vltava',
         search: { country: 'czechia', q: 'Vltava' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Vltava',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Vltava' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Labe',
         search: { country: 'czechia', q: 'Labe' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Labe',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Labe' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Morava',
         search: { country: 'czechia', q: 'Morava' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Morava',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Morava' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Ohře',
         search: { country: 'czechia', q: 'Ohře' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Oh%C5%99e',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Ohře' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Sázava',
         search: { country: 'czechia', q: 'Sázava' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=S%C3%A1zava',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Sázava' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Dyje',
         search: { country: 'czechia', q: 'Dyje' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Dyje',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Dyje' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Jihlava',
         search: { country: 'czechia', q: 'Jihlava' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Jihlava',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Jihlava' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Svratka',
         search: { country: 'czechia', q: 'Svratka' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Svratka',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Svratka' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Jizera',
         search: { country: 'czechia', q: 'Jizera' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Jizera',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Jizera' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Lužnice',
         search: { country: 'czechia', q: 'Lužnice' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Lu%C5%BEnice',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Lužnice' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Berounka',
         search: { country: 'czechia', q: 'Berounka' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Berounka',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Berounka' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Odra',
         search: { country: 'czechia', q: 'Odra' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Odra',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Odra' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Otava',
         search: { country: 'czechia', q: 'Otava' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Otava',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Otava' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Opava',
         search: { country: 'czechia', q: 'Opava' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Opava',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Opava' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Radbuza',
         search: { country: 'czechia', q: 'Radbuza' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Radbuza',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Radbuza' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Chrudimka',
         search: { country: 'czechia', q: 'Chrudimka' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Chrudimka',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Chrudimka' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Úhlava',
         search: { country: 'czechia', q: 'Úhlava' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=%C3%9Ahlava',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Úhlava' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Želivka',
         search: { country: 'czechia', q: 'Želivka' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=%C5%BDelivka',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Želivka' },
+        fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Mže',
         search: { country: 'czechia', q: 'Mže' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=M%C5%BEe',
-        geopath: { region: 'Europe', country: 'Czechia' },
+        geopath: { region: 'Europe', country: 'Czechia', river: 'Mže' },
+        fromFile: 'czechia/rivers.csv',
     },
 ];
