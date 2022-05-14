@@ -39,7 +39,8 @@
                 "region": "Europe",
                 "country": "Czechia",
                 "county": "Liberecký kraj"
-            }
+            },
+            "fromFile": "czechia/counties.csv"
         }
     }
 }

@@ -39,7 +39,8 @@
                 "region": "Europe",
                 "country": "Czechia",
                 "county": "Ústecký kraj"
-            }
+            },
+            "fromFile": "czechia/counties.csv"
         }
     }
 }

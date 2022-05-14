@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Jihočeský kraj",
                 "district": "Okres prachatice"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

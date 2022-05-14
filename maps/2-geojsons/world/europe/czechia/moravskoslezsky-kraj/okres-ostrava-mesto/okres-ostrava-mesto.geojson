@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Moravskoslezský kraj",
                 "district": "Okres ostrava-město"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

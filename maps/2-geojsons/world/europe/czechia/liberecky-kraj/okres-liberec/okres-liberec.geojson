@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Liberecký kraj",
                 "district": "Okres liberec"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

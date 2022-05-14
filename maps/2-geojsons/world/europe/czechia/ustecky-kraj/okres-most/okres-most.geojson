@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Ústecký kraj",
                 "district": "Okres most"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

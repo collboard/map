@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Jihočeský kraj",
                 "district": "Okres písek"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

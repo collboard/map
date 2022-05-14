@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Plzeňský kraj",
                 "district": "Okres domažlice"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Královéhradecký kraj",
                 "district": "Okres jičín"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

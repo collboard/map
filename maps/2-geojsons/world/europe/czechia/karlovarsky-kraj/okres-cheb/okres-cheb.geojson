@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Karlovarský kraj",
                 "district": "Okres cheb"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

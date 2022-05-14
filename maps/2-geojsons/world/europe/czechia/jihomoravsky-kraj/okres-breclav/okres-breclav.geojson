@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Jihomoravský kraj",
                 "district": "Okres břeclav"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

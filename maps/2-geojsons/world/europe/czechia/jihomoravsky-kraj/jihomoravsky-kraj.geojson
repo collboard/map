@@ -39,7 +39,8 @@
                 "region": "Europe",
                 "country": "Czechia",
                 "county": "Jihomoravský kraj"
-            }
+            },
+            "fromFile": "czechia/counties.csv"
         }
     }
 }

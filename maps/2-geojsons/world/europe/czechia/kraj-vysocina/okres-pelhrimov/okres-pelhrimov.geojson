@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Kraj vysočina",
                 "district": "Okres pelhřimov"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Královéhradecký kraj",
                 "district": "Okres hradec králové"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Zlínský kraj",
                 "district": "Okres kroměříž"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

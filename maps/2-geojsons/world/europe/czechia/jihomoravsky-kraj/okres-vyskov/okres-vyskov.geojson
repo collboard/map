@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Jihomoravský kraj",
                 "district": "Okres vyškov"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

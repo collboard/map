@@ -1,4 +1,6 @@
-// !!!! Not working in Colldev> import fetch from 'isomorphic-fetch';
+// TODO: !!!! Not working in Colldev - Pick one of fetch polyfills and cleanup others
+//       > import fetch from 'isomorphic-fetch';
+import fetch from 'cross-fetch';
 import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
 
 export class OsmGeojson {
@@ -26,7 +28,19 @@ export class OsmGeojson {
         // ------
         // Note: Picking only features of geometry type Polygon
         geojson.features = geojson.features.filter(
-            (feature) => feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon',
+            (feature) =>
+                feature.geometry.type === 'Polygon' ||
+                feature.geometry.type === 'MultiPolygon' ||
+                feature.geometry.type === 'LineString' ||
+                feature.geometry.type === 'MultiLineString',
+            /*  TODO: [🎽] Add support for all entity types @see https://www.ibm.com/docs/en/db2/11.5?topic=formats-geojson-format */
+        );
+        // ------
+
+        // ------
+        // Note: Picking only features of some category (this can not be passed as a parameter to the nominatim search)
+        geojson.features = geojson.features.filter((feature) =>
+            !params.category ? true : feature.properties?.category === params.category,
         );
         // ------
 

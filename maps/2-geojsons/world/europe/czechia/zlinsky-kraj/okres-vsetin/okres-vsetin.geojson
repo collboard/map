@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Zlínský kraj",
                 "district": "Okres vsetín"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

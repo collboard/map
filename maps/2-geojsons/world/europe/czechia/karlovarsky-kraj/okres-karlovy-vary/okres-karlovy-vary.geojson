@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Karlovarský kraj",
                 "district": "Okres karlovy vary"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

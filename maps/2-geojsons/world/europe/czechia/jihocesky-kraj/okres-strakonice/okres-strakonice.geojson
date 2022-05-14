@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Jihočeský kraj",
                 "district": "Okres strakonice"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

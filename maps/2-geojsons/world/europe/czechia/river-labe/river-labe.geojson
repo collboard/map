@@ -1,0 +1,46 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "river",
+                "place_id": 156705204,
+                "osm_type": "way",
+                "osm_id": 225417640,
+                "display_name": "Labe, Střekov-lázně, Střekov, Ústí nad Labem, okres Ústí nad Labem, Ústecký kraj, Severozápad, 40003, Česko",
+                "place_rank": 19,
+                "category": "waterway",
+                "importance": 0.385
+            },
+            "bbox": [
+                14.0474699,
+                50.6370543,
+                14.0494717,
+                50.6421128
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [[14.0494717,50.6370543],[14.0494631,50.6381405],[14.0492797,50.6388487],[14.0486614,50.6405568],[14.0483598,50.6412364],[14.0474699,50.6421128]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "cs": "Labe",
+            "search": {
+                "country": "czechia",
+                "q": "Labe",
+                "category": "waterway"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Labe",
+            "geopath": {
+                "region": "Europe",
+                "country": "Czechia",
+                "river": "Labe"
+            },
+            "fromFile": "czechia/rivers.csv"
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "type": "FeatureCollection",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "river",
+                "place_id": 110782148,
+                "osm_type": "way",
+                "osm_id": 37390049,
+                "display_name": "Lužnice, Nová Ves nad Lužnicí, okres Jindřichův Hradec, Jihočeský kraj, Jihozápad, 37809, Česko",
+                "place_rank": 19,
+                "category": "waterway",
+                "importance": 0.385
+            },
+            "bbox": [
+                14.9289733,
+                48.8141254,
+                14.9296365,
+                48.8150374
+            ],
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [[14.9296365,48.8150374],[14.9295173,48.8150184],[14.9292634,48.8149683],[14.9290423,48.8148716],[14.9289733,48.8146781],[14.9291114,48.8145952],[14.9292911,48.8144156],[14.9293187,48.8142359],[14.9291667,48.8141254],[14.9289733,48.814153]]
+            }
+        }
+    ],
+    "collboard": {
+        "feature": {
+            "cs": "Lužnice",
+            "search": {
+                "country": "czechia",
+                "q": "Lužnice",
+                "category": "waterway"
+            },
+            "searchUrl": "https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Lu%C5%BEnice",
+            "geopath": {
+                "region": "Europe",
+                "country": "Czechia",
+                "river": "Lužnice"
+            },
+            "fromFile": "czechia/rivers.csv"
+        }
+    }
+}

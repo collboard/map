@@ -38,7 +38,8 @@
             "geopath": {
                 "region": "Europe",
                 "country": "Czechia"
-            }
+            },
+            "fromFile": "czechia/counties.csv"
         }
     }
 }

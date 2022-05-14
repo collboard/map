@@ -39,7 +39,8 @@
                 "region": "Europe",
                 "country": "Czechia",
                 "county": "Moravskoslezský kraj"
-            }
+            },
+            "fromFile": "czechia/counties.csv"
         }
     }
 }

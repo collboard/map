@@ -39,7 +39,8 @@
                 "region": "Europe",
                 "country": "Czechia",
                 "county": "Kraj vysočina"
-            }
+            },
+            "fromFile": "czechia/counties.csv"
         }
     }
 }

@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Středočeský kraj",
                 "district": "Okres mladá boleslav"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

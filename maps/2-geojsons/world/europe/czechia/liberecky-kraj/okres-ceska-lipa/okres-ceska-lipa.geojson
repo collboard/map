@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Liberecký kraj",
                 "district": "Okres česká lípa"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

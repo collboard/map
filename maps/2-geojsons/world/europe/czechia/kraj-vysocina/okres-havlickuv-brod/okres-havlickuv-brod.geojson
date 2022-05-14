@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Kraj vysočina",
                 "district": "Okres havlíčkův brod"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

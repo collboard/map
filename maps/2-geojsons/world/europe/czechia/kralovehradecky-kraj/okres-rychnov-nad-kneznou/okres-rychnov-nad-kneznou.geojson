@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Královéhradecký kraj",
                 "district": "Okres rychnov nad kněžnou"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

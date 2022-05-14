@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Plzeňský kraj",
                 "district": "Okres plzeň-jih"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

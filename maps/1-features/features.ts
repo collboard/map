@@ -781,7 +781,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Vltava',
-        search: { country: 'czechia', q: 'Vltava' },
+        search: { country: 'czechia', q: 'Vltava', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Vltava',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Vltava' },
@@ -789,14 +789,14 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Labe',
-        search: { country: 'czechia', q: 'Labe' },
+        search: { country: 'czechia', q: 'Labe', category: 'waterway' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Labe',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Labe' },
         fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Morava',
-        search: { country: 'czechia', q: 'Morava' },
+        search: { country: 'czechia', q: 'Morava', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Morava',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Morava' },
@@ -804,7 +804,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Ohře',
-        search: { country: 'czechia', q: 'Ohře' },
+        search: { country: 'czechia', q: 'Ohře', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Oh%C5%99e',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Ohře' },
@@ -812,7 +812,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Sázava',
-        search: { country: 'czechia', q: 'Sázava' },
+        search: { country: 'czechia', q: 'Sázava', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=S%C3%A1zava',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Sázava' },
@@ -820,14 +820,14 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Dyje',
-        search: { country: 'czechia', q: 'Dyje' },
+        search: { country: 'czechia', q: 'Dyje', category: 'waterway' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Dyje',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Dyje' },
         fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Jihlava',
-        search: { country: 'czechia', q: 'Jihlava' },
+        search: { country: 'czechia', q: 'Jihlava', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Jihlava',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Jihlava' },
@@ -835,7 +835,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Svratka',
-        search: { country: 'czechia', q: 'Svratka' },
+        search: { country: 'czechia', q: 'Svratka', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Svratka',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Svratka' },
@@ -843,7 +843,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Jizera',
-        search: { country: 'czechia', q: 'Jizera' },
+        search: { country: 'czechia', q: 'Jizera', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Jizera',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Jizera' },
@@ -851,7 +851,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Lužnice',
-        search: { country: 'czechia', q: 'Lužnice' },
+        search: { country: 'czechia', q: 'Lužnice', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Lu%C5%BEnice',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Lužnice' },
@@ -859,7 +859,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Berounka',
-        search: { country: 'czechia', q: 'Berounka' },
+        search: { country: 'czechia', q: 'Berounka', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Berounka',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Berounka' },
@@ -867,14 +867,14 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Odra',
-        search: { country: 'czechia', q: 'Odra' },
+        search: { country: 'czechia', q: 'Odra', category: 'waterway' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Odra',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Odra' },
         fromFile: 'czechia/rivers.csv',
     },
     {
         cs: 'Otava',
-        search: { country: 'czechia', q: 'Otava' },
+        search: { country: 'czechia', q: 'Otava', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Otava',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Otava' },
@@ -882,7 +882,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Opava',
-        search: { country: 'czechia', q: 'Opava' },
+        search: { country: 'czechia', q: 'Opava', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Opava',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Opava' },
@@ -890,7 +890,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Radbuza',
-        search: { country: 'czechia', q: 'Radbuza' },
+        search: { country: 'czechia', q: 'Radbuza', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Radbuza',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Radbuza' },
@@ -898,7 +898,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Chrudimka',
-        search: { country: 'czechia', q: 'Chrudimka' },
+        search: { country: 'czechia', q: 'Chrudimka', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=Chrudimka',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Chrudimka' },
@@ -906,7 +906,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Úhlava',
-        search: { country: 'czechia', q: 'Úhlava' },
+        search: { country: 'czechia', q: 'Úhlava', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=%C3%9Ahlava',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Úhlava' },
@@ -914,7 +914,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Želivka',
-        search: { country: 'czechia', q: 'Želivka' },
+        search: { country: 'czechia', q: 'Želivka', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=%C5%BDelivka',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Želivka' },
@@ -922,7 +922,7 @@ export const FEATURES: Array<{
     },
     {
         cs: 'Mže',
-        search: { country: 'czechia', q: 'Mže' },
+        search: { country: 'czechia', q: 'Mže', category: 'waterway' },
         searchUrl:
             'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=M%C5%BEe',
         geopath: { region: 'Europe', country: 'Czechia', river: 'Mže' },

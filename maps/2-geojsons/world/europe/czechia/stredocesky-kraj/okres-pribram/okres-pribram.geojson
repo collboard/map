@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Středočeský kraj",
                 "district": "Okres příbram"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

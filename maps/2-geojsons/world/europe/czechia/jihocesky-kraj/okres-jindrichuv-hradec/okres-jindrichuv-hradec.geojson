@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Jihočeský kraj",
                 "district": "Okres jindřichův hradec"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

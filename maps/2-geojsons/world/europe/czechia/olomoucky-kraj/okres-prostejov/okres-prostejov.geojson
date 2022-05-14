@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Olomoucký kraj",
                 "district": "Okres prostějov"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }

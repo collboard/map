@@ -39,7 +39,8 @@
                 "region": "Europe",
                 "country": "Czechia",
                 "county": "Hlavní město praha"
-            }
+            },
+            "fromFile": "czechia/counties.csv"
         }
     }
 }

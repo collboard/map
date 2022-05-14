@@ -39,7 +39,8 @@
                 "region": "Europe",
                 "country": "Czechia",
                 "county": "Karlovarský kraj"
-            }
+            },
+            "fromFile": "czechia/counties.csv"
         }
     }
 }

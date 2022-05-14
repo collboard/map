@@ -40,7 +40,8 @@
                 "country": "Czechia",
                 "county": "Ústecký kraj",
                 "district": "Okres ústí nad labem"
-            }
+            },
+            "fromFile": "czechia/districts.csv"
         }
     }
 }
