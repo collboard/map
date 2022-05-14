@@ -126,6 +126,7 @@ export const FEATURES: Array<{
         fromFile: 'czechia/counties.csv',
     },
     {
+        // TODO: !!! What is this ?!
         cs: '',
         search: { country: 'czechia', q: '' },
         searchUrl: 'https://nominatim.openstreetmap.org/search?format=geojson&polygon_geojson=1&country=czechia&q=',
