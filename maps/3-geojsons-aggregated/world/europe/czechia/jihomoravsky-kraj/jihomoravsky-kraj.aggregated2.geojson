@@ -208,7 +208,8 @@
                     "region": "Europe",
                     "country": "Czechia",
                     "county": "Jihomoravský kraj"
-                }
+                },
+                "fromFile": "czechia/counties.csv"
             }
         },
         {
@@ -224,7 +225,8 @@
                     "country": "Czechia",
                     "county": "Jihomoravský kraj",
                     "district": "Okres blansko"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -240,7 +242,8 @@
                     "country": "Czechia",
                     "county": "Jihomoravský kraj",
                     "district": "Okres břeclav"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -256,7 +259,8 @@
                     "country": "Czechia",
                     "county": "Jihomoravský kraj",
                     "district": "Okres brno-město"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -272,7 +276,8 @@
                     "country": "Czechia",
                     "county": "Jihomoravský kraj",
                     "district": "Okres brno-venkov"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -288,7 +293,8 @@
                     "country": "Czechia",
                     "county": "Jihomoravský kraj",
                     "district": "Okres hodonín"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -304,7 +310,8 @@
                     "country": "Czechia",
                     "county": "Jihomoravský kraj",
                     "district": "Okres vyškov"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -320,7 +327,8 @@
                     "country": "Czechia",
                     "county": "Jihomoravský kraj",
                     "district": "Okres znojmo"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         }
     ]

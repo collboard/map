@@ -112,7 +112,8 @@
                     "region": "Europe",
                     "country": "Czechia",
                     "county": "Karlovarský kraj"
-                }
+                },
+                "fromFile": "czechia/counties.csv"
             }
         },
         {
@@ -128,7 +129,8 @@
                     "country": "Czechia",
                     "county": "Karlovarský kraj",
                     "district": "Okres cheb"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -144,7 +146,8 @@
                     "country": "Czechia",
                     "county": "Karlovarský kraj",
                     "district": "Okres karlovy vary"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -160,7 +163,8 @@
                     "country": "Czechia",
                     "county": "Karlovarský kraj",
                     "district": "Okres sokolov"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         }
     ]

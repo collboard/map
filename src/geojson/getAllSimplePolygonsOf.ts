@@ -23,7 +23,7 @@ export function getAllSimplePolygonsOf(geojson: IGeojson): IGeojsonSimplePolygon
         case 'MultiLineString':
             // Note: Polygons and MultiPolygons will be separated by contained data
 
-            const polygon = parseCoordinates(geojson.coordinates).map((coordinates) => ({
+            return parseCoordinates(geojson.coordinates).map((coordinates) => ({
                 type: 'Polygon',
                 coordinates: [...coordinates, ...[...coordinates].reverse(/* TODO: Make this in optimal way */)],
             }));

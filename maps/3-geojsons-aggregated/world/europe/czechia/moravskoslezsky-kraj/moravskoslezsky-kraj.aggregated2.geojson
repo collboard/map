@@ -184,7 +184,8 @@
                     "region": "Europe",
                     "country": "Czechia",
                     "county": "Moravskoslezský kraj"
-                }
+                },
+                "fromFile": "czechia/counties.csv"
             }
         },
         {
@@ -200,7 +201,8 @@
                     "country": "Czechia",
                     "county": "Moravskoslezský kraj",
                     "district": "Okres bruntál"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -216,7 +218,8 @@
                     "country": "Czechia",
                     "county": "Moravskoslezský kraj",
                     "district": "Okres frýdek-místek"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -232,7 +235,8 @@
                     "country": "Czechia",
                     "county": "Moravskoslezský kraj",
                     "district": "Okres karviná"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -248,7 +252,8 @@
                     "country": "Czechia",
                     "county": "Moravskoslezský kraj",
                     "district": "Okres nový jičín"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -264,7 +269,8 @@
                     "country": "Czechia",
                     "county": "Moravskoslezský kraj",
                     "district": "Okres opava"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -280,7 +286,8 @@
                     "country": "Czechia",
                     "county": "Moravskoslezský kraj",
                     "district": "Okres ostrava-město"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         }
     ]

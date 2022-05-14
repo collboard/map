@@ -160,7 +160,8 @@
                     "region": "Europe",
                     "country": "Czechia",
                     "county": "Královéhradecký kraj"
-                }
+                },
+                "fromFile": "czechia/counties.csv"
             }
         },
         {
@@ -176,7 +177,8 @@
                     "country": "Czechia",
                     "county": "Královéhradecký kraj",
                     "district": "Okres hradec králové"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -192,7 +194,8 @@
                     "country": "Czechia",
                     "county": "Královéhradecký kraj",
                     "district": "Okres jičín"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -208,7 +211,8 @@
                     "country": "Czechia",
                     "county": "Královéhradecký kraj",
                     "district": "Okres náchod"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -224,7 +228,8 @@
                     "country": "Czechia",
                     "county": "Královéhradecký kraj",
                     "district": "Okres rychnov nad kněžnou"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -240,7 +245,8 @@
                     "country": "Czechia",
                     "county": "Královéhradecký kraj",
                     "district": "Okres trutnov"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         }
     ]

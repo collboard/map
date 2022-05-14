@@ -209,7 +209,8 @@
                     "country": "Czechia",
                     "county": "Plzeňský kraj",
                     "district": "Okres domažlice"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -225,7 +226,8 @@
                     "country": "Czechia",
                     "county": "Plzeňský kraj",
                     "district": "Okres klatovy"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -241,7 +243,8 @@
                     "country": "Czechia",
                     "county": "Plzeňský kraj",
                     "district": "Okres plzeň-jih"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -257,7 +260,8 @@
                     "country": "Czechia",
                     "county": "Plzeňský kraj",
                     "district": "Okres plzeň-město"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -273,7 +277,8 @@
                     "country": "Czechia",
                     "county": "Plzeňský kraj",
                     "district": "Okres plzeň-sever"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -289,7 +294,8 @@
                     "country": "Czechia",
                     "county": "Plzeňský kraj",
                     "district": "Okres rokycany"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -305,7 +311,8 @@
                     "country": "Czechia",
                     "county": "Plzeňský kraj",
                     "district": "Okres tachov"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -320,7 +327,8 @@
                     "region": "Europe",
                     "country": "Czechia",
                     "county": "Plzeňský kraj"
-                }
+                },
+                "fromFile": "czechia/counties.csv"
             }
         }
     ]

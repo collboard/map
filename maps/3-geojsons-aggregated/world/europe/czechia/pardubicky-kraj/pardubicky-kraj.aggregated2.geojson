@@ -137,7 +137,8 @@
                     "country": "Czechia",
                     "county": "Pardubický kraj",
                     "district": "Okres chrudim"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -153,7 +154,8 @@
                     "country": "Czechia",
                     "county": "Pardubický kraj",
                     "district": "Okres pardubice"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -169,7 +171,8 @@
                     "country": "Czechia",
                     "county": "Pardubický kraj",
                     "district": "Okres svitavy"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -185,7 +188,8 @@
                     "country": "Czechia",
                     "county": "Pardubický kraj",
                     "district": "Okres ústí nad orlicí"
-                }
+                },
+                "fromFile": "czechia/districts.csv"
             }
         },
         {
@@ -200,7 +204,8 @@
                     "region": "Europe",
                     "country": "Czechia",
                     "county": "Pardubický kraj"
-                }
+                },
+                "fromFile": "czechia/counties.csv"
             }
         }
     ]
