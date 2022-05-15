@@ -55,7 +55,10 @@ export interface IGeojsonProperties {
     osm_id?: number;
     display_name?: string;
     place_rank?: number;
-    category?: string;
+    category?:
+        | 'boundary'
+        | 'waterway'
+        | string /* TODO: constraint here all cathegories @see https://www.google.com/search?q=geojson+properties+category+waterway&sxsrf=ALiCzsZC6aqTLzF_xUCl8qszYyIGBOFxZg%3A1652542964605&ei=9M1_YpTVJITnkgWrvbyQDA&ved=0ahUKEwiUn4ajqt_3AhWEs6QKHaseD8IQ4dUDCA4&uact=5&oq=geojson+properties+category+waterway&gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABOgcIIxCwAxAnOgcIABBHELADOggIIRAWEB0QHjoHCCEQChCgAUoECEEYAEoECEYYAFB-WJYcYM4eaAFwAXgAgAGbAYgBvAaSAQM4LjGYAQCgAQHIAQnAAQE&sclient=gws-wiz */;
 
     /**
      * Range <0;1>

@@ -9,8 +9,12 @@ export function getAllSimplePolygonsOf(geojson: IGeojson): IGeojsonSimplePolygon
     switch (geojson.type) {
         case 'FeatureCollection':
             return geojson.features.flatMap(getAllSimplePolygonsOf);
+
         case 'Feature':
-            return getAllSimplePolygonsOf(geojson.geometry);
+            return getAllSimplePolygonsOf(geojson.geometry).map((polygon) => ({
+                ...polygon,
+                properties: geojson.properties,
+            }));
         case 'Polygon':
         case 'MultiPolygon':
             // Note: Polygons and MultiPolygons will be separated by contained data

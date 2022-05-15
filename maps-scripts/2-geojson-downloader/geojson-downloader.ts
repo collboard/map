@@ -85,8 +85,8 @@ async function runGeojsonDownloader({
 
               // console.log({ geopathAsEndonym, geopathInEnglish });
               */
-
-            const geojsonPath = join(geojsonsPath, geopathToDirpath(feature.geopath));
+            const category = geojson.properties?.category || geojson.features[0]?.properties?.category || 'unknown';
+            const geojsonPath = join(geojsonsPath, geopathToDirpath(feature.geopath, category));
 
             await mkdir(dirname(geojsonPath), { recursive: true });
 
@@ -101,6 +101,7 @@ async function runGeojsonDownloader({
                     ...geojson,
 
                     collboard: {
+                        category,
                         feature,
                     },
                 }),

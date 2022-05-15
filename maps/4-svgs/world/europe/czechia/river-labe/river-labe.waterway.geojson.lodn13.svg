@@ -1,0 +1,11 @@
+<svg viewBox="0 0 10.145766627555712 10.580811663917848" width="10.145766627555712" height="10.580811663917848" xmlns="http://www.w3.org/2000/svg">
+  <title>Ústecký kraj</title>
+  <desc>Geojson of Ústecký kraj</desc>
+  <!-- Generated from maps/2-geojsons/world/europe/czechia/river-labe/river-labe.waterway.geojson -->
+  <metadata>
+    <collboard>
+      <support-module name="@collboard/map-svg-geojson-import" version="1.4.4"></support-module>
+    </collboard>
+  </metadata>
+  <polygon points="1.871902234752264,2.3069472711144043 1.726135607196551,1.7261356071965566 1.726135607196551,1.7261356071965566 1.871902234752264,2.3069472711144043" stroke="#4455ff" fill="none" stroke-width="1.5789473684210527" vector-effect="non-scaling-stroke" stroke-linejoin="round"></polygon>
+</svg>

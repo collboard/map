@@ -28,7 +28,7 @@ function formatGeojson(geojson: IGeojson): any {
     for (const [key, value] of Object.entries(geojson)) {
         const formattedValue = formatGeojson(value);
 
-        if (['type', 'properties'].includes(key)) {
+        if (['type', 'properties', 'collboard'].includes(key)) {
             begining[key] = formattedValue;
         } else if (['coordinates'].includes(key)) {
             end[key] = formattedValue;
