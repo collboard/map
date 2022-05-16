@@ -2,13 +2,12 @@ import del from 'del';
 import { mkdir, stat, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import { basename, dirname, join, relative } from 'path';
+import spaceTrim from 'spacetrim';
 import { commit } from '../utils/autocommit/commit';
 import { forPlay } from '../utils/forPlay';
-import { normalizeToCamelCase } from '../utils/normalizeToCamelCase';
 import { prettify } from '../utils/prettify';
-import { removeDiacritics } from '../utils/removeDiacritics';
 import { generateTrayDefinition } from './2-generateTrayDefinition';
-import { getTitleOfSvg } from './getTitleOfSvg';
+import { replaceInlineImports } from './replaceInlineImports';
 
 /**/
 export async function convertSvgsToTrayDefinitions({
@@ -50,33 +49,9 @@ export async function convertSvgsToTrayDefinitions({
         );
 
         const trayDefinition = await generateTrayDefinition(pathForTrayDefinition);
-        let trayDefinitionJson = JSON.stringify(trayDefinition);
-        const importAliases: { alias: string; path: string }[] = [];
-        for (const match of trayDefinitionJson.matchAll(/import\((?<path>.*?)\)/g)) {
-            const path = match.groups!.path;
-            const baseAlias = await getTitleOfSvg(path).then(removeDiacritics).then(normalizeToCamelCase);
+        const trayDefinitionJson = JSON.stringify(trayDefinition);
 
-            let alias = baseAlias;
-            let i = 0;
-            while (importAliases.some(({ alias: alias2 }) => alias === alias2)) {
-                i++;
-                alias = `${baseAlias}${i}`;
-            }
-
-            importAliases.push({ alias, path });
-            trayDefinitionJson = trayDefinitionJson.replace(`"import(${path})"`, alias);
-        }
-
-        const moduleContent = await prettify(
-            // TODO: Also organize imports
-            `
-
-/**
- * 🏭 GENERATED WITH 🚡 Tray from svg converter
- * ⚠️ Warning: Do not edit by hand, all changes will be lost on next execution!
- */
-
-
+        let moduleContent = `
 
               import { declareModule, makeTraySimpleModule } from '@collboard/modules-sdk';
               import { contributors, license, repository, version } from '${relative(
@@ -85,21 +60,16 @@ export async function convertSvgsToTrayDefinitions({
               )
                   .split('\\')
                   .join('/')}';
-              ${importAliases
-                  .map(
-                      ({ alias, path }) =>
-                          `import ${alias} from "${relative(dirname(modulePath), path).split('\\').join('/')}";`,
-                  )
-                  .join('\n')}
 
 
 
               declareModule(
                 makeTraySimpleModule({
-                    manifest: {
-                        name: '@collboard/map-tray-tool',
-                        title: { en: 'Map tray tool' },
-                        description: { en: 'Tray tool for the map' },
+                      manifest: {
+                        name: '@collboard/map-tray-tool-czechia-counties-and-districts',
+                        icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
+                        title: { cs: 'Kraje a okresy České republiky', en: 'Czechia counties and districts' },
+                        description: { cs: 'Lišta s kraji České republiky', en: 'Tray with Czechia counties and districts' },
                         contributors,
                         license,
                         repository,
@@ -108,17 +78,32 @@ export async function convertSvgsToTrayDefinitions({
 
                     icon: {
                         order: 60,
-                        icon: 'earth' /* <- TODO: Better, Czechia borders */,
+                        // icon: 'earth' /* <- TODO: Better, Czechia borders */,
+                        icon: "import(/assets/icons/cs.svg)",
+                        // TODO: !!! Custom icon OR make flag images from UTF-8 country codes like "🇨🇿"
                         boardCursor: 'default',
                     },
                     trayDefinition: ${trayDefinitionJson}
                 }),
               );
-            `,
+            `;
+        moduleContent = await replaceInlineImports(moduleContent, modulePath);
+        moduleContent = spaceTrim(
+            (block) => `
+
+
+                ${block(`/**
+                 * 🏭 GENERATED WITH 🚡 Tray from svg converter
+                 * ⚠️ Warning: Do not edit by hand, all changes will be lost on next execution!
+                 */`)}
+
+
+                ${block(moduleContent)}
+        `,
         );
 
         await mkdir(dirname(modulePath), { recursive: true });
-        await writeFile(modulePath, moduleContent, 'utf8');
+        await writeFile(modulePath, await prettify(/* TODO: Also organize imports */ moduleContent), 'utf8');
 
         modulesPaths.push(modulePath);
     }

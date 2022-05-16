@@ -6,35 +6,48 @@ export async function generateTrayDefinition(path: string): Promise<ITraySimpleD
     return [
         {
             title: 'Česká republika',
-            icon: 'import(../../../../assets/icons/cs.svg)',
+            icon: 'import(/assets/icons/cs.svg)',
             groups: [
                 {
                     title: `` /* <- Note: No name for (no)group */,
-                    items: await generateTrayItems(...(await findSvgs({ path, level: 1, basenamePattern: /.*/ }))),
+                    items: await generateTrayItems(...(await findSvgs({ path, level: 1 }))),
                 },
             ],
         },
         {
             title: 'Kraje České republiky',
-            icon: 'import(../../../../assets/icons/czechia-counties.png)',
+            icon: 'import(/assets/icons/czechia-counties.png)',
             groups: [
                 {
                     title: `` /* <- Note: No name for (no)group */,
                     items: await generateTrayItems(
-                        ...(await findSvgs({ path, level: 2, basenamePattern: /^((?!aggregated).)*$/ })),
+                        ...(await findSvgs({ path, level: 2, filter: { categories: ['boundary'], aggregated: null } })),
                     ),
                 },
             ],
         },
         {
             title: 'Okresy České republiky',
-            icon: 'import(../../../../assets/icons/czechia-districts.png)',
+            icon: 'import(/assets/icons/czechia-districts.png)',
             groups: [
                 // Note: Using only one group - make it more semantic
                 {
                     title: `` /* <- Note: No name for (no)group */,
                     items: await generateTrayItems(
-                        ...(await findSvgs({ path, level: 2, basenamePattern: /\.aggregated2\./ })),
+                        ...(await findSvgs({ path, level: 2, filter: { categories: ['boundary'], aggregated: 2 } })),
+                    ),
+                },
+            ],
+        },
+        {
+            title: 'Řeky České republiky',
+            icon: 'import(/assets/icons/czechia-districts.png)',
+            groups: [
+                // Note: Using only one group - make it more semantic
+                {
+                    title: `` /* <- Note: No name for (no)group */,
+                    items: await generateTrayItems(
+                        ...(await findSvgs({ path, level: 2, filter: { categories: ['waterway'] } })),
                     ),
                 },
             ],
