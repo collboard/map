@@ -6,6 +6,7 @@ import { Wgs84 } from '../semantic/Wgs84';
 import { pickTitle } from '../utils/pickTitle';
 import { getAllPointsOf } from './getAllPointsOf';
 import { getAllSimplePolygonsOf } from './getAllSimplePolygonsOf';
+import { getSignificantPointsOf } from './getSignificantPointsOf';
 import { OsmGeojson } from './OsmGeojson';
 
 /**
@@ -73,6 +74,17 @@ export class SimplifiedGeojson {
         // TODO: Cache
         return getAllPointsOf(this.originalGeojson);
     }
+
+    /**
+     * Get only the significant points of this geojson
+     * For example if there is mixed boundaries with water this will return only the points of the boundaries
+     */
+    get pointsSignificant(): Wgs84[] {
+      // TODO: Cache
+      return getSignificantPointsOf(this.originalGeojson);
+  }
+
+
 
     /*
     TODO

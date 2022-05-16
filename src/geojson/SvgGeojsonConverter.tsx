@@ -27,7 +27,7 @@ export class SvgGeojsonConverter {
 
     private calculateBoundingBox() {
         // TODO: Use here BoundingBox.fromPoints
-        this.pointsOnBoard = this.simplifiedGeojson.points.map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
+        this.pointsOnBoard = this.simplifiedGeojson.pointsSignificant.map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
 
         const xVals = this.pointsOnBoard.map((point) => point.x || 0);
         const yVals = this.pointsOnBoard.map((point) => point.y || 0);
@@ -149,7 +149,7 @@ export class SvgGeojsonConverter {
     private static getSvgPropsFromPolygon(feature: IGeojsonSimplePolygon): Partial<JSX.IntrinsicElements['polygon']> {
         let stroke = '#009edd';
 
-    
+
         if (feature.properties?.category === 'waterway') {
             stroke = '#4455ff';
         }
