@@ -41,6 +41,8 @@ import chrudimkaSeverovychod53941Cesko from '../../../4-svgs/world/europe/czechi
 import dyjeThayaJihovychod67110Cesko from '../../../4-svgs/world/europe/czechia/river-dyje/river-dyje.waterway.geojson.lodn13.svg';
 import jihlavaJihovychod67501Cesko from '../../../4-svgs/world/europe/czechia/river-jihlava/river-jihlava.waterway.geojson.lodn13.svg';
 import jizera29501Cesko from '../../../4-svgs/world/europe/czechia/river-jizera/river-jizera.waterway.geojson.lodn13.svg';
+import usteckyKraj2 from '../../../4-svgs/world/europe/czechia/river-labe/river-labe.waterway.geojson.lodn13.svg';
+import jihoceskyKraj2 from '../../../4-svgs/world/europe/czechia/river-luznice/river-luznice.waterway.geojson.lodn13.svg';
 import morava78964Cesko from '../../../4-svgs/world/europe/czechia/river-morava/river-morava.waterway.geojson.lodn13.svg';
 import mzeJihozapad34701Cesko from '../../../4-svgs/world/europe/czechia/river-mze/river-mze.waterway.geojson.lodn13.svg';
 import odra45001Polska from '../../../4-svgs/world/europe/czechia/river-odra/river-odra.waterway.geojson.lodn13.svg';
@@ -173,7 +175,7 @@ declareModule(
                                 imageSrc: berounkaStredniCechy27023Cesko,
                             },
                             { title: 'Vltava', imageSrc: vltava38101Cesko },
-                            // !!!!!!!! Labe
+                            { title: 'Labe', imageSrc: usteckyKraj2 },
                             { title: 'Morava', imageSrc: morava78964Cesko },
                             { title: 'Ohře', imageSrc: ohre36007Cesko },
                             { title: 'Sázava', imageSrc: sazavaJihovychod58401Cesko },
@@ -184,7 +186,7 @@ declareModule(
                             { title: 'Jihlava', imageSrc: jihlavaJihovychod67501Cesko },
                             { title: 'Svratka', imageSrc: svratkaJihovychod59266Cesko },
                             { title: 'Jizera', imageSrc: jizera29501Cesko },
-                            // !!!!!!!!! Lužnice
+                            { title: 'Lužnice', imageSrc: jihoceskyKraj2 },
                             {
                                 title: 'Berounka',
                                 imageSrc: berounkaStredniCechy27023Cesko1,
