@@ -9,6 +9,7 @@ declareModule({
         name: '@collboard/map-map-geojson-import-support',
         title: { en: 'GeoJson support' },
         description: { en: 'Support for importing GeoJson files' },
+        categories: ['Geography', 'Education'],
         contributors,
         license,
         repository,

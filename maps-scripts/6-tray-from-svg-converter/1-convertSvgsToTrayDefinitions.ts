@@ -70,6 +70,7 @@ export async function convertSvgsToTrayDefinitions({
                         icon: 'https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.42.0/languages/cs.svg',
                         title: { cs: 'Kraje a okresy České republiky', en: 'Czechia counties and districts' },
                         description: { cs: 'Lišta s kraji České republiky', en: 'Tray with Czechia counties and districts' },
+                        categories: ['Geography', 'Education'],
                         contributors,
                         license,
                         repository,

@@ -12,6 +12,7 @@ declareModule(() => {
             name: '@collboard/map-tray-tool',
             title: { en: 'Map tray tool' },
             description: { en: 'Tray tool for the map' },
+            categories: ['Geography', 'Education'],
             contributors,
             license,
             repository,

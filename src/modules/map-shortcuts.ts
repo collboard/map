@@ -12,6 +12,7 @@ declareModule({
         name: '@collboard/map-shortcuts',
         title: { en: 'Map shortcuts' },
         description: { en: 'Shortcuts native for the map' },
+        categories: ['Geography', 'Education'],
         contributors,
         license,
         repository,
@@ -33,7 +34,6 @@ declareModule({
         });
     },
 });
-
 
 /**
  * TODO: !!! Make it work
