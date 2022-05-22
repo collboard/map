@@ -1,80 +1,98 @@
 {
-    "autokill": true,
-    "terminals": [
-        {
-            "name": "👨🏽‍💻 Develop",
-            "command": "npm start",
-            "focus": true
-        },
-        {
-            "name": "🧪 Test",
-            "command": "npm run test",
-            "onlySingle": true,
-            "focus": true
-        },
-        {
-            "name": "🧪 Lint",
-            "command": "npm run lint",
-            "onlySingle": true,
-            "focus": true
-        },
-        {
-            "name": "🏭🏭🏭 Run all generators",
-            "commands": [
-                "ts-node ./maps-scripts/1-features-generator/features-generator.ts --commit",
-                "ts-node ./maps-scripts/2-geojson-downloader/geojson-downloader.ts --commit",
-                "ts-node ./maps-scripts/3-geojson-aggregator/geojson-aggregator.ts --commit",
-                "ts-node ./maps-scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts --commit",
-                "ts-node ./maps-scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts --commit",
-                "ts-node ./maps-scripts/6-tray-from-svg-converter/0-tray-from-svg-converter.ts --commit"
-            ],
-            "onlySingle": true,
-            "focus": true
-        },
-        {
-            "name": "🏭🏭 Generate SVGs + Tray",
-            "commands": [
-                "ts-node ./maps-scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts --commit",
-                "ts-node ./maps-scripts/6-tray-from-svg-converter/0-tray-from-svg-converter.ts --commit"
-            ],
-            "onlySingle": true,
-            "focus": true
-        },
-        {
-            "name": "🏭/1/🎹 Features generator",
-            "command": "ts-node ./maps-scripts/1-features-generator/features-generator.ts",
-            "onlySingle": true,
-            "focus": true
-        },
-        {
-            "name": "🏭/2/🗺️ Geojson downloader",
-            "command": "ts-node ./maps-scripts/2-geojson-downloader/geojson-downloader.ts",
-            "onlySingle": true,
-            "focus": true
-        },
-        {
-            "name": "🏭/3/🧩 Geojson aggregator",
-            "command": "ts-node ./maps-scripts/3-geojson-aggregator/geojson-aggregator.ts",
-            "onlySingle": true,
-            "focus": true
-        },
-        {
-            "name": "🏭/4/🖼️ Svg from geojson converter",
-            "command": "ts-node ./maps-scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts",
-            "onlySingle": true,
-            "focus": true
-        },
-        {
-            "name": "🏭/5/🖨️ Pdf from svg converter",
-            "command": "ts-node ./maps-scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts",
-            "onlySingle": true,
-            "focus": true
-        },
-        {
-            "name": "🏭/6/🚡 Tray from svg converter",
-            "command": " ts-node ./maps-scripts/6-tray-from-svg-converter/0-tray-from-svg-converter.ts",
-            "onlySingle": true,
-            "focus": true
-        }
-    ]
+  "autokill": true,
+  "terminals": [
+    {
+      "name": "👨🏽‍💻 Develop",
+      "command": "npm start",
+      "focus": true
+    },
+    {
+      "name": "🧪 Test",
+      "command": "npm run test",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🧪 Lint",
+      "command": "npm run lint",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🏭🏭🏭 Run all generators",
+      "commands": [
+        "ts-node ./maps-scripts/1-features-generator/features-generator.ts --commit",
+        "ts-node ./maps-scripts/2-geojson-downloader/geojson-downloader.ts --commit",
+        "ts-node ./maps-scripts/3-geojson-aggregator/geojson-aggregator.ts --commit",
+        "ts-node ./maps-scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts --commit",
+        "ts-node ./maps-scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts --commit",
+        "ts-node ./maps-scripts/6-tray-from-svg-converter/0-tray-from-svg-converter.ts --commit"
+      ],
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🏭🏭 Generate SVGs + Tray",
+      "commands": [
+        "ts-node ./maps-scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts --commit",
+        "ts-node ./maps-scripts/6-tray-from-svg-converter/0-tray-from-svg-converter.ts --commit"
+      ],
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🏭/1/🎹 Features generator",
+      "command": "ts-node ./maps-scripts/1-features-generator/features-generator.ts",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🏭/2/🗺️ Geojson downloader",
+      "command": "ts-node ./maps-scripts/2-geojson-downloader/geojson-downloader.ts",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🏭/3/🧩 Geojson aggregator",
+      "command": "ts-node ./maps-scripts/3-geojson-aggregator/geojson-aggregator.ts",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🏭/4/🖼️ Svg from geojson converter",
+      "command": "ts-node ./maps-scripts/4-svg-from-geojson-converter/svg-from-geojson-converter.ts",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🏭/5/🖨️ Pdf from svg converter",
+      "command": "ts-node ./maps-scripts/5-pdf-from-svg-converter/pdf-from-svg-converter.ts",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🏭/6/🚡 Tray from svg converter",
+      "command": " ts-node ./maps-scripts/6-tray-from-svg-converter/0-tray-from-svg-converter.ts",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🔼👑 Release major version",
+      "command": "npm version major",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🔼🚀 Release minor version",
+      "command": "npm version minor",
+      "onlySingle": true,
+      "focus": true
+    },
+    {
+      "name": "🔼🩹 Release patch version",
+      "command": "npm version patch",
+      "onlySingle": true,
+      "focus": true
+    }
+  ]
 }
