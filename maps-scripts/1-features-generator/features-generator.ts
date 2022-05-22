@@ -4,7 +4,7 @@ import commander from 'commander';
 import { readFile, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import papaparse from 'papaparse';
-import { basename, join } from 'path';
+import { basename, join, relative } from 'path';
 import spaceTrim from 'spacetrim';
 import { OsmGeojson } from '../../src/geojson/OsmGeojson';
 import { isNumeric } from '../../src/utils/isNumeric';
@@ -80,7 +80,7 @@ async function runFeaturesGenerator({ isDebug, isCommited }: { isDebug: boolean;
 
                       ${block(GENERATOR_WARNING)}
 
-                      export const FEATURES: Array<{ en?: string; cs?: string; search: any, searchUrl: string, geopath: IGeopath }> = [
+                      export const FEATURES: Array<{ en?: string; cs?: string; search: any, searchUrl: string, geopath: IGeopath, fromFile: string }> = [
                         ${block(features.map((feature) => JSON.stringify(feature)).join(',\n'))}
                       ];
 
@@ -111,15 +111,17 @@ async function runFeaturesGenerator({ isDebug, isCommited }: { isDebug: boolean;
         const featureLanguage = csvCountry === 'czechia' ? 'cs' : 'en';
 
         for (const row of data as any) {
+            const featureName: string = row[featureNameKey].split(/\[[a-zA-Z0-9]\]/g).join('');
+            console.info(`🏭 Processing ${featureName}`);
+
             const region: string | null = capitalizeFirstLetter(row['Region'] || 'Europe');
             const country: string | null = capitalizeFirstLetter(csvCountry || row['Country'] || null);
+            const river: string | null = capitalizeFirstLetter(row['Řeka'] || null);
             const county: string | null = capitalizeFirstLetter(row['County'] || null);
             const district: string | null = capitalizeFirstLetter(row['District'] || null);
             const city: string | null = capitalizeFirstLetter(row['City'] || null);
 
-            const featureName: string = row[featureNameKey].split(/\[[a-zA-Z0-9]\]/g).join('');
-
-            console.info(`🏭 Processing ${featureName}`);
+            // console.log(row, river);
 
             const search: Record<string, string> = !csvCountry
                 ? {
@@ -135,10 +137,11 @@ async function runFeaturesGenerator({ isDebug, isCommited }: { isDebug: boolean;
                 search,
                 searchUrl: OsmGeojson.createSearchUrl(search),
                 geopath: Object.fromEntries(
-                    Object.entries({ region, country, county, district, city }).filter(
+                    Object.entries({ region, country, river, county, district, city }).filter(
                         ([key, value]) => value !== null,
                     ),
                 ),
+                fromFile: relative(join(process.cwd(), 'maps', '0-features-lists'), csvPath).split('\\').join('/'),
             };
 
             if (csvCountry !== 'czechia') {

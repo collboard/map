@@ -8,6 +8,7 @@ declareModule({
         name: '@collboard/map-toolbar-persisting',
         title: { en: 'Map toolbar' },
         description: { en: 'Modify behaviour of toolbar and tools for the map' },
+        categories: ['Geography', 'Education'],
         contributors,
         license,
         repository,

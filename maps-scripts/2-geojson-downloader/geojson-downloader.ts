@@ -13,7 +13,7 @@ import { commit } from '../utils/autocommit/commit';
 import { DebugAutomaticTranslator } from '../utils/automatic-translators/DebugAutomaticTranslator';
 import { GoogleAutomaticTranslator } from '../utils/automatic-translators/GoogleAutomaticTranslator';
 import { forPlay } from '../utils/forPlay';
-import { removeDiacritics } from '../utils/removeDiacritics';
+import { geopathToDirpath } from './geopathToDirpath';
 import { geojsonStringify } from './utils/geojsonStringify';
 
 /**/
@@ -85,17 +85,9 @@ async function runGeojsonDownloader({
 
               // console.log({ geopathAsEndonym, geopathInEnglish });
               */
+            const category = geojson.properties?.category || geojson.features[0]?.properties?.category || 'unknown';
+            const geojsonPath = join(geojsonsPath, geopathToDirpath(feature.geopath, category));
 
-            const geopathNormalized = Object.values(feature.geopath).map((geopart) =>
-                // TODO: Make one normalizeGeoname function
-                //       "Wallis and futuna (france)" -> "wallis-and-futuna-france"
-                removeDiacritics(geopart).split(/\s+/).join('-').toLowerCase(),
-            );
-            const geojsonPath = join(
-                geojsonsPath,
-                ...geopathNormalized,
-                `${geopathNormalized[geopathNormalized.length - 1]}.geojson`,
-            );
             await mkdir(dirname(geojsonPath), { recursive: true });
 
             if (geojsonPath.includes('maps/4-svgs/world/europe/czechia/praha')) {
@@ -109,6 +101,7 @@ async function runGeojsonDownloader({
                     ...geojson,
 
                     collboard: {
+                        category,
                         feature,
                     },
                 }),

@@ -9,7 +9,7 @@ export function pickTitle(...titles: string[]): string {
         firstTitle
             .split(',')
             .map((part) => part.trim())
-            .find((part) => part.endsWith('kraj')) || firstTitle
+            .find((part) => part.match(/(kraj)/i)) || firstTitle
     );
 
     /*

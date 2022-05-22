@@ -4,7 +4,7 @@ import ReactDOMServer from 'react-dom/server';
 import { Vector } from 'xyzt';
 import { version } from '../../package.json';
 import { MAP_BASE, TILE_SIZE } from '../config';
-import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
+import { IGeojsonFeatureCollection, IGeojsonSimplePolygon } from '../interfaces/IGeojson';
 import { ISvgGeojson } from '../interfaces/ISvgGeojson';
 import { TileAbsolute } from '../semantic/TileAbsolute';
 import { Wgs84 } from '../semantic/Wgs84';
@@ -27,7 +27,7 @@ export class SvgGeojsonConverter {
 
     private calculateBoundingBox() {
         // TODO: Use here BoundingBox.fromPoints
-        this.pointsOnBoard = this.simplifiedGeojson.points.map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
+        this.pointsOnBoard = this.simplifiedGeojson.pointsSignificant.map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));
 
         const xVals = this.pointsOnBoard.map((point) => point.x || 0);
         const yVals = this.pointsOnBoard.map((point) => point.y || 0);
@@ -97,13 +97,7 @@ export class SvgGeojsonConverter {
                         </collboard>
                     </metadata>
                 </>
-                {/*
-                <filter id="dilate-and-xor">
-                    {/* TODO: Filters can be used also for special effects/texturing for FreehandArt * /}
-                    <feMorphology in="SourceGraphic" result="dilate-result" operator="dilate" radius={2 / z} />
-                    <feComposite in="SourceGraphic" in2="dilate-result" result="xor-result" operator="xor" />
-                </filter>
-                */}
+
                 {simplifiedGeojson.simplePolygons.map((feature, i) => (
                     <polygon
                         key={i}
@@ -128,12 +122,7 @@ export class SvgGeojsonConverter {
                             // TODO: Tell the region that the user hoovered on it
                             // + add  onMouseLeave={(event) => {
                         }}
-                        stroke="#009edd"
-                        fill="none"
-                        strokeWidth="5px"
-                        vectorEffect="non-scaling-stroke"
-                        strokeLinejoin="round"
-                        // filter="url(#dilate-and-xor)"
+                        {...SvgGeojsonConverter.getSvgPropsFromPolygon(feature)}
                     />
                 ))}
             </svg>
@@ -155,6 +144,32 @@ export class SvgGeojsonConverter {
                 src,
             };
         }
+    }
+
+    private static getSvgPropsFromPolygon(feature: IGeojsonSimplePolygon): Partial<JSX.IntrinsicElements['polygon']> {
+        let stroke = '#009edd';
+
+
+        if (feature.properties?.category === 'waterway') {
+            stroke = '#4455ff';
+        }
+
+        return {
+            stroke,
+            fill: 'none',
+            strokeWidth: (5 * 6) / (feature.properties?.place_rank || 5),
+            vectorEffect: 'non-scaling-stroke',
+            strokeLinejoin: 'round',
+
+            // filter="url(#dilate-and-xor)"
+            /*
+            <filter id="dilate-and-xor">
+                {/* TODO: Filters can be used also for special effects/texturing for FreehandArt * /}
+                <feMorphology in="SourceGraphic" result="dilate-result" operator="dilate" radius={2 / z} />
+                <feComposite in="SourceGraphic" in2="dilate-result" result="xor-result" operator="xor" />
+            </filter>
+            */
+        };
     }
 }
 
