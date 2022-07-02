@@ -1,4 +1,4 @@
-# 🗺️ Map
+# 🗺️ Collboard geography
 
 Maps for the geography class for the [Collboard.com](https://collboard.com/) in cooperation with [The Capital City of Prague](https://www.prague.eu/).
 [See all file support modules for Collboard](https://github.com/topics/collboard-file-support).
