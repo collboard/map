@@ -21,7 +21,7 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "@collboard/modules-sdk": "26.0.504",
+        "@collboard/modules-sdk": "26.0.505",
         "@types/isomorphic-fetch": "0.0.35",
         "@types/jest": "27.4.0",
         "@types/papaparse": "5.3.2",
