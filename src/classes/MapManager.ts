@@ -1,4 +1,4 @@
-import { AppState, CollSpace, ImageArt, Queue, VirtualArtVersioningSystem } from '@collboard/modules-sdk';
+import { AppState, CollSpace, ImageArt, Queue, VirtualArtVersioningSystem, windowSize } from '@collboard/modules-sdk';
 import { Operation } from '@collboard/modules-sdk/types/50-systems/ArtVersionSystem/Operation';
 import { Destroyable, IDestroyable } from 'destroyable';
 import { forImage, forValueDefined } from 'waitasecond';
@@ -7,7 +7,6 @@ import { MAP_BASE, TILE_COUNT_PADDING, TILE_SIZE } from '../config';
 import { TileAbsolute } from '../semantic/TileAbsolute';
 import { Wgs84 } from '../semantic/Wgs84';
 import { iterateTiles } from '../utils/iterateTiles';
-import { observeByHeartbeat } from '../utils/observeByHeartbeat';
 import { TileProvider } from './TileProvider';
 
 export class MapManager extends Destroyable implements IDestroyable {
@@ -23,10 +22,10 @@ export class MapManager extends Destroyable implements IDestroyable {
     ) {
         super();
 
-        observeByHeartbeat({ getValue: () => appState.transform })
+        appState.transform
             // TODO: Debounce by some distance value
             .subscribe((transform) => {
-                this.render(transform, appState.windowSize);
+                this.render(transform, windowSize.value /* <- TODO: Also observe windowSize */);
             });
 
         // TODO: Observe appState.windowSize
@@ -45,14 +44,14 @@ export class MapManager extends Destroyable implements IDestroyable {
         */
     }
 
-    private pickTile(pointOnScreen: Vector /* TODO: Pixels*/): TileAbsolute {
+    private async pickTile(pointOnScreen: Vector /* TODO: Pixels*/): Promise<TileAbsolute> {
         // TODO: !!! Optimize this
 
-        const zoom = Math.ceil(Math.log2(this.appState.transform.scale.x) + MAP_BASE.z);
+        const zoom = Math.ceil(Math.log2(this.appState.transform.value.scale.x) + MAP_BASE.z);
 
         const mapCenterTile = TileAbsolute.fromWgs84(new Wgs84(MAP_BASE.x, MAP_BASE.y, zoom));
 
-        const pointOnBoard = this.collSpace.pickPoint(pointOnScreen).point;
+        const pointOnBoard = (await this.collSpace.pickPoint(pointOnScreen)).point;
         const pointAsTile = new TileAbsolute(
             pointOnBoard
                 .divide(TILE_SIZE.scale(Math.pow(2, MAP_BASE.z - zoom)))
@@ -68,12 +67,14 @@ export class MapManager extends Destroyable implements IDestroyable {
         return pointAsTile;
     }
 
-    private render(transform: Transform, windowSize: Vector) {
+    private async render(transform: Transform, windowSize: Vector) {
         // console.log(`________________________`);
         // console.log('render');
 
-        const corners = [windowSize.scale(1 - TILE_COUNT_PADDING), windowSize.scale(TILE_COUNT_PADDING)].map((corner) =>
-            this.pickTile(corner),
+        const corners = await Promise.all(
+            [windowSize.scale(1 - TILE_COUNT_PADDING), windowSize.scale(TILE_COUNT_PADDING)].map((corner) =>
+                this.pickTile(corner),
+            ),
         );
 
         let createdTiles = 0;

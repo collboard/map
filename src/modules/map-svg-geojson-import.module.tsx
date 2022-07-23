@@ -48,7 +48,7 @@ declareModule({
 
         return importSystem.registerFileSupport({
             priority: 100 /* <- TODO: [⭕] In future no need for extra priority because imported file itself will tell to use <support-module name="@collboard/map-svg-geojson-import" */,
-            async processFile({ logger, file, boardPosition, next, willCommitArts, previewOperation }) {
+            async importFile({ logger, file, boardPosition, next, willCommitArts, previewOperation }) {
                 if (!mimeTypes.some((mimeType) => patternToRegExp(mimeType).test(file.type))) {
                     return next();
                 }

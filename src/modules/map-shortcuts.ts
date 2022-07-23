@@ -29,7 +29,7 @@ declareModule({
             defaultShortcuts,
             executor: ({ value }) => {
                 const transform = Transform.fromObject(value);
-                appState.transform = appState.transform.apply(transform);
+                appState.transform.next(appState.transform.value.apply(transform));
             },
         });
     },

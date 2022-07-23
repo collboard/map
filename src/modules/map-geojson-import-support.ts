@@ -32,7 +32,7 @@ declareModule({
         return importSystem.registerFileSupport({
             priority: 0,
             // mimeType: 'application/geo+json',
-            async processFile({ file, boardPosition, next }) {
+            async importFile({ file, boardPosition, next }) {
                 return next();
                 // TODO: Import GeoJson and center the map
                 const geojson = JSON.parse(await file.text()) as IGeojsonFeatureCollection;

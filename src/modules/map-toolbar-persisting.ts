@@ -22,7 +22,7 @@ declareModule({
 
         for (let i = 0; i < 20; i++) {
             await forTime(100);
-            /* not await */ toolbarSystem.getToolbar(ToolbarName.Navigation).handleIconClick('move');
+            /* not await */ toolbarSystem.getToolbar(ToolbarName.Navigation).clickOnIcon('move');
         }
         // TODO: !!! Better
 
