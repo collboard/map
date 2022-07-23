@@ -51,7 +51,7 @@ declareModule(() => {
                 return Registration.fromSubscription((registerAdditionalSubscription) =>
                     touchController.touches.subscribe(async (touch) => {
                         const pointOnScreen = touch.firstFrame.position;
-                        const pointOnBoard = collSpace.pickPoint(pointOnScreen).point;
+                        const pointOnBoard = (await collSpace.pickPoint(pointOnScreen)).point;
                         const pointAsTile = new TileAbsolute(pointOnBoard.divide(TILE_SIZE).add(mapCenterTile));
                         const pointAsWgs84 = pointAsTile.toWgs84();
 
