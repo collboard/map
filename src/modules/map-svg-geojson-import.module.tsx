@@ -1,5 +1,5 @@
 import {
-    blobToDataUrl,
+    blobToDataurl,
     centerArts,
     declareModule,
     ImageArt,
@@ -71,7 +71,7 @@ declareModule({
                 }
 
                 willCommitArts();
-                let imageSrc: string_data_url = await blobToDataUrl(fileSvg);
+                let imageSrc: string_data_url = await blobToDataurl(fileSvg);
 
                 // await previewImage(imageSrc);
 
