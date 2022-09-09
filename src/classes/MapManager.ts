@@ -67,12 +67,12 @@ export class MapManager extends Destroyable implements IDestroyable {
         return pointAsTile;
     }
 
-    private async render(transform: Transform, windowSize: Vector) {
+    private async render(transform: Transform, windowSizeValue: Vector) {
         // console.log(`________________________`);
         // console.log('render');
 
         const corners = await Promise.all(
-            [windowSize.scale(1 - TILE_COUNT_PADDING), windowSize.scale(TILE_COUNT_PADDING)].map((corner) =>
+            [windowSizeValue.scale(1 - TILE_COUNT_PADDING), windowSizeValue.scale(TILE_COUNT_PADDING)].map((corner) =>
                 this.pickTile(corner),
             ),
         );
