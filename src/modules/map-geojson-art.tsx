@@ -75,14 +75,14 @@ export class GeojsonArt extends Abstract2dArt {
     }
     */
 
-    public get topLeftCorner() {
+    public get topLeft() {
         return new Vector(this.minX, this.minY).add(this.shift);
     }
-    public get bottomRightCorner() {
+    public get bottomRight() {
         return new Vector(this.maxX, this.maxY).add(this.shift);
     }
     public get size() {
-        return this.bottomRightCorner.subtract(this.topLeftCorner);
+        return this.bottomRight.subtract(this.topLeft);
     }
 
     public get acceptedAttributes() {
