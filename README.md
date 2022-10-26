@@ -15,10 +15,10 @@ Maps for the geography class for the [Collboard.com](https://collboard.com/) in 
 
 
 [![License of 🗺️ Geography for Collboard](https://img.shields.io/github/license/collboard/map.svg?style=flat)](https://github.com/collboard/map/blob/main/LICENSE)
+[![lint](https://github.com/collboard/map/actions/workflows/lint.yml/badge.svg)](https://github.com/collboard/map/actions/workflows/lint.yml)
+[![test](https://github.com/collboard/map/actions/workflows/test.yml/badge.svg)](https://github.com/collboard/map/actions/workflows/test.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/collboard/map/badge.svg)](https://snyk.io/test/github/collboard/map)
 [![Issues](https://img.shields.io/github/issues/collboard/map.svg?style=flat)](https://github.com/collboard/map/issues)
-<!--[![lint](https://github.com/collboard/map/actions/workflows/lint.yml/badge.svg)](https://github.com/collboard/map/actions/workflows/lint.yml)-->
-<!--[![test](https://github.com/collboard/map/actions/workflows/test.yml/badge.svg)](https://github.com/collboard/map/actions/workflows/test.yml)-->
 
 <!--/Badges-->
 
