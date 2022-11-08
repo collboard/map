@@ -1,6 +1,6 @@
 {
     "name": "@collboard/map",
-    "version": "1.5.51",
+    "version": "1.5.52",
     "description": "Maps for the geography class for the Collboard.com in cooperation with The Capital City of Prague. See all file support modules for Collboard.",
     "license": "SEE LICENSE IN LICENSE",
     "contributors": [
@@ -20,7 +20,7 @@
         "postversion": "git push && git push --tags"
     },
     "devDependencies": {
-        "@collboard/modules-sdk": "28.2.0",
+        "@collboard/modules-sdk": "28.3.0",
         "@types/isomorphic-fetch": "0.0.35",
         "@types/jest": "27.4.0",
         "@types/papaparse": "5.3.2",
