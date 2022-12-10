@@ -1,0 +1,52 @@
+{
+    "name": "@collboard/map",
+    "version": "1.5.57",
+    "description": "Maps for the geography class for the Collboard.com in cooperation with The Capital City of Prague. See all file support modules for Collboard.",
+    "license": "SEE LICENSE IN LICENSE",
+    "contributors": [
+        "Pavol Hejný <pavol.hejny@collboard.com> (https://collboard.com/-/about/team)",
+        "Hlavní město Praha"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/collboard/map"
+    },
+    "private": false,
+    "scripts": {
+        "start": "colldev develop",
+        "test": "colldev test & jest",
+        "lint": "tslint -p tsconfig.json",
+        "preversion": "npm run lint && npm test",
+        "postversion": "git push && git push --tags"
+    },
+    "devDependencies": {
+        "@collboard/modules-sdk": "30.4.0",
+        "@types/isomorphic-fetch": "0.0.35",
+        "@types/jest": "27.4.0",
+        "@types/papaparse": "5.3.2",
+        "@types/react": "17.0.39",
+        "@types/react-dom": "17.0.11",
+        "@types/sharp": "0.30.0",
+        "cross-fetch": "3.1.5",
+        "del": "6.0.0",
+        "everstorage": "1.10.1",
+        "isomorphic-fetch": "3.0.0",
+        "jest": "27.4.7",
+        "jspdf": "2.5.1",
+        "papaparse": "5.3.1",
+        "prettier": "2.5.1",
+        "puppeteer": "13.5.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "sharp": "0.30.6",
+        "simplify-geojson": "1.0.5",
+        "spacetrim": "0.9.0",
+        "ts-jest": "27.1.2",
+        "ts-node": "10.5.0",
+        "tslint": "6.1.3",
+        "type-fest": "2.12.0",
+        "waitasecond": "1.9.0",
+        "xml-formatter": "2.6.1",
+        "xyzt": "5.1.0"
+    }
+}
