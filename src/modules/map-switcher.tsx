@@ -1,4 +1,11 @@
-import { declareModule, UserInterfaceElementPlace, makeUserInterfaceModule, randomEmoji, React, styled } from '@collboard/modules-sdk';
+import {
+    React,
+    UserInterfaceElementPlace,
+    declareModule,
+    makeUserInterfaceModule,
+    randomEmoji,
+    styled,
+} from '@collboard/modules-sdk';
 import helloWorldButton from '../../assets/hello-world-button.png';
 import helloWorldIcon from '../../assets/hello-world-icon.png';
 import { contributors, description, license, repository, version } from '../../package.json';
@@ -21,7 +28,7 @@ declareModule(
             },
         },
         place: UserInterfaceElementPlace.EdgeRight,
-        async createElement(systems) {
+        async render(systems) {
             const { notificationSystem } = await systems.request('notificationSystem');
             return (
                 <ButtonElement
