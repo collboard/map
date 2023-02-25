@@ -1,10 +1,7 @@
 import {
-    React,
-    UserInterfaceElementPlace,
-    declareModule,
-    makeUserInterfaceModule,
-    randomEmoji,
-    styled,
+  declareModule,
+  makeUserInterfaceModule,
+  randomEmoji, React, styled, UserInterfaceElementPlace
 } from '@collboard/modules-sdk';
 import helloWorldButton from '../../assets/hello-world-button.png';
 import helloWorldIcon from '../../assets/hello-world-icon.png';

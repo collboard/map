@@ -1,10 +1,10 @@
 import {
-    Abstract2dArt,
-    AsyncContentComponent,
-    declareModule,
-    ISystems,
-    makeArtModule,
-    React,
+  Abstract2dArt,
+  AsyncContentComponent,
+  declareModule,
+  ISystems,
+  makeArtModule,
+  React
 } from '@collboard/modules-sdk';
 import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
