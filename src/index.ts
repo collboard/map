@@ -10,8 +10,8 @@ import './modules/map-shortcuts';
 /**/
 import '../maps/6-tray-modules/index';
 import './modules/map-svg-geojson-import.module.tsx';
-// !!! Remove import './modules/map-tray-tool/map-tray-tool.module';
-// !!! SVG plus import module
+// TODO: !!! Remove import './modules/map-tray-tool/map-tray-tool.module';
+// TODO: !!! SVG plus import module
 /**/
 
 /*/

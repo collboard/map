@@ -1,10 +1,10 @@
 import {
-    Abstract2dArt,
-    AsyncContentComponent,
-    declareModule,
-    ISystems,
-    makeArtModule,
-    React,
+  Abstract2dArt,
+  AsyncContentComponent,
+  declareModule,
+  ISystems,
+  makeArtModule,
+  React
 } from '@collboard/modules-sdk';
 import { IVectorData, Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../../package.json';
@@ -45,13 +45,13 @@ export class GeojsonArt extends Abstract2dArt {
             this.geojson = geojson;
         }
 
-        // !!! Remove this.calculateBoundingBox();
+        // TODO: !!! Remove this.calculateBoundingBox();
 
         this.__svgGeojson = new SvgGeojsonConverter(this.geojson).makeSvg(1, true);
     }
 
     /*
-    !!! Remove
+    TODO: !!! Remove
     private calculateBoundingBox() {
         // TODO: Use here BoundingBox.fromPoints
         this.pointsOnBoard = getAllPointsOf(this.geojson).map((pointAsWgs84) => this.wgs84ToBoard(pointAsWgs84));

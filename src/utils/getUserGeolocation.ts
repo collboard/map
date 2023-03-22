@@ -1,4 +1,3 @@
-import { Vector } from 'xyzt';
 import { Wgs84 } from '../semantic/Wgs84';
 
 export function getUserGeolocation(): Promise<Wgs84> {

@@ -9,7 +9,7 @@ export function SvgGeojsonComponent(props: ISvgGeojsonComponentProps) {
     const { padding, boundingBox, selected } = props;
     const { minX, maxX, minY, maxY } = boundingBox;
 
-    // TODO:!!! Use only element or src
+    // TODO:TODO: !!! Use only element or src
     // console.log(props);
 
     return (

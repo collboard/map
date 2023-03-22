@@ -1,4 +1,4 @@
-// TODO: !!!! Not working in Colldev - Pick one of fetch polyfills and cleanup others
+// TODO: !!TODO: !! Not working in Colldev - Pick one of fetch polyfills and cleanup others
 //       > import fetch from 'isomorphic-fetch';
 import fetch from 'cross-fetch';
 import { IGeojsonFeatureCollection } from '../interfaces/IGeojson';
@@ -87,7 +87,7 @@ export class OsmGeojson {
     */
 
     public get title() {
-        return '!!! TODO';
+        return 'TODO: !!! TODO';
     }
 }
 

@@ -30,7 +30,7 @@ export class TileRelative extends Vector {
     }
 }
 
-// !!! Descriptions
+// TODO: !!! Descriptions
 
 /**
  * TODO: Fluent API should preserve the semantics:

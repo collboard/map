@@ -61,7 +61,7 @@ export class GoogleAutomaticTranslator implements IAutomaticTranslator {
 
             let i = 0;
             while (!translatedElement) {
-                await forTime(500 /* !!! */);
+                await forTime(500 /* TODO: !!! */);
                 translatedElement = (await this.page.$x(`//*[@data-result-index]`))[0];
                 //console.log(translatedElement);
 
