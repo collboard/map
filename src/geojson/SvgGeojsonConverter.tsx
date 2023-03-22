@@ -50,7 +50,7 @@ export class SvgGeojsonConverter {
         return pointOnBoard;
     }
 
-    // !!! Maybe not async
+    // TODO: !!! Maybe not async
     public async makeSvg(z: number, isAsUrl: boolean): Promise<ISvgGeojson> {
         this.calculateBoundingBox();
 

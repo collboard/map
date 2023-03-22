@@ -14,7 +14,7 @@ import { commit } from '../utils/autocommit/commit';
 import { forPlay } from '../utils/forPlay';
 
 const LODS_EXPONENTS = [
-    -13, //!!!!
+    -13, //TODO: !!TODO: !!
     // Note: -13 [➿] is best ballance between quality and pefrormance for the web
     // Other LODs> -50, -30, -10, 0, 5, 1, 2, 3, 4, 10, 30
 ];

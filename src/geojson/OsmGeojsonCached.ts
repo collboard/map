@@ -34,5 +34,5 @@ export class OsmGeojsonCached extends OsmGeojson {
 }
 
 /**
- * !!! Is cache working
+ * TODO: !!! Is cache working
  */

@@ -79,7 +79,7 @@ async function convertSvgsToPdfs({
             await unlink(svgTmpPath);
 
             /*
-            !!! Remove
+            TODO: !!! Remove
             const geojsonSvg = await readFile(svgPath, 'utf8');
             const geojsonPng = await sharp(Buffer.from(geojsonSvg)).png().toBuffer();
 
@@ -87,7 +87,7 @@ async function convertSvgsToPdfs({
             await mkdir(dirname(pngPath), { recursive: true });
             await writeFile(pngPath, geojsonPng, 'binary');
 
-            // !!! Use pupeeteer to convert svg to png
+            // TODO: !!! Use pupeeteer to convert svg to png
             const pdf = new jsPDF();
 
             pdf.addImage(geojsonPng, 'svg', 0, 0, 12, 15);
