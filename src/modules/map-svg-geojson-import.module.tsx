@@ -1,12 +1,12 @@
 import {
-    blobToDataurl,
-    centerArts,
-    declareModule,
-    ImageArt,
-    measureImageSize,
-    patternToRegExp,
-    string_data_url,
-    string_mime_type_with_wildcard,
+  blobToDataurl,
+  centerArts,
+  declareModule,
+  ImageArt,
+  measureImageSize,
+  patternToRegExp,
+  string_data_url,
+  string_mime_type_with_wildcard
 } from '@collboard/modules-sdk';
 import ReactDOMServer from 'react-dom/server';
 import { contributors, description, license, repository, version } from '../../package.json';
