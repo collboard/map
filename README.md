@@ -13,6 +13,7 @@ Maps for the geography class for the [Collboard.com](https://collboard.com/) in 
 [![test](https://github.com/collboard/map/actions/workflows/test.yml/badge.svg)](https://github.com/collboard/map/actions/workflows/test.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/collboard/map/badge.svg)](https://snyk.io/test/github/collboard/map)
 [![Issues](https://img.shields.io/github/issues/collboard/map.svg?style=flat)](https://github.com/collboard/map/issues)
+<!--[![Socket](https://socket.dev/api/badge/npm/package/@collboard/map)](https://socket.dev/npm/package/@collboard/map)-->
 
 <!--/Badges-->
 
