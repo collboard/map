@@ -48,5 +48,15 @@
         "waitasecond": "1.11.66",
         "xml-formatter": "2.6.1",
         "xyzt": "5.4.3"
-    }
+    },
+    "funding": [
+        {
+            "type": "individual",
+            "url": "https://buymeacoffee.com/hejny"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/collboard/map/blob/main/README.md#%EF%B8%8F-contributing"
+        }
+    ]
 }
