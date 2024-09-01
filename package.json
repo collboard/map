@@ -40,7 +40,7 @@
         "react-dom": "17.0.2",
         "sharp": "0.30.6",
         "simplify-geojson": "1.0.5",
-        "spacetrim": "0.11.50",
+        "spacetrim": "0.11.51",
         "ts-jest": "27.1.2",
         "ts-node": "10.5.0",
         "tslint": "6.1.3",
